@@ -1,7 +1,8 @@
 """Run authorised device QA and collect actual evidence. Restores Wi-Fi/display size afterward.
 
 python tools/fire_qa.py --serial SERIAL [--compact]
-Never clears unrelated packages or device data. Fixture data belongs only to Fixavora.
+Never clears unrelated packages. WARNING: fixture seeding replaces Fixavora's own
+home records on the target debug install. Use a dedicated test install or back up first.
 """
 import argparse, json, os, subprocess, sys
 from pathlib import Path
@@ -33,7 +34,8 @@ if not args.compact and not args.workspace_only:
     instrument("PersistenceTest","fire-persistence-final")
     instrument("VoiceCompatibilityTest","fire-voice")
     require(adb("pull","/sdcard/Android/data/com.fixavora.app/files/voice-compatibility.json",str(LOG/"voice-compatibility.json")))
-wifi=require(adb("shell","settings","get","global","wifi_on")).strip()
+wifi_report=require(adb("shell","dumpsys","wifi"))
+wifi="1" if "Wi-Fi is enabled" in wifi_report else "0" if "Wi-Fi is disabled" in wifi_report else require(adb("shell","settings","get","global","wifi_on")).strip()
 size=require(adb("shell","wm","size")).strip()
 override=next((line.split(":",1)[1].strip() for line in size.splitlines() if line.startswith("Override")),None)
 rotation=require(adb("shell","settings","get","system","user_rotation")).strip()

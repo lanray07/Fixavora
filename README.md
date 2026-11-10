@@ -49,6 +49,8 @@ Device tests capture the actual interface with fictional fixtures. Debug-only fi
 
 ## Tests and operational limits
 
+Device fixture tests replace Fixavora's own home records. Use a dedicated debug test installation, or export a backup before running them against an installation containing records you want to keep. They do not clear unrelated applications.
+
 - JVM: recurrence anchors, leap years, DST, currencies, local proposals, command routing, duplicate detection, encrypted backups and CSV safety.
 - Instrumentation: relational integrity, free limits, transactional restore, migration, database reopen, PDF/CSV generation, device voice capabilities and an actual create-task journey.
 - `python -m unittest discover -s server -v` checks receipt response evaluation without contacting Amazon.
