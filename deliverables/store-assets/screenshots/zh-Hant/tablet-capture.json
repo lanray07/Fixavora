@@ -1,0 +1,91 @@
+{
+  "locale": "zh-Hant",
+  "variant": "tablet",
+  "journey": "PASS",
+  "device": "G001KT0620330AWU",
+  "network": "Wi-Fi disabled",
+  "visual_review": "AI sample review plus real journey and native composition bounds",
+  "files": [
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/tablet/01-overview.png",
+      "sha256": "9b14fab4948913a4e8e7071222f878899a56b4cc5fb82503de00d608c721876f",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/tablet/01-overview.png",
+      "raw_sha256": "9e958d59e2635a8a1867d2074b50e0ce165ca11d835a4f9380acb8006e0c0195"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/tablet/02-maintenance.png",
+      "sha256": "28b2dabca3a8babe265c1983c62d0c5e7800ed6651290eec5677630f30e99d1e",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/tablet/02-maintenance.png",
+      "raw_sha256": "e953860901af2871309f1c9a64cbbb2cef8fe90697354d4c556f5fcc15704e6b"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/tablet/03-repairs.png",
+      "sha256": "32739070aa71a4d3104d8cabe1f589e95c8fa0da1f36b97760c879786b17701f",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/tablet/03-repairs.png",
+      "raw_sha256": "f17f3cd674177d827b0475a4844d9cccedb77c3cfb49736fe4bd4178768b0ee0"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/tablet/04-appliances.png",
+      "sha256": "3c0c995d8ae7d194307577265981d1ead3d8913722bddfb3b73684e756259753",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/tablet/04-appliances.png",
+      "raw_sha256": "014fac967bd2b6f765d7e07dc111657c5d9556eb7c3de83421a5caa430d22213"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/tablet/05-voice-assistant.png",
+      "sha256": "cf01b049d330d2e6c684dfa3d512d70fe2bf859d2e73fad9f53ba419927788d4",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/tablet/05-voice-assistant.png",
+      "raw_sha256": "336feca049e3cb0b6b24b4102c040d4b1729da0a4bb241d9a33eadeef995338d"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/tablet/06-calendar.png",
+      "sha256": "d39371a4d726bee2129d406216ea7e3d1d2a5a506778715039a35da4a55995f4",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/tablet/06-calendar.png",
+      "raw_sha256": "10d78d53ac40983912c11931835ef016afb13d9f4f078ed3cbe913ccaf07507f"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/tablet/07-offline-records.png",
+      "sha256": "cacc88a83f95f86aab29cd33ade77c93c33942c72ebea8b8581258294a843297",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/tablet/07-offline-records.png",
+      "raw_sha256": "c9bb64a640c584b6dab4d1793c9fe8571eed8cbd96f9857248c2953979b53830"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/tablet/08-reports.png",
+      "sha256": "a72c5d70400f5d58c2af55a857bcbe55a1edcfb4061140c4fd7c213d0d9dfc2c",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/tablet/08-reports.png",
+      "raw_sha256": "5bb8de1cc9e6a6e5cb4f421d7dc74acf0c38de3da9460ec94cd42f8534fbc692"
+    }
+  ],
+  "human_review": "NOT PERFORMED"
+}

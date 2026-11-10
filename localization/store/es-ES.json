@@ -1,0 +1,36 @@
+{
+  "status": "AI_REVIEWED_PENDING_FINAL_UPLOAD",
+  "human_review": "NOT PERFORMED",
+  "publish_approved": false,
+  "locale": "es-ES",
+  "display_title": "Fixavora - Seguimiento de mantenimiento y reparaciones del hogar",
+  "short_description": "Centraliza el mantenimiento, las reparaciones, los electrodomésticos y los gastos de tu hogar. Tus registros se almacenan directamente en tu dispositivo.",
+  "long_description": "Organiza toda la información de tu hogar en un solo lugar. Planifica tareas de mantenimiento recurrentes, realiza un seguimiento de las reparaciones, registra los detalles y las fechas de garantía de tus electrodomésticos, guarda los datos de contacto de los profesionales y vincula documentos. No es necesario crear una cuenta en Fixavora. Comienza gratis gestionando una propiedad y hasta 15 tareas de mantenimiento activas. Mediante un pago único a través de Amazon, puedes desbloquear funciones adicionales: más propiedades, gestión de garantías, contactos de profesionales, registro de gastos, exportación de informes y copias de seguridad cifradas de tus datos. No requiere suscripción. El precio local aparecerá en la pantalla de compra de Amazon. El asistente integrado en la aplicación prepara borradores de tareas para que los revises antes de guardarlos. Puedes introducir información escribiendo desde cualquier dispositivo. El uso de entrada por voz y la respuesta mediante voz requiere tener instalados motores de voz y voces compatibles. Fixavora no almacena audio. Los registros del hogar funcionan sin conexión a internet; sin embargo, las compras y la verificación de recibos requieren conexión. Es posible que los recordatorios se retrasen debido a la configuración de ahorro de energía de tu dispositivo. El acceso a documentos externos puede requerir conexión a internet. Las copias cifradas incluyen registros e historial. No incluyen documentos externos, fotos ni sus enlaces; conserva copias separadas y vuelve a vincular los archivos después de restaurar. Fixavora te ayuda a organizar la información; no realiza inspecciones en tu hogar ni sustituye el trabajo de un profesional cualificado.",
+  "product_feature_bullets": [
+    "Planifica el mantenimiento recurrente de tu hogar",
+    "Haz un seguimiento de las reparaciones y los detalles de tus electrodomésticos",
+    "Registra las fechas de garantía y los datos de contacto de los profesionales",
+    "Revisa los borradores de tareas antes de guardarlos",
+    "Informes avanzados y copias de seguridad cifradas"
+  ],
+  "keywords": "Planifica el mantenimiento recurrente de tu hogar, Haz un seguimiento de las reparaciones y los detalles de tus electrodomésticos, Registra las fechas de garantía y los datos de contacto de los profesionales",
+  "screenshot_headlines": [
+    "Tu hogar, cuidadosamente organizado",
+    "Dale un lugar a cada tarea",
+    "Mantenga juntos los detalles de la reparación",
+    "Conozca los registros de sus electrodomésticos",
+    "Habla o escribe un borrador de tarea",
+    "Ver el mes que viene",
+    "Mantenga sus registros en su dispositivo",
+    "Una vista clara del historial de tu hogar."
+  ],
+  "screenshot_caption_status": "Translated; actual capture review pending",
+  "release_notes": "Centraliza el mantenimiento, las reparaciones, los electrodomésticos y los gastos de tu hogar. Tus registros se almacenan directamente en tu dispositivo.",
+  "category_recommendation": "Productivity",
+  "privacy_policy": "https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md",
+  "support_status": "CONFIGURED",
+  "iap_title": "Fixavora Premium",
+  "iap_description": "Mejora mediante un pago único para gestionar más propiedades, garantías y profesionales, realizar un seguimiento de gastos, generar informes en formato PDF y CSV, y crear copias de seguridad cifradas. Sin suscripciones.",
+  "support_email": "banksmi@mail.com",
+  "support_url": "https://github.com/lanray07/Fixavora/issues"
+}

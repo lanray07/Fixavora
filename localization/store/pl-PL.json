@@ -1,0 +1,36 @@
+{
+  "status": "AI_REVIEWED_PENDING_FINAL_UPLOAD",
+  "human_review": "NOT PERFORMED",
+  "publish_approved": false,
+  "locale": "pl-PL",
+  "display_title": "Fixavora – Narzędzie do zarządzania konserwacją i naprawami w domu",
+  "short_description": "Gromadź informacje o konserwacji, naprawach, urządzeniach domowych i wydatkach w jednym miejscu. Twoje dane pozostają na Twoim urządzeniu.",
+  "long_description": "Zadbaj o porządek w dokumentacji swojego domu. Planuj cykliczne prace konserwacyjne, śledź naprawy, przechowuj dane o urządzeniach i terminach gwarancji, zapisuj kontakty do wykonawców oraz dołączaj dokumenty. Nie musisz zakładać konta w Fixavora. Zacznij za darmo – możesz dodać jedną nieruchomość i do 15 aktywnych zadań konserwacyjnych. Jednorazowy zakup (przez Amazon) odblokowuje możliwość dodania kolejnych nieruchomości, gwarancji, wykonawców i wydatków, a także pozwala na eksport raportów oraz tworzenie zaszyfrowanych kopii zapasowych danych. Brak subskrypcji. Cena w lokalnej walucie wyświetli się na ekranie zakupu w serwisie Amazon. Wbudowany asystent przygotowuje szkice zadań, które możesz przejrzeć przed zapisaniem. Na każdym urządzeniu możesz wprowadzać dane za pomocą klawiatury. Funkcje rozpoznawania mowy i komunikatów głosowych wymagają zainstalowania odpowiednich modułów obsługi głosu. Fixavora nie przechowuje nagrań audio. Dane dotyczące domu są dostępne w trybie offline. Zakupy oraz weryfikacja płatności wymagają połączenia z internetem. Przypomnienia mogą być opóźnione ze względu na ustawienia oszczędzania energii na urządzeniu. Dostęp do zewnętrznych dokumentów może wymagać połączenia z siecią. Zaszyfrowane kopie zapasowe zawierają wpisy i historię. Nie obejmują zewnętrznych dokumentów, zdjęć ani ich odnośników. Zachowaj osobne kopie i ponownie dołącz pliki po przywróceniu. Fixavora pomaga w porządkowaniu informacji; aplikacja nie przeprowadza inspekcji technicznych domu ani nie zastępuje wykwalifikowanego specjalisty.",
+  "product_feature_bullets": [
+    "Planuj cykliczne prace konserwacyjne w domu",
+    "Śledź naprawy i szczegółowe informacje o urządzeniach",
+    "Przechowuj terminy gwarancji oraz kontakty do wykonawców",
+    "Przeglądaj przygotowane szkice zadań przed ich zapisaniem",
+    "Raporty premium i zaszyfrowane kopie zapasowe danych"
+  ],
+  "keywords": "Planuj cykliczne prace konserwacyjne w domu, Śledź naprawy i szczegółowe informacje o urządzeniach, Przechowuj terminy gwarancji oraz kontakty do wykonawców",
+  "screenshot_headlines": [
+    "Twój dom, przemyślanie zorganizowany",
+    "Daj każdemu zadaniu miejsce",
+    "Zachowaj szczegóły naprawy razem",
+    "Zapoznaj się z dokumentacją swojego urządzenia",
+    "Porozmawiaj lub wpisz wersję roboczą zadania",
+    "Zobacz nadchodzący miesiąc",
+    "Przechowuj swoje dane na swoim urządzeniu",
+    "Przejrzysty widok historii Twojego domu"
+  ],
+  "screenshot_caption_status": "Translated; actual capture review pending",
+  "release_notes": "Gromadź informacje o konserwacji, naprawach, urządzeniach domowych i wydatkach w jednym miejscu. Twoje dane pozostają na Twoim urządzeniu.",
+  "category_recommendation": "Productivity",
+  "privacy_policy": "https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md",
+  "support_status": "CONFIGURED",
+  "iap_title": "Fixavora Premium",
+  "iap_description": "Jednorazowe rozszerzenie funkcjonalności: obsługa większej liczby nieruchomości, gwarancji, wykonawców i wydatków, generowanie raportów w formatach PDF i CSV oraz tworzenie zaszyfrowanych kopii zapasowych. Brak subskrypcji.",
+  "support_email": "banksmi@mail.com",
+  "support_url": "https://github.com/lanray07/Fixavora/issues"
+}

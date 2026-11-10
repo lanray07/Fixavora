@@ -1,0 +1,36 @@
+{
+  "status": "AI_REVIEWED_PENDING_FINAL_UPLOAD",
+  "human_review": "NOT PERFORMED",
+  "publish_approved": false,
+  "locale": "fr-FR",
+  "display_title": "Fixavora – Suivi de l'entretien et des réparations de votre domicile",
+  "short_description": "Centralisez le suivi de l'entretien, des réparations, des appareils électroménagers et des dépenses liés à votre domicile. Vos données restent stockées sur votre appareil.",
+  "long_description": "Offrez à vos informations sur votre domicile un espace dédié. Planifiez l'entretien régulier, suivez les réparations, conservez les détails de vos appareils et les dates de garantie, enregistrez les coordonnées des prestataires et associez des documents. Aucun compte Fixavora n'est requis. Commencez gratuitement avec un bien immobilier et jusqu'à 15 tâches d'entretien actives. Un achat unique (via Amazon) permet de débloquer davantage de biens, de garanties, de prestataires et de dépenses, tout en offrant l'exportation de rapports et la sauvegarde chiffrée de vos données. Il n'y a aucun abonnement. Le prix affiché lors de l'achat sur Amazon correspond au tarif en vigueur dans votre région. L'assistant intégré à l'application prépare des ébauches de tâches que vous pouvez examiner avant de les enregistrer. La saisie au clavier est disponible sur tous vos appareils. La saisie vocale et le retour vocal nécessitent l'installation de moteurs de synthèse et de reconnaissance vocale compatibles. Fixavora ne conserve aucun enregistrement audio. Vos données sont accessibles hors ligne. Une connexion Internet est toutefois nécessaire pour effectuer des achats, vérifier des reçus ou accéder à des documents stockés sur des services externes. Les rappels peuvent être retardés par les paramètres de gestion de l'énergie de votre appareil. Les sauvegardes chiffrées contiennent les fiches et leur historique. Les documents, les photos et leurs liens ne sont pas inclus : conservez des copies séparées et rétablissez les liens après la restauration. Fixavora vous aide à organiser vos informations ; l'application ne réalise pas d'inspection de votre domicile et ne remplace en aucun cas l'intervention d'un professionnel qualifié.",
+  "product_feature_bullets": [
+    "Planifiez l'entretien régulier de votre domicile",
+    "Suivez les réparations et les détails de vos appareils",
+    "Conservez les dates de garantie et les coordonnées des prestataires",
+    "Examinez les ébauches de tâches avant de les enregistrer",
+    "Rapports détaillés et sauvegardes chiffrées de vos données"
+  ],
+  "keywords": "Planifiez l'entretien régulier de votre domicile, Suivez les réparations et les détails de vos appareils, Conservez les dates de garantie et les coordonnées des prestataires",
+  "screenshot_headlines": [
+    "Votre maison, soigneusement organisée",
+    "Donnez à chaque tâche une place",
+    "Conservez les détails de la réparation ensemble",
+    "Connaissez les dossiers de vos appareils",
+    "Énoncer ou saisir un brouillon de tâche",
+    "Voir le mois à venir",
+    "Conservez vos enregistrements sur votre appareil",
+    "Une vue claire de l’historique de votre maison"
+  ],
+  "screenshot_caption_status": "Translated; actual capture review pending",
+  "release_notes": "Centralisez le suivi de l'entretien, des réparations, des appareils électroménagers et des dépenses liés à votre domicile. Vos données restent stockées sur votre appareil.",
+  "category_recommendation": "Productivity",
+  "privacy_policy": "https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md",
+  "support_status": "CONFIGURED",
+  "iap_title": "Fixavora Premium",
+  "iap_description": "Une mise à niveau unique pour gérer davantage de biens, de garanties et de prestataires, suivre vos dépenses, exporter des rapports (PDF et CSV) et effectuer des sauvegardes chiffrées. Aucun abonnement.",
+  "support_email": "banksmi@mail.com",
+  "support_url": "https://github.com/lanray07/Fixavora/issues"
+}

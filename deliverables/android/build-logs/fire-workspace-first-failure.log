@@ -127,5 +127,3 @@ java.lang.IllegalStateException: No ActivityResultRegistryOwner was provided via
 
 FAILURES!!!
 Tests run: 1,  Failures: 1
-
-

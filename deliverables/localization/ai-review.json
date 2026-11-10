@@ -1,0 +1,173 @@
+[
+  {
+    "locale": "es-ES",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "es-419",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "fr-FR",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "fr-CA",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "de-DE",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "it-IT",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "pt-BR",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "pt-PT",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "nl-NL",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "pl-PL",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "sv-SE",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "ja-JP",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "ko-KR",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "zh-Hans",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "zh-Hant",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "hi-IN",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "ar",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "tr-TR",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  },
+  {
+    "locale": "id-ID",
+    "ui_strings": 283,
+    "screenshot_strings": 35,
+    "method": "Google Translate web UI with Codex terminology and privacy corrections",
+    "human_review": "NOT PERFORMED",
+    "status": "AI_REVIEWED_LAYOUT_QA_PASS",
+    "source_sha256": "7c28aeae647e5c8e075ab645d625cafb4984aca539b3b3aae9988f81264989e8"
+  }
+]

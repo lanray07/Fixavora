@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '22'
       - run: node --test server/cloudflare/worker.test.mjs
-      - run: ./gradlew testDebugUnitTest assembleDebug assembleRelease --console=plain
+      - run: ./gradlew testDebugUnitTest assembleDebug assembleRelease assembleDebugAndroidTest --console=plain
       - run: ./gradlew lintDebug --console=plain
       - uses: actions/upload-artifact@v4
         if: always()

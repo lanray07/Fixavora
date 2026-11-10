@@ -1,0 +1,91 @@
+{
+  "locale": "ko-KR",
+  "variant": "tablet",
+  "journey": "PASS",
+  "device": "G001KT0620330AWU",
+  "network": "Wi-Fi disabled",
+  "visual_review": "AI sample review plus real journey and native composition bounds",
+  "files": [
+    {
+      "file": "deliverables/store-assets/screenshots/ko-KR/tablet/01-overview.png",
+      "sha256": "c20588a35d35ac1b9d66c767899b7f33cb1a579c84f4f1fd718a28b76ac25272",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ko-KR/tablet/01-overview.png",
+      "raw_sha256": "9b99567d35c106c9c944df3979d6d6bba89cefa4c3c50e982a26a6de3e08b5b8"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ko-KR/tablet/02-maintenance.png",
+      "sha256": "0139154cb8683eca234e73a16b351bdab646631bf814d97397e985bad01b46bc",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ko-KR/tablet/02-maintenance.png",
+      "raw_sha256": "d40f7ef0a4c593d0699a8cc0924b20db8794cefeb241cda474b1040435ad6d0a"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ko-KR/tablet/03-repairs.png",
+      "sha256": "ee876b152beed45bd533247899b0325819a28d6fe3b9e43910995a2dc8348799",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ko-KR/tablet/03-repairs.png",
+      "raw_sha256": "7489bb123db1946e0b0fcf4c7219cc1141291f9b1b8a63a621a26094508d1034"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ko-KR/tablet/04-appliances.png",
+      "sha256": "346b922f67a9689429f0f280e894297f396d01d23f1ee2e3e0c74bc96a530358",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ko-KR/tablet/04-appliances.png",
+      "raw_sha256": "060b9237a7fc79c2c8b44870e3e31e5b97c6e5da3caac1e36713f23a770ff908"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ko-KR/tablet/05-voice-assistant.png",
+      "sha256": "0eab8d4ae83b29418a8658e5fa70762b9e05782345f2296279da470bae81a22c",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ko-KR/tablet/05-voice-assistant.png",
+      "raw_sha256": "2add6dc100b26e5d585b39333ce3117745e8af480f36abdadbe68d294134b545"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ko-KR/tablet/06-calendar.png",
+      "sha256": "f0fbe45183d334805e6a3eb847479294632c2bf17c53f0e96e4a4fb0d613c181",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ko-KR/tablet/06-calendar.png",
+      "raw_sha256": "589c1015ff346959d2d0839a547a6d967adb3c5133e883b5b0ea3579a5ee52a2"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ko-KR/tablet/07-offline-records.png",
+      "sha256": "51e832d89c275e522b0e4d7d551ac6b025b73a4e10c0318283703a9f1f3b73c2",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ko-KR/tablet/07-offline-records.png",
+      "raw_sha256": "ab704583a36e183a1a4e8fbbdc27274cb16c76fd0ed6ba2adfb50ef847443925"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ko-KR/tablet/08-reports.png",
+      "sha256": "fd5144092b24bab4a9f4f5dfbf35a3f62b0587059ed6476783e5ddc5d82a57ff",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ko-KR/tablet/08-reports.png",
+      "raw_sha256": "23dc1d63b3a0b1e2573005a2efa144f4b3e5c184fb8bf0993f60c8f4870c027c"
+    }
+  ],
+  "human_review": "NOT PERFORMED"
+}

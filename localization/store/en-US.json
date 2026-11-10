@@ -1,0 +1,36 @@
+{
+  "status": "AI_REVIEWED_PENDING_FINAL_UPLOAD",
+  "human_review": "NOT PERFORMED",
+  "publish_approved": false,
+  "locale": "en-US",
+  "display_title": "Fixavora - Home Maintenance & Repair Tracker",
+  "short_description": "Keep home maintenance, repairs, appliances and expenses together. Your home records stay on your device.",
+  "long_description": "Give your home records a place of their own. Plan recurring maintenance, track repairs, keep appliance details and warranty dates, save contractor contacts and link documents. No Fixavora account is required.\n\nStart free with one active property and up to 15 active maintenance tasks. An optional one-time Amazon purchase unlocks more properties, warranties, contractors, expenses, report exports and encrypted record backups. There is no subscription. The Amazon purchase screen shows your local price.\n\nThe on-device assistant prepares task drafts for you to review before saving. Use typing on every device. Speech input and spoken feedback require compatible installed speech engines and voices. Fixavora does not retain audio.\n\nHome records work offline. Purchases and receipt verification need an internet connection. Reminders can be delayed by device power settings. External document providers may need a connection. Encrypted backups contain records and history. External documents, photos and their attachment links are not included; keep separate copies and relink them after restoring.\n\nFixavora helps you organize information. It does not inspect your home or replace a qualified professional.",
+  "product_feature_bullets": [
+    "Plan recurring home maintenance",
+    "Track repairs and appliance details",
+    "Keep warranty dates and contractor contacts",
+    "Review local task drafts before saving",
+    "Premium reports and encrypted record backups"
+  ],
+  "keywords": "Plan recurring home maintenance, Track repairs and appliance details, Keep warranty dates and contractor contacts",
+  "screenshot_headlines": [
+    "Your home, thoughtfully organised",
+    "Give every task a place",
+    "Keep repair details together",
+    "Know your appliance records",
+    "Speak or type a task draft",
+    "See the month ahead",
+    "Keep your records on your device",
+    "A clear view of your home history"
+  ],
+  "screenshot_caption_status": "Translated; actual capture review pending",
+  "release_notes": "Keep home maintenance, repairs, appliances and expenses together. Your home records stay on your device.",
+  "category_recommendation": "Productivity",
+  "privacy_policy": "https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md",
+  "support_status": "CONFIGURED",
+  "iap_title": "Fixavora Premium",
+  "iap_description": "One-time upgrade for more properties, warranties, contractors, expense tracking, PDF and CSV reports, and encrypted record backups. No subscription.",
+  "support_email": "banksmi@mail.com",
+  "support_url": "https://github.com/lanray07/Fixavora/issues"
+}

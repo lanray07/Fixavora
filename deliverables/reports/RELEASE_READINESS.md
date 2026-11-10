@@ -1,58 +1,51 @@
-# Fixavora delivery and release readiness
+# Fixavora submission readiness
 
-Date: 10 November 2026. **Overall release status: BLOCKED.** This delivery is a working native development build with verified core behaviour, not a completed worldwide Appstore release. Nothing was submitted or published to Amazon.
+10 November 2026. Candidate: **1.0.0, version code 2**. The Amazon application draft is complete and its **Submit App** button is enabled. No app or IAP has been submitted or published. Final source and CI evidence are recorded in `deliverables/qa/source-verification.json`.
 
-## Source and build artifacts
+## Release artifacts
 
-- Source: `D:\App Projects\Fixavora` (Android module `app/`). GitHub: https://github.com/lanray07/Fixavora, branch `main`.
-- Debug APK: `deliverables/android/debug/Fixavora-0.1.0-debug.apk`.
-- Release APK: `deliverables/android/release/Fixavora-0.1.0-release-unsigned.apk` — unsigned, not a production-signed installable release.
-- Actual file sizes and SHA-256 hashes: `deliverables/android/artifact-hashes.json`.
-- File inventory: `deliverables/DELIVERABLES_MANIFEST.csv`. Only existing files are inventoried. APKs are local deliverables and are ignored by Git; source, evidence and screenshot assets are pushed.
+- Source: https://github.com/lanray07/Fixavora, branch `main`.
+- Amazon upload: `deliverables/android/release/Fixavora-1.0.0-release-unsigned.apk`.
+- Installable debug test build: `deliverables/android/debug/Fixavora-1.0.0-debug.apk`.
+- Release SHA-256: `c9582dcc96a4a42168eb6c85dcd866282f384a7b774e17490377210c4c90fbc3`.
+- APK inspection, version, SDK and endpoint checks: `android/build-logs/release-artifact-verification.json`.
+- Exact artifact hashes and file inventory: `android/artifact-hashes.json`, `DELIVERABLES_MANIFEST.csv`. APK binaries remain local/CI artifacts and are not committed to Git.
 
-| Check | Status | Evidence |
+## Completed checks
+
+| Gate | Result | Evidence |
 | --- | --- | --- |
-| Debug build | PASS | `assembleDebug`; final logs under `android/build-logs/`. Installed on the connected Fire tablet; debug signature verifies. |
-| Release artifact build | PASS | `assembleRelease`; unsigned APK exists. Amazon documents applying its signature to signed or unsigned uploads. The actual Amazon-signed distribution path is NOT TESTED. |
-| JVM tests | PASS | 14 tests: recurrence, leap years, DST, exact currency handling, local proposals, intent routing, duplicate matching, encrypted backups and CSV safety. XML results included. |
-| Database/integrity device tests | PASS | 7 tests: completion/undo/snooze, cascades, free limits, cross-property links, restore rollback, PDF/CSV data, disk reopen and a synthetic version-1-to-2 migration. |
-| Voice capability device test | PASS | Capability report generated; en-GB synthesis produced a real audio file. This does not mean microphone recognition passed. |
-| Tablet UI journey | PASS | Proposal does not save automatically; editor confirmation creates a fourth task; record appears in maintenance/calendar/reports. Wi-Fi disabled. |
-| Compact UI journey | PASS | Same journey on a resized Fire tablet viewport in portrait. This is not a physical phone test. |
-| Receipt service tests | PASS | 5 local tests, including a shared rate-limit integration test. No real Amazon receipt was used. |
-| Full Android lint | FAIL | 258 `MissingTranslation` errors; latest recorded run also has 318 warnings. No missing-translation suppression or lint baseline was introduced. Warnings still require release review. |
-| GitHub CI | FAIL | The first run failed on the same missing-translation gate. CI runs on push; do not infer a later run's result from local checks. |
+| Build | PASS | Debug, unsigned Amazon release and instrumentation APKs built with JDK 17, minimum API 26, target 35. |
+| JVM tests | PASS: 21 | Recurrence/DST, draft routing, exact localized money, currency precision, backup cryptography/passphrase session, quiet hours and entitlement cache boundaries. XML results under `android/build-logs/unit-test-results/`. |
+| Android lint | PASS: 0 errors | 337 maintenance warnings reviewed in `qa/lint-review.json`; dynamic localized resource references account for most unused-resource warnings. No missing-translation suppression/baseline. |
+| Receipt service | PASS: 13 automated tests | Eight deployed-worker implementation tests plus five Python reference tests; SKU/receipt matching, cancellation, errors, redirects and malformed input. Production and sandbox health both report configured. |
+| Device workflows | PASS: 14 tests | Real App Tester receipt verification/reconnect/restore plus 13 tests covering all nine module forms, deletion, reminders, voice capability, database integrity/migration, actual document pickers, backup restore and PDF/CSV. Final log: `android/build-logs/final-device-workflows.log`. |
+| Localized journeys | PASS | 24 tablet and 24 compact locale journeys, including two extra regional store captures. Compact is a resized Fire tablet viewport, not a physical phone. |
+| Localization | PASS: AI review | 22 full catalogs, 283 keys each, placeholder/resource consistency and native plurals. Immutable catalog/capture hashes in `localization/review.json` and screenshot manifests. Human linguistic review NOT PERFORMED, as authorized by the publisher. |
+| Screenshots | PASS | 384 actual localized compositions, eight screens × 24 locales × two sizes; matching raw captures and SVG sources. Native shaping for Arabic/Indic/CJK. Japanese/Korean money displays preserve GBP decimals. |
+| Large text/theme | PASS: scoped | German, Arabic and Japanese compact journeys at font scale 1.3 in dark/high contrast; AI visual samples reviewed. See `qa/layout-stress/`. |
+| Privacy/security | Scoped assessment complete | Encrypted portable backups, private storage, deletion/grants, fixed HTTPS verifier endpoints, no production secrets in client/Git, provider metadata disclosed. See `SECURITY_AND_PRIVACY.md`. |
 
-Build commands used: `gradlew.bat assembleDebug assembleRelease testDebugUnitTest assembleDebugAndroidTest`, `gradlew.bat lintDebug`, `python -m unittest discover -s server -v`, and `python tools/fire_qa.py --serial SERIAL` (with workspace-only/compact variants). Logs retain the original file-picker registry failure and subsequent verification. The language context now preserves the Activity wrapper chain. The task editor dismisses/resizes around the keyboard so its actions remain accessible.
+## Amazon draft configuration
 
-## Implemented application scope
+App ID `amzn1.devportal.mobileapp.11ee49e6c8e94500b8800d17b794aa02`; release ID `amzn1.devportal.apprelease.5c4b51dc4fd749ddac050c9949d1be55`.
 
-Native Kotlin, Compose/Material 3, MVVM, Room, DataStore, WorkManager, coroutines/Flow, API 26+; no mandatory Google Play Services or Google billing. Includes onboarding, property/room records, tasks and recurrence, repairs/statuses, appliances, warranties, contractors, appointments, expenses, linked documents/photos, history, local assistant, voice capability detection/fallback, reminders, currency-separated summaries, PDF/CSV/text exports, encrypted record backup/restore, appearance/settings, deletion and an Amazon IAP/verification integration boundary.
+The final version-code-2 APK is the only upload. Twelve compatible Fire tablet models are selected; Fire TV and automotive are excluded. Availability is all countries/regions Amazon offers for those devices. The audience is 18+. Amazon's API warning concerns excluded/incompatible devices; it does not prevent this selected-device submission. The shared To-Do Lists & Reminders subcategory maps to Business, Productivity and Lifestyle in the console review.
 
-Forms and local repository operations are implemented. **NOT TESTED:** every CRUD screen/action combination, actual SAF file picker and external viewer, all attachment permission-loss cases, complete settings deletion, real backup document-picker journey, long-duration notifications and quiet hours, high contrast/dark mode, large fonts, screen readers, reduced-motion settings and exhaustive orientation/device coverage. Passing the scoped tests is not a claim that all acceptance criteria passed.
+Fifteen localized descriptions and all eleven offered image locales are populated. Each image locale has eight actual localized UI captures plus original brand icons/promotion. Reviewer instructions explain the free limits, purchase/restore, voice fallback, file picker, backup scope and local deletion. Public support is banksmi@mail.com; policy/support links use the public GitHub repository. Privacy labels conservatively cover local record inputs, purchase identifiers and verification-network identifiers, with functionality/security purposes. No advertising/analytics use is declared. Export certification was checked under the publisher's explicit instruction.
 
-Known feature limits: no app lock; no cloud sync; no remote-model adapter or paid AI allowance; no time-zone-aware contractor appointment conversion; no explicit reminders at an exact appointment time; no combined cross-currency totals; no full comparative multi-property expense dashboard; no dedicated read-only repair-history narrative generated by a remote model; no complete per-appliance structured service-event editor beyond linked tasks/history/service notes. Property details and record dialogs provide tablet adaptation, but a persistent tablet master/detail split pane is not implemented. These gaps must be addressed or explicitly removed from a revised release scope, not presented as delivered features.
+Premium SKU `fixavora.premium.lifetime` is a one-time entitlement with GBP 4.99 base pricing and Amazon marketplace conversions. Its draft descriptions/icons are localized in the offered IAP languages. The shared secret is held in encrypted Cloudflare secrets; production and sandbox use distinct Workers on the Free plan. No paid service was enabled. The IAP remains a separate draft; submitting the application does not itself publish the product.
 
-## Verified hardware and voice
+## Verified environment and limits
 
-One physical device: Amazon KFTRWI, Android 9 / API 28, build PS7331.4463N, 1200×1920 display, density 240. Tablet landscape and simulated compact portrait were exercised. No other Fire configurations, Android phone hardware, Fire TV or emulator configuration are verified.
+One physical Amazon KFTRWI (Fire HD 10, 2021), Fire OS 7 / API 28, 1200×1920, density 240. System display size, font scale and stay-awake setting were restored after testing. No emulator, physical Android phone, second Amazon account or other Fire hardware is certified by these tests.
 
-Recognition service detection returned false. Push-to-talk acoustic recognition on this Fire is **BLOCKED** by the missing engine. en-GB TTS synthesis is **PASS**. The engine reports en-US/en-AU available, but their synthesis is **NOT TESTED**. The other 16 requested TTS languages are **BLOCKED** by unavailable installed voices. All acoustic recognition language/accuracy tests and microphone-denial UI are **NOT TESTED**. Details: `AI_AND_VOICE.md` and machine-readable voice report.
+The Fire has no installed compatible speech recognizer. Text input works as the fallback. en-GB, en-US and en-AU TTS synthesized real audio; other 19 voices were unavailable. Acoustic recognition, screen-reader speech and voice accuracy across languages are NOT TESTED. These capabilities are disclosed conditionally in the app and store copy.
 
-## Localisation, listings and screenshots
+App Tester and a live sandbox RVS request have passed; the repeat final run restored an existing genuine test receipt. Production charging, Amazon-signed distribution, refund with a second account and LAT are NOT TESTED. LAT/Amazon-signed testing is recommended additional assurance; it is not being misrepresented as a completed test or as a requirement of the completed App Tester sandbox gate.
 
-283 base strings. Complete English string coverage: en-GB, en-US, en-AU. Other requested locale tags: es-ES, es-419, fr-FR, fr-CA, de-DE, it-IT, pt-BR, pt-PT, nl-NL, pl-PL, sv-SE, ja-JP, hi-IN, ar, tr-TR, id-ID. Each currently has 26 draft navigation strings (9.19%) and English fallback. Zero locales have completed human release review. No raw translation keys are intentionally displayed.
+The local database uses Android private storage and is not separately encrypted. There is no app lock, cloud sync, remote-model adapter, product analytics or advertising. Reports keep currencies separate; appointments use local times; reminders are periodic and subject to power settings. Backups contain records/history and exclude external files/photos/attachment links. The local assistant is limited and always needs user review. Whole-device security, a penetration test, human linguistic certification and legal/name clearance are not claimed.
 
-Translation status: **BLOCKED** for completion/review. No translation service credentials were supplied. The development pipeline generates Android resources, validates base keys, preserves placeholders, caches gateway responses, tracks review and reports missing keys. Non-English plural forms, RTL/long-text review and linguistic voice review remain **NOT TESTED**. See `deliverables/localization/coverage.json` for exact missing keys.
+## Remaining release action
 
-Screenshot files: en-GB only — eight tablet and eight compact captures, plus matching PNG compositions and editable SVG templates. The manifest lists actual files/dimensions/hashes. Tablet compositions are 1920×1200; compact compositions are 800×1280. Fictional data was inserted only by instrumentation, never by a production demo unlock. **NOT TESTED:** final store visual/linguistic approval; **BLOCKED:** screenshots in the other target listing languages until the actual UI and headline/caption translations are complete. Do not reuse English screens with translated overlays.
-
-Thirteen draft Amazon listing locale files exist under `store-assets/metadata`: en-US, en-AU, en-IN, fr-FR, de-DE, it-IT, pt-BR, pt-PT, nl-NL, pl-PL, sv-SE, ja-JP, es-ES. They are candidate copy, not approved localised listings. Full non-English screenshot headlines/captions, local search-intent research, support/privacy translations and regional review remain **BLOCKED**. Distribution countries were not configured. Listing support, UI support and device speech capabilities are separate matrices; see `docs/RESEARCH.md`.
-
-## Purchasing, privacy and next release work
-
-Amazon IAP status: **BLOCKED**. SDK integration, price lookup, restore pagination, receipt-service boundary, cached entitlements and errors are implemented, with no fake successful purchase. The app-specific public key, configured product, hosted HTTPS verifier/server secret and Amazon App Tester/LAT execution are missing. The proposed £4.99 is not a configured store price. Existing records remain accessible without a currently available entitlement. Real payment, refund, account-change and restore tests are **NOT TESTED**.
-
-Privacy/security scope and limitations: `SECURITY_AND_PRIVACY.md`. No production key is supplied, no account is mandatory and local assistant processing does not upload home records. Portable record backup encryption is tested; encryption of the entire Room database is not implemented. External document providers and speech engines have their own connectivity/privacy behaviour. Publisher policy/contact, legal/name review and security/accessibility release assessments remain **BLOCKED** or **NOT TESTED** as detailed in the reports.
-
-Next priorities: complete translations and review; finish the listed functional gaps and module UI tests; configure and test Amazon purchases; validate attachments, backups, reminders and accessibility on additional physical Fire devices; regenerate reviewed localised store assets; establish publisher privacy/support details; verify the final Amazon-signed release candidate (and publisher signing for any separate distribution). Follow `RELEASE_INSTRUCTIONS.md`. Explicit user approval is still required for any actual store submission.
+The publisher must explicitly authorize final app and IAP submission. Until then both drafts stay unpublished. After Amazon signs and distributes a candidate, run the documented signed-build purchase/restore smoke check before claiming production payment verification. Setup, architecture, environment templates, voice, privacy and release instructions are included in README, `docs/` and the delivery reports.

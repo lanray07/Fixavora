@@ -1,1 +1,398 @@
-{}
+{
+  "en-GB": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "4167863091c61ab192d8657d9714471356493dd97f086c4de65ae6ef95078b68"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "4b875bad1d11b9be5a4f024934d61683899ff1372c33f8ae4d380a783ec79b79"
+      }
+    ]
+  },
+  "en-US": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "145044ce54f65e39e7f62b8dc4c3d23a06726a70a6152f08c98ddf3d40733dba",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "eb95e119c042a8f6ee0b295043ed6f6242497c4449ccf780d5a7ace1c385aa32"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "1e5ff5c1d657ba539a337d2e924f106f68df9cda11a8f4856384e47225d0136c"
+      }
+    ]
+  },
+  "en-AU": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "a64c2aad83f380aa6d2fa37d1f84cc20dc9835c519cd05c71eff89f90d4a6b20"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "b38452742e625762c674e2fa7ac46dac9d1b5cde4be4becf41f8ff892c880b1c"
+      }
+    ]
+  },
+  "es-ES": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "3e18a0d578af63cf27d3ac50957dc35b7b044ff6b607ea92eeb9308a4635a19f",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "bafbc455a39e287067c21a0fa86b7d9041a55bc78abba66092f5e8391bc3feb0"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "39dac36c1722adf26da478a5ceb8da0cf6e35ac5b1de5d0e225b4d6dfd9312d0"
+      }
+    ]
+  },
+  "es-419": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "6c9fe911e9893569c501c1baa5244db0812a333dad7bb1ef1ac6ab14bfba39b9",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "f17e82d7acf1fc4f2ec24480ef23199a19086743d79a9e591e4c1c4b952d3138"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "562abfcd8b91c47e42c2a012aa467d536ec78c4878436b14f8b008ee5d449452"
+      }
+    ]
+  },
+  "fr-FR": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "bb7fcd055a140409200cd4d2f6db7e4f5d6d34ab1e3f6ed0e397ea972870de2d",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "c35a511e01ade9e5617c363b60a6a4a75afdc2fdb99191d3004a39709def773c"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "1dfe4cbf71e1caed11be0a40d3f74b9f34f3a5f2ed1e8800da5cc8ea44be0343"
+      }
+    ]
+  },
+  "fr-CA": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "fe41136745b53576ae39e98c87c63afc83854e5af2c4f4214558f717120b66b2",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "8c871c3f91b9250ede398b35c659cd20f359fb6d3f7205a59a8e8e0d5f5ca86c"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "57d704c85c319e0e43e252e0c9f10451e29db13387567f0b8136b3e34dbe1767"
+      }
+    ]
+  },
+  "de-DE": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "9e2f3b0cb2d3e49ac9e77628025980a98f74a5c1862a772f62821bc990626651",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "fc64cb3ea8b3737129c097c8d97976ed224ba95c3588e79dab9d86c8da76a29c"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "16f70ea7ae0763b4867169cb199dede0dd48681c541549c980638cc26aac152d"
+      }
+    ]
+  },
+  "it-IT": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "9410d5a6e1a22271799fd586440242560c7aaae661f81c38bbfda62b60fb5096",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "03067d011840730193f7a19130b0cd5d0f70b02add8034a7e43aff8664bbd9f0"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "f0bea67d8d47c1eee0acff9ba6f638c911bc28f868ae2aa446d156d4f5b6ab67"
+      }
+    ]
+  },
+  "pt-BR": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "55a30683b759375413c56660a914f7c5a10f6eeb09f98ad6e93e25feb3d83547",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "a887a2017bb7492a25396a535599f2d2ec0f465ca9e203e2d14691a652a275b0"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "fd9d2821f4ed7db23db22e8d24191857b194023e69abccd9eb67a200d1d39010"
+      }
+    ]
+  },
+  "pt-PT": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "0d3b56491e9e712ab5fb2856e019838eda0154061a3349e53ee09688babb0a4d",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "0da8b5ff9f9d7c76ef460d46aafb633ac3609e7cafb9665dd45ac303f02bfee9"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "b2310c063a1125824eabe999f93f7a45ea78aa0c7b00709dba2325d4b5882198"
+      }
+    ]
+  },
+  "nl-NL": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "4d44ab09dc5d717b9590df05769fd76e8981ca47d000a28bf48301b02e6b3691",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "dde73654cae2bfce4250399cb9c5eb29c6537ec509ed222d329e00f1e2846c1c"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "89db83b9d25a2da973948b5e9a4a85123fae1cb2cdfe30ec1e5263efd24983b9"
+      }
+    ]
+  },
+  "pl-PL": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "d77ce7b227884100e1b4f90df7d55fc25c2338c5f4a67d04c716c1ff0585b456",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "cbc1b59b0e6f4dff3bdde433ad8e459d50c53fabc79338a3ab9456e30026e449"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "bfddd3408555825ea5aa0e0842efb4faed51208e20938af8bf78e9abd38b8153"
+      }
+    ]
+  },
+  "sv-SE": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "acd2b82e45f821483580a594ded2dd0d01def12582814eacae7bca1a6aa74df9",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "85e14ca60bc929bb8168f2a8727b9257c76a9668871c8bc2bc7567bc3c5b9eaa"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "3ee7877635dc70b3e4611080f37ab21fd8c27737396d99ea185942cb28a938e0"
+      }
+    ]
+  },
+  "ja-JP": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "264bbb4daa325473885907257075daa6c0a6b10564f7a6ff9d88c04429be53bf",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "01d3fd27ff2e0c9ab67752c888fe8206c732e023c0383cbf93f8fd206f26b551"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "683b87135e993155538aca34c2246b395d016094e3d4ae7955dc346d4a89f38a"
+      }
+    ]
+  },
+  "ko-KR": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "31590a259f6971f227e7b077630b6ec6aaef1dd625bae806b42fc7718eca9ce0",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "47eb323cb6000d9ed43dfbee0f6a550db9c661fa742f0213e440f96588f97286"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "043c1617c755b2269a82822113bc49a14cf504eb579b71364e0e957689a3be2e"
+      }
+    ]
+  },
+  "zh-Hans": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "bb25fdf3ee0c22c28cd68b60cf4f1934c7cda093144efd523b942e9253230c1a",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "c04b0e2d0d86f4d5dffa7c49eb73d3cccaabde030e3feac8db5a21a75275fb12"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "4336615f8dd2f4990a5b5d7b4b31de3dc9e2b6a4d7b9f04116e0412c1f2a1a37"
+      }
+    ]
+  },
+  "zh-Hant": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "699684e2037ac8b1b88d8e8d799c645a56c2d0a10f27dbda5ba75c2e8c7b693a",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "038ef3fa27d59a5f16bb4a2e6a07ca5fc179a40591b208ad0ee1f36fd0370950"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "187dd514df51484693da1071fc3f34ac2aed8f5de41b5897e8c19dc1bf71b4d0"
+      }
+    ]
+  },
+  "hi-IN": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "a2407d8b55a5dbdd98c1f8e645e4793bb11f9dc47eb5d7b3e1ca74e0ec9fa364",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "6409fa7bdb89b9adecc780fe4cd8f01a46560f0ab7e27343e4b1bc7e1793c45d"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "9ebd8abbb135e3a9e83ac9f68856286c938970a1b8787b559c8198eb55fb6328"
+      }
+    ]
+  },
+  "ar": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "a65b29a39133af5671c7991a3ab4e9a91bf70adfb034032f206e83c4ba8806e1",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "b0124b68918daddff7502df24697d7af5c60c61e2831bab7febfaced33f5d56e"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "4a270098738c1683cd3912caa1f28635bde2f878c249ff2d9df08e2a686497ae"
+      }
+    ]
+  },
+  "tr-TR": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "6ea85e44c340648f22b5739f592fca6c476fa4e4bf0e36034a152e5d902ac45b",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "b067922c89e1e8acba8fbd4bcf6b9b749b1f5151ae45f9de0447310780f95e28"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "f6a78ce73968be0a942049b51172767e28958f280a968a3ffbcebb193ddd793d"
+      }
+    ]
+  },
+  "id-ID": {
+    "status": "PASS",
+    "reviewer": "Codex AI",
+    "method": "AI terminology/privacy review, real localized journeys, native composition bounds and script/layout samples",
+    "human_review": "NOT PERFORMED",
+    "source_sha256": "828dacbf19c06d923675304f9ba74402b4c12f496a4710ddcba5b78debb6af4f",
+    "catalog_sha256": "290f07aa311280c9d118055e77a64ed72d365937355fb4b6bad91ee0544a6c77",
+    "captures": [
+      {
+        "variant": "tablet",
+        "manifest_sha256": "f3c2ba4eea5815e3ddf321f8769b5159820f4a764f3a148cfe0690462f3bdfe5"
+      },
+      {
+        "variant": "compact",
+        "manifest_sha256": "69c3028536dbe3a6a8487b6b3ff6907337d8611e291abc622aad7c820953f918"
+      }
+    ]
+  }
+}

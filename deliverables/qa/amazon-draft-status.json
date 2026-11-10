@@ -1,0 +1,20 @@
+{
+  "application": "Ready to Submit",
+  "iap": "Ready to Submit",
+  "version": "1.0.0",
+  "version_code": 2,
+  "release_sha256": "c9582dcc96a4a42168eb6c85dcd866282f384a7b774e17490377210c4c90fbc3",
+  "uploaded_apks": 1,
+  "tablet_models_selected": 12,
+  "tv_selected": 0,
+  "automotive_selected": 0,
+  "description_locales": 15,
+  "image_locales": 11,
+  "screenshots_per_locale": 8,
+  "iap_locales": 12,
+  "reviewer_instructions_saved": true,
+  "export_certification": "Checked under explicit publisher authorization",
+  "app_submitted": false,
+  "iap_submitted": false,
+  "source": "Observed saved Amazon console UI; fresh review page confirms enabled Submit App"
+}

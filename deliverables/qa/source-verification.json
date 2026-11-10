@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "version_code": 2,
+  "release_sha256": "c9582dcc96a4a42168eb6c85dcd866282f384a7b774e17490377210c4c90fbc3",
+  "build": "PASS",
+  "jvm_tests": 21,
+  "receipt_tests": 13,
+  "device_workflow_tests": 14,
+  "lint_errors": 0,
+  "lint_warnings": 337,
+  "localized_catalogs": 22,
+  "keys_per_catalog": 283,
+  "tablet_locale_journeys": 24,
+  "compact_locale_journeys": 24,
+  "screenshot_compositions": 384,
+  "human_linguistic_review": "NOT PERFORMED",
+  "production_charging": "NOT TESTED",
+  "ci": "PENDING FINAL REVISION"
+}

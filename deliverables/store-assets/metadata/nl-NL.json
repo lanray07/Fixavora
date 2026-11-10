@@ -1,23 +1,36 @@
 {
-  "status": "NOT TESTED",
-  "human_review": "NOT TESTED",
+  "status": "AI_REVIEWED_PENDING_FINAL_UPLOAD",
+  "human_review": "NOT PERFORMED",
   "publish_approved": false,
   "locale": "nl-NL",
-  "display_title": "Fixavora – Onderhoud en reparaties van je huis",
-  "short_description": "Bewaar onderhoud, reparaties en apparaatgegevens op je apparaat. Geen verplicht account.",
-  "long_description": "Verzamel onderhoudstaken, reparaties en apparaatgegevens in Fixavora. Voeg kamers, datums, notities en documentlinks toe. Je gegevens blijven op het apparaat.\n\nGratis: één actieve woning en maximaal 15 actieve onderhoudstaken. Premium is een optionele eenmalige aankoop via Amazon voor meerdere woningen, garanties, vakmensen, uitgaven, rapporten en versleutelde gegevensback-ups. Configureer en test aankopen vóór publicatie.\n\nDe lokale assistent maakt concepttaken die je vóór het opslaan controleert. Spraakfuncties hangen af van de geïnstalleerde diensten en talen. Herinneringen kunnen vertraging oplopen. Externe documenten kunnen een verbinding vereisen. Fixavora geeft geen veiligheidscertificering.",
+  "display_title": "Fixavora - Beheer en onderhoud van je woning",
+  "short_description": "Houd onderhoud, reparaties, apparatuur en uitgaven voor je woning op één plek bij. Je gegevens blijven op je eigen apparaat staan.",
+  "long_description": "Geef je woninggegevens een eigen plek. Plan periodiek onderhoud, houd reparaties bij, bewaar details van apparatuur en garantiedata, sla contactgegevens van vakmensen op en koppel documenten. Er is geen Fixavora-account vereist. Begin gratis met één woning en maximaal 15 actieve onderhoudstaken. Met een eenmalige aankoop (via Amazon) ontgrendel je extra woningen, garanties, contacten, uitgavenoverzichten, rapportexport en versleutelde back-ups. Er is geen sprake van een abonnement. De aankooppagina van Amazon toont de prijs in jouw regio. De assistent op je apparaat stelt concepttaken op die je kunt controleren voordat je ze opslaat. Je kunt op elk apparaat tekst invoeren via het toetsenbord. Voor spraakinvoer en gesproken feedback zijn compatibele spraakengines en stemmen op je apparaat vereist. Fixavora slaat geen audio op. Je woninggegevens zijn offline toegankelijk. Voor aankopen en de verificatie van aankoopbewijzen is een internetverbinding nodig. Herinneringen kunnen vertraagd worden door energiebesparende instellingen van je apparaat. Voor externe documentbronnen is mogelijk een internetverbinding vereist. Versleutelde back-ups bevatten gegevens en geschiedenis. Externe documenten, foto's en hun koppelingen worden niet meegenomen. Bewaar aparte kopieën en koppel de bestanden opnieuw na het herstellen. Fixavora helpt je bij het organiseren van informatie. Het voert geen inspecties uit aan je woning en is geen vervanging voor een gekwalificeerde vakman.",
   "product_feature_bullets": [
-    "Onderhoud",
-    "Reparaties",
-    "Apparaten",
-    "Documenten",
-    "Rapporten"
+    "Plan periodiek onderhoud aan je woning",
+    "Houd reparaties en details van apparatuur bij",
+    "Bewaar garantiedata en contactgegevens van vakmensen",
+    "Controleer concepttaken voordat je ze opslaat",
+    "Uitgebreide rapportages en versleutelde back-ups"
   ],
-  "keywords": "Onderhoud, Reparaties, Apparaten",
-  "screenshot_headlines": [],
-  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
-  "release_notes": "Bewaar onderhoud, reparaties en apparaatgegevens op je apparaat. Geen verplicht account.",
-  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
-  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
-  "support_status": "BLOCKED: publisher support contact required"
+  "keywords": "Plan periodiek onderhoud aan je woning, Houd reparaties en details van apparatuur bij, Bewaar garantiedata en contactgegevens van vakmensen",
+  "screenshot_headlines": [
+    "Uw huis, doordacht georganiseerd",
+    "Geef elke taak een plek",
+    "Houd reparatiegegevens bij elkaar",
+    "Ken de gegevens van uw apparaat",
+    "Spreek of typ een taakconcept",
+    "Zie de komende maand",
+    "Bewaar uw gegevens op uw apparaat",
+    "Een helder zicht op uw woongeschiedenis"
+  ],
+  "screenshot_caption_status": "Translated; actual capture review pending",
+  "release_notes": "Houd onderhoud, reparaties, apparatuur en uitgaven voor je woning op één plek bij. Je gegevens blijven op je eigen apparaat staan.",
+  "category_recommendation": "Productivity",
+  "privacy_policy": "https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md",
+  "support_status": "CONFIGURED",
+  "iap_title": "Fixavora Premium",
+  "iap_description": "Eenmalige upgrade voor meer woningen, garanties, contacten, het bijhouden van uitgaven, rapporten in pdf- of csv-formaat en versleutelde back-ups. Geen abonnement.",
+  "support_email": "banksmi@mail.com",
+  "support_url": "https://github.com/lanray07/Fixavora/issues"
 }

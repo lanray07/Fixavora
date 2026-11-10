@@ -1,0 +1,18 @@
+{
+  "fixavora-receipts": {
+    "status": 200,
+    "body": {
+      "service": "fixavora-receipts",
+      "configured": true,
+      "environment": "production"
+    }
+  },
+  "fixavora-receipts-sandbox": {
+    "status": 200,
+    "body": {
+      "service": "fixavora-receipts",
+      "configured": true,
+      "environment": "sandbox"
+    }
+  }
+}

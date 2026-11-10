@@ -6,7 +6,7 @@ from pathlib import Path
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1]
 ADB=Path(os.environ.get('ANDROID_HOME',str(Path.home()/'AppData/Local/Android/Sdk')))/'platform-tools/adb.exe'
-p=argparse.ArgumentParser();p.add_argument('--serial',required=True);p.add_argument('--locales',nargs='+',default=['en-GB']);p.add_argument('--compact',action='store_true');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--serial',required=True);p.add_argument('--locales',nargs='+',default=['en-GB']);p.add_argument('--compact',action='store_true');p.add_argument('--batch',action='store_true');a=p.parse_args()
 def adb(*cmd,check=True):
     r=subprocess.run([str(ADB),'-s',a.serial,*cmd],capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=300)
     if check and r.returncode: raise RuntimeError(r.stderr)
@@ -23,8 +23,19 @@ try:
     adb('shell','settings','put','system','user_rotation','0' if a.compact else '1')
     if a.compact: adb('shell','wm','size','800x1280')
     adb('shell','svc','wifi','disable')
+    if a.batch:
+        cmd=[str(ADB),'-s',a.serial,'shell','am','instrument','-w','-e','class','com.fixavora.app.'+('CompactWorkspaceTest' if a.compact else 'WorkspaceTest'),'-e','locales',','.join(a.locales),'com.fixavora.app.test/androidx.test.runner.AndroidJUnitRunner']
+        process=subprocess.Popen(cmd,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,encoding='utf-8',errors='replace')
+        lines=[]
+        with (logs/f'batch-{variant}.log').open('w',encoding='utf-8') as log:
+            for line in process.stdout:
+                log.write(line);log.flush();lines.append(line)
+                if 'FIXAVORA_LOCALE_PASS' in line:print(line.strip(),flush=True)
+        code=process.wait();batch_result=''.join(lines)
+        if code or 'OK (' not in batch_result or 'FAILURES!!!' in batch_result:raise RuntimeError('Batch journey failed; see instrumentation log')
+        if any('FIXAVORA_LOCALE_PASS '+tag not in batch_result for tag in a.locales):raise RuntimeError('Missing completed locale in batch evidence')
     for tag in a.locales:
-        result=adb('shell','am','instrument','-w','-e','class','com.fixavora.app.'+('CompactWorkspaceTest' if a.compact else 'WorkspaceTest'),'-e','locale',tag,'com.fixavora.app.test/androidx.test.runner.AndroidJUnitRunner')
+        result=batch_result if a.batch else adb('shell','am','instrument','-w','-e','class','com.fixavora.app.'+('CompactWorkspaceTest' if a.compact else 'WorkspaceTest'),'-e','locale',tag,'com.fixavora.app.test/androidx.test.runner.AndroidJUnitRunner')
         (logs/f'{tag}-{variant}.log').write_text(result,encoding='utf-8');print(tag,variant,result[-180:],flush=True)
         if 'OK (' not in result or 'FAILURES!!!' in result: raise RuntimeError('Journey failed: '+tag)
         raw=dest/'raw'/tag;composed=dest/tag;raw.mkdir(parents=True,exist_ok=True);composed.mkdir(parents=True,exist_ok=True)

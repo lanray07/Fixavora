@@ -1,27 +1,22 @@
 # Assistant and voice capability report
 
-## Local assistant
+The assistant performs deterministic local organization: reviewed task drafts, supported date/category/recurrence terms, possible duplicate detection, saved-record summaries, general checklists and questions for a contractor. A proposal opens the normal editor and requires Save. Completion commands require confirmation and a saved-title match. No remote model or paid inference service is connected, and home records are not sent to an AI provider.
 
-Implemented: deterministic task drafts, limited category/date/recurrence parsing, possible duplicate detection, overdue/upcoming/warranty queries, spending summaries from saved records, general organisation checklists and questions to ask a contractor. Proposed tasks open the normal editor and require Save; completion commands require confirmation and an exact saved task-title match. No remote model is connected and no private home records are sent to one.
+Language understanding is limited. Unsupported relative dates, arbitrary time zones and ambiguous task matches require manual review. The app does not perform safety inspections or supply hazardous repair instructions. Remote AI is an optional future integration, not a dependency of this release.
 
-The assistant is an organisation tool. Natural-language understanding is limited; relative-date parsing is strongest for the explicitly implemented English/French/Spanish/German terms. Friday appointments, arbitrary time zones and all natural-language date expressions are not inferred. Users must review/edit dates, categories and recurrence. No automated appliance verification, safety inspection, legal certification or hazardous repair instructions are claimed. General professional-assessment guidance is always accessible.
+## Physical Fire evidence
 
-Remote AI status: **BLOCKED** for service configuration and informed-consent design; no provider credentials were supplied. A remote-model adapter is not implemented. Local functionality does not depend on it. Premium does not include paid inference or imply unlimited calls.
+Device: Amazon KFTRWI, Android 9 / API 28. The report is `android/build-logs/voice-compatibility.json`.
 
-## Tested device
+| Capability | Result |
+| --- | --- |
+| Recognition service detection | PASS: Android reports no compatible SpeechRecognizer service on this Fire. Alexa availability is a separate capability. |
+| Acoustic recognition | NOT AVAILABLE on the tested device; no successful microphone transcription or accent coverage is claimed. |
+| Text alternative | PASS in localized real-screen journeys. A typed proposal is reviewed, saved, persisted and shown in calendar/reports. |
+| Missing-recognizer UI | PASS in the language journeys: invoking push-to-talk shows the localized fallback and leaves typing available. |
+| TTS initialization | PASS. |
+| en-GB, en-US, en-AU synthesis | PASS for each: the installed engine produced a nonempty WAV via `synthesizeToFile`. Test audio was removed. Audible speaker quality was not assessed. |
+| Other 19 interface locale voices | Unavailable in the installed engine. No voice download or substitute engine was installed. |
+| Permission denial during a real recognition session | NOT TESTED because no recognizer is installed. Runtime permission/error handling remains implemented. |
 
-Amazon KFTRWI, Android 9 / API 28, build PS7331.4463N, physical display 1200×1920 at density 240. Machine-readable evidence is `deliverables/android/build-logs/voice-compatibility.json`.
-
-| Capability | Status | Result |
-| --- | --- | --- |
-| Recognition engine capability detection | PASS | Android `SpeechRecognizer.isRecognitionAvailable` reports false on the connected Fire. |
-| Actual push-to-talk recognition on this Fire | BLOCKED | No compatible Android recognition service is installed/available. Alexa availability does not establish SpeechRecognizer compatibility. |
-| Text fallback | PASS | Actual text-to-task proposal, explicit editor Save, persistence, calendar navigation and report preview passed on both tested layouts with Wi-Fi disabled. This is not microphone recognition. |
-| TTS initialisation | PASS | Installed engine initialised successfully. |
-| en-GB TTS synthesis | PASS | Engine generated a nonempty audio file via `synthesizeToFile`; file was then removed. Audible speaker quality was NOT TESTED. |
-| en-US and en-AU TTS | NOT TESTED | Engine reports these language variants available; synthesis for these variants was not separately executed. |
-| Other 16 requested locale voices | BLOCKED | Installed TTS engine reports unavailable for each. No voice download or alternative engine was installed. |
-| Microphone-denial UI | NOT TESTED | Runtime permission handling is implemented. No real recognition session or microphone recording was performed on an unavailable recogniser. |
-| Recognition in any target locale | NOT TESTED | No acoustic recognition result exists. |
-
-Nineteen draft dictionaries contain six command intents each. Structural generation checks and JVM routing tests exist. They are not a claim of linguistic review, accent coverage, recognition accuracy or offline recognition. No continuous microphone listening is implemented; Fixavora does not store audio recordings. The installed speech engine may process audio online and the interface discloses this before invocation. Spoken feedback can be disabled.
+There are 22 command dictionaries covering six intents, including Korean and both Chinese scripts. Dictionary coverage is distinct from an engine's acoustic language support. Voice processing may occur online under the chosen engine's policy, disclosed before use. Fixavora does not continuously listen or retain recordings. Spoken feedback is optional and can be disabled. TTS errors and unavailable languages have a text fallback.

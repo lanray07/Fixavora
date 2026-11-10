@@ -1,0 +1,16 @@
+{
+  "errors": 0,
+  "warnings": 337,
+  "categories": {
+    "OldTargetApi": 1,
+    "GradleDependency": 15,
+    "LockedOrientationActivity": 1,
+    "DiscouragedApi": 3,
+    "ObsoleteSdkInt": 1,
+    "UnusedResources": 282,
+    "TypographyDashes": 23,
+    "TypographyEllipsis": 4,
+    "UseKtx": 7
+  },
+  "review": "Unused resources are largely dynamic localized keys. Dependency/API modernization and debug-only locked capture activities are maintenance warnings; current Amazon Fire target requirements are met. No missing-translation baseline or suppression."
+}

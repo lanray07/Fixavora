@@ -1,0 +1,62 @@
+[
+  {
+    "locale": "en-US",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "en-GB",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "en-AU",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "en-IN",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "de-DE",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "es-ES",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "es-MX",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "fr-FR",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "it-IT",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "ja-JP",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "nl-NL",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "pl-PL",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "pt-BR",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "pt-PT",
+    "longDescriptionMatches": true
+  },
+  {
+    "locale": "sv-SE",
+    "longDescriptionMatches": true
+  }
+]

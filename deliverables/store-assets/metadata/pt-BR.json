@@ -1,23 +1,36 @@
 {
-  "status": "NOT TESTED",
-  "human_review": "NOT TESTED",
+  "status": "AI_REVIEWED_PENDING_FINAL_UPLOAD",
+  "human_review": "NOT PERFORMED",
   "publish_approved": false,
   "locale": "pt-BR",
-  "display_title": "Fixavora – Manutenção e reparos da casa",
-  "short_description": "Organize reparos, aparelhos e tarefas de manutenção. Registros no dispositivo, sem conta obrigatória.",
-  "long_description": "O Fixavora reúne tarefas de manutenção, reparos e informações sobre seus aparelhos. Adicione cômodos, datas, notas e links para documentos. Os registros ficam no dispositivo.\n\nA versão gratuita inclui um imóvel ativo e até 15 tarefas de manutenção ativas. O Premium é uma compra única opcional pela Amazon para vários imóveis, garantias, profissionais, despesas, relatórios e backups criptografados dos registros. Configure e teste as compras antes de publicar.\n\nO assistente local prepara rascunhos para sua revisão antes de salvar. Os recursos de voz dependem dos serviços e idiomas instalados. Lembretes podem atrasar. Documentos externos podem precisar de conexão. O app não certifica a segurança do imóvel.",
+  "display_title": "Fixavora – Gerenciador de Manutenção e Reparos Residenciais",
+  "short_description": "Mantenha o controle da manutenção, reparos, eletrodomésticos e despesas da sua casa em um só lugar. Seus registros residenciais permanecem armazenados no seu dispositivo.",
+  "long_description": "Organize os registros da sua casa em um local dedicado. Planeje manutenções recorrentes, acompanhe reparos, registre detalhes de eletrodomésticos e prazos de garantia, salve contatos de prestadores de serviço e anexe documentos. Não é necessário criar uma conta no Fixavora. Comece gratuitamente com um imóvel e até 15 tarefas de manutenção ativas. Uma compra única (via Amazon) desbloqueia recursos adicionais, como mais imóveis, garantias, contatos de prestadores de serviço, controle de despesas, exportação de relatórios e backups criptografados. Não há cobrança de assinatura. O preço local é exibido na tela de compra da Amazon. O assistente integrado ao dispositivo prepara rascunhos de tarefas para você revisar antes de salvar. É possível inserir dados digitando em qualquer dispositivo. O uso de entrada por voz e feedback por voz requer a instalação de mecanismos e vozes compatíveis no seu dispositivo. O Fixavora não armazena áudio. Os registros residenciais funcionam offline; no entanto, compras e a verificação de recibos exigem conexão com a internet. Lembretes podem sofrer atrasos devido às configurações de energia do dispositivo. O acesso a documentos externos pode exigir conexão com a internet. Os backups criptografados incluem registros e histórico. Documentos externos, fotos e seus vínculos não são incluídos; guarde cópias separadas e vincule os arquivos novamente após restaurar. O Fixavora auxilia na organização de informações; ele não realiza inspeções residenciais nem substitui a avaliação de um profissional qualificado.",
   "product_feature_bullets": [
-    "Manutenção",
-    "Reparos",
-    "Eletrodomésticos",
-    "Documentos",
-    "Relatórios"
+    "Planeje manutenções residenciais recorrentes",
+    "Acompanhe reparos e detalhes de eletrodomésticos",
+    "Armazene prazos de garantia e contatos de prestadores de serviço",
+    "Revise rascunhos de tarefas antes de salvá-los",
+    "Relatórios premium e backups criptografados de registros"
   ],
-  "keywords": "Manutenção, Reparos, Eletrodomésticos",
-  "screenshot_headlines": [],
-  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
-  "release_notes": "Organize reparos, aparelhos e tarefas de manutenção. Registros no dispositivo, sem conta obrigatória.",
-  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
-  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
-  "support_status": "BLOCKED: publisher support contact required"
+  "keywords": "Planeje manutenções residenciais recorrentes, Acompanhe reparos e detalhes de eletrodomésticos, Armazene prazos de garantia e contatos de prestadores de serviço",
+  "screenshot_headlines": [
+    "Sua casa cuidadosamente organizada",
+    "Dê um lugar a cada tarefa",
+    "Mantenha os detalhes do reparo juntos",
+    "Conheça os registros do seu aparelho",
+    "Fale ou digite um rascunho de tarefa",
+    "Veja o próximo mês",
+    "Mantenha seus registros no seu dispositivo",
+    "Uma visão clara do histórico da sua casa"
+  ],
+  "screenshot_caption_status": "Translated; actual capture review pending",
+  "release_notes": "Mantenha o controle da manutenção, reparos, eletrodomésticos e despesas da sua casa em um só lugar. Seus registros residenciais permanecem armazenados no seu dispositivo.",
+  "category_recommendation": "Productivity",
+  "privacy_policy": "https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md",
+  "support_status": "CONFIGURED",
+  "iap_title": "Fixavora Premium",
+  "iap_description": "Upgrade único para adicionar mais imóveis, garantias, prestadores de serviço, controle de despesas, relatórios em PDF e CSV, além de backups criptografados. Sem assinaturas.",
+  "support_email": "banksmi@mail.com",
+  "support_url": "https://github.com/lanray07/Fixavora/issues"
 }

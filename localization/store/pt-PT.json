@@ -1,0 +1,36 @@
+{
+  "status": "AI_REVIEWED_PENDING_FINAL_UPLOAD",
+  "human_review": "NOT PERFORMED",
+  "publish_approved": false,
+  "locale": "pt-PT",
+  "display_title": "Fixavora - Rastreador de Manutenção e Reparações Domésticas",
+  "short_description": "Mantenha a manutenção, as reparações, os eletrodomésticos e as despesas da sua casa organizadas. Os registos da sua casa ficam no seu dispositivo.",
+  "long_description": "Dê aos registos da sua casa um lugar próprio. Planeie manutenções recorrentes, acompanhe as reparações, mantenha os detalhes dos eletrodomésticos e as datas de garantia, guarde os contactos dos prestadores de serviços e ligue documentos. Não é necessário ter uma conta Fixavora. Comece gratuitamente com uma propriedade ativa e até 15 tarefas de manutenção ativas. Uma compra única opcional na Amazon desbloqueia mais propriedades, garantias, prestadores de serviços, despesas, exportações de relatórios e cópias de segurança encriptadas de registos. Não há assinatura. O ecrã de compra da Amazon mostra o preço local. O assistente no dispositivo prepara rascunhos de tarefas para rever antes de guardar. Utilize a digitação em todos os dispositivos. A entrada de voz e o feedback falado requerem mecanismos de fala e vozes compatíveis instalados. O Fixavora não retém o áudio. Os registos da casa funcionam offline. As compras e a verificação de recibos precisam de uma ligação à internet. Os lembretes podem ser atrasados pelas definições de energia do dispositivo. Os fornecedores de documentos externos podem precisar de uma ligação. As cópias de segurança encriptadas incluem registos e histórico. Os documentos externos, as fotografias e as respetivas ligações não estão incluídos; guarde cópias separadas e volte a ligar os ficheiros após o restauro. O Fixavora ajuda-o a organizar a informação. Não inspeciona a sua casa nem substitui um profissional qualificado.",
+  "product_feature_bullets": [
+    "Planeie a manutenção recorrente da sua casa",
+    "Acompanhe as reparações e detalhes de eletrodomésticos",
+    "Mantenha as datas de garantia e os contactos de fornecedores",
+    "Reveja os rascunhos de tarefas locais antes de guardar",
+    "Relatórios premium e backups de registos encriptados"
+  ],
+  "keywords": "Planeie a manutenção recorrente da sua casa, Acompanhe as reparações e detalhes de eletrodomésticos, Mantenha as datas de garantia e os contactos de fornecedores",
+  "screenshot_headlines": [
+    "A sua casa cuidadosamente organizada",
+    "Dê um lugar a cada tarefa",
+    "Mantenha os detalhes da reparação juntos",
+    "Conheça os registos do seu aparelho",
+    "Fale ou digite um rascunho de tarefa",
+    "Veja o próximo mês",
+    "Mantenha os seus registos no seu dispositivo",
+    "Uma visão clara do histórico da sua casa"
+  ],
+  "screenshot_caption_status": "Translated; actual capture review pending",
+  "release_notes": "Mantenha a manutenção, as reparações, os eletrodomésticos e as despesas da sua casa organizadas. Os registos da sua casa ficam no seu dispositivo.",
+  "category_recommendation": "Productivity",
+  "privacy_policy": "https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md",
+  "support_status": "CONFIGURED",
+  "iap_title": "Fixavora Premium",
+  "iap_description": "Atualização única para mais propriedades, garantias, fornecedores, controlo de despesas, relatórios PDF e CSV e cópias de segurança de registos encriptados. Sem assinatura.",
+  "support_email": "banksmi@mail.com",
+  "support_url": "https://github.com/lanray07/Fixavora/issues"
+}

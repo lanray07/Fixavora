@@ -1,12 +1,12 @@
 [
   {
-    "path": "deliverables/android/debug/Fixavora-0.1.0-debug.apk",
-    "bytes": 19554444,
-    "sha256": "b8f1440604c3c96eee69be080d41929ceb8bdac3b6419b05b15fa8b40d8ff4c0"
+    "path": "deliverables/android/debug/Fixavora-1.0.0-debug.apk",
+    "bytes": 19604513,
+    "sha256": "66b18d50434fb777985d2a479112bf531cc40435b1d9919b69a076d31164f005"
   },
   {
-    "path": "deliverables/android/release/Fixavora-0.1.0-release-unsigned.apk",
-    "bytes": 12608023,
-    "sha256": "da702c6f2473915c17ec3f70c057c51414b1357a83b1184e002b26bb9ad0801d"
+    "path": "deliverables/android/release/Fixavora-1.0.0-release-unsigned.apk",
+    "bytes": 12927537,
+    "sha256": "c9582dcc96a4a42168eb6c85dcd866282f384a7b774e17490377210c4c90fbc3"
   }
 ]

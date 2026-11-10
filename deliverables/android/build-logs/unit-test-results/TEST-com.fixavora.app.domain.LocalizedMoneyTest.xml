@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.fixavora.app.domain.LocalizedMoneyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-10T12:22:30.220Z" hostname="DESKTOP-MAKK9CA" time="0.04">
+  <properties/>
+  <testcase name="decimalSeparatorsAndNativeDigitsKeepExactMinorUnits" classname="com.fixavora.app.domain.LocalizedMoneyTest" time="0.006"/>
+  <testcase name="selectedCurrencyPrecisionSurvivesDifferentLocaleDefaults" classname="com.fixavora.app.domain.LocalizedMoneyTest" time="0.034"/>
+  <testcase name="fractionalWholeUnitCurrenciesAndAmbiguousGroupingAreRejected" classname="com.fixavora.app.domain.LocalizedMoneyTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

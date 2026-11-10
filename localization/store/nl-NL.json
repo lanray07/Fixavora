@@ -1,0 +1,36 @@
+{
+  "status": "AI_REVIEWED_PENDING_FINAL_UPLOAD",
+  "human_review": "NOT PERFORMED",
+  "publish_approved": false,
+  "locale": "nl-NL",
+  "display_title": "Fixavora - Beheer en onderhoud van je woning",
+  "short_description": "Houd onderhoud, reparaties, apparatuur en uitgaven voor je woning op één plek bij. Je gegevens blijven op je eigen apparaat staan.",
+  "long_description": "Geef je woninggegevens een eigen plek. Plan periodiek onderhoud, houd reparaties bij, bewaar details van apparatuur en garantiedata, sla contactgegevens van vakmensen op en koppel documenten. Er is geen Fixavora-account vereist. Begin gratis met één woning en maximaal 15 actieve onderhoudstaken. Met een eenmalige aankoop (via Amazon) ontgrendel je extra woningen, garanties, contacten, uitgavenoverzichten, rapportexport en versleutelde back-ups. Er is geen sprake van een abonnement. De aankooppagina van Amazon toont de prijs in jouw regio. De assistent op je apparaat stelt concepttaken op die je kunt controleren voordat je ze opslaat. Je kunt op elk apparaat tekst invoeren via het toetsenbord. Voor spraakinvoer en gesproken feedback zijn compatibele spraakengines en stemmen op je apparaat vereist. Fixavora slaat geen audio op. Je woninggegevens zijn offline toegankelijk. Voor aankopen en de verificatie van aankoopbewijzen is een internetverbinding nodig. Herinneringen kunnen vertraagd worden door energiebesparende instellingen van je apparaat. Voor externe documentbronnen is mogelijk een internetverbinding vereist. Versleutelde back-ups bevatten gegevens en geschiedenis. Externe documenten, foto's en hun koppelingen worden niet meegenomen. Bewaar aparte kopieën en koppel de bestanden opnieuw na het herstellen. Fixavora helpt je bij het organiseren van informatie. Het voert geen inspecties uit aan je woning en is geen vervanging voor een gekwalificeerde vakman.",
+  "product_feature_bullets": [
+    "Plan periodiek onderhoud aan je woning",
+    "Houd reparaties en details van apparatuur bij",
+    "Bewaar garantiedata en contactgegevens van vakmensen",
+    "Controleer concepttaken voordat je ze opslaat",
+    "Uitgebreide rapportages en versleutelde back-ups"
+  ],
+  "keywords": "Plan periodiek onderhoud aan je woning, Houd reparaties en details van apparatuur bij, Bewaar garantiedata en contactgegevens van vakmensen",
+  "screenshot_headlines": [
+    "Uw huis, doordacht georganiseerd",
+    "Geef elke taak een plek",
+    "Houd reparatiegegevens bij elkaar",
+    "Ken de gegevens van uw apparaat",
+    "Spreek of typ een taakconcept",
+    "Zie de komende maand",
+    "Bewaar uw gegevens op uw apparaat",
+    "Een helder zicht op uw woongeschiedenis"
+  ],
+  "screenshot_caption_status": "Translated; actual capture review pending",
+  "release_notes": "Houd onderhoud, reparaties, apparatuur en uitgaven voor je woning op één plek bij. Je gegevens blijven op je eigen apparaat staan.",
+  "category_recommendation": "Productivity",
+  "privacy_policy": "https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md",
+  "support_status": "CONFIGURED",
+  "iap_title": "Fixavora Premium",
+  "iap_description": "Eenmalige upgrade voor meer woningen, garanties, contacten, het bijhouden van uitgaven, rapporten in pdf- of csv-formaat en versleutelde back-ups. Geen abonnement.",
+  "support_email": "banksmi@mail.com",
+  "support_url": "https://github.com/lanray07/Fixavora/issues"
+}

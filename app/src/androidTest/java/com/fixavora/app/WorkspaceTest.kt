@@ -20,10 +20,12 @@ import com.google.gson.Gson
 abstract class WorkspaceJourney<T : MainActivity>(activityClass: Class<T>, private val phone: Boolean) {
     @get:Rule val compose = createAndroidComposeRule(activityClass)
     private val app get() = compose.activity.application as FixavoraApp
-    private val locale get() = InstrumentationRegistry.getArguments().getString("locale") ?: "en-GB"
+    private var captureLocale: String? = null
+    private val locale get() = captureLocale ?: InstrumentationRegistry.getArguments().getString("locale") ?: "en-GB"
     private val style get() = InstrumentationRegistry.getArguments().getString("style") ?: ""
     private val variant get() = (if(phone) "compact" else "tablet") + if(style.isEmpty()) "" else "-$style"
-    private val copy by lazy {
+    private val copies=mutableMapOf<String,com.google.gson.JsonObject>()
+    private val copy get() = copies.getOrPut(locale) {
         val stream = InstrumentationRegistry.getInstrumentation().context.assets.open("screenshots/$locale.json")
         stream.bufferedReader().use { Gson().fromJson(it, com.google.gson.JsonObject::class.java) }
     }
@@ -65,9 +67,8 @@ abstract class WorkspaceJourney<T : MainActivity>(activityClass: Class<T>, priva
                 if (compose.onAllNodesWithText(text).fetchSemanticsNodes().isEmpty()) compose.onNodeWithTag("tablet-navigation").performTouchInput { swipeUp() }
             }
         }
-        val nodes = compose.onAllNodesWithText(text, useUnmergedTree = false)
-        // First matching text is the navigation item on tablet layouts.
-        nodes.onFirst().performScrollTo().performClick()
+        val nodes = compose.onAllNodes(hasText(text) and hasAnyAncestor(hasTestTag(if(phone)"compact-navigation" else "tablet-navigation")))
+        if(phone)nodes.onFirst().performClick() else nodes.onFirst().performScrollTo().performClick()
         compose.waitForIdle()
     }
     private fun capture(name: String) {
@@ -85,6 +86,16 @@ abstract class WorkspaceJourney<T : MainActivity>(activityClass: Class<T>, priva
     }
 
     @Test fun actualScreensAndLocalTaskJourney() {
+        val tags=InstrumentationRegistry.getArguments().getString("locales")?.split(',') ?: listOf(locale)
+        for((index,tag) in tags.withIndex()) {
+            captureLocale=tag
+            if(index>0)compose.activityRule.scenario.recreate()
+            journey()
+            InstrumentationRegistry.getInstrumentation().sendStatus(0,android.os.Bundle().apply {putString("stream","FIXAVORA_LOCALE_PASS $tag\n")})
+        }
+    }
+
+    private fun journey() {
         compose.runOnUiThread {
             compose.activity.window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         }
@@ -100,7 +111,7 @@ abstract class WorkspaceJourney<T : MainActivity>(activityClass: Class<T>, priva
             }
             throw error
         }
-        capture("01-overview")
+        clickNav("overview");capture("01-overview")
         clickNav("tasks"); compose.onNodeWithText(fixture("task_1")).assertExists(); capture("02-maintenance")
         clickNav("repairs"); compose.onNodeWithText(fixture("repair")).assertExists(); capture("03-repairs")
         clickNav("appliances"); compose.onNodeWithText(fixture("appliance")).performClick(); compose.onNodeWithText("WM-100").assertExists(); capture("04-appliances")
@@ -116,10 +127,10 @@ abstract class WorkspaceJourney<T : MainActivity>(activityClass: Class<T>, priva
         compose.onNodeWithText(label("prepare_task")).performClick(); compose.onNodeWithText(label("review_proposal")).assertExists(); capture("05-voice-assistant")
         // A proposal must not write until the separate editor save action.
         runBlocking { assertEquals(3, app.repository.dao.all().count { it.kind == "TASK" }) }
-        compose.onNodeWithText(label("review_and_save")).performClick()
+        compose.onNodeWithText(label("review_and_save")).performScrollTo().performClick()
         try {
             compose.waitUntil(10000) { compose.onAllNodesWithText(label("save"), substring = false).fetchSemanticsNodes().isNotEmpty() }
-        } catch (error: Exception) {
+        } catch (error: Throwable) {
             val image = InstrumentationRegistry.getInstrumentation().uiAutomation.takeScreenshot()
             File(app.getExternalFilesDir(null), "editor-failure.png").outputStream().use { image.compress(Bitmap.CompressFormat.PNG, 100, it) }; image.recycle()
             File(app.getExternalFilesDir(null), "editor-failure.txt").writeText(compose.onAllNodes(isRoot()).printToString())
@@ -130,6 +141,9 @@ abstract class WorkspaceJourney<T : MainActivity>(activityClass: Class<T>, priva
         clickNav("calendar"); capture("06-calendar")
         clickNav("tasks"); compose.onNodeWithText(fixture("proposal")).assertExists(); capture("07-offline-records")
         clickNav("reports"); compose.onNodeWithText(label("preview")).assertExists(); capture("08-reports")
+        if(locale.startsWith("ja")||locale.startsWith("ko")) {
+            compose.onAllNodesWithText("113.50",substring=true).onFirst().assertExists()
+        }
     }
 }
 

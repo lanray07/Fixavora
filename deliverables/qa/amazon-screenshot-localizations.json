@@ -1,0 +1,145 @@
+[
+  {
+    "locale": "English (U.S.)",
+    "assets": [
+      "screenshot_amzn1.dex.asset.535b7e619bd447daa7e718cfabd7e2e10",
+      "screenshot_amzn1.dex.asset.a584993a5c294339aad205949f7a085d1",
+      "screenshot_amzn1.dex.asset.5c97d081ee434aa6901592d87f1427f62",
+      "screenshot_amzn1.dex.asset.2efd708246ad47e79d5f5843aadcd1e93",
+      "screenshot_amzn1.dex.asset.8967d8cd4ba047dbb80d0ff657dcb50e4",
+      "screenshot_amzn1.dex.asset.f2573c665b2747dfbd8f153e8e46ed835",
+      "screenshot_amzn1.dex.asset.636b390ca5cf4806aeec63e4c0ac429b6",
+      "screenshot_amzn1.dex.asset.26056825730f4538bf2fed52ad8f00be7"
+    ]
+  },
+  {
+    "locale": "English (U.K.)",
+    "assets": [
+      "screenshot_amzn1.dex.asset.e6a9c4796bf349f29ee66347faca26150",
+      "screenshot_amzn1.dex.asset.4a3c41cd31074588aeeac0ca51648bf41",
+      "screenshot_amzn1.dex.asset.0841b89d25c2450ca74d57bf78a674372",
+      "screenshot_amzn1.dex.asset.e01a9afd0b3d448dba10f490fd4d243f3",
+      "screenshot_amzn1.dex.asset.75adc50aacd94e8c955f2ba3f3a851b84",
+      "screenshot_amzn1.dex.asset.07974b5e5542453eafd79ed3298e8a7e5",
+      "screenshot_amzn1.dex.asset.72f31cb3cf284eafb7755dc74256888d6",
+      "screenshot_amzn1.dex.asset.f58b07a3d68a4169bfa11cdb1a6c7e977"
+    ]
+  },
+  {
+    "locale": "English (Australia)",
+    "assets": [
+      "screenshot_amzn1.dex.asset.aceff14dc0454994b8a3ae98ddb30fd00",
+      "screenshot_amzn1.dex.asset.dff11cfc64094b8daa807b3108e720861",
+      "screenshot_amzn1.dex.asset.af24ca62e39a46c9bdce3af38467fb3c2",
+      "screenshot_amzn1.dex.asset.864a454a5a384aac82ae3639092ddf8c3",
+      "screenshot_amzn1.dex.asset.38b080175e3341788fbe61692dd4e1b94",
+      "screenshot_amzn1.dex.asset.c6cd89bff11d43549386b456bd534e665",
+      "screenshot_amzn1.dex.asset.ef5a20c1354d44aabd6e4a0c3af92e2d6",
+      "screenshot_amzn1.dex.asset.068a2473829441ab89b13962de09ed347"
+    ]
+  },
+  {
+    "locale": "English (India)",
+    "assets": [
+      "screenshot_amzn1.dex.asset.08cd512a11a04d83bf6d876e8d5eaa370",
+      "screenshot_amzn1.dex.asset.d596c4070fe14641bd6dde38235048421",
+      "screenshot_amzn1.dex.asset.6f9d452543af421c8f97f297135d81d62",
+      "screenshot_amzn1.dex.asset.863f19c0560b4a1588517062571834343",
+      "screenshot_amzn1.dex.asset.129bd689ea2f4293bc8a59682f24e0ed4",
+      "screenshot_amzn1.dex.asset.11c3a5d8591d4d3e8699540b1096ba645",
+      "screenshot_amzn1.dex.asset.40db98fcf27b4584b409e9060765b5b36",
+      "screenshot_amzn1.dex.asset.8e8020c6adc54c0fa1168796fe833d727"
+    ]
+  },
+  {
+    "locale": "German",
+    "assets": [
+      "screenshot_amzn1.dex.asset.bd9e91e4a6da48e78d7f86a6bb9847520",
+      "screenshot_amzn1.dex.asset.fe1f2e2bcecd486ab2d19e84a10b79b61",
+      "screenshot_amzn1.dex.asset.30783c8b94ed473b9473c4e0dc8147a12",
+      "screenshot_amzn1.dex.asset.4f744f7cd0274bf1b766de91fa9387543",
+      "screenshot_amzn1.dex.asset.ec47b9b73f284894abf5610a5aa740894",
+      "screenshot_amzn1.dex.asset.839633f38a43427f9135c959725924a45",
+      "screenshot_amzn1.dex.asset.bd745416e4964fb8b88e335bb1b2dcd16",
+      "screenshot_amzn1.dex.asset.cee7b4880d8f4e2389e434ec84b3331b7"
+    ]
+  },
+  {
+    "locale": "Spanish",
+    "assets": [
+      "screenshot_amzn1.dex.asset.460363bfd14645eab8e03593d434fbac0",
+      "screenshot_amzn1.dex.asset.ad581cb173564bbd9f415db8e5a0c76a1",
+      "screenshot_amzn1.dex.asset.c2c6dca8ebce495b87fe97d478ec2ace2",
+      "screenshot_amzn1.dex.asset.b0073b87799841f4b2aeac4f0e3898b53",
+      "screenshot_amzn1.dex.asset.a1cb1adc82e14fc9ab067799c9d9b8764",
+      "screenshot_amzn1.dex.asset.fe2e930c996543bb9acb059fd96cc1ee5",
+      "screenshot_amzn1.dex.asset.b81e568218a845b385803199c9a40fe56",
+      "screenshot_amzn1.dex.asset.07550ceb1b1b4cacbae6bf383ecd21b37"
+    ]
+  },
+  {
+    "locale": "Spanish (Mexico)",
+    "assets": [
+      "screenshot_amzn1.dex.asset.f31c5278747243db920fb2659e760d510",
+      "screenshot_amzn1.dex.asset.063f253037a44bc3bd98e235e286a9da1",
+      "screenshot_amzn1.dex.asset.9a6ae0511cbc4d858234c69c521ad9ec2",
+      "screenshot_amzn1.dex.asset.6ea851d381384948a490f0bce5231d0c3",
+      "screenshot_amzn1.dex.asset.433096072b2d468cb652a25118c2c1734",
+      "screenshot_amzn1.dex.asset.b7ac1d0ab4fd4666bf199347d5c612a25",
+      "screenshot_amzn1.dex.asset.730767fab8674415aabe6481bd4d990c6",
+      "screenshot_amzn1.dex.asset.bca6bfcda5444afb85bff093092ca8377"
+    ]
+  },
+  {
+    "locale": "French",
+    "assets": [
+      "screenshot_amzn1.dex.asset.12be0c694434422386e35aab3342b8970",
+      "screenshot_amzn1.dex.asset.ee8924be8ad14e53900d3ae1c7ba03b41",
+      "screenshot_amzn1.dex.asset.bad967cff064449aabee9c8844a0e2932",
+      "screenshot_amzn1.dex.asset.bb621c032e3841b1834a6bfc39d5d3f53",
+      "screenshot_amzn1.dex.asset.0f9ff9d9f8594d469bb15af8e6eafd704",
+      "screenshot_amzn1.dex.asset.8850d9968d844e8e9a952f8e025565255",
+      "screenshot_amzn1.dex.asset.0de4589d56924eae9dcbf4566a2f0c746",
+      "screenshot_amzn1.dex.asset.156447131fa34647a8efeaa94c5d52597"
+    ]
+  },
+  {
+    "locale": "Italian",
+    "assets": [
+      "screenshot_amzn1.dex.asset.3f83ec43cb6c400984f999efee07290d0",
+      "screenshot_amzn1.dex.asset.d7adb709cd1641d0aa2eb6a54c44d32e1",
+      "screenshot_amzn1.dex.asset.688156ef894146bca08160f947c4a1e62",
+      "screenshot_amzn1.dex.asset.9b8da8adf7fe4e82893ae17473e0b3c23",
+      "screenshot_amzn1.dex.asset.d45bac67c7d94f009ef1cbb6bd1bbef14",
+      "screenshot_amzn1.dex.asset.7dcf597eeb37478e99e28faebc307e3e5",
+      "screenshot_amzn1.dex.asset.af5f5b1a69614caa838a0263220749976",
+      "screenshot_amzn1.dex.asset.27dd32710ac846ad9b0cad89acd5102c7"
+    ]
+  },
+  {
+    "locale": "Japanese",
+    "assets": [
+      "screenshot_amzn1.dex.asset.d53e4d731bf9411ea7e1c95d5fb5be440",
+      "screenshot_amzn1.dex.asset.0c8ee0304f1647d9b0542e5546ac5e601",
+      "screenshot_amzn1.dex.asset.8bfe547dc8c8479d87e7d0892fe91bf12",
+      "screenshot_amzn1.dex.asset.ceeabbd43b6444a69db7615efd716dea3",
+      "screenshot_amzn1.dex.asset.7750b319e7e84683b10ef0b3125543bc4",
+      "screenshot_amzn1.dex.asset.0c71da485c49411a8030d0fb3de980ff5",
+      "screenshot_amzn1.dex.asset.bc18548f744642829daafdab387ba2276",
+      "screenshot_amzn1.dex.asset.5b6fbef079134936a3c05bcdf12dd2907"
+    ]
+  },
+  {
+    "locale": "Portuguese (Brazil)",
+    "assets": [
+      "screenshot_amzn1.dex.asset.8c6cac72566e4a90ac5ad610e437cc2b0",
+      "screenshot_amzn1.dex.asset.6d82a686c3bc441bbea4cb315f175d721",
+      "screenshot_amzn1.dex.asset.858e9d037ce94e9ebb3ae8e2d8915a142",
+      "screenshot_amzn1.dex.asset.cfdc2e990d15468b91c0f2d758cffc443",
+      "screenshot_amzn1.dex.asset.6f5085a78c4446769a73f02f1ae18b8b4",
+      "screenshot_amzn1.dex.asset.fd156f79d9ea4e90aa840c64f985b0895",
+      "screenshot_amzn1.dex.asset.09d06875d4204d87beec59d649b3ee1e6",
+      "screenshot_amzn1.dex.asset.e7f0a0b78a874a4b9e6ea4c2f5b4791c7"
+    ]
+  }
+]

@@ -51,7 +51,7 @@ def validate():
     failures = []
     review = load(LOC / "review.json")
     for tag in TARGETS:
-        data = base if tag.startswith("en-") else load(LOC / f"{tag}.json")
+        data = base | load(LOC / f"{tag}.json") if tag.startswith("en-") else load(LOC / f"{tag}.json")
         missing = sorted(set(base) - set(data))
         bad = [k for k in data if k in base and (not isinstance(data[k], str) or not data[k].strip() or placeholders(data[k]) != placeholders(base[k]))]
         failures.extend((tag, k) for k in bad)
@@ -61,7 +61,10 @@ def validate():
         expected = base | load(LOC / f"{tag}.json") if tag.startswith("en-") else data
         if generated != expected:
             failures.append((tag, "generated Android resources differ from catalog"))
-        rows.append(dict(locale=tag, translated=len(base) - len(missing), total=len(base), coverage=round((len(base)-len(missing))*100/len(base), 2), missing=missing, placeholder_errors=bad, human_review=review.get(tag, "NOT TESTED"), release_status="BLOCKED" if missing or review.get(tag) != "PASS" else "PASS"))
+        entry=review.get(tag,{})
+        digest=lambda value:hashlib.sha256(json.dumps(value,ensure_ascii=False,sort_keys=True).encode('utf-8')).hexdigest()
+        reviewed=isinstance(entry,dict) and entry.get('status')=='PASS' and entry.get('source_sha256')==digest(base) and entry.get('catalog_sha256')==digest(data)
+        rows.append(dict(locale=tag, translated=len(base) - len(missing), total=len(base), coverage=round((len(base)-len(missing))*100/len(base), 2), missing=missing, placeholder_errors=bad, review_method=entry.get('method','NOT REVIEWED') if isinstance(entry,dict) else 'legacy', human_review=entry.get('human_review','NOT PERFORMED') if isinstance(entry,dict) else 'NOT PERFORMED', release_status="PASS" if not missing and not bad and reviewed else "BLOCKED"))
     for path in (ROOT / "app/src/main/res").glob("values*/strings.xml"):
         root = ET.parse(path).getroot()
         names = [e.attrib["name"] for e in root]

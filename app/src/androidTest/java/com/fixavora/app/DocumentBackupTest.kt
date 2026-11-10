@@ -35,15 +35,7 @@ class DocumentBackupTest {
     }
     private fun createFile(name:String) {
         localDownloads()
-        diagnostic("create-document-initial")
-        device.takeScreenshot(File(InstrumentationRegistry.getInstrumentation().targetContext.getExternalFilesDir(null),"create-document-initial.png"))
-        var field=device.wait(Until.findObject(By.pkg("com.android.documentsui").clazz("android.widget.EditText").textStartsWith("Fixavora-")),3000)
-        if(field==null){
-            // Fire's DocumentsUI first asks for the destination, then opens its
-            // filename dialog through the visible Add action.
-            device.findObject(By.res("com.android.documentsui","option_menu_add"))?.click()
-            field=device.wait(Until.findObject(By.pkg("com.android.documentsui").clazz("android.widget.EditText").textStartsWith("Fixavora-")),5000)
-        }
+        val field=device.wait(Until.findObject(By.pkg("com.android.documentsui").clazz("android.widget.EditText")),15000)
         if(field==null)diagnostic("create-document")
         assertNotNull("File name field",field);field.text=name
         val save=device.wait(Until.findObject(By.pkg("com.android.documentsui").text(Pattern.compile("(?i)^save$"))),5000)
@@ -75,6 +67,8 @@ class DocumentBackupTest {
         compose.onNodeWithText("Create encrypted backup").performScrollTo().performClick()
         compose.onNodeWithText("Backup passphrase").performTextInput(password)
         compose.onNodeWithText("Continue",substring=false).performClick()
+        compose.waitForIdle()
+        assertTrue("The external picker must own the foreground before recreation",device.wait(Until.hasObject(By.pkg("com.android.documentsui")),10000))
         // Recreate the app while the external picker is open. The passphrase must
         // survive in memory without being placed in Android saved-instance state.
         InstrumentationRegistry.getInstrumentation().runOnMainSync { pickerHost.recreate() }
@@ -89,6 +83,7 @@ class DocumentBackupTest {
         compose.onNodeWithText("Restore a backup").performScrollTo().performClick()
         compose.onNodeWithText("Backup passphrase").performTextInput(password)
         compose.onNodeWithText("Continue",substring=false).performClick()
+        compose.waitForIdle()
         chooseFile(name)
         compose.onNode(hasText("Restore a backup") and hasClickAction() and hasAnyAncestor(isDialog())).performClick()
         compose.waitUntil(30000){runBlocking { app.repository.dao.find(property.id)?.title==property.title }}
@@ -98,6 +93,8 @@ class DocumentBackupTest {
             val exportName="Fixavora-QA-Export-${System.nanoTime()}.${format.lowercase()}"
             compose.onNodeWithText(format,substring=false).performClick()
             compose.onNodeWithText("Continue",substring=false).performClick()
+            compose.waitForIdle()
+            assertTrue(device.wait(Until.hasObject(By.pkg("com.android.documentsui")),10000))
             val exportHost=compose.activity
             InstrumentationRegistry.getInstrumentation().runOnMainSync { exportHost.recreate() }
             createFile(exportName)
@@ -113,6 +110,6 @@ class DocumentBackupTest {
             vm.message.value=null
             compose.waitUntil(15000) { runCatching { compose.onAllNodesWithText("Reports").fetchSemanticsNodes().isNotEmpty() }.getOrDefault(false) }
         }
-        File(app.getExternalFilesDir(null),"document-backup-result.json").writeText("""{"create_document":"PASS","encrypted_write":"PASS","open_document":"PASS","restore_confirmation":"PASS","restored_records":"PASS","fixture_file":"$name"}""")
+        File(app.getExternalFilesDir(null),"document-backup-result.json").writeText("""{"create_document":"PASS","encrypted_write":"PASS","open_document":"PASS","restore_confirmation":"PASS","restored_records":"PASS","pdf_export_and_render":"PASS","csv_export_records":"PASS","activity_recreation":"PASS","fixture_file":"$name"}""")
     }
 }

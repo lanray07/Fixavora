@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.fixavora.app.domain.QuietHoursTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-10T12:22:30.263Z" hostname="DESKTOP-MAKK9CA" time="0.006">
+  <properties/>
+  <testcase name="daytimeWindowAndDisabledWindow" classname="com.fixavora.app.domain.QuietHoursTest" time="0.006"/>
+  <testcase name="midnightWrapAndEndBoundary" classname="com.fixavora.app.domain.QuietHoursTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,23 +1,36 @@
 {
-  "status": "NOT TESTED",
-  "human_review": "NOT TESTED",
+  "status": "AI_REVIEWED_PENDING_FINAL_UPLOAD",
+  "human_review": "NOT PERFORMED",
   "publish_approved": false,
   "locale": "ja-JP",
-  "display_title": "Fixavora – 住まいのメンテナンスと修理記録",
-  "short_description": "住まいの点検予定、修理、家電の情報を端末に記録。アカウント登録は必須ではありません。",
-  "long_description": "Fixavoraは、住まいのメンテナンス予定、修理、家電の情報をまとめて管理するアプリです。部屋、日付、メモ、書類へのリンクを追加できます。記録は端末内に保存されます。\n\n無料版は有効な物件1件と未完了のメンテナンスタスク15件まで。PremiumはAmazonでの任意の買い切り購入で、複数物件、保証、業者、費用、レポート、記録の暗号化バックアップを利用できます。公開前に購入機能の設定とテストが必要です。\n\nローカルアシスタントが作成するタスク案は、保存前に確認します。音声機能は端末の音声サービスと言語対応状況に依存します。通知が遅れる場合があります。外部の書類には接続が必要な場合があります。住宅の安全性を証明するアプリではありません。",
+  "display_title": "Fixavora - 住宅のメンテナンス・修理管理アプリ",
+  "short_description": "住宅のメンテナンス、修理、家電製品、費用に関する情報を一元管理。データはすべて、お使いのデバイス内に保存されます。",
+  "long_description": "住宅に関するあらゆる記録を、専用の場所に整理しましょう。定期的なメンテナンスの計画、修理履歴の追跡、家電製品の詳細や保証期間の管理、業者連絡先の保存、関連書類の紐付けが可能です。Fixavoraのアカウント登録は不要です。まずは無料で、1軒の物件と最大15件のメンテナンス・タスクを管理することから始められます。Amazonでの一度限りの購入（買い切り型）を行うと、管理できる物件数、保証情報、業者数、費用項目が増えるほか、レポートのエクスポートや、暗号化されたバックアップ機能が利用可能になります。サブスクリプション（継続課金）ではありません。Amazonの購入画面には、お住まいの地域の価格が表示されます。アプリ内のアシスタント機能がタスクの草案を作成しますので、保存前に内容を確認・調整できます。すべてのデバイスでキーボード入力が可能です。音声入力や音声フィードバック機能を利用するには、対応する音声エンジンおよび音声データがデバイスにインストールされている必要があります。なお、Fixavoraが音声データを保存することはありません。住宅データはオフラインでも利用可能です。ただし、購入手続きや領収書の確認にはインターネット接続が必要です。デバイスの電源設定によっては、リマインダーの通知が遅れる場合があります。外部のドキュメントサービスを利用する際にも、インターネット接続が必要となることがあります。暗号化バックアップには記録と履歴が含まれます。外部の書類・写真・添付ファイルへのリンクは含まれません。ファイルは別途保管し、復元後に再度リンクしてください。Fixavoraは情報の整理をサポートするツールです。住宅の点検を行うものではなく、専門家による診断や作業の代わりとなるものではありません。",
   "product_feature_bullets": [
-    "メンテナンス",
-    "修理",
-    "家電",
-    "書類",
-    "レポート"
+    "定期的な住宅メンテナンスの計画",
+    "修理履歴や家電製品の詳細を管理",
+    "保証期間や業者連絡先の記録",
+    "保存前にタスクの草案を確認・調整",
+    "プレミアムレポートおよび暗号化されたバックアップ"
   ],
-  "keywords": "メンテナンス, 修理, 家電",
-  "screenshot_headlines": [],
-  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
-  "release_notes": "住まいの点検予定、修理、家電の情報を端末に記録。アカウント登録は必須ではありません。",
-  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
-  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
-  "support_status": "BLOCKED: publisher support contact required"
+  "keywords": "定期的な住宅メンテナンスの計画, 修理履歴や家電製品の詳細を管理, 保証期間や業者連絡先の記録",
+  "screenshot_headlines": [
+    "住まいの情報を、すっきり整理",
+    "家のメンテナンスを計画的に",
+    "修理の記録をひとまとめに",
+    "家電の情報と保証を管理",
+    "話して、入力して、下書きを作成",
+    "これからの予定をカレンダーで",
+    "住まいの記録を端末に保存",
+    "住まいの履歴をひと目で確認"
+  ],
+  "screenshot_caption_status": "Translated; actual capture review pending",
+  "release_notes": "住宅のメンテナンス、修理、家電製品、費用に関する情報を一元管理。データはすべて、お使いのデバイス内に保存されます。",
+  "category_recommendation": "Productivity",
+  "privacy_policy": "https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md",
+  "support_status": "CONFIGURED",
+  "iap_title": "Fixavoraプレミアム",
+  "iap_description": "一度限りのアップグレードで、管理できる物件数、保証情報、業者数、費用項目が増えるほか、PDF/CSV形式のレポート出力や、暗号化されたバックアップ機能が利用可能になります。サブスクリプション（継続課金）ではありません。",
+  "support_email": "banksmi@mail.com",
+  "support_url": "https://github.com/lanray07/Fixavora/issues"
 }

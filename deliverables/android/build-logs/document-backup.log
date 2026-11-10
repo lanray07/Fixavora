@@ -1,0 +1,12 @@
+
+com.fixavora.app.DocumentBackupTest:.
+com.fixavora.app.AttachmentPickerTest:.
+com.fixavora.app.ModuleFormsTest:.
+com.fixavora.app.SettingsDeletionTest:.
+com.fixavora.app.ReminderDeliveryTest:.
+com.fixavora.app.VoiceCompatibilityTest:.
+com.fixavora.app.PersistenceTest:.......
+
+Time: 83.812
+
+OK (13 tests)

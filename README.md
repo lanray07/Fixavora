@@ -1,59 +1,47 @@
 # Fixavora
 
-Native, offline-first home maintenance and repair organiser for Amazon Fire tablets, written in Kotlin and Jetpack Compose. Source project: `app/`. This is a development delivery, **not an Appstore-ready release**. See `deliverables/reports/RELEASE_READINESS.md` for evidence and outstanding work.
+Native Kotlin and Jetpack Compose home maintenance app for Amazon Fire tablets and compatible Android devices. Version 1.0.0, minimum API 26, target API 35. Current release evidence and remaining gates are in [RELEASE_READINESS.md](deliverables/reports/RELEASE_READINESS.md).
 
-## Build and install
+## Build
 
-Requirements: JDK 17, Android SDK platform 35 and build tools, an Android API 26+ device. The Gradle wrapper is included. No Google Play Services account is required.
+Install JDK 17 and Android SDK platform 35/build tools. Set `ANDROID_HOME` or `sdk.dir` in an untracked `local.properties`, then run:
 
-1. Clone this repository.
-2. Point `local.properties` at your SDK (`sdk.dir=C:/Users/YourName/AppData/Local/Android/Sdk` on Windows), or set `ANDROID_HOME`.
-3. Run `./gradlew assembleDebug assembleRelease testDebugUnitTest assembleDebugAndroidTest` (Windows: `.\gradlew.bat`).
-4. Install `app/build/outputs/apk/debug/app-debug.apk` using `adb install -r`.
+```sh
+./gradlew testDebugUnitTest assembleDebug assembleRelease assembleDebugAndroidTest lintDebug
+python tools/localize.py validate
+python tools/store_metadata.py
+python -m unittest discover -s server -v
+node --test server/cloudflare/worker.test.mjs
+```
 
-The release build produces `app/build/outputs/apk/release/app-release-unsigned.apk`. It is deliberately unsigned; do not distribute it as an installable publisher-signed release. Amazon documents applying its own signature to signed or unsigned uploads; verify the resulting Amazon-signed candidate through LAT. For separate publisher-signed distribution, create and securely retain your own key, align/sign using Android tools and verify the signature. No signing key or production secret is committed.
+On Windows use `gradlew.bat`. Install `app/build/outputs/apk/debug/app-debug.apk` with ADB. The release artifact is `app/build/outputs/apk/release/app-release-unsigned.apk`, intended for Amazon's signing/upload route. It is not a directly installable publisher-signed APK. Keep a publisher-controlled signing key outside Git for any separate distribution.
 
-Local APK copies and SHA-256 hashes are collected under `deliverables/android/` after validation. APKs are ignored by Git to avoid committing binaries; the workflow uploads build artifacts. Check its result, because localisation errors currently prevent full lint from passing.
+## Application
 
-## App workflow
+Create a property and rooms, schedule recurring maintenance, complete/undo/snooze tasks, track repairs and appliances, keep warranties and contractor contacts, record expenses and appointments, and attach read-only external documents. Reports preview real records; Premium adds PDF/CSV exports and encrypted record backups. Restore validates the entire backup before replacing records transactionally. External files and their attachment links are excluded from backups and must be retained separately and relinked.
 
-Choose language, household role, currency and measurement preference during optional onboarding. Create a property. Open the property to add rooms, edit/archive it, attach photos, or open linked records. Use the module navigation to add maintenance tasks, repairs and appliances. Tasks support recurrence, completion, immediate undo, pause, reminders and snooze. Open a record to view history and attach read-only documents using the Android picker.
+Room and DataStore keep home data on the device. WorkManager provides periodic opt-in reminders with quiet hours. The local assistant prepares drafts for review and summaries of saved records. It never silently saves. Speech input and output depend on the installed engines; typing remains available. No remote AI, analytics, advertising or cloud sync is connected.
 
-Premium-gated additions include warranties, contractor directory, expense tracking, appointments and additional properties. Existing records can still be opened and edited if entitlement becomes unavailable. The assistant prepares local task drafts for review; it never silently saves. Voice input depends on the installed recogniser; text input remains available.
+## Premium and infrastructure
 
-Settings includes notification opt-in, quiet hours, appearance, spoken feedback, currency, language, data deletion and portable encrypted record backups. Reports preview saved data for the current property with dates and record-type filters. PDF, CSV and text exports require an explicit confirmation and Premium. Backup restore is available for recovery without a new purchase; restoring replaces current records transactionally. External attachments are not bundled in backups.
+`fixavora.premium.lifetime` is a one-time Amazon entitlement, configured at a GBP 4.99 base price with marketplace conversions. The store supplies the displayed local price. App and IAP drafts remain separate from publishing approval.
 
-## Configuration
+The app-specific **public** authentication key is intentionally versioned in `app/src/main/assets/`. The RVS shared secret is held only in encrypted Cloudflare Worker secrets. Production uses `https://fixavora-receipts.lanraybanks.workers.dev/verify`; debug uses the separate sandbox Worker. These URLs are fixed by build type to prevent an environment override from shipping a sandbox endpoint.
 
-`.env.example` documents optional development/server configuration. The app does not automatically read a `.env` file or package it into the APK.
+The verifier runs on Workers Free with rate limiting and application logs disabled. See [server/cloudflare/README.md](server/cloudflare/README.md). Core records require no server. Offline entitlement caching is limited to seven days and requires a confirmed matching Amazon account. Existing records remain accessible when Premium verification is unavailable.
 
-Amazon IAP uses SKU `fixavora.premium.lifetime` (entitlement, one-time purchase). Before enabling purchases:
+## Languages and screenshots
 
-- Register the actual package/SKU in your Amazon developer account and set marketplace prices; £4.99 is only the requested price hypothesis.
-- Supply your app's `AppstoreAuthenticationKey.pem` in `app/src/main/assets/` (ignored by Git).
-- Host `server/receipt_service.py` behind HTTPS with global rate limits and server-side `AMAZON_SHARED_SECRET`.
-- Set `FIXAVORA_RECEIPT_ENDPOINT` in the Gradle build environment to the service's HTTPS `/verify` URL, then rebuild.
-- Test purchases, cancellations, restore, account changes, revocation, verification failures and offline entitlement behaviour with Amazon App Tester/LAT. No production purchase has been simulated.
+There are 22 complete interface catalogs: en-GB, en-US, en-AU, es-ES, es-419, fr-FR, fr-CA, de-DE, it-IT, pt-BR, pt-PT, nl-NL, pl-PL, sv-SE, ja-JP, ko-KR, zh-Hans, zh-Hant, hi-IN, ar, tr-TR and id-ID. System detection, manual selection, English fallback, native plural resources and Arabic RTL are implemented. All language resources stay in a bundle; on-demand language splitting is disabled.
 
-Remote AI is not configured or connected. The assistant uses deterministic local organisation and record summaries; no private records are sent to an AI provider. This build does not include a remote-model adapter or paid inference allowance.
+`localization/` is the canonical UI source. Run `python tools/localize.py generate` after editing it; validation checks completeness, placeholders, source keys and generated Android resource consistency. AI translation and terminology corrections are recorded separately from human review. No human linguistic review is claimed.
 
-## Localisation and assets
+`localization/store/` contains 15 canonical Amazon descriptions. `python tools/store_metadata.py` validates and exports them. The console currently offers 11 image-localization slots; additional localized assets remain available in the delivery folders.
 
-`localization/en-GB.json` is the base catalog. All 19 requested locale tags are selectable, with English fallback. Three English variants have complete base-string coverage; the other 16 have draft navigation translations, not complete UI translations or review. Do not advertise them as fully supported. `deliverables/localization/coverage.json` enumerates every missing key.
+Screenshot tests use real screens and clearly fictional records in the debug installation. Run `python tools/prepare_capture_assets.py`, build/install the test APK, then `python tools/capture_locales.py --serial SERIAL --locales en-GB fr-FR` (add `--compact --batch` for a compact batch). This replaces Fixavora's disposable debug data. Wi-Fi, rotation and display size are restored. Compact captures on a resized Fire tablet are not physical-phone test evidence. Native Android composition preserves Arabic, Indic and CJK shaping and exports PNG/SVG assets.
 
-Run `python tools/localize.py generate` and `python tools/localize.py validate`. To fill missing strings through your own translation gateway, configure `TRANSLATION_ENDPOINT` and `TRANSLATION_API_KEY`, then run `python tools/localize.py translate --locale fr-FR` for each locale. The endpoint receives public UI strings only. Review terminology, placeholders, plural forms, RTL, text expansion, privacy copy and screenshot copy before setting review status to PASS. Validation currently reports zero approved locales.
+## Verification and limits
 
-`python tools/brand_assets.py` generates original editable SVG artwork and store icon exports. Python Pillow is needed (`python -m pip install -r tools/requirements.txt`). `python tools/store_metadata.py` generates 13 draft listing localisations, separate from UI locale support. No app or store listing is published.
+Unit tests cover recurrence/DST, currencies and localized digits, draft routing, backup cryptography, cache boundaries and quiet hours. Device tests cover database integrity/migration, module forms, actual file pickers and recreation, deletion, reminder delivery, installed voice capabilities and localized journeys. `tools/sandbox_qa.py` preserves the existing App Tester SKU configuration and SDK mode while exercising real Amazon test receipts through the live sandbox verifier.
 
-Device tests capture the actual interface with fictional fixtures. Debug-only fixed-orientation hosts inherit MainActivity and its real screens/data flows; they are not packaged in release. `python tools/fire_qa.py --serial SERIAL` installs only Fixavora packages, runs database/voice/UI tests, temporarily disables Wi-Fi for the core journey, and restores Wi-Fi. `--compact` additionally simulates a compact viewport on the connected tablet and restores display size. It is not a physical phone test. `python tools/compose_screenshots.py` consumes those real captures to generate image compositions and editable templates. Screenshots in other locales are blocked until UI translations and marketing copy are complete.
-
-## Tests and operational limits
-
-Device fixture tests replace Fixavora's own home records. Use a dedicated debug test installation, or export a backup before running them against an installation containing records you want to keep. They do not clear unrelated applications.
-
-- JVM: recurrence anchors, leap years, DST, currencies, local proposals, command routing, duplicate detection, encrypted backups and CSV safety.
-- Instrumentation: relational integrity, free limits, transactional restore, migration, database reopen, PDF/CSV generation, device voice capabilities and an actual create-task journey.
-- `python -m unittest discover -s server -v` checks receipt response evaluation without contacting Amazon.
-- `./gradlew lintDebug` currently fails on incomplete translations. This release check has not been weakened or baselined away.
-
-There are no analytics, advertising, cloud sync or background AI uploads. Core storage uses Android's private application sandbox; it is not SQLCipher-encrypted. Portable record backups are encrypted and tested separately. Monitoring is limited to Android's platform tools and CI. See `docs/ARCHITECTURE.md`, `docs/PRIVACY_POLICY_DRAFT.md`, `docs/RESEARCH.md` and the deliverable reports for exact scope, privacy dependencies and known limitations.
+The tested Fire has no compatible SpeechRecognizer service. Three installed English TTS variants synthesize successfully; other installed voices are unavailable. Natural-language parsing is limited and every draft needs review. Reports keep currencies separate; appointments use local dates/times. Android's private storage is used; the whole database is not separately encrypted. There is no app lock, remote AI adapter or exact-time alarm guarantee. [Privacy policy](docs/PRIVACY_POLICY.md), [architecture](docs/ARCHITECTURE.md), and delivery reports describe the boundaries and evidence.

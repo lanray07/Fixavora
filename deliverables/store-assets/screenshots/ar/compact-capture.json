@@ -1,0 +1,91 @@
+{
+  "locale": "ar",
+  "variant": "compact",
+  "journey": "PASS",
+  "device": "G001KT0620330AWU",
+  "network": "Wi-Fi disabled",
+  "visual_review": "AI sample review plus real journey and native composition bounds",
+  "files": [
+    {
+      "file": "deliverables/store-assets/screenshots/ar/compact/01-overview.png",
+      "sha256": "16c53d3a1020f157725b7ec708d6bb5614acbcd3910c57f7b72a6d879ff0a1e3",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ar/compact/01-overview.png",
+      "raw_sha256": "73bf677aee295ccb6862542ae101eeeba77e39a39575a9be9ced691d2a479d35"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ar/compact/02-maintenance.png",
+      "sha256": "f48aa4e3f5aa05d68a8ac688bd4012cb0c2924430ed9cce8c3eccd2acdd70eab",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ar/compact/02-maintenance.png",
+      "raw_sha256": "a50dc121b34d97e487d7824fd475e26d34f83e36a318f38223abf96be6f85a25"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ar/compact/03-repairs.png",
+      "sha256": "1c81a31fe30961dbf4cab8594391cf35fcc1c13e0904dee55ed9e48d66be3bdd",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ar/compact/03-repairs.png",
+      "raw_sha256": "596d50f1146f19ad7a966959ada7552ff71240736ebf19cd9adc8105264e35db"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ar/compact/04-appliances.png",
+      "sha256": "9799a1a6f3637cca9ddbb3cd0bc616d37e27b0ac0e33d7e50ba55942f86c5da7",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ar/compact/04-appliances.png",
+      "raw_sha256": "1d5b994757cf0bffd56fefb52253e6a99135a70e21cf544435cd1b675cd9879c"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ar/compact/05-voice-assistant.png",
+      "sha256": "0cbada0c1d69536512a88d1a7958aaa12a642748900665260261fec52640302a",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ar/compact/05-voice-assistant.png",
+      "raw_sha256": "9263f102ffdf88d61019748818e7893ab76a0f7099f6bf3dff1c8692a240a613"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ar/compact/06-calendar.png",
+      "sha256": "e606e2c20c499de914c3f37276d37f2df512ff104386c15084878cb1d6606c2a",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ar/compact/06-calendar.png",
+      "raw_sha256": "3ba3052e05398882814911f28cc36ca685bf4c78372aacbc3ecf00ca4d7f080b"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ar/compact/07-offline-records.png",
+      "sha256": "e9845efc59da6183191f504781c1351e60564b4326768737263a5a77127f9483",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ar/compact/07-offline-records.png",
+      "raw_sha256": "f8e1115fb320e93e844dd8c718fc46a026c6edd7acd0ce3687043c8fa9cf4abf"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/ar/compact/08-reports.png",
+      "sha256": "5ccbd25bc726f115aacc5f209458c80db44a4772118e51269e21175737fa2586",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/ar/compact/08-reports.png",
+      "raw_sha256": "93deed8c5a0ebf4ccb22805160eb91180c1adeca1d43d0c75b81dc476bee45d3"
+    }
+  ],
+  "human_review": "NOT PERFORMED"
+}

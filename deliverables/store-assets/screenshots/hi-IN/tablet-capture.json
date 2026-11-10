@@ -1,0 +1,91 @@
+{
+  "locale": "hi-IN",
+  "variant": "tablet",
+  "journey": "PASS",
+  "device": "G001KT0620330AWU",
+  "network": "Wi-Fi disabled",
+  "visual_review": "AI sample review plus real journey and native composition bounds",
+  "files": [
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/tablet/01-overview.png",
+      "sha256": "18ba75c2e708fce32aa9a1fb7b57629b23701ca773ef41705fd234fa8896ad54",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/tablet/01-overview.png",
+      "raw_sha256": "f60e3999f7f29ba68ffccd2ea92fe488dbe3c410cc929956c8bc253eed6bd0ff"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/tablet/02-maintenance.png",
+      "sha256": "4171e61aad170e5a5011b609ad20a1e8969b6726ab63eebbaec6188589524cf7",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/tablet/02-maintenance.png",
+      "raw_sha256": "dd8f8f8f6e0f56b78608417cc083b3cff3cb836df5a76808bb2882401a9017a2"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/tablet/03-repairs.png",
+      "sha256": "d851426235f3fede690bbcfe5e3d552c2a453e198499a6e40fc0339042201853",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/tablet/03-repairs.png",
+      "raw_sha256": "fec771ae63375794112fb4877b494c4f0ce4dfa5d1fde385c043d0849817051c"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/tablet/04-appliances.png",
+      "sha256": "351117bd7613cf8441527f93e6c7e9ef29796397637adb2d46f9bc1d4d318115",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/tablet/04-appliances.png",
+      "raw_sha256": "e6188328975f17784fa828c5567db9beae08ad360d970f4e20cc5900e50fee3c"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/tablet/05-voice-assistant.png",
+      "sha256": "6de437e11efa9fd0fc4fb1e6aaea9293d386c304e0f156e14ea928cc0aa78215",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/tablet/05-voice-assistant.png",
+      "raw_sha256": "42b87c4bca1662c17b97cb40fd87a50ed80028e55fd79ce950b6bd06ad473f27"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/tablet/06-calendar.png",
+      "sha256": "98ae6c1ae581fa56a0e6ad18cd685e2dd4b63c8908e001b666624e1d6562318d",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/tablet/06-calendar.png",
+      "raw_sha256": "74096ad4156b71dd3b83874d65953b2455adfc3069fa5affff370a3cfdbe449e"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/tablet/07-offline-records.png",
+      "sha256": "dfa5e68d9eae48a8350b5fab41a8d28539cbda62e012c8a5118ee39cb40251e1",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/tablet/07-offline-records.png",
+      "raw_sha256": "ad5773eee60d14446a22c335d68195c060bf06d4525e2c4ac9279c47facf4006"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/tablet/08-reports.png",
+      "sha256": "32dbc03f7e47b5fca7baba2c47529c3dd73b9b664f9cb008862d5bb069310871",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/tablet/08-reports.png",
+      "raw_sha256": "65c321fdef196dafd3facc0b47c5b903486ff761447f07be2bdc1bf452171c4c"
+    }
+  ],
+  "human_review": "NOT PERFORMED"
+}

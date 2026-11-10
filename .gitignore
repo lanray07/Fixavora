@@ -5,8 +5,10 @@ local.properties
 .idea/
 *.jks
 *.keystore
-.env
-.dev.vars
+.env*
+!.env.example
+.dev.vars*
+!.dev.vars.example
 __pycache__/
 deliverables/android/debug/*.apk
 deliverables/android/release/*.apk
@@ -14,5 +16,6 @@ deliverables/android/release/*.apk
 emulator-*.log
 build-first.log
 .runtime/
+.wrangler/
 # Amazon's public authentication key is intentionally packaged and versioned.
 # The Amazon shared secret and publisher signing keys must never be committed.

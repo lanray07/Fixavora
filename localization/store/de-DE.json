@@ -1,0 +1,36 @@
+{
+  "status": "AI_REVIEWED_PENDING_FINAL_UPLOAD",
+  "human_review": "NOT PERFORMED",
+  "publish_approved": false,
+  "locale": "de-DE",
+  "display_title": "Fixavora – Verwaltung von Instandhaltung und Reparaturen rund ums Haus",
+  "short_description": "Behalten Sie den Überblick über Instandhaltung, Reparaturen, Haushaltsgeräte und Ausgaben. Ihre Daten bleiben dabei stets auf Ihrem Gerät gespeichert.",
+  "long_description": "Geben Sie Ihren Unterlagen rund ums Haus einen festen Platz. Planen Sie wiederkehrende Wartungsarbeiten, erfassen Sie Reparaturen, speichern Sie Details zu Haushaltsgeräten sowie Garantiefristen, hinterlegen Sie Kontaktdaten von Handwerkern und verknüpfen Sie Dokumente. Es ist kein Fixavora-Konto erforderlich. Starten Sie kostenlos mit einer Immobilie und bis zu 15 aktiven Wartungsaufgaben. Durch einen einmaligen Kauf (über Amazon) lassen sich weitere Immobilien, Garantien, Handwerkerkontakte, Ausgaben, Berichts-Exporte sowie verschlüsselte Datensicherungen freischalten. Es gibt kein Abonnement. Der Kaufbildschirm zeigt Ihnen den für Ihre Region geltenden Preis an. Ein integrierter Assistent erstellt Entwürfe für Aufgaben, die Sie vor dem Speichern noch einmal überprüfen können. Die Eingabe per Tastatur ist auf allen Geräten möglich. Für die Spracheingabe und Sprachausgabe sind entsprechende, auf dem Gerät installierte Sprachmodule erforderlich. Fixavora speichert keine Audioaufnahmen. Die App funktioniert auch offline. Für Käufe und die Überprüfung von Transaktionen ist eine Internetverbindung erforderlich. Erinnerungen können durch die Energieeinstellungen Ihres Geräts verzögert werden. Für den Zugriff auf externe Dokumentenquellen ist unter Umständen eine Internetverbindung nötig. Verschlüsselte Sicherungen enthalten Einträge und deren Verlauf. Externe Dokumente, Fotos und ihre Verknüpfungen sind nicht enthalten. Bewahren Sie separate Kopien auf und verknüpfen Sie die Dateien nach der Wiederherstellung erneut. Fixavora unterstützt Sie bei der Organisation Ihrer Informationen. Die App führt keine Inspektionen Ihres Zuhauses durch und ersetzt keinen qualifizierten Fachmann.",
+  "product_feature_bullets": [
+    "Wiederkehrende Instandhaltungsarbeiten planen",
+    "Reparaturen und Details zu Haushaltsgeräten erfassen",
+    "Garantiefristen und Handwerkerkontakte verwalten",
+    "Aufgabenentwürfe vor dem Speichern überprüfen",
+    "Umfassende Berichte und verschlüsselte Datensicherungen"
+  ],
+  "keywords": "Wiederkehrende Instandhaltungsarbeiten planen, Reparaturen und Details zu Haushaltsgeräten erfassen, Garantiefristen und Handwerkerkontakte verwalten",
+  "screenshot_headlines": [
+    "Ihr Zuhause, durchdacht organisiert",
+    "Geben Sie jeder Aufgabe einen Platz",
+    "Halten Sie die Reparaturdetails zusammen",
+    "Kennen Sie Ihre Geräteaufzeichnungen",
+    "Sprechen oder tippen Sie einen Aufgabenentwurf",
+    "Sehen Sie sich den kommenden Monat an",
+    "Bewahren Sie Ihre Aufzeichnungen auf Ihrem Gerät auf",
+    "Eine klare Sicht auf die Geschichte Ihres Hauses"
+  ],
+  "screenshot_caption_status": "Translated; actual capture review pending",
+  "release_notes": "Behalten Sie den Überblick über Instandhaltung, Reparaturen, Haushaltsgeräte und Ausgaben. Ihre Daten bleiben dabei stets auf Ihrem Gerät gespeichert.",
+  "category_recommendation": "Productivity",
+  "privacy_policy": "https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md",
+  "support_status": "CONFIGURED",
+  "iap_title": "Fixavora Premium",
+  "iap_description": "Einmaliges Upgrade für weitere Immobilien, Garantien, Handwerkerkontakte, Ausgabenverwaltung, Berichte (PDF/CSV) sowie verschlüsselte Datensicherungen. Kein Abonnement.",
+  "support_email": "banksmi@mail.com",
+  "support_url": "https://github.com/lanray07/Fixavora/issues"
+}

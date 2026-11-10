@@ -1,0 +1,29 @@
+[
+  {
+    "locale": "de-DE",
+    "journey": "PASS",
+    "font_scale": 1.3,
+    "dark": true,
+    "high_contrast": true,
+    "visual_review": "AI sample PASS: report controls readable, no overlapping text; scrollable content remains available",
+    "human_review": "NOT PERFORMED"
+  },
+  {
+    "locale": "ar",
+    "journey": "PASS",
+    "font_scale": 1.3,
+    "dark": true,
+    "high_contrast": true,
+    "visual_review": "AI sample PASS: report controls readable, no overlapping text; scrollable content remains available",
+    "human_review": "NOT PERFORMED"
+  },
+  {
+    "locale": "ja-JP",
+    "journey": "PASS",
+    "font_scale": 1.3,
+    "dark": true,
+    "high_contrast": true,
+    "visual_review": "AI sample PASS: report controls readable, no overlapping text; scrollable content remains available",
+    "human_review": "NOT PERFORMED"
+  }
+]

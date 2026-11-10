@@ -11,6 +11,7 @@ import com.fixavora.app.ui.openAttachment
 import kotlinx.coroutines.runBlocking
 import org.junit.*
 import org.junit.Assert.*
+import java.io.File
 
 class AttachmentPickerTest {
     @get:Rule val compose=createAndroidComposeRule<TabletCaptureActivity>()
@@ -19,7 +20,10 @@ class AttachmentPickerTest {
         val app=compose.activity.application as FixavoraApp
         val device=UiDevice.getInstance(InstrumentationRegistry.getInstrumentation())
         val name="Fixavora-QA-Document-${System.nanoTime()}.txt"
-        shell("sh -c 'echo Disposable_Fixavora_QA_document > /sdcard/Download/$name'")
+        val source=File(app.getExternalFilesDir(null),"disposable-attachment.txt").apply {writeText("Disposable_Fixavora_QA_document")}
+        shell("cp ${source.absolutePath} /sdcard/Download/$name")
+        assertTrue("The disposable file was actually created",shell("cat /sdcard/Download/$name").contains("Disposable_Fixavora_QA_document"))
+        shell("am broadcast -a android.intent.action.MEDIA_SCANNER_SCAN_FILE -d file:///sdcard/Download/$name")
         try {
             app.repository.dao.clear();app.settings.flag("onboarding",true);app.settings.text("language","en-GB")
             val home=HomeRecord(kind="PROPERTY",title="Disposable attachment QA home")
@@ -49,6 +53,6 @@ class AttachmentPickerTest {
             openAttachment(app,attachment) {failed=true};assertTrue(failed)
             compose.onNodeWithContentDescription("Remove attachment link").performClick()
             compose.waitUntil(10000) {runBlocking {app.repository.dao.attachments().isEmpty()} }
-        } finally {shell("rm -f /sdcard/Download/$name")}
+        } finally {shell("rm -f /sdcard/Download/$name");source.delete()}
     }
 }

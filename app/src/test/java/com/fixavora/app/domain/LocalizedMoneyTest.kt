@@ -5,6 +5,12 @@ import org.junit.Assert.*
 import org.junit.Test
 
 class LocalizedMoneyTest {
+    @Test fun selectedCurrencyPrecisionSurvivesDifferentLocaleDefaults() {
+        assertTrue(Money.formatter("GBP",Locale.JAPAN).format(Money.decimal(11350,"GBP")).endsWith("113.50"))
+        assertTrue(Money.formatter("GBP",Locale.KOREA).format(Money.decimal(11350,"GBP")).endsWith("113.50"))
+        assertTrue(Money.formatter("JPY",Locale.UK).format(Money.decimal(50,"JPY")).endsWith("50"))
+        assertTrue(Money.formatter("KWD",Locale.US).format(Money.decimal(1234,"KWD")).endsWith("1.234"))
+    }
     @Test fun decimalSeparatorsAndNativeDigitsKeepExactMinorUnits() {
         assertEquals(4999L,Money.parse("49,99","EUR",Locale.FRANCE))
         assertEquals(4999L,Money.parse("49.99","EUR",Locale.FRANCE))

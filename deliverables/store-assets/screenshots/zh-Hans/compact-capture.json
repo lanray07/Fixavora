@@ -1,0 +1,91 @@
+{
+  "locale": "zh-Hans",
+  "variant": "compact",
+  "journey": "PASS",
+  "device": "G001KT0620330AWU",
+  "network": "Wi-Fi disabled",
+  "visual_review": "AI sample review plus real journey and native composition bounds",
+  "files": [
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hans/compact/01-overview.png",
+      "sha256": "fb6ace3405e3f6bbb309c0b1dfa5f62b764ec5f7b68bf41f50c75a799ff11180",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hans/compact/01-overview.png",
+      "raw_sha256": "00b4f50fdd1b3ca31e4e02448a9e6a6edee81ce41aa54c2fd66c2804efe8d618"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hans/compact/02-maintenance.png",
+      "sha256": "12ebabf039f12d7d2873a9ab59ac0e7231bd02d99da7e6b17575082342038c77",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hans/compact/02-maintenance.png",
+      "raw_sha256": "1296aa9785e0bf13fda9c3a6c59f96368eac4e608adaa65c95e3c454688a8640"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hans/compact/03-repairs.png",
+      "sha256": "abfb332222d5b358d40ffb25a74efe72ca35b40414d390ed302856b238dd6049",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hans/compact/03-repairs.png",
+      "raw_sha256": "bb7ac228b53358ede1207cb6753c3107b4cfc57bf2bf634c34159538f8469915"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hans/compact/04-appliances.png",
+      "sha256": "4ed8c5f148f9d3c696291e550c6c06c1c2287e054016a9a7771a1456a0acddf6",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hans/compact/04-appliances.png",
+      "raw_sha256": "ba138efd3e84ddc947fa559e640811730580c5843e2d9e0436362ba4b495b441"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hans/compact/05-voice-assistant.png",
+      "sha256": "ed5580f568177d7e2098782343ecbf25fc24ce40d56bf8b9a8e18fb6ad66e29d",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hans/compact/05-voice-assistant.png",
+      "raw_sha256": "212ae28cc65791b1842eca48de321d6d82d9ae88f876c109b3493b2243120244"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hans/compact/06-calendar.png",
+      "sha256": "70d3b9b82832db5493364f8372c56cdc096aaeb8df4609d2b99550dc8c34633d",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hans/compact/06-calendar.png",
+      "raw_sha256": "edca0ecd82883e32e16f219cf4d490e4fdbd03ec73ce5e1c4621062a43c4a621"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hans/compact/07-offline-records.png",
+      "sha256": "02f89a86af716a395b3704889d73377755095b8efdd250907c114fdc36ea2b36",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hans/compact/07-offline-records.png",
+      "raw_sha256": "094b46d9ea47a446e13ddaf2f5254ae5b13986fc43bcad878e0eac40afca1e14"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hans/compact/08-reports.png",
+      "sha256": "8bca44e1cebce44ed9a47cdf1c85683b0c0a0b603d10c7cf04330dc224292d71",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hans/compact/08-reports.png",
+      "raw_sha256": "dc48cf934154d8c263a42ed3c5cc19a044828c848c76132476bf105235ec491d"
+    }
+  ],
+  "human_review": "NOT PERFORMED"
+}

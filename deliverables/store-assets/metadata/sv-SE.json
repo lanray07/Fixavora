@@ -1,23 +1,36 @@
 {
-  "status": "NOT TESTED",
-  "human_review": "NOT TESTED",
+  "status": "AI_REVIEWED_PENDING_FINAL_UPLOAD",
+  "human_review": "NOT PERFORMED",
   "publish_approved": false,
   "locale": "sv-SE",
-  "display_title": "Fixavora – Underhåll och reparationer i hemmet",
-  "short_description": "Samla underhåll, reparationer och apparatuppgifter på enheten. Inget obligatoriskt konto.",
-  "long_description": "Fixavora samlar underhållsuppgifter, reparationer och apparatuppgifter. Lägg till rum, datum, anteckningar och dokumentlänkar. Uppgifterna sparas på enheten.\n\nGratisversionen omfattar en aktiv bostad och högst 15 aktiva underhållsuppgifter. Premium är ett frivilligt engångsköp via Amazon för flera bostäder, garantier, hantverkare, utgifter, rapporter och krypterade säkerhetskopior. Köp måste konfigureras och testas före publicering.\n\nDen lokala assistenten skapar utkast som du granskar innan de sparas. Röstfunktioner beror på installerade tjänster och språk. Påminnelser kan försenas. Externa dokument kan kräva anslutning. Appen intygar inte bostadens säkerhet.",
+  "display_title": "Fixavora - Hemunderhåll och reparationer",
+  "short_description": "Samla underhåll, reparationer, vitvaror och utgifter. Uppgifterna om ditt hem sparas på din enhet.",
+  "long_description": "Samla uppgifterna om ditt hem på ett ställe. Planera återkommande underhåll, spåra reparationer, spara apparatinformation och garantidatum, spara entreprenörskontakter och länka dokument. Inget Fixavora-konto krävs. Börja gratis med en aktiv fastighet och upp till 15 aktiva underhållsuppgifter. Ett valfritt engångsköp på Amazon låser upp fler fastigheter, garantier, entreprenörer, utgifter, rapportexport och krypterade säkerhetskopior av register. Det finns ingen prenumeration. Amazons köpskärm visar ditt lokala pris. Assistenten på enheten förbereder utkast till uppgifter som du kan granska innan du sparar. Använd skrivning på alla enheter. Talinmatning och talad feedback kräver kompatibla installerade talmotorer och röster. Fixavora behåller inte ljud. Uppgifterna om ditt hem är tillgängliga offline. Köp och kvittoverifiering kräver en internetanslutning. Påminnelser kan fördröjas av enhetens ströminställningar. Externa dokumentleverantörer kan behöva en anslutning. Krypterade säkerhetskopior innehåller uppgifter och historik. Externa dokument, foton och deras länkar ingår inte. Spara separata kopior och länka filerna igen efter återställning. Fixavora hjälper dig att organisera information. Den inspekterar inte ditt hem eller ersätter en kvalificerad yrkesperson.",
   "product_feature_bullets": [
-    "Underhåll",
-    "Reparationer",
-    "Apparater",
-    "Dokument",
-    "Rapporter"
+    "Planera återkommande hemunderhåll",
+    "Spåra reparationer och detaljer om apparater",
+    "Spara garantidatum och kontaktuppgifter till entreprenörer",
+    "Granska lokala utkast innan du sparar",
+    "Premiumrapporter och krypterade säkerhetskopior av register"
   ],
-  "keywords": "Underhåll, Reparationer, Apparater",
-  "screenshot_headlines": [],
-  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
-  "release_notes": "Samla underhåll, reparationer och apparatuppgifter på enheten. Inget obligatoriskt konto.",
-  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
-  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
-  "support_status": "BLOCKED: publisher support contact required"
+  "keywords": "Planera återkommande hemunderhåll, Spåra reparationer och detaljer om apparater, Spara garantidatum och kontaktuppgifter till entreprenörer",
+  "screenshot_headlines": [
+    "Ditt hem, omtänksamt organiserat",
+    "Ge varje uppgift en plats",
+    "Håll reparationsdetaljerna tillsammans",
+    "Känn till dina apparaters register",
+    "Tala eller skriv ett uppgiftsutkast",
+    "Se månaden framåt",
+    "Spara dina register på din enhet",
+    "En tydlig bild av ditt hems historia"
+  ],
+  "screenshot_caption_status": "Translated; actual capture review pending",
+  "release_notes": "Håll hemunderhåll, reparationer, apparater och utgifter samlade. Dina hemregister finns kvar på din enhet.",
+  "category_recommendation": "Productivity",
+  "privacy_policy": "https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md",
+  "support_status": "CONFIGURED",
+  "iap_title": "Fixavora Premium",
+  "iap_description": "Engångsuppgradering för fler fastigheter, garantier, entreprenörer, utgiftsspårning, PDF- och CSV-rapporter och krypterade säkerhetskopior av register. Ingen prenumeration.",
+  "support_email": "banksmi@mail.com",
+  "support_url": "https://github.com/lanray07/Fixavora/issues"
 }

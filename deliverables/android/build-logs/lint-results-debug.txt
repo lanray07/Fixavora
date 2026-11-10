@@ -1,22 +1,3 @@
-D:\App Projects\Fixavora\app\src\main\res\values-b+id+ID: Warning: The locale folder "id" should be called "in" instead; see the java.util.Locale documentation [LocaleFolder]
-
-   Explanation for issues of type "LocaleFolder":
-   From the java.util.Locale documentation:
-   "Note that Java uses several deprecated two-letter codes. The Hebrew ("he")
-   language code is rewritten as "iw", Indonesian ("id") as "in", and Yiddish
-   ("yi") as "ji". This rewriting happens even if you construct your own
-   Locale object, not just for instances returned by the various lookup
-   methods.
-
-   Because of this, if you add your localized resources in for example
-   values-he they will not be used, since the system will look for values-iw
-   instead.
-
-   To work around this, place your resources in a values folder using the
-   deprecated language code instead.
-
-   https://developer.android.com/reference/java/util/Locale.html
-
 D:\App Projects\Fixavora\app\build.gradle.kts:13: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
         targetSdk = 35
         ~~~~~~~~~~~~~~
@@ -40,57 +21,51 @@ D:\App Projects\Fixavora\app\build.gradle.kts:13: Warning: Not targeting the lat
 
    https://developer.android.com/distribute/best-practices/develop/target-sdk.html
 
-D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\ui\Localization.kt:10: Warning: Found dynamic locale changes, but did not find corresponding Play Core library calls for downloading languages and splitting by language is not disabled in the bundle configuration [AppBundleLocaleChanges]
-    if (tag.isNotEmpty()) config.setLocale(Locale.forLanguageTag(tag))
-                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "AppBundleLocaleChanges":
-   When changing locales at runtime (e.g. to provide an in-app language
-   switcher), the Android App Bundle must be configured to not split by locale
-   or the Play Core library must be used to download additional locales at
-   runtime.
-
-   https://developer.android.com/guide/app-bundle/configure-base#handling_language_changes
-
-D:\App Projects\Fixavora\app\build.gradle.kts:32: Warning: A newer version of androidx.activity:activity-compose than 1.10.1 is available: 1.13.0 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:39: Warning: A newer version of androidx.activity:activity-compose than 1.10.1 is available: 1.13.0 [GradleDependency]
     implementation("androidx.activity:activity-compose:1.10.1")
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\build.gradle.kts:37: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.8.7 is available: 2.11.0 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:44: Warning: A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.8.7 is available: 2.11.0 [GradleDependency]
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\build.gradle.kts:38: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.8.7 is available: 2.11.0 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:45: Warning: A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.8.7 is available: 2.11.0 [GradleDependency]
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.7")
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\build.gradle.kts:39: Warning: A newer version of androidx.room:room-runtime than 2.7.1 is available: 2.8.5 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:46: Warning: A newer version of androidx.room:room-runtime than 2.7.1 is available: 2.8.5 [GradleDependency]
     implementation("androidx.room:room-runtime:2.7.1")
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\build.gradle.kts:40: Warning: A newer version of androidx.room:room-ktx than 2.7.1 is available: 2.8.5 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:47: Warning: A newer version of androidx.room:room-ktx than 2.7.1 is available: 2.8.5 [GradleDependency]
     implementation("androidx.room:room-ktx:2.7.1")
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\build.gradle.kts:41: Warning: A newer version of androidx.room:room-compiler than 2.7.1 is available: 2.8.5 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:48: Warning: A newer version of androidx.room:room-compiler than 2.7.1 is available: 2.8.5 [GradleDependency]
     ksp("androidx.room:room-compiler:2.7.1")
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\build.gradle.kts:42: Warning: A newer version of androidx.datastore:datastore-preferences than 1.1.4 is available: 1.3.0 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:49: Warning: A newer version of androidx.datastore:datastore-preferences than 1.1.4 is available: 1.3.0 [GradleDependency]
     implementation("androidx.datastore:datastore-preferences:1.1.4")
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\build.gradle.kts:43: Warning: A newer version of androidx.work:work-runtime-ktx than 2.10.1 is available: 2.12.0 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:50: Warning: A newer version of androidx.work:work-runtime-ktx than 2.10.1 is available: 2.12.0 [GradleDependency]
     implementation("androidx.work:work-runtime-ktx:2.10.1")
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\build.gradle.kts:44: Warning: A newer version of com.google.code.gson:gson than 2.11.0 is available: 2.13.1 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:51: Warning: A newer version of com.google.code.gson:gson than 2.11.0 is available: 2.13.1 [GradleDependency]
     implementation("com.google.code.gson:gson:2.11.0")
                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\build.gradle.kts:48: Warning: A newer version of androidx.test.ext:junit than 1.2.1 is available: 1.3.0 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:55: Warning: A newer version of androidx.test.ext:junit than 1.2.1 is available: 1.3.0 [GradleDependency]
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\build.gradle.kts:49: Warning: A newer version of androidx.test:runner than 1.6.2 is available: 1.7.0 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:56: Warning: A newer version of androidx.test:runner than 1.6.2 is available: 1.7.0 [GradleDependency]
     androidTestImplementation("androidx.test:runner:1.6.2")
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\build.gradle.kts:50: Warning: A newer version of androidx.test:rules than 1.6.1 is available: 1.7.0 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:57: Warning: A newer version of androidx.test:rules than 1.6.1 is available: 1.7.0 [GradleDependency]
     androidTestImplementation("androidx.test:rules:1.6.1")
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\build.gradle.kts:51: Warning: A newer version of androidx.room:room-testing than 2.7.1 is available: 2.8.5 [GradleDependency]
+D:\App Projects\Fixavora\app\build.gradle.kts:58: Warning: A newer version of androidx.test.uiautomator:uiautomator than 2.3.0 is available: 2.4.1 [GradleDependency]
+    androidTestImplementation("androidx.test.uiautomator:uiautomator:2.3.0")
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\build.gradle.kts:59: Warning: A newer version of androidx.room:room-testing than 2.7.1 is available: 2.8.5 [GradleDependency]
     androidTestImplementation("androidx.room:room-testing:2.7.1")
                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\build.gradle.kts:60: Warning: A newer version of androidx.work:work-testing than 2.10.1 is available: 2.12.0 [GradleDependency]
+    androidTestImplementation("androidx.work:work-testing:2.10.1")
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "GradleDependency":
    This detector looks for usages of libraries where the version you are using
@@ -99,7 +74,7 @@ D:\App Projects\Fixavora\app\build.gradle.kts:51: Warning: A newer version of an
    However, you may simply not be aware that a more recent version is
    available, and that is what this lint check helps find.
 
-D:\App Projects\Fixavora\app\src\debug\AndroidManifest.xml:4: Warning: Expecting android:screenOrientation="unspecified" or "fullSensor" for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices [LockedOrientationActivity]
+D:\App Projects\Fixavora\app\src\debug\AndroidManifest.xml:5: Warning: Expecting android:screenOrientation="unspecified" or "fullSensor" for this activity so the user can use the application in any orientation and provide a great experience on Chrome OS devices [LockedOrientationActivity]
         <activity android:name=".CompactCaptureActivity" android:screenOrientation="portrait" android:exported="false" />
                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -112,848 +87,19 @@ D:\App Projects\Fixavora\app\src\debug\AndroidManifest.xml:4: Warning: Expecting
 
    https://developer.android.com/topic/arc/window-management
 
-D:\App Projects\Fixavora\app\src\main\res\values-b+en+AU\strings.xml:115: Warning: Overriding @string/in_progress which is marked as private in androidx.compose.ui:ui-android:1.8.0. If deliberate, use tools:override="true", otherwise pick a different name. [PrivateResource]
-    <string name="in_progress">In progress</string>
-                  ~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values-b+en+GB\strings.xml:115: Warning: Overriding @string/in_progress which is marked as private in androidx.compose.ui:ui-android:1.8.0. If deliberate, use tools:override="true", otherwise pick a different name. [PrivateResource]
-    <string name="in_progress">In progress</string>
-                  ~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values-b+en+US\strings.xml:115: Warning: Overriding @string/in_progress which is marked as private in androidx.compose.ui:ui-android:1.8.0. If deliberate, use tools:override="true", otherwise pick a different name. [PrivateResource]
-    <string name="in_progress">In progress</string>
-                  ~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:115: Warning: Overriding @string/in_progress which is marked as private in androidx.compose.ui:ui-android:1.8.0. If deliberate, use tools:override="true", otherwise pick a different name. [PrivateResource]
-    <string name="in_progress">In progress</string>
-                  ~~~~~~~~~~~
-
-   Explanation for issues of type "PrivateResource":
-   Private resources should not be referenced; the may not be present
-   everywhere, and even where they are they may disappear without notice.
-
-   To fix this, copy the resource into your own project instead.
-
-D:\App Projects\Fixavora\app\src\debug\AndroidManifest.xml:3: Warning: Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed. [DiscouragedApi]
+D:\App Projects\Fixavora\app\src\debug\AndroidManifest.xml:4: Warning: Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed. [DiscouragedApi]
         <activity android:name=".TabletCaptureActivity" android:screenOrientation="landscape" android:exported="false" />
                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\debug\AndroidManifest.xml:4: Warning: Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed. [DiscouragedApi]
+D:\App Projects\Fixavora\app\src\debug\AndroidManifest.xml:5: Warning: Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed. [DiscouragedApi]
         <activity android:name=".CompactCaptureActivity" android:screenOrientation="portrait" android:exported="false" />
                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\ui\Localization.kt:16: Warning: Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. R.foo.bar) than by name (e.g. getIdentifier("bar", "foo", null)). [DiscouragedApi]
-    val id = resources.getIdentifier(key.lowercase(), "string", packageName)
+D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\ui\Localization.kt:17: Warning: Use of this function is discouraged because resource reflection makes it harder to perform build optimizations and compile-time verification of code. It is much more efficient to retrieve resources by identifier (e.g. R.foo.bar) than by name (e.g. getIdentifier("bar", "foo", null)). [DiscouragedApi]
+    val id = resources.getIdentifier(name, "string", packageName)
                        ~~~~~~~~~~~~~
 
    Explanation for issues of type "DiscouragedApi":
    Discouraged APIs are allowed and are not deprecated, but they may be unfit
    for common use (e.g. due to slow performance or subtle behavior).
-
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:2: Error: "a_helping_hand" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="a_helping_hand">A helping hand for your home</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:3: Error: "a_little_care" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="a_little_care">A LITTLE CARE. LASTING PEACE OF MIND.</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:4: Error: "active" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="active">Active</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:5: Error: "active_repairs" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="active_repairs">Active repairs</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:6: Error: "actual_cost" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="actual_cost">Actual cost</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:8: Error: "add_record" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="add_record">Add a record</string>
-            ~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:9: Error: "add_record_intro" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="add_record_intro">Add a record and build a useful history of your home.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:10: Error: "add_room" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="add_room">Add room</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:11: Error: "add_task" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="add_task">Add a task</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:12: Error: "add_your_next_task" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="add_your_next_task">Add your next maintenance task to see it here.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:13: Error: "address" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="address">Address (optional)</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:14: Error: "after_photo" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="after_photo">After photo</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:16: Error: "all_dates" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="all_dates">All dates</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:17: Error: "all_rooms" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="all_rooms">All rooms</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:18: Error: "amount" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="amount">Amount</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:19: Error: "appliance" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="appliance">Appliance</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:21: Error: "appointment" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="appointment">Appointment</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:23: Error: "archive" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="archive">Archive</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:24: Error: "archived" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="archived">Archived</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:25: Error: "ask_your_assistant" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="ask_your_assistant">Speak or type to your assistant</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:27: Error: "assistant_reads_local" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="assistant_reads_local">Summaries use only what you have saved. Nothing is sent to a remote AI service.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:28: Error: "attach_document" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="attach_document">Attach photo or document</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:29: Error: "attachments_after_save" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="attachments_after_save">Save a record first, then open it to attach photos, receipts or a manual.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:30: Error: "backup_attachment_notice" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="backup_attachment_notice">Encrypted backups include records and history. Documents and photos are external links and are not included; retain separate copies and relink them after restoring.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:31: Error: "backup_password_notice" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="backup_password_notice">Use at least 12 characters. Keep the passphrase somewhere safe; it cannot be recovered.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:32: Error: "backup_saved" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="backup_saved">Encrypted record backup saved</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:33: Error: "basement" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="basement">Basement</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:34: Error: "bathroom" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="bathroom">Bathroom</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:35: Error: "bedroom" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="bedroom">Bedroom</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:36: Error: "before_photo" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="before_photo">Before photo</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:37: Error: "billing_unavailable" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="billing_unavailable">Amazon purchasing is not configured or available. No payment can be taken in this build.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:38: Error: "business_name" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="business_name">Business name</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:40: Error: "call" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="call">Call</string>
-            ~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:42: Error: "cancelled" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="cancelled">Cancelled</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:43: Error: "category" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="category">Category</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:44: Error: "certificate" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="certificate">Certificate or inspection report</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:45: Error: "choose_task_to_complete" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="choose_task_to_complete">Include the exact saved task title, or open Maintenance and choose a task to complete. No changes were made.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:46: Error: "cleaning" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="cleaning">Cleaning</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:47: Error: "close" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="close">Close</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:48: Error: "coming_up" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="coming_up">Coming up</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:49: Error: "completed" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="completed">Completed</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:50: Error: "completion_date" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="completion_date">Completion date</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:51: Error: "continue_action" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="continue_action">Continue</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:52: Error: "contractor" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="contractor">Contractor</string>
-            ~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:53: Error: "contractor_questions" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="contractor_questions">Questions for a contractor</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:54: Error: "contractor_questions_text" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="contractor_questions_text">What work do you recommend? What is included in the quote? Which qualifications and insurance are relevant? What will it cost, and when can it be completed? What documents should I keep?</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:56: Error: "coverage_notes" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="coverage_notes">Coverage notes</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:57: Error: "create_first_property" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="create_first_property">Create my first property</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:58: Error: "create_property_first" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="create_property_first">Create a property first.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:59: Error: "created" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="created">Created</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:60: Error: "currencies_kept_separate" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="currencies_kept_separate">Totals are grouped by currency. No exchange rates are applied.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:61: Error: "currency" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="currency">Currency (ISO code)</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:62: Error: "custom" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="custom">Custom room</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:63: Error: "custom_days" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="custom_days">Custom days</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:64: Error: "daily" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="daily">Daily</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:65: Error: "dark_mode" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="dark_mode">Dark appearance</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:66: Error: "dashboard_intro" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="dashboard_intro">The small things that keep your home running, all in one place.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:67: Error: "date" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="date">Date</string>
-            ~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:68: Error: "date_format" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="date_format">YYYY-MM-DD, for example 2026-11-30</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:70: Error: "delete_all_data" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="delete_all_data">Delete all home data</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:71: Error: "delete_all_warning" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="delete_all_warning">Delete all properties, records, history, attachment links and preferences on this device? Your Amazon purchase and files stored elsewhere are not deleted.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:72: Error: "delete_property_warning" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="delete_property_warning">This deletes the property and all its rooms, tasks, repairs and linked records from Fixavora. External files are not deleted.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:73: Error: "delete_record" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="delete_record">Delete this record?</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:74: Error: "delete_warning" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="delete_warning">This record and its history will be deleted. External files are not deleted.</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:75: Error: "description" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="description">Description</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:76: Error: "document" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="document">Document</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:77: Error: "document_privacy" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="document_privacy">Files remain in your chosen storage provider. Fixavora keeps a read-only link and does not upload files.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:78: Error: "document_unavailable" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="document_unavailable">The file could not be opened. It may have moved, or a compatible viewer may be unavailable. Attach it again if needed.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:80: Error: "due_date" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="due_date">Due date</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:81: Error: "due_soon" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="due_soon">Due this week</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:82: Error: "duration_minutes" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="duration_minutes">Duration in minutes</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:84: Error: "edit_record" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="edit_record">Edit record</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:85: Error: "electrical" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="electrical">Electrical</string>
-            ~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:86: Error: "email" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="email">Email</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:87: Error: "encrypted_backup" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="encrypted_backup">Create encrypted backup</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:88: Error: "estimated_cost" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="estimated_cost">Estimated cost</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:89: Error: "everything_in_one_place" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="everything_in_one_place">Useful details, right where you need them.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:90: Error: "expense" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="expense">Expense</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:92: Error: "expiry_date" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="expiry_date">Warranty expiry date</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:93: Error: "export_privacy_warning" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="export_privacy_warning">This export may contain private property information. Only save or share it with a destination you trust.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:94: Error: "export_records" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="export_records">Export these home records?</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:95: Error: "export_saved" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="export_saved">Report exported</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:96: Error: "exterior" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="exterior">Exterior</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:97: Error: "flat" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="flat">Flat or apartment</string>
-            ~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:98: Error: "form_error" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="form_error">Check the required fields, dates, currency and amounts. Use the formats shown below each field.</string>
-            ~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:99: Error: "free_tier_detail" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="free_tier_detail">Free: one active property, up to 15 active maintenance tasks, basic repairs and appliance records. Existing records remain readable if Premium becomes unavailable.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:100: Error: "from_date" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="from_date">From date (optional)</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:101: Error: "from_your_records" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="from_your_records">From your own records</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:102: Error: "garage" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="garage">Garage</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:103: Error: "garden" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="garden">Garden</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:104: Error: "general" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="general">General upkeep</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:105: Error: "get_premium" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="get_premium">Get Premium</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:106: Error: "heating" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="heating">Heating</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:107: Error: "high" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="high">High</string>
-            ~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:108: Error: "high_contrast" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="high_contrast">Higher contrast</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:109: Error: "history" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="history">Record history</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:110: Error: "home_companion" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="home_companion">YOUR HOME COMPANION</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:111: Error: "home_records" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="home_records">Your home at a glance</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:112: Error: "homeowner" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="homeowner">Homeowner</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:113: Error: "house" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="house">House</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:114: Error: "imperial" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="imperial">Imperial</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:115: Error: "in_progress" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="in_progress">In progress</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:116: Error: "installation_date" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="installation_date">Installation date</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:117: Error: "interval_days" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="interval_days">Number of days</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:118: Error: "invalid_record" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="invalid_record">Check the record fields and linked property.</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:119: Error: "kitchen" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="kitchen">Kitchen</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:120: Error: "landlord" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="landlord">Landlord</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:122: Error: "listening" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="listening">Listening…</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:123: Error: "living_room" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="living_room">Living room</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:124: Error: "local_assistant_intro" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="local_assistant_intro">Turn your words into a task draft, or ask for a summary of your saved records. Runs locally; you review every change.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:125: Error: "loft" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="loft">Loft</string>
-            ~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:126: Error: "low" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="low">Low</string>
-            ~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:127: Error: "maintenance_at_your_pace" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="maintenance_at_your_pace">A clear view of what needs a little attention.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:128: Error: "maintenance_history" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="maintenance_history">Property maintenance history</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:129: Error: "maintenance_template" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="maintenance_template">Organise a maintenance check</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:130: Error: "maintenance_template_text" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="maintenance_template_text">General organisation checklist: identify the appliance or area; consult the manufacturer\'s guidance; choose a suitable qualified professional where needed; set a schedule for your situation; save the service date and receipt. No inspection or compliance is implied.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:131: Error: "make_room_for_calm" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="make_room_for_calm">Make room for calm.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:132: Error: "managed" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="managed">Managed</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:133: Error: "manual" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="manual">Manual</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:134: Error: "manufacturer" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="manufacturer">Manufacturer</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:135: Error: "mark_complete" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="mark_complete">Complete occurrence</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:136: Error: "measurement_units" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="measurement_units">Measurement preference</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:137: Error: "metric" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="metric">Metric</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:138: Error: "microphone_denied" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="microphone_denied">Microphone access was not granted. Type your request or enable microphone access in device settings.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:139: Error: "model" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="model">Model</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:140: Error: "money_format" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="money_format">Use a decimal point, without a currency symbol. For example 49.99.</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:142: Error: "monthly" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="monthly">Monthly</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:143: Error: "next_month" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="next_month">Next month</string>
-            ~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:144: Error: "no_compatible_app" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="no_compatible_app">No compatible app is available on this device.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:145: Error: "no_date" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="no_date">Choose a date</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:146: Error: "no_documents" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="no_documents">Keep important details close</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:147: Error: "no_expenses" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="no_expenses">Your saved expenses will appear here.</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:148: Error: "no_records" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="no_records">A fresh start</string>
-            ~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:149: Error: "none" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="none">None</string>
-            ~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:150: Error: "normal" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="normal">Normal</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:151: Error: "notes" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="notes">Notes</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:152: Error: "nothing_due" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="nothing_due">A little breathing room</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:153: Error: "notifications_denied" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="notifications_denied">Notifications were not enabled. Your tasks remain visible in the app.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:154: Error: "one_time_purchase" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="one_time_purchase">One-time purchase</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:155: Error: "operation_failed" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="operation_failed">That action could not be completed. Check your entries and storage, then try again.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:156: Error: "other" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="other">Other</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:157: Error: "overdue" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="overdue">Overdue</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:159: Error: "owned" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="owned">Owned</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:160: Error: "passphrase" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="passphrase">Backup passphrase</string>
-            ~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:161: Error: "pause_recurrence" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="pause_recurrence">Pause recurrence</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:162: Error: "phone" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="phone">Phone</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:163: Error: "planned" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="planned">Planned</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:164: Error: "plumbing" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="plumbing">Plumbing</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:165: Error: "possible_duplicate" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="possible_duplicate">Possible matching task</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:167: Error: "premium_active" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="premium_active">Premium active</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:168: Error: "premium_ai_policy" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="premium_ai_policy">Premium does not include unlimited paid AI. Remote AI is not available in this build. The store supplies the actual local price; no purchase is made until you confirm with Amazon.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:169: Error: "premium_backup" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="premium_backup">Portable encrypted record backups</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:170: Error: "premium_intro" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="premium_intro">More room for the homes you care for.</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:171: Error: "premium_properties" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="premium_properties">Manage multiple properties</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:172: Error: "premium_records" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="premium_records">Expanded records, warranties and contractor directory</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:173: Error: "premium_reports" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="premium_reports">Expense summaries and PDF / CSV exports</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:174: Error: "premium_required" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="premium_required">This addition needs Premium. Your existing records remain available.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:175: Error: "prepare_task" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="prepare_task">Prepare task</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:176: Error: "preview" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="preview">Report preview</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:177: Error: "previous_month" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="previous_month">Previous month</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:178: Error: "priority" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="priority">Priority</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:179: Error: "privacy" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="privacy">Privacy and your data</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:180: Error: "privacy_detail" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="privacy_detail">No account, advertising or analytics SDK. Home records stay in the app\'s private storage. Optional speech engines, your document provider and Amazon purchases have their own privacy policies. Exports leave private storage only when you choose a destination. No remote AI processing is enabled.</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:181: Error: "privacy_intro" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="privacy_intro">Your records stay on this device. No account, location tracking or advertising. Choose your preferences, then make Fixavora your own.</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:183: Error: "property" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="property">Property</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:184: Error: "property_type" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="property_type">Property type</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:185: Error: "provider" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="provider">Warranty provider</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:186: Error: "purchase_date" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="purchase_date">Purchase date</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:187: Error: "purchase_failed" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="purchase_failed">The purchase did not complete. No access has been granted. Check your Amazon purchase history before retrying.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:188: Error: "purchase_inactive" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="purchase_inactive">No active Premium purchase was verified</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:189: Error: "purchase_price" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="purchase_price">Purchase price</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:190: Error: "purchase_ready" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="purchase_ready">Available through Amazon</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:191: Error: "push_to_talk" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="push_to_talk">Tap to speak</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:192: Error: "quarterly" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="quarterly">Quarterly</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:193: Error: "quiet_hours" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="quiet_hours">Quiet hours (start → end)</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:194: Error: "read_aloud" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="read_aloud">Read aloud</string>
-            ~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:195: Error: "read_overdue" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="read_overdue">Read overdue tasks</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:196: Error: "receipt" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="receipt">Receipt or invoice</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:197: Error: "recent_activity" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="recent_activity">Recently updated</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:198: Error: "record" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="record">record</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:199: Error: "record_type" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="record_type">Record type</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:200: Error: "records" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="records">records</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:201: Error: "recurrence" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="recurrence">Repeat schedule</string>
-            ~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:202: Error: "related_record" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="related_record">Related repair, appliance or task</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:203: Error: "reminder_due" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="reminder_due">Your home has a reminder</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:204: Error: "reminder_limitations" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="reminder_limitations">Reminders are checked periodically, not at an exact time. Fire OS battery settings, notification permissions and device availability can delay delivery. Quiet hours use device local time.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:205: Error: "reminders" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="reminders">Maintenance notifications</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:206: Error: "remote_ai_unavailable" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="remote_ai_unavailable">Remote AI is not configured. Local task drafts and record summaries remain available. Date and category parsing is limited; review every draft.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:207: Error: "remove_attachment" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="remove_attachment">Remove attachment link</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:208: Error: "rented" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="rented">Rented</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:209: Error: "renter" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="renter">Renter</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:210: Error: "repair" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="repair">Repair</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:212: Error: "reported" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="reported">Reported</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:213: Error: "reported_date" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="reported_date">Reported date</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:215: Error: "reports_intro" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="reports_intro">Reports use the current property. Filter dates and record types before exporting.</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:216: Error: "restore_backup" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="restore_backup">Restore a backup</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:217: Error: "restore_checked" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="restore_checked">Amazon purchase history checked</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:218: Error: "restore_purchases" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="restore_purchases">Restore Amazon purchase</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:219: Error: "restore_warning" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="restore_warning">Restoring replaces all current home records and history. Attachment links will be removed. Export a backup first if you need to keep the current data.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:220: Error: "restored" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="restored">Records restored</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:221: Error: "review_and_save" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="review_and_save">Review details before saving</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:222: Error: "review_proposal" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="review_proposal">Review your task draft</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:223: Error: "roofing" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="roofing">Roofing</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:224: Error: "room" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="room">Room</string>
-            ~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:225: Error: "room_type" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="room_type">Room type</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:226: Error: "safety" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="safety">Safety</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:227: Error: "safety_guardrail" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="safety_guardrail">For gas, electrical, structural or fire-safety work, arrange assessment by a qualified professional. This app provides organisation guidance, not repair procedures or safety certification.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:229: Error: "saved" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="saved">Saved on this device</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:230: Error: "saved_on_this_device" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="saved_on_this_device">Saved privately on this device</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:231: Error: "scheduled_this_month" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="scheduled_this_month">Scheduled this month</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:233: Error: "serial_number" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="serial_number">Serial number (optional)</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:234: Error: "service_history" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="service_history">Service history</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:236: Error: "share_text" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="share_text">Share text</string>
-            ~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:237: Error: "skip_for_now" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="skip_for_now">Explore first</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:238: Error: "snooze" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="snooze">Snooze until tomorrow</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:239: Error: "snoozed" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="snoozed">Reminder snoozed</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:240: Error: "spending_overview" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="spending_overview">Maintenance spending</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:241: Error: "spending_summary" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="spending_summary">Summarise my spending</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:242: Error: "spoken_feedback" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="spoken_feedback">Speak assistant responses</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:243: Error: "start_date" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="start_date">Warranty start date</string>
-            ~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:244: Error: "status" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="status">Status</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:245: Error: "stop_listening" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="stop_listening">Stop listening</string>
-            ~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:246: Error: "system_language" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="system_language">Device language</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:247: Error: "tagline" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="tagline">Track repairs. Plan maintenance. Protect your home.</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:248: Error: "task" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="task">Maintenance task</string>
-            ~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:250: Error: "tenure" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="tenure">Ownership or tenancy</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:251: Error: "time" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="time">Appointment time</string>
-            ~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:252: Error: "time_format" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="time_format">24-hour time, HH:mm (local property time)</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:253: Error: "title" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="title">Name or title</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:254: Error: "to_date" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="to_date">To date (optional)</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:256: Error: "total" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="total">Total</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:257: Error: "trade" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="trade">Trade</string>
-            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:258: Error: "translation_review_notice" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="translation_review_notice">Additional languages contain draft translations and may fall back to English. They have not completed language or layout review.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:259: Error: "tts_unavailable" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="tts_unavailable">Spoken feedback is unavailable for this device or language. Your response remains visible.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:260: Error: "type_or_speak" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="type_or_speak">What needs your attention?</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:261: Error: "unarchive" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="unarchive">Unarchive</string>
-            ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:262: Error: "undo_completion" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="undo_completion">Undo last completion</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:263: Error: "undo_unavailable" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="undo_unavailable">Undo is available immediately after the latest completion, before further changes.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:264: Error: "undone" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="undone">Completion undone</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:265: Error: "updated" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="updated">Updated</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:266: Error: "urgent" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="urgent">Urgent</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:267: Error: "utility_room" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="utility_room">Utility room</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:268: Error: "ventilation" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="ventilation">Ventilation</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:269: Error: "verification_pending" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="verification_pending">Purchase verification could not finish. Restore your purchase when connected.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:270: Error: "voice_error" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="voice_error">Speech could not be recognised. Try again or type your request.</string>
-            ~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:271: Error: "voice_privacy" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="voice_privacy">Tap to speak. Your installed speech engine may process audio online under its own policy. Fixavora does not save recordings. Typing always works.</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:272: Error: "voice_unavailable" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="voice_unavailable">Speech recognition is unavailable on this device. You can type your request instead.</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:273: Error: "waiting_parts" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="waiting_parts">Waiting for parts</string>
-            ~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:275: Error: "warranty" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="warranty">Warranty</string>
-            ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:276: Error: "warranty_alerts" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="warranty_alerts">Warranty alerts</string>
-            ~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:277: Error: "warranty_summary" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="warranty_summary">Show warranty dates</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:278: Error: "website" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="website">Website</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:280: Error: "week_summary" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="week_summary">What\'s due this week?</string>
-            ~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:281: Error: "weekly" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="weekly">Weekly</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:282: Error: "welcome" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="welcome">A little care goes a long way.</string>
-            ~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:283: Error: "yearly" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="yearly">Yearly</string>
-            ~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:284: Error: "your_home_organised" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <string name="your_home_organised">Your home, thoughtfully organised</string>
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:285: Error: "record_count" is not translated in "de" (German), "hi" (Hindi), "sv" (Swedish), "pt" (Portuguese), "it" (Italian), "fr" (French), "es" (Spanish), "ar" (Arabic), "ja" (Japanese), "id" (Indonesian), "pl" (Polish), "nl" (Dutch), "tr" (Turkish) [MissingTranslation]
-    <plurals name="record_count"><item quantity="one">%d record</item><item quantity="other">%d records</item></plurals>
-             ~~~~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "MissingTranslation":
-   If an application has more than one locale, then all the strings declared
-   in one language should also be translated in all other languages.
-
-   If the string should not be translated, you can add the attribute
-   translatable="false" on the <string> element, or you can define all your
-   non-translatable strings in a resource file called donottranslate.xml. Or,
-   you can ignore the issue with a tools:ignore="MissingTranslation"
-   attribute.
-
-   You can tell lint (and other tools) which language is the default language
-   in your res/values/ folder by specifying tools:locale="languageCode" for
-   the root <resources> element in your resource file. (The tools prefix
-   refers to the namespace declaration http://schemas.android.com/tools.)
-
-D:\App Projects\Fixavora\app\src\main\AndroidManifest.xml:13: Warning: The attribute android:allowBackup is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher. [DataExtractionRules]
-    <application android:name=".FixavoraApp" android:allowBackup="false" android:label="Fixavora" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher" android:theme="@style/Theme.Fixavora" android:supportsRtl="true" android:usesCleartextTraffic="false">
-                                                                  ~~~~~
-
-   Explanation for issues of type "DataExtractionRules":
-   Before Android 12, the attributes android:allowBackup and
-   android:fullBackupContent were used to configure all forms of backup,
-   including cloud backups, device-to-device transfers and adb backup.
-
-   In Android 12 and higher, these attributes have been deprecated and will
-   only apply to cloud backups. You should instead use the attribute
-   android:dataExtractionRules, specifying an @xml resource that configures
-   which files to back up, for cloud backups and for device-to-device
-   transfers, separately. If your minSdkVersion supports older versions,
-   you'll still want to specify an android:fullBackupContent resource if the
-   default behavior is not right for your app.
-
-   https://developer.android.com/about/versions/12/backup-restore#xml-changes
-   https://goo.gle/DataExtractionRules
 
 D:\App Projects\Fixavora\app\src\main\res\mipmap-anydpi-v26: Warning: This folder configuration (v26) is unnecessary; minSdkVersion is 26. Merge all the resources in this folder into mipmap-anydpi. [ObsoleteSdkInt]
 
@@ -1072,7 +218,7 @@ D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:36: Warning: The re
     <string name="before_photo">Before photo</string>
             ~~~~~~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:37: Warning: The resource R.string.billing_unavailable appears to be unused [UnusedResources]
-    <string name="billing_unavailable">Amazon purchasing is not configured or available. No payment can be taken in this build.</string>
+    <string name="billing_unavailable">Amazon purchasing is unavailable right now. Check the Amazon Appstore and your connection, then try again.</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:38: Warning: The resource R.string.business_name appears to be unused [UnusedResources]
     <string name="business_name">Business name</string>
@@ -1302,9 +448,9 @@ D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:113: Warning: The r
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:114: Warning: The resource R.string.imperial appears to be unused [UnusedResources]
     <string name="imperial">Imperial</string>
             ~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:115: Warning: The resource R.string.in_progress appears to be unused [UnusedResources]
-    <string name="in_progress">In progress</string>
-            ~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:115: Warning: The resource R.string.fixavora_in_progress appears to be unused [UnusedResources]
+    <string name="fixavora_in_progress">In progress</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:116: Warning: The resource R.string.installation_date appears to be unused [UnusedResources]
     <string name="installation_date">Installation date</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1462,7 +608,7 @@ D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:167: Warning: The r
     <string name="premium_active">Premium active</string>
             ~~~~~~~~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:168: Warning: The resource R.string.premium_ai_policy appears to be unused [UnusedResources]
-    <string name="premium_ai_policy">Premium does not include unlimited paid AI. Remote AI is not available in this build. The store supplies the actual local price; no purchase is made until you confirm with Amazon.</string>
+    <string name="premium_ai_policy">Premium is a one-time Amazon purchase. The store displays the price for your marketplace. You confirm purchases with Amazon; no subscription is started.</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:169: Warning: The resource R.string.premium_backup appears to be unused [UnusedResources]
     <string name="premium_backup">Portable encrypted record backups</string>
@@ -1498,7 +644,7 @@ D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:179: Warning: The r
     <string name="privacy">Privacy and your data</string>
             ~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:180: Warning: The resource R.string.privacy_detail appears to be unused [UnusedResources]
-    <string name="privacy_detail">No account, advertising or analytics SDK. Home records stay in the app\'s private storage. Optional speech engines, your document provider and Amazon purchases have their own privacy policies. Exports leave private storage only when you choose a destination. No remote AI processing is enabled.</string>
+    <string name="privacy_detail">No mandatory account, advertising or product analytics. Home records stay in private app storage. Amazon and our receipt verifier process purchase identifiers to check Premium access. Optional speech and document providers have their own privacy policies. You choose where exports go. No remote AI processing.</string>
             ~~~~~~~~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:181: Warning: The resource R.string.privacy_intro appears to be unused [UnusedResources]
     <string name="privacy_intro">Your records stay on this device. No account, location tracking or advertising. Choose your preferences, then make Fixavora your own.</string>
@@ -1576,7 +722,7 @@ D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:205: Warning: The r
     <string name="reminders">Maintenance notifications</string>
             ~~~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:206: Warning: The resource R.string.remote_ai_unavailable appears to be unused [UnusedResources]
-    <string name="remote_ai_unavailable">Remote AI is not configured. Local task drafts and record summaries remain available. Date and category parsing is limited; review every draft.</string>
+    <string name="remote_ai_unavailable">Drafts are prepared on this device. Date and category suggestions may be incomplete; review all details before saving.</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:207: Warning: The resource R.string.remove_attachment appears to be unused [UnusedResources]
     <string name="remove_attachment">Remove attachment link</string>
@@ -1732,7 +878,7 @@ D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:257: Warning: The r
     <string name="trade">Trade</string>
             ~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:258: Warning: The resource R.string.translation_review_notice appears to be unused [UnusedResources]
-    <string name="translation_review_notice">Additional languages contain draft translations and may fall back to English. They have not completed language or layout review.</string>
+    <string name="translation_review_notice">Choose your preferred language. Speech services and available voices depend on your device.</string>
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:259: Warning: The resource R.string.tts_unavailable appears to be unused [UnusedResources]
     <string name="tts_unavailable">Spoken feedback is unavailable for this device or language. Your response remains visible.</string>
@@ -1827,6 +973,12 @@ D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:284: Warning: The r
    lint.unused-resources.exclude-tests =true.
    ,
 
+D:\App Projects\Fixavora\app\src\main\res\values-b+ar\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">السنة-الشهر-اليوم (YYYY-MM-DD)، على سبيل المثال: 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+de+DE\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">JJJJ-MM-TT, zum Beispiel 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values-b+en+AU\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
     <string name="date_format">YYYY-MM-DD, for example 2026-11-30</string>
                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1836,6 +988,57 @@ D:\App Projects\Fixavora\app\src\main\res\values-b+en+GB\strings.xml:68: Warning
 D:\App Projects\Fixavora\app\src\main\res\values-b+en+US\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
     <string name="date_format">YYYY-MM-DD, for example 2026-11-30</string>
                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+es+419\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">AAAA-MM-DD; por ejemplo, 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+es+ES\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">AAAA-MM-DD; por ejemplo, 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+fr+CA\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">AAAA-MM-JJ, par exemple 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+fr+FR\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">AAAA-MM-JJ, par exemple 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+hi+IN\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">YYYY-MM-DD, उदाहरण के लिए 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+it+IT\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">AAAA-MM-GG, ad esempio 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+ja+JP\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">YYYY-MM-DD形式（例：2026-11-30）</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+ko+KR\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">YYYY-MM-DD (예: 2026-11-30)</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+nl+NL\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">JJJJ-MM-DD, bijvoorbeeld 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+pl+PL\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">RRRR-MM-DD, na przykład 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+pt+BR\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">AAAA-MM-DD, por exemplo: 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+pt+PT\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">AAAA-MM-DD, por exemplo, 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+sv+SE\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">ÅÅÅÅ-MM-DD, till exempel 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+tr+TR\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">YYYY-AA-GG; örneğin 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+zh+Hans\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">YYYY-MM-DD，例如 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+zh+Hant\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">YYYY-MM-DD，例如 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-in-rID\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
+    <string name="date_format">YYYY-MM-DD, contohnya 2026-11-30</string>
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:68: Warning: Replace "-" with an "en dash" character (–, &#8211;) ? [TypographyDashes]
     <string name="date_format">YYYY-MM-DD, for example 2026-11-30</string>
                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1848,22 +1051,45 @@ D:\App Projects\Fixavora\app\src\main\res\values\strings.xml:68: Warning: Replac
 
    https://en.wikipedia.org/wiki/Dash
 
-D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\premium\AmazonBilling.kt:50: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
-            if (cache.getString("user", null) != userId) { cache.edit().clear().apply(); state.value = state.value.copy(premium = false) }
+D:\App Projects\Fixavora\app\src\main\res\values-b+hi+IN\strings.xml:122: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+    <string name="listening">सुन रहा हूँ...</string>
+                             ~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+it+IT\strings.xml:122: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+    <string name="listening">Ascoltando...</string>
+                             ~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+sv+SE\strings.xml:122: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+    <string name="listening">Lyssnar...</string>
+                             ~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\res\values-b+tr+TR\strings.xml:122: Warning: Replace "..." with ellipsis character (…, &#8230;) ? [TypographyEllipsis]
+    <string name="listening">Dinleniyor...</string>
+                             ~~~~~~~~~~~~~
+
+   Explanation for issues of type "TypographyEllipsis":
+   You can replace the string "..." with a dedicated ellipsis character,
+   ellipsis character (u2026, &#8230;). This can help make the text more
+   readable.
+
+   https://en.wikipedia.org/wiki/Ellipsis
+
+D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\premium\AmazonBilling.kt:75: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+                if (cache.getString("user", null) != user) cache.edit().clear().apply()
                                                            ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\premium\AmazonBilling.kt:82: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
-                cache.edit().putBoolean("active", active).putString("user", user).apply()
+D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\premium\AmazonBilling.kt:123: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+                cache.edit().putBoolean("active", active).putString("user", user).putLong("verifiedAt", System.currentTimeMillis()).apply()
                 ~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\ui\RecordForms.kt:188: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
-                    TextButton({ openExternal(c, Intent(Intent.ACTION_VIEW).setDataAndType(Uri.parse(a.uri), a.mime).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)) { vm.message.value = "document_unavailable" } }, Modifier.weight(1f)) { Text(a.name) }
-                                                                                           ~~~~~~~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\ui\RecordForms.kt:209: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
-        items(files) { file -> OutlinedCard(onClick = { openExternal(c, Intent(Intent.ACTION_VIEW).setDataAndType(Uri.parse(file.uri), file.mime).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)) { vm.message.value = "document_unavailable" } }, Modifier.fillMaxWidth()) { Column(Modifier.padding(20.dp)) { Text(file.name); Text(all.find { it.id == file.recordId }?.title.orEmpty(), style = MaterialTheme.typography.bodySmall) } } }
-                                                                                                                  ~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\ui\RecordForms.kt:196: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                        if(vm.repo.dao.attachments().none { it.uri == a.uri }) runCatching { c.contentResolver.releasePersistableUriPermission(Uri.parse(a.uri),Intent.FLAG_GRANT_READ_URI_PERMISSION) }
+                                                                                                                                               ~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\ui\RecordForms.kt:213: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+        c.contentResolver.openAssetFileDescriptor(Uri.parse(file.uri),"r")?.use { true } ?: false
+                                                  ~~~~~~~~~~~~~~~~~~~
+D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\ui\RecordForms.kt:216: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+    openExternal(c,Intent(Intent.ACTION_VIEW).setDataAndType(Uri.parse(file.uri),file.mime).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION),failed)
+                                                             ~~~~~~~~~~~~~~~~~~~
 D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\notifications\ReminderWorker.kt:45: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
             log.edit().putString(r.id, today.toString()).apply()
             ~~~~~~~~~~
-D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\ui\SettingsReports.kt:94: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\ui\SettingsReports.kt:117: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
         c.getSharedPreferences("notification_history", android.content.Context.MODE_PRIVATE).edit().clear().apply()
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -1920,4 +1146,4 @@ D:\App Projects\Fixavora\app\src\main\java\com\fixavora\app\ui\SettingsReports.k
    </lint>
    ```
 
-258 errors, 318 warnings
+0 errors, 337 warnings

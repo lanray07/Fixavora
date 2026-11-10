@@ -1,0 +1,91 @@
+{
+  "locale": "zh-Hant",
+  "variant": "compact",
+  "journey": "PASS",
+  "device": "G001KT0620330AWU",
+  "network": "Wi-Fi disabled",
+  "visual_review": "AI sample review plus real journey and native composition bounds",
+  "files": [
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/compact/01-overview.png",
+      "sha256": "4e37378f1c0f5f84b5ea612ed9389b917daf15720a03d2c908956d961644e4d1",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/compact/01-overview.png",
+      "raw_sha256": "fb639291d960e57654f516d7e1eb878ddc7fa2787de5888bcbbbe9cf76ba8555"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/compact/02-maintenance.png",
+      "sha256": "0523dd98b9102f9c445d60cf66ec4e220ecf74c32c8ddc5f6b8283e8f57b1106",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/compact/02-maintenance.png",
+      "raw_sha256": "f1ac9f095bd869e16e46c4a5c59709605bf1e27e3fdbea67def49a8e1fbc24a5"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/compact/03-repairs.png",
+      "sha256": "c8c1b698be039f04a903720cc0acbd591abfb23e0549cc6852a4af9715ae2948",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/compact/03-repairs.png",
+      "raw_sha256": "cf44535036c6820d7e3be02e588c69fad2ca051c6c3b4c57895fc0e68843a2fc"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/compact/04-appliances.png",
+      "sha256": "ee731fb2fa43150766f665d1fcba9b4105ebd3226bebb40404e5bccb6f5f414c",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/compact/04-appliances.png",
+      "raw_sha256": "3756a92b4a53e7f16a9dedfa3a11f89b53d0ccabfa6d32e2fe2e60a23468699a"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/compact/05-voice-assistant.png",
+      "sha256": "91cc85272f76ccc5af1a7a9a1cf584a167ffe1e0ac72d34f0120947e8990674e",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/compact/05-voice-assistant.png",
+      "raw_sha256": "3083765a7d70c231cc69fc83901cb3f6c18c8135ebec00d9c0f62376ec0bccc9"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/compact/06-calendar.png",
+      "sha256": "fe958c7c79e2b885abe78725b9bccba15dcb968020224c3133ac25f34bce945e",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/compact/06-calendar.png",
+      "raw_sha256": "d7c80487420cd70fdd9810ce2c50e9a448cbf3b2c67473c957412ba7a8d64902"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/compact/07-offline-records.png",
+      "sha256": "695cec58b2264dcca8730a4ef561687481e5c2fcd30414c82f4d2686d13a95a0",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/compact/07-offline-records.png",
+      "raw_sha256": "5fae46161519eb918a504351c5239e794a883ae83964fca609e65f54d6e330c7"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/zh-Hant/compact/08-reports.png",
+      "sha256": "cb81568cf727ea3fe2a7bb521cdc040d661523344b3b86d19d14e58bd73646d9",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/zh-Hant/compact/08-reports.png",
+      "raw_sha256": "0ef79ed43bddcb2cac5b6751e4a42538f2a0522f12afa02ee2b2818f7054d115"
+    }
+  ],
+  "human_review": "NOT PERFORMED"
+}

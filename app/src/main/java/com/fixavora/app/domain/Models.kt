@@ -33,6 +33,15 @@ object Recurrence {
 }
 
 object Money {
+    fun formatter(currencyCode: String, locale: java.util.Locale): java.text.NumberFormat {
+        val selected=Currency.getInstance(currencyCode)
+        val digits=selected.defaultFractionDigits
+        require(digits>=0)
+        return java.text.NumberFormat.getCurrencyInstance(locale).apply {
+            currency=selected
+            minimumFractionDigits=digits;maximumFractionDigits=digits
+        }
+    }
     fun parse(input: String, currency: String, locale: java.util.Locale = java.util.Locale.ROOT): Long {
         val scale = Currency.getInstance(currency).defaultFractionDigits
         require(scale >= 0)

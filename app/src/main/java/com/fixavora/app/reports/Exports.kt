@@ -35,7 +35,7 @@ object Exports {
         val totals = records.filter { it.kind == "EXPENSE" }.groupBy { it.currency }
         totals.forEach { (currency, values) ->
             val amount = values.fold(java.math.BigInteger.ZERO) { a, r -> a.add(java.math.BigInteger.valueOf(r.amountMinor)) }
-            val format = NumberFormat.getCurrencyInstance(locale).apply { this.currency = java.util.Currency.getInstance(currency) }
+            val format = Money.formatter(currency,locale)
             val decimal = java.math.BigDecimal(amount, java.util.Currency.getInstance(currency).defaultFractionDigits)
             add("${context.t("total")} ($currency): ${format.format(decimal)}")
         }

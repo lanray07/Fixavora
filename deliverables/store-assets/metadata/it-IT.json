@@ -1,23 +1,36 @@
 {
-  "status": "NOT TESTED",
-  "human_review": "NOT TESTED",
+  "status": "AI_REVIEWED_PENDING_FINAL_UPLOAD",
+  "human_review": "NOT PERFORMED",
   "publish_approved": false,
   "locale": "it-IT",
-  "display_title": "Fixavora – Manutenzione e riparazioni della casa",
-  "short_description": "Organizza interventi, elettrodomestici e scadenze. Dati sul dispositivo, senza account obbligatorio.",
-  "long_description": "Con Fixavora puoi conservare attività di manutenzione, riparazioni e informazioni sugli elettrodomestici. Aggiungi stanze, date, note e collegamenti ai documenti. I dati restano sul dispositivo.\n\nLa versione gratuita comprende un immobile attivo e fino a 15 attività di manutenzione attive. Premium è un acquisto singolo facoltativo tramite Amazon per più immobili, garanzie, professionisti, spese, rapporti e backup cifrati dei dati. Configurare e verificare gli acquisti prima della pubblicazione.\n\nL'assistente locale prepara bozze da controllare prima di salvarle. Le funzioni vocali dipendono dai servizi e dalle lingue installati. I promemoria possono subire ritardi. I documenti esterni possono richiedere una connessione. L'app non certifica la sicurezza della casa.",
+  "display_title": "Fixavora - Gestione della manutenzione e delle riparazioni domestiche",
+  "short_description": "Tieni traccia di manutenzioni, riparazioni, elettrodomestici e spese della tua casa. I dati rimangono sul tuo dispositivo.",
+  "long_description": "Organizza in un unico posto tutte le informazioni sulla tua casa. Pianifica la manutenzione periodica, registra le riparazioni, conserva i dettagli degli elettrodomestici e le scadenze delle garanzie, salva i contatti dei tecnici e allega documenti. Non è richiesto alcun account Fixavora. Inizia gratuitamente con una proprietà e fino a 15 attività di manutenzione attive. Un acquisto una tantum tramite Amazon sblocca la possibilità di gestire più proprietà, garanzie, contatti di professionisti e spese, oltre a consentire l'esportazione di report e il backup crittografato dei dati. Non è previsto alcun abbonamento. Il prezzo visualizzato nella schermata di acquisto Amazon è quello applicato nella tua valuta locale. L'assistente integrato prepara bozze di attività che potrai revisionare prima di salvarle. È possibile inserire i dati digitandoli su qualsiasi dispositivo. L'input vocale e il feedback vocale richiedono l'installazione di motori di sintesi e riconoscimento vocale compatibili. Fixavora non conserva alcun dato audio. I dati relativi alla casa sono accessibili anche offline; tuttavia, per gli acquisti, la verifica delle ricevute e l'accesso a documenti archiviati esternamente è necessaria una connessione internet. I promemoria potrebbero subire ritardi a causa delle impostazioni di risparmio energetico del dispositivo. I backup crittografati includono i dati e la cronologia. Documenti esterni, foto e relativi collegamenti non sono inclusi: conserva copie separate e ricollega i file dopo il ripristino. Fixavora ti aiuta a organizzare le informazioni; non effettua ispezioni della tua abitazione né sostituisce l'intervento di un professionista qualificato.",
   "product_feature_bullets": [
-    "Manutenzione",
-    "Riparazioni",
-    "Elettrodomestici",
-    "Documenti",
-    "Rapporti"
+    "Pianifica la manutenzione periodica della casa",
+    "Tieni traccia delle riparazioni e dei dettagli degli elettrodomestici",
+    "Archivia le scadenze delle garanzie e i contatti dei professionisti",
+    "Revisiona le bozze delle attività prima di salvarle",
+    "Report avanzati e backup crittografati dei dati"
   ],
-  "keywords": "Manutenzione, Riparazioni, Elettrodomestici",
-  "screenshot_headlines": [],
-  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
-  "release_notes": "Organizza interventi, elettrodomestici e scadenze. Dati sul dispositivo, senza account obbligatorio.",
-  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
-  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
-  "support_status": "BLOCKED: publisher support contact required"
+  "keywords": "Pianifica la manutenzione periodica della casa, Tieni traccia delle riparazioni e dei dettagli degli elettrodomestici, Archivia le scadenze delle garanzie e i contatti dei professionisti",
+  "screenshot_headlines": [
+    "La tua casa, organizzata con cura",
+    "Dai un posto a ogni compito",
+    "Conserva insieme i dettagli della riparazione",
+    "Conosci i dati del tuo elettrodomestico",
+    "Parla o digita una bozza di attività",
+    "Vedi il mese a venire",
+    "Conserva i tuoi record sul tuo dispositivo",
+    "Una visione chiara della cronologia della tua casa"
+  ],
+  "screenshot_caption_status": "Translated; actual capture review pending",
+  "release_notes": "Tieni traccia di manutenzioni, riparazioni, elettrodomestici e spese della tua casa. I dati rimangono sul tuo dispositivo.",
+  "category_recommendation": "Productivity",
+  "privacy_policy": "https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md",
+  "support_status": "CONFIGURED",
+  "iap_title": "Fixavora Premium",
+  "iap_description": "Un unico acquisto per sbloccare la gestione di più proprietà, garanzie, contatti di professionisti e spese, oltre all'esportazione di report in formato PDF e CSV e al backup crittografato dei dati. Nessun abbonamento richiesto.",
+  "support_email": "banksmi@mail.com",
+  "support_url": "https://github.com/lanray07/Fixavora/issues"
 }

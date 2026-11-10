@@ -214,7 +214,7 @@ fun newRecord(kind: Kind, propertyId: String?, prefs: Preferences) = HomeRecord(
 @Composable fun EmptyState(title: String, caption: String, icon: ImageVector) { Surface(shape = RoundedCornerShape(20.dp), color = MaterialTheme.colorScheme.surfaceVariant) { Column(Modifier.fillMaxWidth().padding(24.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) { Icon(icon, null, tint = MaterialTheme.colorScheme.primary); Heading(title, caption) } } }
 
 fun formattedDate(value: String, locale: Locale): String = runCatching { LocalDate.parse(value).format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM).withLocale(locale)) }.getOrDefault(value)
-fun formattedMoney(r: HomeRecord, locale: Locale): String = NumberFormat.getCurrencyInstance(locale).apply { currency = Currency.getInstance(r.currency) }.format(Money.decimal(r.amountMinor, r.currency))
+fun formattedMoney(r: HomeRecord, locale: Locale): String = Money.formatter(r.currency,locale).format(Money.decimal(r.amountMinor, r.currency))
 
 @Composable fun RecordCard(r: HomeRecord, all: List<HomeRecord>, locale: Locale, click: () -> Unit) {
     val c = LocalContext.current
@@ -287,7 +287,7 @@ fun formattedMoney(r: HomeRecord, locale: Locale): String = NumberFormat.getCurr
         records.groupBy { it.currency }.forEach { (currency, rows) ->
             val totals = rows.groupBy { it.category }.mapValues { (_, group) -> group.fold(java.math.BigInteger.ZERO) { sum, r -> sum + java.math.BigInteger.valueOf(r.amountMinor) } }
             val total = totals.values.fold(java.math.BigInteger.ZERO, java.math.BigInteger::add)
-            val format = NumberFormat.getCurrencyInstance(locale).apply { this.currency = Currency.getInstance(currency) }
+            val format = Money.formatter(currency,locale)
             Text(format.format(java.math.BigDecimal(total, Currency.getInstance(currency).defaultFractionDigits)), style = MaterialTheme.typography.titleLarge)
             totals.forEach { (category, value) ->
                 Text(c.t(category) + " • " + format.format(java.math.BigDecimal(value, Currency.getInstance(currency).defaultFractionDigits)), style = MaterialTheme.typography.bodySmall)

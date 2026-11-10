@@ -1,24 +1,23 @@
 # Security and privacy assessment
 
-Assessment date: 10 November 2026. Scope: source inspection, local tests, APK configuration and the connected Fire tablet. This is not a penetration test or a legal compliance certification.
+10 November 2026. Scope: changed source, build configuration, verifier tests, APK inspection and the physical KFTRWI debug workflows. This is a scoped engineering assessment, not a penetration test or legal certification.
 
-| Area | Status | Evidence / limit |
-| --- | --- | --- |
-| Backup confidentiality and integrity | PASS | AES-GCM round-trip, random ciphertext, wrong-passphrase and tampering tests pass. PBKDF2-HMAC-SHA256 derives a portable key. |
-| Relational integrity and restore rollback | PASS | Device tests reject cross-property links and orphan restores, exercise cascades and preserve current data on validation failure. |
-| CSV formula handling | PASS | Tests neutralise formula prefixes and escape quotes/newlines. |
-| Core local persistence | PASS | Device tests reopen a disk database and read the saved record. |
-| No embedded production secrets | PASS | Source/configuration review found no provider keys, Amazon shared secret or signing key. `.env.example` contains empty values. Receipt and translation secrets are server/development-only. This is a scoped review, not a guarantee against all possible leaks. |
-| Cleartext network policy | PASS | Application manifest disables cleartext traffic. Client receipt URL must be HTTPS and redirects are disabled. |
-| Purchases fail closed | PASS | Source gates purchase setup on a public key and verification endpoint; there is no production test unlock. Server evaluation tests reject wrong/cancelled/test receipts. Real Amazon purchase verification remains BLOCKED. |
-| File picker / external viewer end to end | NOT TESTED | Implemented with read-only persisted SAF grants, explicit user picker and compatible ACTION_VIEW intents; physical provider permission/revocation scenarios still need testing. |
-| Complete local deletion journey | NOT TESTED | Database cascade behaviour is tested. Settings deletion also clears preferences, notifications and persisted grants; its full UI journey still needs execution. External originals, exported backups and Amazon purchases are intentionally not deleted. |
-| Platform storage confidentiality | NOT TESTED | Uses Android app-private storage and disables automatic backup. The Room database is not independently encrypted. No rooted-device resistance or device-encryption assessment is claimed. |
-| Notifications / lock screen | NOT TESTED | Notification visibility is private and scheduling respects opt-in/quiet hours in source. Delivery, revocation and all Fire OS battery cases are not established by a long-duration test. |
-| Network / SDK audit | NOT TESTED | No advertising/analytics dependency is intentionally included. Amazon SDK and OS speech/document providers have their own policies. No packet-capture audit was performed. |
-| Public receipt-service deployment | BLOCKED | Requires publisher-held Amazon secret, TLS endpoint, global edge rate limits, operational logging/retention policy and Amazon verification tests. No service was deployed. |
-| Legal and privacy publication | BLOCKED | Publisher identity/contact, policy URL, processor disclosures and jurisdiction review are required. Draft policy is in `docs/PRIVACY_POLICY_DRAFT.md`. |
+| Area | Evidence and limits |
+| --- | --- |
+| Portable backup encryption | PASS: authenticated AES-256-GCM, random salt/nonce, PBKDF2-HMAC-SHA256, wrong-password/tampering tests and actual encrypted file-picker restore. |
+| Passphrase handling | Single-use RAM CharArray retained across activity recreation, wiped after use; UI text reset, password keyboard configured, no Bundle/preference/server storage. This does not claim forensic erasure of every OS/IME memory copy. |
+| Database integrity | PASS: cross-property validation, cascades, transactional restore rollback, non-destructive migration and disk reopen tests. |
+| File access | PASS: actual picker links and persisted read grants; a removed test document produces the app fallback. Detaching the last link releases its persisted grant in source. External originals are not deleted. |
+| Local deletion | PASS: confirmation/cancel/delete UI, records/history/preferences, notification history and persisted grants. Exported files, external originals and Amazon store records remain under their respective owners. The separate purchase cache is cleared by Android app-storage clearing/uninstall, disclosed in the policy. |
+| Report handling | PASS: reviewed snapshots survive recreation, real PDF renders and CSV contains the reviewed record. CSV formula prefixes are neutralized. PDF uses native text shaping and pagination. |
+| Receipt verification | PASS: real App Tester receipt through deployed sandbox RVS verifier, reconnect and restore; 13 worker/Python tests cover matching SKU/receipt, revocation, errors and malformed input. No client-only unlock is present. Amazon-verified LAT test receipts retain their marker. Production charging/LAT distribution are not tested. |
+| Account/cache boundaries | Confirmed matching Amazon account required; stale requests invalidated, operation timeout, complete paginated restore, empty restore revocation, seven-day cache maximum and future-time rejection. Cache-policy tests pass; a second real Amazon account was not used. |
+| Secrets | Shared secret remains in encrypted Cloudflare secrets, absent from client/source. The packaged authentication key is public and verified against the release APK. Environment, private key and Wrangler state files are excluded from Git. |
+| Transport/service | HTTPS only, redirects rejected, fixed Amazon upstream, 8 KB request limit, typed input, approximate distributed per-IP rate limiting, non-cacheable replies and disabled application logs/traces. Workers Free imposes a hard availability cap; no paid resource was enabled. Provider operational metadata may still be retained. |
+| Notifications | PASS: actual OS notification delivery, duplicate suppression and quiet-hour suppression. Source uses private lock-screen visibility. This is not a long-duration test across every OEM power setting or lock-screen preference. |
+| Core storage | Android private app storage; automatic cloud backup and device transfer excluded. Whole-database encryption, app lock and rooted-device resistance are not implemented or claimed. |
+| External services | Amazon store SDK and optional OS speech/document providers have independent policies. Home records are not sent to the receipt verifier. No advertising, product analytics or remote AI service is connected. No packet-capture audit was performed. |
 
-The assistant's local organisation does not upload records and requires review before saving. Remote AI is not connected. Speech may be processed by the installed engine, which is disclosed before the user invokes it. No continuous listening or recording retention is implemented.
+Published policy: https://github.com/lanray07/Fixavora/blob/main/docs/PRIVACY_POLICY.md. Publisher O. Bankole; contact banksmi@mail.com. The policy explains local records, optional providers, receipt identifiers, provider metadata, retention and deletion. Do not describe the app as encrypting its entire database or make blanket legal-compliance claims.
 
-Remaining hardening: assess app lock if required by the intended threat model; conduct accessibility, dependency and SDK privacy audits; test attachment loss/revocation, sensitive report sharing, notification leakage, entitlement account changes/refunds and signed-release behaviour. Do not advertise encryption of all local data or blanket legal compliance.
+Additional prelaunch assurance can include Amazon-signed/LAT testing, a second account/refund exercise, VoiceView/TalkBack and more physical Fire models. These must be reported separately from the completed sandbox and device checks.

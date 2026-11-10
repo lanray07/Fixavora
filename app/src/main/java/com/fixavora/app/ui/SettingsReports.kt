@@ -8,13 +8,17 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.*
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.*
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.text.input.PasswordVisualTransformation
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.fixavora.app.backup.*
@@ -22,11 +26,13 @@ import com.fixavora.app.data.*
 import com.fixavora.app.reports.Exports
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.util.Locale
 
 @Composable fun SettingsPanel(vm: HomeViewModel, prefs: Preferences) {
     val c = LocalContext.current
+    val pickerScope = rememberCoroutineScope()
     var deleting by remember { mutableStateOf(false) }
     var backupMode by remember { mutableStateOf<String?>(null) }
     var password by remember { mutableStateOf("") }
@@ -68,7 +74,22 @@ import java.util.Locale
         Text(c.t("safety_guardrail"), style = MaterialTheme.typography.bodySmall)
         Text("Fixavora ${com.fixavora.app.BuildConfig.VERSION_NAME}", style = MaterialTheme.typography.labelSmall)
     }
-    if (backupMode != null) AlertDialog(onDismissRequest = { backupMode = null; password = ""; vm.backupSession.clear() }, title = { Text(c.t(if (backupMode == "backup") "encrypted_backup" else "restore_backup")) }, text = { Column { Text(c.t("backup_password_notice")); OutlinedTextField(password, { password = it }, label = { Text(c.t("passphrase")) }, visualTransformation = PasswordVisualTransformation(), singleLine = true) } }, confirmButton = { TextButton({ val mode = backupMode; vm.backupSession.begin(password); password = ""; backupMode = null; if (mode == "backup") backup.launch("Fixavora-${LocalDate.now()}.fixavora") else restore.launch(arrayOf("application/octet-stream", "*/*")) }, enabled = password.length >= 12) { Text(c.t("continue_action")) } }, dismissButton = { TextButton({ backupMode = null; password = ""; vm.backupSession.clear() }) { Text(c.t("cancel")) } })
+    if (backupMode != null) AlertDialog(onDismissRequest = { backupMode = null; password = ""; vm.backupSession.clear() }, title = { Text(c.t(if (backupMode == "backup") "encrypted_backup" else "restore_backup")) }, text = { Column { Text(c.t("backup_password_notice")); OutlinedTextField(password, { password = it }, label = { Text(c.t("passphrase")) }, visualTransformation = PasswordVisualTransformation(), keyboardOptions = KeyboardOptions(keyboardType=KeyboardType.Password,autoCorrectEnabled=false), singleLine = true) } }, confirmButton = {
+        val keyboard=LocalSoftwareKeyboardController.current
+        val focus=LocalFocusManager.current
+        TextButton({
+            val mode = backupMode
+            focus.clearFocus(force=true); keyboard?.hide()
+            vm.backupSession.begin(password); password = ""; backupMode = null
+            // Let the dialog window and its IME close before Fire's document
+            // activity measures its available height and filename footer.
+            pickerScope.launch {
+                withFrameNanos { }
+                runCatching { if (mode == "backup") backup.launch("Fixavora-${LocalDate.now()}.fixavora") else restore.launch(arrayOf("application/octet-stream", "*/*")) }
+                    .onFailure { vm.backupSession.clear(); vm.message.value="operation_failed" }
+            }
+        }, enabled = password.length >= 12) { Text(c.t("continue_action")) }
+    }, dismissButton = { TextButton({ backupMode = null; password = ""; vm.backupSession.clear() }) { Text(c.t("cancel")) } })
     confirmRestore?.let { uri -> AlertDialog(onDismissRequest = { vm.restoreUri.value = null; vm.backupSession.clear() }, title = { Text(c.t("restore_backup")) }, text = { Text(c.t("restore_warning")) }, confirmButton = { TextButton({
         val pass = vm.backupSession.take() ?: charArrayOf(); vm.restoreUri.value = null
         vm.action { try {
@@ -121,6 +142,7 @@ import java.util.Locale
 
 @Composable fun ReportsPanel(vm: HomeViewModel, records: List<HomeRecord>, locale: Locale, premium: Boolean) {
     val c = LocalContext.current
+    val pickerScope = rememberCoroutineScope()
     var from by remember { mutableStateOf("") }
     var to by remember { mutableStateOf("") }
     var type by remember { mutableStateOf("all") }
@@ -144,13 +166,22 @@ import java.util.Locale
         Text(c.t("preview"), style = MaterialTheme.typography.titleLarge)
         Exports.summary(c, filtered, locale, if (from.isBlank() && to.isBlank()) c.t("all_dates") else "$from — $to").forEach { Text(it) }
     }
-    export?.let { format -> AlertDialog(onDismissRequest = { export = null }, title = { Text(c.t("export_records")) }, text = { Text(c.t("export_privacy_warning")) }, confirmButton = { TextButton({
+    export?.let { format -> AlertDialog(onDismissRequest = { export = null }, title = { Text(c.t("export_records")) }, text = { Text(c.t("export_privacy_warning")) }, confirmButton = {
+        val keyboard=LocalSoftwareKeyboardController.current
+        val focus=LocalFocusManager.current
+        TextButton({
+        focus.clearFocus(force=true); keyboard?.hide()
         export = null
         vm.reportSnapshot = snapshot.toList(); vm.reportRange = rangeSnapshot
+        pickerScope.launch {
+        withFrameNanos { }
+        runCatching {
         when(format) {
             "pdf" -> pdf.launch("Fixavora-${LocalDate.now()}.pdf")
             "csv" -> csv.launch("Fixavora-${LocalDate.now()}.csv")
             else -> openExternal(c, android.content.Intent.createChooser(android.content.Intent(android.content.Intent.ACTION_SEND).setType("text/plain").putExtra(android.content.Intent.EXTRA_TEXT, Exports.summary(c, snapshot, locale, rangeSnapshot).joinToString("\n")), c.t("share_text"))) { vm.message.value = "no_compatible_app" }
+        }
+        }.onFailure { vm.message.value="operation_failed" }
         }
     }) { Text(c.t("continue_action")) } }, dismissButton = { TextButton({ export = null }) { Text(c.t("cancel")) } }) }
 }
@@ -160,7 +191,7 @@ import java.util.Locale
     Text(c.t("currencies_kept_separate"), style = MaterialTheme.typography.bodySmall)
     records.filter { it.kind == "EXPENSE" }.groupBy { it.currency }.forEach { (code, rows) ->
         val total = rows.fold(java.math.BigInteger.ZERO) { sum, r -> sum + java.math.BigInteger.valueOf(r.amountMinor) }
-        val format = java.text.NumberFormat.getCurrencyInstance(locale).apply { currency = java.util.Currency.getInstance(code) }
+        val format = com.fixavora.app.domain.Money.formatter(code,locale)
         Text(code + " • " + format.format(java.math.BigDecimal(total, java.util.Currency.getInstance(code).defaultFractionDigits)), style = MaterialTheme.typography.titleLarge)
     }
 }

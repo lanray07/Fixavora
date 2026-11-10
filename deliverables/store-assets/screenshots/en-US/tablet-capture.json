@@ -1,0 +1,91 @@
+{
+  "locale": "en-US",
+  "variant": "tablet",
+  "journey": "PASS",
+  "device": "G001KT0620330AWU",
+  "network": "Wi-Fi disabled",
+  "visual_review": "AI sample review plus real journey and native composition bounds",
+  "files": [
+    {
+      "file": "deliverables/store-assets/screenshots/en-US/tablet/01-overview.png",
+      "sha256": "146b27a1c04bbbf8486e2f6ce95cb6507baaba2b706da4092c158850dc451ab0",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/en-US/tablet/01-overview.png",
+      "raw_sha256": "f1f0f4840822d07640d96859acfab698111f67f293f907ed931d2fb91663055a"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/en-US/tablet/02-maintenance.png",
+      "sha256": "d9ae1b284f03dfbdbf08a17116eafe9c54cd8ea6937652a06304c893303cfae3",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/en-US/tablet/02-maintenance.png",
+      "raw_sha256": "7210e5e06681645e0b372e1bc335ceae59260bf403c63f7e10d7c285532fb427"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/en-US/tablet/03-repairs.png",
+      "sha256": "b982f8161041ca7e20d44e40919984a01ac5cc02bea179396b00147e2395b1d2",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/en-US/tablet/03-repairs.png",
+      "raw_sha256": "e7cea6601657f6d6dfb5bd4db5b5c4335db27edb925a055c77c3e421a48cb791"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/en-US/tablet/04-appliances.png",
+      "sha256": "561d4cae865afd8fb302937b948fcc09ef11d5db1a0ebfc85e347dd17ccff031",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/en-US/tablet/04-appliances.png",
+      "raw_sha256": "3a8c992c37f7135d2738ad587af3e946d287ccee7352d34f1be552b75c1776ef"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/en-US/tablet/05-voice-assistant.png",
+      "sha256": "9ef21f142e32eb97d388aa5dca23d126d34c51c0632d3e683822a48bdb031248",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/en-US/tablet/05-voice-assistant.png",
+      "raw_sha256": "43aad711ef7232969ad732aec27c17decc462a5583a9b4f7404cf0ca42784ebf"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/en-US/tablet/06-calendar.png",
+      "sha256": "a6a194927822232e99a746e7ad7c7ec638faf2cbf200a7bf8edd7845071d54a1",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/en-US/tablet/06-calendar.png",
+      "raw_sha256": "1af39fa3aea4dbcb234305a33c9f38ee44bd81d649757c5eb338905320d09323"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/en-US/tablet/07-offline-records.png",
+      "sha256": "aa60cbe6a8838b134c2fb37520489d4f5152dec2c4306cc9bc4c6daca8db68f7",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/en-US/tablet/07-offline-records.png",
+      "raw_sha256": "69600894a4c1702ac22a7bd14afde7e7584cdfdca60dbce0f7e2dd2025658208"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/en-US/tablet/08-reports.png",
+      "sha256": "ec63380bec78cadc64c652968dd036aba4b72639d969e1f7906b364104d2b59e",
+      "dimensions": [
+        1920,
+        1200
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/en-US/tablet/08-reports.png",
+      "raw_sha256": "265ee85be819820e9b1d6027e71bcc99796915435feefe78d91840f97dcb384c"
+    }
+  ],
+  "human_review": "NOT PERFORMED"
+}

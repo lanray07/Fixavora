@@ -1,0 +1,91 @@
+{
+  "locale": "hi-IN",
+  "variant": "compact",
+  "journey": "PASS",
+  "device": "G001KT0620330AWU",
+  "network": "Wi-Fi disabled",
+  "visual_review": "AI sample review plus real journey and native composition bounds",
+  "files": [
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/compact/01-overview.png",
+      "sha256": "7372b5c11ff891f8db03bdc5f31955d5e167ff8d476bb4b279aa3ac83fa896c1",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/compact/01-overview.png",
+      "raw_sha256": "39eb16135d4c68a4e738f6237b6ad0f77db1e07b4693e1e729c0191e2db2b08a"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/compact/02-maintenance.png",
+      "sha256": "9abe14c64b2f310053ee039e2b30873c4f9ef418cc44446cd5efc3afa1da0779",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/compact/02-maintenance.png",
+      "raw_sha256": "9ce799c6c02fee9ec4b16a47d389f943dc04fc225494819df256885131c078b1"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/compact/03-repairs.png",
+      "sha256": "71085fdd63162a4c4ed7ad0f19856eba36c7e099721c5cf3ad5057380d76ff2e",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/compact/03-repairs.png",
+      "raw_sha256": "fd28db92a902607c73d62424840c95e1b22de8ba3c6f330cba98b4042ea67bad"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/compact/04-appliances.png",
+      "sha256": "29c01a5e69923cf8f90206b07ad6ab0faa07e65ee7e7340d1859439ed5b211a4",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/compact/04-appliances.png",
+      "raw_sha256": "dacb0cac5cb322c7aaed88e748cad269f3a769683ca8c9dfbe94518767359cdf"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/compact/05-voice-assistant.png",
+      "sha256": "f4d5e8b83cd550a4644eb02959dd8f3bdd8727f1aec809047ac3f00780b5476f",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/compact/05-voice-assistant.png",
+      "raw_sha256": "6198c64bc1c2ffac32f40a3e9c7429ba6ef6828da879c90b5a315ade8e315482"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/compact/06-calendar.png",
+      "sha256": "bf82e41b1478074bbbd8e8e99c80ecbb24145b2162d48c6d3d6b9f1b92bb0c6c",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/compact/06-calendar.png",
+      "raw_sha256": "51d2704a2f92cc684ac34d622da0fff9377ea4d65e14c1e96a16a68df595d215"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/compact/07-offline-records.png",
+      "sha256": "7b11f653ccde263d29d282b0f5e4eb949ba421b03d1c246808b762bed2e2aaa8",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/compact/07-offline-records.png",
+      "raw_sha256": "196ce713123c5b6f50aab0dc5979791dce4d6ee08e638c6624e24b482bd51613"
+    },
+    {
+      "file": "deliverables/store-assets/screenshots/hi-IN/compact/08-reports.png",
+      "sha256": "e1c0a55b7bfe1900d57ed571997ccf6ff74f8361de1865034202127ac51582e3",
+      "dimensions": [
+        800,
+        1280
+      ],
+      "raw": "deliverables/store-assets/screenshots/raw/hi-IN/compact/08-reports.png",
+      "raw_sha256": "9ade076883487481d2bfb89abd2c250988a0fb597fc755b9fb36226e18cb5428"
+    }
+  ],
+  "human_review": "NOT PERFORMED"
+}

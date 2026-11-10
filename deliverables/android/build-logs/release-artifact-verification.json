@@ -1,0 +1,16 @@
+{
+  "artifact": "app/build/outputs/apk/release/app-release-unsigned.apk",
+  "version": "1.0.0",
+  "version_code": 2,
+  "min_sdk": 26,
+  "target_sdk": 35,
+  "bytes": 12927537,
+  "sha256": "c9582dcc96a4a42168eb6c85dcd866282f384a7b774e17490377210c4c90fbc3",
+  "production_endpoint": "PASS",
+  "sandbox_endpoint_excluded": "PASS",
+  "test_hosts_and_fixtures_excluded": "PASS",
+  "public_authentication_key_matches": "PASS",
+  "public_key_sha256": "e6b91236c5b89588177fc0825c18c97524599b558b1a198c38cb7411357e4bbc",
+  "shared_secret": "SERVER ONLY",
+  "artifact_signing": "Unsigned Amazon upload; Amazon-signed distribution not tested"
+}
