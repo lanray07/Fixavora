@@ -15,5 +15,17 @@
   "screenshot_compositions": 384,
   "human_linguistic_review": "NOT PERFORMED",
   "production_charging": "NOT TESTED",
-  "ci": "PENDING FINAL REVISION"
+  "ci": "PASS",
+  "source_commit": "8e40ebcf4be63ed21805b26a1bd69e5d0dbb9b57",
+  "ci_run": "https://github.com/lanray07/Fixavora/actions/runs/42818877989",
+  "ci_checks": [
+    "22 catalog validation",
+    "5 Python receipt tests",
+    "8 worker receipt tests",
+    "21 JVM tests",
+    "debug/release/instrumentation builds",
+    "full Android lint",
+    "artifact upload"
+  ],
+  "attestation_scope": "Final application code and test sources. Subsequent delivery commit changes only metadata status, privacy wording, evidence and manifest."
 }

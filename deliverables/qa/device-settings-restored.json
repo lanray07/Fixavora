@@ -1,0 +1,9 @@
+{
+  "device_model": "Amazon KFTRWI",
+  "stay_on_while_plugged_in": 0,
+  "display": "Physical size 1200x1920; no override",
+  "font_scale": 1.0,
+  "wifi_on": 1,
+  "accelerometer_rotation": 1,
+  "result": "Verified after all device tests"
+}

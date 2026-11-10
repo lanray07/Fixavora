@@ -34,7 +34,7 @@ If you enable reminders and grant any required notification permission, Fixavora
 
 Reports and backups leave the application's private storage only when you choose to export, save or share them. The selected destination or recipient then controls its copy. Reports may contain private home, contact or expense information, so choose recipients and storage destinations carefully.
 
-Portable encrypted backups contain home records and history. They do not bundle the contents of externally attached files. Backups are encrypted using a passphrase you choose. Keep the passphrase safe: the publisher cannot recover it. Protect exported reports, backup files and separate copies of your documents.
+Portable encrypted backups contain home records and history. External documents, photographs and their attachment links are excluded. Keep separate copies and relink files after restoring. Backups are encrypted using a passphrase you choose. Keep the passphrase safe: the publisher cannot recover it. Protect exported reports, backup files and separate copies of your documents.
 
 ## Amazon Appstore and purchases
 

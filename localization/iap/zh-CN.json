@@ -3,5 +3,7 @@
   "title": "Fixavora Premium",
   "description": "一次性升级，可管理更多房产、保修和服务商，记录费用，导出 PDF/CSV 报告，并创建加密的记录备份。无需订阅。",
   "human_review": "NOT PERFORMED",
-  "review": "AI terminology review"
+  "review": "AI terminology review",
+  "status": "SAVED_AMAZON_DRAFT",
+  "publish_approved": false
 }

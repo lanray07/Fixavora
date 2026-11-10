@@ -16,6 +16,7 @@
 | Gate | Result | Evidence |
 | --- | --- | --- |
 | Build | PASS | Debug, unsigned Amazon release and instrumentation APKs built with JDK 17, minimum API 26, target 35. |
+| GitHub CI | PASS | [Run 42818877989](https://github.com/lanray07/Fixavora/actions/runs/42818877989), source commit `8e40ebc`; all build/check/artifact steps successful. |
 | JVM tests | PASS: 21 | Recurrence/DST, draft routing, exact localized money, currency precision, backup cryptography/passphrase session, quiet hours and entitlement cache boundaries. XML results under `android/build-logs/unit-test-results/`. |
 | Android lint | PASS: 0 errors | 337 maintenance warnings reviewed in `qa/lint-review.json`; dynamic localized resource references account for most unused-resource warnings. No missing-translation suppression/baseline. |
 | Receipt service | PASS: 13 automated tests | Eight deployed-worker implementation tests plus five Python reference tests; SKU/receipt matching, cancellation, errors, redirects and malformed input. Production and sandbox health both report configured. |
