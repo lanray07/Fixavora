@@ -84,6 +84,7 @@ deliverables/android/build-logs/unit-test-results/TEST-com.fixavora.app.domain.Q
 deliverables/android/build-logs/voice-compatibility.json,1770,c8f7139fb5496aecf51f853c3de064a87db0298fa9fc892b126c56cacaae0f4c
 deliverables/android/debug/Fixavora-1.0.0-debug.apk,19604513,66b18d50434fb777985d2a479112bf531cc40435b1d9919b69a076d31164f005
 deliverables/android/release/Fixavora-1.0.0-release-unsigned.apk,12927537,c9582dcc96a4a42168eb6c85dcd866282f384a7b774e17490377210c4c90fbc3
+deliverables/brand-assets/RIGHTS.txt,226,c3854cdcfac0110898c4eb53eacd067ab084c325ee75451d430e2bdccd2bd8a2
 deliverables/brand-assets/amazon-promotional-1024x500.png,12010,e6302a26bc15edb86f604d025297afb260e75a63ccd189325dae8e92b1e2f71e
 deliverables/brand-assets/app-icon-1024.png,31089,d3f3993e3b3cb5e2c919e367d2454fbda2518535660782df05a7aa24e80bee9e
 deliverables/brand-assets/app-icon-114.png,3324,96c2cd9e3f4f4acd50d0904ee92409c80068a6ba8d71a639bd4fd9181de1aeac
@@ -101,20 +102,22 @@ deliverables/brand-assets/onboarding.svg,472,d5e28be4210705ccddf52a3038a3ada6cad
 deliverables/brand-assets/premium.svg,472,f4e775fe6ed4e3ea3222f6526e06ddeec02afbbaec766992757a56e20d312345
 deliverables/brand-assets/property.svg,358,cfb0a13b4c7559278fcefe4b9f0d995293fd15bd7f9b66ad261341e416b2f952
 deliverables/brand-assets/repair.svg,364,a0a09dc02e2639bf901d3bc8d51a417c64e801598b572953daa0cf87433eb6dc
-deliverables/brand-assets/RIGHTS.txt,226,c3854cdcfac0110898c4eb53eacd067ab084c325ee75451d430e2bdccd2bd8a2
 deliverables/brand-assets/splash.svg,358,cfb0a13b4c7559278fcefe4b9f0d995293fd15bd7f9b66ad261341e416b2f952
 deliverables/brand-assets/voice.svg,369,81ffac0a36749118a87244c515b2d324e9a1799105dc353862b3b05e5d144001
 deliverables/brand-assets/warranty.svg,338,00369492386c5d34357abf6ba7dbd5fd822f365a6fda18e894f234528161a4a6
 deliverables/localization/ai-review.json,6676,ab85981c1318be1bd0d0c021f80c35f82c25afd3a5c199864d5dddf78bc3ba99
 deliverables/localization/coverage.json,7793,ce3513425ed911fadaf5315a9503b8bba4718e89ab032313e0c9ed76831d57cc
-deliverables/qa/amazon-draft-status.json,686,d084755b1da9a325419a72dc868ebabc876c9f0cfa20d85a3e9d53a9eac85875
+deliverables/qa/amazon-app-submission.jpg,65020,753e3e90f78462f68ddf159e8f4a605d48aecdd83bc9dbdc603f35e117d5c146
+deliverables/qa/amazon-draft-status.json,883,32a7d6139af7de8203ecf83008c01a7fe815b493a5602fbf2346f262dd8dab7a
 deliverables/qa/amazon-iap-localizations.json,951,3354bf8b9338c387518e5dcdcacea98a2aad79f4b0fbb884dd55bd539b53c5d5
+deliverables/qa/amazon-iap-submission.jpg,70487,1f759f5a2fbbd8515d56f5982b117e5b37b62ca7e96a510a0756c9a1d17e411c
 deliverables/qa/amazon-listing-localizations.json,1008,c7eeef3f429c0aa0bf4e9ee2c23932674be11a4badc240c33bae58733d49659c
 deliverables/qa/amazon-premium-draft.jpg,69443,e958274c4baa88138f906da55f5334e8b15b4c858c777fc5dedc2680afb075a6
 deliverables/qa/amazon-reviewer-instructions.txt,1697,2f504952826b468d41b3f089d254ed5cb1afb090509f63b6c2016914741cd00a
 deliverables/qa/amazon-screenshot-localizations.json,6822,992a6c3cfb57875fe2e21bc38dcedeb5029f8cfa17dc445ca5c9b8e765ce1910
 deliverables/qa/device-settings-restored.json,248,9c0afd33514791b50a4f19e691c7c7977f018675df33dfef81d3c81f84b54a26
 deliverables/qa/document-backup-result.json,279,65bab424cb2287e37decde45ec7b9bfc7368c842ceb506c268a4784e2994cf57
+deliverables/qa/layout-stress/ar.log,96,8652c959bfd7c58d9ed49f4b55a1c05debdd06283bef35c22e0c94094dcb2a43
 deliverables/qa/layout-stress/ar/compact-dark-contrast-large/01-overview.png,170455,bf7707081d529214ceb736e9aa2f51a7d6709ced5a70516e9464391bebb50932
 deliverables/qa/layout-stress/ar/compact-dark-contrast-large/02-maintenance.png,139988,eb931c9631357fb43441badd5ad218492ced9f81402c193aa9f7d4d130dd56b7
 deliverables/qa/layout-stress/ar/compact-dark-contrast-large/03-repairs.png,105556,592a2bc9e1c3ac85b551ca5f40c990c55defe0906b5414e619b756724cbef8fb
@@ -123,7 +126,7 @@ deliverables/qa/layout-stress/ar/compact-dark-contrast-large/05-voice-assistant.
 deliverables/qa/layout-stress/ar/compact-dark-contrast-large/06-calendar.png,120368,22c1d9e8902b81899b647657f143a526c26b92e4fb5b3efd9d460dd1262c4c83
 deliverables/qa/layout-stress/ar/compact-dark-contrast-large/07-offline-records.png,153524,47b0b0d4d6cf5dad4f83da9d5b946e49c8d9f98df740403a0ed25f2c0bf7c5e8
 deliverables/qa/layout-stress/ar/compact-dark-contrast-large/08-reports.png,186873,4cd9d3bed3b165a5177b8016e1b4e419d2c907f28b89054cae7b1031514cfe8a
-deliverables/qa/layout-stress/ar.log,96,8652c959bfd7c58d9ed49f4b55a1c05debdd06283bef35c22e0c94094dcb2a43
+deliverables/qa/layout-stress/de-DE.log,99,a49bf92cb0488e593dc99fea11566c1a9e217561e8ba05eecf6f68ea5594ef63
 deliverables/qa/layout-stress/de-DE/compact-dark-contrast-large/01-overview.png,167469,475e693801514efc1c0e4dd61d137676067227c2e2ce07559751e7ae5eb4f6b4
 deliverables/qa/layout-stress/de-DE/compact-dark-contrast-large/02-maintenance.png,155043,e97d2b73351352f7186a576558fd515f934eb3d90d1bdf93f4153cee294db8d7
 deliverables/qa/layout-stress/de-DE/compact-dark-contrast-large/03-repairs.png,107955,0db1ec8b0f599f918894458a8cf1671af93af36b03ea725642b0fef0fe45c376
@@ -132,7 +135,7 @@ deliverables/qa/layout-stress/de-DE/compact-dark-contrast-large/05-voice-assista
 deliverables/qa/layout-stress/de-DE/compact-dark-contrast-large/06-calendar.png,107715,be4a783e3f0b229bd17d7915fac6d442bdb8f35cf07e6f2d606ca39280e6d013
 deliverables/qa/layout-stress/de-DE/compact-dark-contrast-large/07-offline-records.png,169021,1eb775091f5f4488c9720522150648d6f2d3faf20df549595cf919af1739557e
 deliverables/qa/layout-stress/de-DE/compact-dark-contrast-large/08-reports.png,207417,a3600e5b3ad08b9c189a322046a5aa3561be1a5c1760a6c342b7c6bfc66f8922
-deliverables/qa/layout-stress/de-DE.log,99,a49bf92cb0488e593dc99fea11566c1a9e217561e8ba05eecf6f68ea5594ef63
+deliverables/qa/layout-stress/ja-JP.log,99,798071930f87d93fe34d0e8cbb17bd7c0eedd2e087b66f62ec13d91c36915188
 deliverables/qa/layout-stress/ja-JP/compact-dark-contrast-large/01-overview.png,190745,29c3aabfd6a2db8a82123a98851ca7460d3d346e0d8641288b32e3529c1f1075
 deliverables/qa/layout-stress/ja-JP/compact-dark-contrast-large/02-maintenance.png,157059,bd1cdf88be4527e8ea35d311643b701a8571d0f380200879d0a827f2a506310c
 deliverables/qa/layout-stress/ja-JP/compact-dark-contrast-large/03-repairs.png,104953,87e1ca9062c7250db1533414b0c8048fe18ea71ae0d5b167985593de602f3d00
@@ -141,7 +144,6 @@ deliverables/qa/layout-stress/ja-JP/compact-dark-contrast-large/05-voice-assista
 deliverables/qa/layout-stress/ja-JP/compact-dark-contrast-large/06-calendar.png,123432,081c48ee323cd3f8f0878d9bee6c2179d5b20841110ee96d5555d17dc116d42b
 deliverables/qa/layout-stress/ja-JP/compact-dark-contrast-large/07-offline-records.png,178074,eb4f790972e4bfa4d702362f82f4d391425451def1c6f0813535528694154cd7
 deliverables/qa/layout-stress/ja-JP/compact-dark-contrast-large/08-reports.png,211248,800346e84c11c5967d1fe2b942dcb33904b287e18265d66f6d12e5fd6fca49b8
-deliverables/qa/layout-stress/ja-JP.log,99,798071930f87d93fe34d0e8cbb17bd7c0eedd2e087b66f62ec13d91c36915188
 deliverables/qa/layout-stress/results.json,878,2878590c64b59eeb1813244b3775490eb0f9bc5a007ec15de683a54d5aa501cb
 deliverables/qa/lint-review.json,575,80a8281c6afe4e37710988708133c44ebd63fe8118a3ecc9613a507f8ec9cca5
 deliverables/qa/receipt-health.json,360,8cf6c2cacd9948a27d0ed01f523f8f5b31d2419575c6a06beac29293f04bb60a
@@ -149,7 +151,7 @@ deliverables/qa/source-verification.json,1082,b5e547ab70362fd50a5fc0da1390aa2df7
 deliverables/qa/voice-compatibility.json,2069,f1032dd31ed641bcf78ffa1a922e05dd65d50e09102084b9030d94efb4aeefbe
 deliverables/reports/AI_AND_VOICE.md,2472,af3a21da52f4a5c80994f3275aba764b44c0f29d53edf9ea5788eb37354102a6
 deliverables/reports/RELEASE_INSTRUCTIONS.md,3585,083d67b652ab4d0576cefcc92f18be1dfa9e3ebb35cfde6c8b662cbba3717fb5
-deliverables/reports/RELEASE_READINESS.md,7331,25a8a1d1c3d935f9d793616c71ed1d3a37b5a13ed0970e38d4facdbaad422142
+deliverables/reports/RELEASE_READINESS.md,7704,e49a870951a68117bb05be5bb49ad078f3ace8c246009bb7d59d543575a7efa9
 deliverables/reports/SECURITY_AND_PRIVACY.md,4190,f98f87bd7ecc8ce451d573046f6c25411d601b5a7d49b3866bf343222ff54672
 deliverables/store-assets/metadata/de-DE.json,3883,a8d34f3e471ad823966af40ca2f7a33e7dcf1c269e4d3b8585281193c248e661
 deliverables/store-assets/metadata/en-AU.json,3009,d4ab92523a215e152b14e0487b9ddddd2d7058bc5fd4af72ae489a1199732ac3
@@ -166,6 +168,7 @@ deliverables/store-assets/metadata/pl-PL.json,3829,7308ba5abe6dc01b60f89b4f62f48
 deliverables/store-assets/metadata/pt-BR.json,3768,7ad310dc7047dad980854c95439554a92df1888fc36554457fbcecbacbc94a1c
 deliverables/store-assets/metadata/pt-PT.json,3654,52c3cdf543875de48a366aa79ffce6321212bfd703ee8fe66b1dc0b7f59a1227
 deliverables/store-assets/metadata/sv-SE.json,3261,a4f69f293d321f1bf295483b0dd7d525a641f59bbf94d550ccdc1474234dde36
+deliverables/store-assets/screenshots/ar/compact-capture.json,3657,4a270098738c1683cd3912caa1f28635bde2f878c249ff2d9df08e2a686497ae
 deliverables/store-assets/screenshots/ar/compact/01-overview.png,156527,16c53d3a1020f157725b7ec708d6bb5614acbcd3910c57f7b72a6d879ff0a1e3
 deliverables/store-assets/screenshots/ar/compact/01-overview.svg,592,70b6c8b26306a4076e5f4bc3e69cf13545d93bfcc9d2abcf14a53b4b9d9533ed
 deliverables/store-assets/screenshots/ar/compact/02-maintenance.png,131300,f48aa4e3f5aa05d68a8ac688bd4012cb0c2924430ed9cce8c3eccd2acdd70eab
@@ -182,7 +185,7 @@ deliverables/store-assets/screenshots/ar/compact/07-offline-records.png,144110,e
 deliverables/store-assets/screenshots/ar/compact/07-offline-records.svg,600,5a7539bd3ca004adff0ef32b3375473640d67b9d34fd5b81d11ca51411f0371d
 deliverables/store-assets/screenshots/ar/compact/08-reports.png,186762,5ccbd25bc726f115aacc5f209458c80db44a4772118e51269e21175737fa2586
 deliverables/store-assets/screenshots/ar/compact/08-reports.svg,604,39ea57194c7ad5f81b5b1954e9c4c4375517bfe6ce3a4e077346a0b3f88c3593
-deliverables/store-assets/screenshots/ar/compact-capture.json,3657,4a270098738c1683cd3912caa1f28635bde2f878c249ff2d9df08e2a686497ae
+deliverables/store-assets/screenshots/ar/tablet-capture.json,3648,b0124b68918daddff7502df24697d7af5c60c61e2831bab7febfaced33f5d56e
 deliverables/store-assets/screenshots/ar/tablet/01-overview.png,194892,70a75a449316e32c9cf4f4beaa70c4f7c29f87cabd956a19c8f0494413c8d544
 deliverables/store-assets/screenshots/ar/tablet/01-overview.svg,595,a2ef0e7d744e36b77a8fbec0a89a83a4e10f9fe04d51ca31f8fe6e8512d2427c
 deliverables/store-assets/screenshots/ar/tablet/02-maintenance.png,163029,6de4dc33a587ee081d8539a7adff5fc80174b5db367c34806eb7f0b8232946f8
@@ -199,7 +202,7 @@ deliverables/store-assets/screenshots/ar/tablet/07-offline-records.png,173578,86
 deliverables/store-assets/screenshots/ar/tablet/07-offline-records.svg,603,f05783602ca9ea389b84b4a7086d5c01f4eb70cdc247c81cb819f965ca449f3d
 deliverables/store-assets/screenshots/ar/tablet/08-reports.png,216543,7f91b0e2de1aa3dadfa1e3b7ce07c07c9452d30818cef25f6bd9d66593c2bac7
 deliverables/store-assets/screenshots/ar/tablet/08-reports.svg,607,d06083e8991f5264dfdc975f28aa861bd436804b616cc0ebd40ee9275415ed26
-deliverables/store-assets/screenshots/ar/tablet-capture.json,3648,b0124b68918daddff7502df24697d7af5c60c61e2831bab7febfaced33f5d56e
+deliverables/store-assets/screenshots/de-DE/compact-capture.json,3708,16f70ea7ae0763b4867169cb199dede0dd48681c541549c980638cc26aac152d
 deliverables/store-assets/screenshots/de-DE/compact/01-overview.png,178053,d194ab48fbb22789c424397242e768cfcd8bd2d954563545d6441e9065c43daf
 deliverables/store-assets/screenshots/de-DE/compact/01-overview.svg,562,653fdcdf3f2e63c9f067c32c90ef402decad7aa69ef457f4825e145a5b0b84db
 deliverables/store-assets/screenshots/de-DE/compact/02-maintenance.png,152474,7c0c50ad460cd709734bff3d24bdaf8859bd996a64222ce9ab5133ccd653dd87
@@ -216,7 +219,7 @@ deliverables/store-assets/screenshots/de-DE/compact/07-offline-records.png,17180
 deliverables/store-assets/screenshots/de-DE/compact/07-offline-records.svg,707,5398d508feb7c1ff09e2268ba20fc3b9253048c24b076c494d664e03e70140b3
 deliverables/store-assets/screenshots/de-DE/compact/08-reports.png,215252,958991714d7acb8efd44b67ee1774de1f450f21360b3360b9e4938c3dbc9803d
 deliverables/store-assets/screenshots/de-DE/compact/08-reports.svg,841,b7e8115b7d128e7b5e8cd1156d42f1e5c2870983c750e4692b516e57ee7e2855
-deliverables/store-assets/screenshots/de-DE/compact-capture.json,3708,16f70ea7ae0763b4867169cb199dede0dd48681c541549c980638cc26aac152d
+deliverables/store-assets/screenshots/de-DE/tablet-capture.json,3699,fc64cb3ea8b3737129c097c8d97976ed224ba95c3588e79dab9d86c8da76a29c
 deliverables/store-assets/screenshots/de-DE/tablet/01-overview.png,231728,ab83eb1139b4f498124e2313130675883e625ca877c8b99ae75e44dc44d68fe9
 deliverables/store-assets/screenshots/de-DE/tablet/01-overview.svg,563,123f0284e8cc6865edecc00ddee5f1beae9ce17132e69a37e474754697494668
 deliverables/store-assets/screenshots/de-DE/tablet/02-maintenance.png,192170,04cb5f4e930212ecb82d487444b803122e751997271e2688e45e1bb811afb3ab
@@ -233,7 +236,7 @@ deliverables/store-assets/screenshots/de-DE/tablet/07-offline-records.png,205080
 deliverables/store-assets/screenshots/de-DE/tablet/07-offline-records.svg,586,5b16d384c87c6ccbc4ccacf25ccb998a35952dd06c0ef8617533b37ea4b231ec
 deliverables/store-assets/screenshots/de-DE/tablet/08-reports.png,257452,33a0e030fccfcb9f58b6d83650caf111da9f76c58c17428615aaa5389bab2af8
 deliverables/store-assets/screenshots/de-DE/tablet/08-reports.svg,595,7a541893ee08cd4b5689eb9bb7932b71c8e180f84f876ae293ff8b5f9321ed96
-deliverables/store-assets/screenshots/de-DE/tablet-capture.json,3699,fc64cb3ea8b3737129c097c8d97976ed224ba95c3588e79dab9d86c8da76a29c
+deliverables/store-assets/screenshots/en-AU/compact-capture.json,3708,b38452742e625762c674e2fa7ac46dac9d1b5cde4be4becf41f8ff892c880b1c
 deliverables/store-assets/screenshots/en-AU/compact/01-overview.png,173284,72cfba06a2d3b5d73dd9953e2eb6dffef1f3bd2b770ca122df877da7c3096462
 deliverables/store-assets/screenshots/en-AU/compact/01-overview.svg,556,88fecb9a9d5fe32a7998d83144c788910a314207f97e11ec30948764f2039f7f
 deliverables/store-assets/screenshots/en-AU/compact/02-maintenance.png,136169,e835328c1144a71152126f1e1fab72cbe2e9fad622a273db22b0ca7871ec77f4
@@ -250,7 +253,7 @@ deliverables/store-assets/screenshots/en-AU/compact/07-offline-records.png,15153
 deliverables/store-assets/screenshots/en-AU/compact/07-offline-records.svg,545,912b5201f11a090b68f94aec349696771c769e677c7a5c15432157437a6daea4
 deliverables/store-assets/screenshots/en-AU/compact/08-reports.png,206156,b1604ec8a2de3ddbf98e29401269374e02a4a40a7388618233769dee78fce20e
 deliverables/store-assets/screenshots/en-AU/compact/08-reports.svg,558,cc08074d21293f1957814fa6ebe16cad295ccdf7d5ab935eaccbcc8d8dc49815
-deliverables/store-assets/screenshots/en-AU/compact-capture.json,3708,b38452742e625762c674e2fa7ac46dac9d1b5cde4be4becf41f8ff892c880b1c
+deliverables/store-assets/screenshots/en-AU/tablet-capture.json,3699,a64c2aad83f380aa6d2fa37d1f84cc20dc9835c519cd05c71eff89f90d4a6b20
 deliverables/store-assets/screenshots/en-AU/tablet/01-overview.png,215808,7619843797e167713ac116c0dc39326c68fa0a9586772862637a16383f13ebce
 deliverables/store-assets/screenshots/en-AU/tablet/01-overview.svg,557,456c4eaf343b6c930e4e7066f7696ba30307d5d288b053a984aa81dae49655da
 deliverables/store-assets/screenshots/en-AU/tablet/02-maintenance.png,175626,b588e6bd2b5dacf791a9ebca9ff798d8f23de01bf65b04e8997a5fd86466fece
@@ -267,7 +270,7 @@ deliverables/store-assets/screenshots/en-AU/tablet/07-offline-records.png,186678
 deliverables/store-assets/screenshots/en-AU/tablet/07-offline-records.svg,546,061626819b29fb526086cdd3924920d15cfebcc1d3e4ca09986420e8026b64a4
 deliverables/store-assets/screenshots/en-AU/tablet/08-reports.png,243426,e41a8532099a0eaddd8751af05a3e277f438b9e3b3477cd8c0349719b8844148
 deliverables/store-assets/screenshots/en-AU/tablet/08-reports.svg,559,df41f0c03f02806dcc86dd342478962cf736edd01f3f490113615e7b7f9207cb
-deliverables/store-assets/screenshots/en-AU/tablet-capture.json,3699,a64c2aad83f380aa6d2fa37d1f84cc20dc9835c519cd05c71eff89f90d4a6b20
+deliverables/store-assets/screenshots/en-GB/compact-capture.json,3708,4b875bad1d11b9be5a4f024934d61683899ff1372c33f8ae4d380a783ec79b79
 deliverables/store-assets/screenshots/en-GB/compact/01-overview.png,173253,50d652db6b1472d604cb6185a1444f47bb2dee239582b999c951f37cb8ae8753
 deliverables/store-assets/screenshots/en-GB/compact/01-overview.svg,556,638106c82132c7cdd04f872b7c81dbd2045b8ac0f4a1b0649386264344d438d7
 deliverables/store-assets/screenshots/en-GB/compact/02-maintenance.png,136209,4bf492ccb60ad85a7619708ff863acbf8e8e58da70766b30cd873f45eba167b4
@@ -284,7 +287,7 @@ deliverables/store-assets/screenshots/en-GB/compact/07-offline-records.png,15159
 deliverables/store-assets/screenshots/en-GB/compact/07-offline-records.svg,545,dd0d7db6a6da2ebaed0bd9fe6f20d55af48c93d1f5fc4d060bea6b51d66133e1
 deliverables/store-assets/screenshots/en-GB/compact/08-reports.png,204151,5f8826c7fefaf6ded943d0512152dd0589104b9bffbdb7b1219d234fb2122a73
 deliverables/store-assets/screenshots/en-GB/compact/08-reports.svg,558,ec83384325d6a1c0bc0b89995b0a70fe9852b88099afe10023b1eb61855d30f3
-deliverables/store-assets/screenshots/en-GB/compact-capture.json,3708,4b875bad1d11b9be5a4f024934d61683899ff1372c33f8ae4d380a783ec79b79
+deliverables/store-assets/screenshots/en-GB/tablet-capture.json,3699,4167863091c61ab192d8657d9714471356493dd97f086c4de65ae6ef95078b68
 deliverables/store-assets/screenshots/en-GB/tablet/01-overview.png,216009,42b85590dd1d76a4d165a6063ca1391375f884e68961456a8cba3f5058460d7d
 deliverables/store-assets/screenshots/en-GB/tablet/01-overview.svg,557,9a72a3bbb77f815338d4cce8ca3e04fb892589bac9e610f0b64fdf5232a87515
 deliverables/store-assets/screenshots/en-GB/tablet/02-maintenance.png,175665,54c0bb95569b0b3d45939a33eb980a881b9da0c79c537546ae0be640b7748270
@@ -301,7 +304,7 @@ deliverables/store-assets/screenshots/en-GB/tablet/07-offline-records.png,186738
 deliverables/store-assets/screenshots/en-GB/tablet/07-offline-records.svg,546,1eb7262b0788cafcb293a2d044f7be344041d87a874738302bf742b1c156b3fa
 deliverables/store-assets/screenshots/en-GB/tablet/08-reports.png,242163,ecc65e88ab0e2a8b111467652785793f25b052643b643d62a63a0ef4934c23c7
 deliverables/store-assets/screenshots/en-GB/tablet/08-reports.svg,559,a7fb6af6c652572faefc6096ad0b073b1c80a2d52cc11e6b5a85db266443a6a3
-deliverables/store-assets/screenshots/en-GB/tablet-capture.json,3699,4167863091c61ab192d8657d9714471356493dd97f086c4de65ae6ef95078b68
+deliverables/store-assets/screenshots/en-IN/compact-capture.json,3708,9ae8613fe498a119de19a432b53461b5d2058ea2a9d7964a25766df050372731
 deliverables/store-assets/screenshots/en-IN/compact/01-overview.png,173745,d12763368929a3d68c9b51e76dbd907b1e5d69f3424117cb8adb777c92978c1a
 deliverables/store-assets/screenshots/en-IN/compact/01-overview.svg,556,ef765e66cad2c8898db79a4d14e670efb4783d361a3d3bb432b1cb7330db9b4a
 deliverables/store-assets/screenshots/en-IN/compact/02-maintenance.png,136801,43c3cfdc96e92694519b543233fddbeddce7ba3d5b9f5d5d144a80748fd70059
@@ -318,7 +321,7 @@ deliverables/store-assets/screenshots/en-IN/compact/07-offline-records.png,15235
 deliverables/store-assets/screenshots/en-IN/compact/07-offline-records.svg,545,3a2bcf0c104391a53f07cdd5c611bd138d8d6f01494589a91db84d612c36e7f1
 deliverables/store-assets/screenshots/en-IN/compact/08-reports.png,204278,cf00f2be6e6df54c0ab331aa165c479699a27d9aeeca6d705f267641e99fbce0
 deliverables/store-assets/screenshots/en-IN/compact/08-reports.svg,558,5f09854d3bc625f9790612a97ac9cc4bec7c853da4b93b8e1e5815163641108d
-deliverables/store-assets/screenshots/en-IN/compact-capture.json,3708,9ae8613fe498a119de19a432b53461b5d2058ea2a9d7964a25766df050372731
+deliverables/store-assets/screenshots/en-IN/tablet-capture.json,3699,28c86efe99957f2884f18529c48917186ec0a810ff559747603c680d65de2752
 deliverables/store-assets/screenshots/en-IN/tablet/01-overview.png,216309,03b0394a2b590d6cebeff24eb34e44d82d4ff2c9815175c7e8e183bf39312f88
 deliverables/store-assets/screenshots/en-IN/tablet/01-overview.svg,557,dab4aa6d4eafc2d78e5d55f239b8da7c2c3c17e6fa6a71245893307aff9fde78
 deliverables/store-assets/screenshots/en-IN/tablet/02-maintenance.png,176353,0f848880934a88d9bd4dc2ffcdc324e8bcd8c035f42057503c6a72e6c91fac80
@@ -335,7 +338,7 @@ deliverables/store-assets/screenshots/en-IN/tablet/07-offline-records.png,187250
 deliverables/store-assets/screenshots/en-IN/tablet/07-offline-records.svg,546,2c89a0aa4690bdcfec8ce94403cfc64574a1b38c00c882a7e5d114254a654ce0
 deliverables/store-assets/screenshots/en-IN/tablet/08-reports.png,242171,82e32937cdd019bf591fcee6839ca342e724b0f7c869b2665382f0037b8b79d4
 deliverables/store-assets/screenshots/en-IN/tablet/08-reports.svg,559,27debcad7c7d3d3160cf159ddbdd1a59ae9a692cea8c9ce61c1ed306506b5f13
-deliverables/store-assets/screenshots/en-IN/tablet-capture.json,3699,28c86efe99957f2884f18529c48917186ec0a810ff559747603c680d65de2752
+deliverables/store-assets/screenshots/en-US/compact-capture.json,3708,1e5ff5c1d657ba539a337d2e924f106f68df9cda11a8f4856384e47225d0136c
 deliverables/store-assets/screenshots/en-US/compact/01-overview.png,173102,0a696dc79e3e241071dc2fa0d3bee56c7b924e54de13845c43af28fc0ea7bbfd
 deliverables/store-assets/screenshots/en-US/compact/01-overview.svg,556,7a2e6749e320eb2348c9d8e801099674333c13e4c571ed3dd6c3e8829f2a9032
 deliverables/store-assets/screenshots/en-US/compact/02-maintenance.png,136577,412cecd8cc80e8db8d5999697807971ec48d4968162aaab311ac2ef74c8651ed
@@ -352,7 +355,7 @@ deliverables/store-assets/screenshots/en-US/compact/07-offline-records.png,15254
 deliverables/store-assets/screenshots/en-US/compact/07-offline-records.svg,545,b30f7e5c5dbce59c5c342555a7f20ef2f082e7802465fecf135b2738dbfd48e4
 deliverables/store-assets/screenshots/en-US/compact/08-reports.png,205903,928570a920fde5e47ef5f986b98fe66f96a22c61eb2016f94e27c1dd8422c21a
 deliverables/store-assets/screenshots/en-US/compact/08-reports.svg,558,fdf73e08d1269967e22c1d4b3ee19e4c96399b57b35e13f035d414251017c308
-deliverables/store-assets/screenshots/en-US/compact-capture.json,3708,1e5ff5c1d657ba539a337d2e924f106f68df9cda11a8f4856384e47225d0136c
+deliverables/store-assets/screenshots/en-US/tablet-capture.json,3699,eb95e119c042a8f6ee0b295043ed6f6242497c4449ccf780d5a7ace1c385aa32
 deliverables/store-assets/screenshots/en-US/tablet/01-overview.png,215268,146b27a1c04bbbf8486e2f6ce95cb6507baaba2b706da4092c158850dc451ab0
 deliverables/store-assets/screenshots/en-US/tablet/01-overview.svg,557,48229d768af4ea5f0679e13ee13fbc23f98e5c3a0265fa8e7a2f4bd38ffb613d
 deliverables/store-assets/screenshots/en-US/tablet/02-maintenance.png,175546,d9ae1b284f03dfbdbf08a17116eafe9c54cd8ea6937652a06304c893303cfae3
@@ -369,7 +372,7 @@ deliverables/store-assets/screenshots/en-US/tablet/07-offline-records.png,187026
 deliverables/store-assets/screenshots/en-US/tablet/07-offline-records.svg,546,6e8a77ee6658caf20359a1c74e767f894358b3f1fe6e9dad4b0f2f337dd7278f
 deliverables/store-assets/screenshots/en-US/tablet/08-reports.png,243745,ec63380bec78cadc64c652968dd036aba4b72639d969e1f7906b364104d2b59e
 deliverables/store-assets/screenshots/en-US/tablet/08-reports.svg,559,638b9c8e821837fb4fbde39a7268338571721714def2d1cc1e8621749fa2c4ea
-deliverables/store-assets/screenshots/en-US/tablet-capture.json,3699,eb95e119c042a8f6ee0b295043ed6f6242497c4449ccf780d5a7ace1c385aa32
+deliverables/store-assets/screenshots/es-419/compact-capture.json,3725,562abfcd8b91c47e42c2a012aa467d536ec78c4878436b14f8b008ee5d449452
 deliverables/store-assets/screenshots/es-419/compact/01-overview.png,184436,efbf7e1a5f011a4ad411012bb5051746e4b62f29ca4dfd5734b728e123e91038
 deliverables/store-assets/screenshots/es-419/compact/01-overview.svg,570,2539167e88a6a525c03f451b268d2cae557c263807d5a4a3f7c4c7d253eab1f4
 deliverables/store-assets/screenshots/es-419/compact/02-maintenance.png,143733,384ed45b0f3431a6a3e1dcde6c413819b89ff8db0c6ebc4a2e00bdf1da99c1f7
@@ -386,7 +389,7 @@ deliverables/store-assets/screenshots/es-419/compact/07-offline-records.png,1615
 deliverables/store-assets/screenshots/es-419/compact/07-offline-records.svg,580,609c07aefd95df35e89108b080af8c3a4d264a3adaa88bb250ac39399d2844c6
 deliverables/store-assets/screenshots/es-419/compact/08-reports.png,227042,b8bc7b1cbbc40a374c11c9ea33ec36fb9fd3cc47496f7f98a3280bd72dde6ce6
 deliverables/store-assets/screenshots/es-419/compact/08-reports.svg,713,4991021c37e5c2a0f1923b8b337c57f6a4329cf8ed81024f436e1d2bc663ead4
-deliverables/store-assets/screenshots/es-419/compact-capture.json,3725,562abfcd8b91c47e42c2a012aa467d536ec78c4878436b14f8b008ee5d449452
+deliverables/store-assets/screenshots/es-419/tablet-capture.json,3716,f17e82d7acf1fc4f2ec24480ef23199a19086743d79a9e591e4c1c4b952d3138
 deliverables/store-assets/screenshots/es-419/tablet/01-overview.png,238411,7f000fa7e6167aa556a14c0e8504c497eb6646454d1d82478606d777076eb355
 deliverables/store-assets/screenshots/es-419/tablet/01-overview.svg,571,64b26fac3be5f524e2f9672e67e211d491bc8cece2dd8986948070fc2760a63f
 deliverables/store-assets/screenshots/es-419/tablet/02-maintenance.png,186174,86aa3821b3901ef66fbf7f195369c3e32e585e4131a7121a467bc5a03f67af78
@@ -403,7 +406,7 @@ deliverables/store-assets/screenshots/es-419/tablet/07-offline-records.png,20301
 deliverables/store-assets/screenshots/es-419/tablet/07-offline-records.svg,581,8ec56b433ce0b55c9e5dc0d8f9f77d4e2b7fc5688f26761d874ae7e617a2fe3b
 deliverables/store-assets/screenshots/es-419/tablet/08-reports.png,269184,8d75c18b06f2993993b325304d41092a8b412918a130ce2f2f65e6ac0537dfcf
 deliverables/store-assets/screenshots/es-419/tablet/08-reports.svg,592,c81c132ad5fdcf4c2face068a6ab9092dda49a501bc5a70464f0d5623f3e9bc7
-deliverables/store-assets/screenshots/es-419/tablet-capture.json,3716,f17e82d7acf1fc4f2ec24480ef23199a19086743d79a9e591e4c1c4b952d3138
+deliverables/store-assets/screenshots/es-ES/compact-capture.json,3708,39dac36c1722adf26da478a5ceb8da0cf6e35ac5b1de5d0e225b4d6dfd9312d0
 deliverables/store-assets/screenshots/es-ES/compact/01-overview.png,183619,902352bc38606d640f2697f755d1d301b8704692677cd4677d91e74e8125c9c7
 deliverables/store-assets/screenshots/es-ES/compact/01-overview.svg,569,56ae849dd069b3ee2b61d8ad56c3d544965fb6385a46bbe5858a9d84263e2bc4
 deliverables/store-assets/screenshots/es-ES/compact/02-maintenance.png,143121,8d3a628b0e113cdcea0c958fed98f6330d31c029bc819f60a9a1d84b457869c8
@@ -420,7 +423,7 @@ deliverables/store-assets/screenshots/es-ES/compact/07-offline-records.png,16101
 deliverables/store-assets/screenshots/es-ES/compact/07-offline-records.svg,579,3899bef0fd525ed65afeedfd2e658fa7ebfc932cf5c6d25f1c99f1e0a5a31946
 deliverables/store-assets/screenshots/es-ES/compact/08-reports.png,227347,14013a48d090d88c5de3b857b6e146f21887711cdf417984c0e8d6ed9c026f90
 deliverables/store-assets/screenshots/es-ES/compact/08-reports.svg,712,ad5ecc7a7506dfe87869aaead30519414868181ca0600380327010431087b1f2
-deliverables/store-assets/screenshots/es-ES/compact-capture.json,3708,39dac36c1722adf26da478a5ceb8da0cf6e35ac5b1de5d0e225b4d6dfd9312d0
+deliverables/store-assets/screenshots/es-ES/tablet-capture.json,3699,bafbc455a39e287067c21a0fa86b7d9041a55bc78abba66092f5e8391bc3feb0
 deliverables/store-assets/screenshots/es-ES/tablet/01-overview.png,238063,9f20e28579447cd89ab543d76955f77032e0cf958b7b94a5baa2433eb42a66cf
 deliverables/store-assets/screenshots/es-ES/tablet/01-overview.svg,570,c8a086275c09acb38dc0eb0c3c3eefbb08fa8d7b309c93ab517c2b8a54fbf725
 deliverables/store-assets/screenshots/es-ES/tablet/02-maintenance.png,185665,27ceb87e10f4cdb6e17cb6e8b3d1973ca2a9b0d286fdccbfc9b19aa3339efdf2
@@ -437,7 +440,7 @@ deliverables/store-assets/screenshots/es-ES/tablet/07-offline-records.png,202478
 deliverables/store-assets/screenshots/es-ES/tablet/07-offline-records.svg,580,024277f744bc6fd13006f9de734d1bd9e64adf790e9a9284012974b6a48eecf7
 deliverables/store-assets/screenshots/es-ES/tablet/08-reports.png,269775,ee1eecdd49fb90c50a8d6d14d2fdfd48698173bf6a2e5c6ed02962e597eee8c1
 deliverables/store-assets/screenshots/es-ES/tablet/08-reports.svg,591,7732960a4059e4ac380556748406467e554a7625b622e5123c9229a2b46ee0e3
-deliverables/store-assets/screenshots/es-ES/tablet-capture.json,3699,bafbc455a39e287067c21a0fa86b7d9041a55bc78abba66092f5e8391bc3feb0
+deliverables/store-assets/screenshots/es-MX/compact-capture.json,3708,f5de49df11999f81b217badb3e50ba66742989c37f59a3a421cf07c9a5c87023
 deliverables/store-assets/screenshots/es-MX/compact/01-overview.png,184207,b52d6f0616c6f17c5501f6bd1426b4ed36ae8e3a0fa5006e463dd612f6bafb87
 deliverables/store-assets/screenshots/es-MX/compact/01-overview.svg,569,bffbb8b19b608d32d662465f55667e051cde610b6f356e45e8f57feba5ccc9cc
 deliverables/store-assets/screenshots/es-MX/compact/02-maintenance.png,143547,76ea0280a2cde5a97f3734559017a12482eae00c53b6303205426d0d237b1207
@@ -454,7 +457,7 @@ deliverables/store-assets/screenshots/es-MX/compact/07-offline-records.png,16138
 deliverables/store-assets/screenshots/es-MX/compact/07-offline-records.svg,579,79f1d98669290cb724db02f1841e2334f5e54ca4ce479f5619096ce621b9f612
 deliverables/store-assets/screenshots/es-MX/compact/08-reports.png,226988,7b6a5d48eab1eb6690a5ac11fbf90bcbe59a998cb6f55e8f61e2e5bd4ffd9d73
 deliverables/store-assets/screenshots/es-MX/compact/08-reports.svg,712,fe0eb322d05a676b49806939d11eabe6ba2d976bf15a7b46f963fb3ede90300b
-deliverables/store-assets/screenshots/es-MX/compact-capture.json,3708,f5de49df11999f81b217badb3e50ba66742989c37f59a3a421cf07c9a5c87023
+deliverables/store-assets/screenshots/es-MX/tablet-capture.json,3699,2527b7d9fdaec44cc18be17eadd1a28d2d6667298e9d5490457481bab394d4c5
 deliverables/store-assets/screenshots/es-MX/tablet/01-overview.png,238498,1807d2cae9bb2633a1dfce96d6b7b6bc1087ecac0afc311ca905acc629f4fa9d
 deliverables/store-assets/screenshots/es-MX/tablet/01-overview.svg,570,42f2641ba50e1ac5e0cc74b4f42bab8c45b3e7e70e0349b9b50343b5637fbedf
 deliverables/store-assets/screenshots/es-MX/tablet/02-maintenance.png,186325,b2a7649f0c62c0a429ec2baf7fb38cf79d77339e153e9a8ac14b600d7734ecfe
@@ -471,7 +474,7 @@ deliverables/store-assets/screenshots/es-MX/tablet/07-offline-records.png,203130
 deliverables/store-assets/screenshots/es-MX/tablet/07-offline-records.svg,580,df66bb94fbf63de2e118a4965e51062fd58580aa3b9f5c02f5f52c45b2bc808d
 deliverables/store-assets/screenshots/es-MX/tablet/08-reports.png,269191,fc22d5a5d680569a2e4a264d4c392bc40e96daef1085180515097c2336597569
 deliverables/store-assets/screenshots/es-MX/tablet/08-reports.svg,591,73921d93ba413b00d7eca1ec9c918cd2891a86d0b10c503cbb3d22f0a6566291
-deliverables/store-assets/screenshots/es-MX/tablet-capture.json,3699,2527b7d9fdaec44cc18be17eadd1a28d2d6667298e9d5490457481bab394d4c5
+deliverables/store-assets/screenshots/fr-CA/compact-capture.json,3708,57d704c85c319e0e43e252e0c9f10451e29db13387567f0b8136b3e34dbe1767
 deliverables/store-assets/screenshots/fr-CA/compact/01-overview.png,180073,7490e8cd437b7bb50571ace7002d5096c934b41eade9a66578fc5be50f4ff820
 deliverables/store-assets/screenshots/fr-CA/compact/01-overview.svg,570,5460277072ee0e77ca4dba545e403e83b9e047559ff544423150887ab4e22f20
 deliverables/store-assets/screenshots/fr-CA/compact/02-maintenance.png,149945,c7601f412451506973032d248d91df223cb68bab892aeed8b963f8c3dc5c2b7e
@@ -488,7 +491,7 @@ deliverables/store-assets/screenshots/fr-CA/compact/07-offline-records.png,16916
 deliverables/store-assets/screenshots/fr-CA/compact/07-offline-records.svg,713,f226d757790747e13eb8d4d3737bdc17bef3aaf5283dfbd73ff0feb0b97e335a
 deliverables/store-assets/screenshots/fr-CA/compact/08-reports.png,214712,6a78a825db406d060c8b58639ecf4106d759294c527e79400ede7b7a982ce6a9
 deliverables/store-assets/screenshots/fr-CA/compact/08-reports.svg,731,ab23768976db4107c2fa4101a3fecb42c6fa6832d664aa08f070290baa2cfd6d
-deliverables/store-assets/screenshots/fr-CA/compact-capture.json,3708,57d704c85c319e0e43e252e0c9f10451e29db13387567f0b8136b3e34dbe1767
+deliverables/store-assets/screenshots/fr-CA/tablet-capture.json,3699,8c871c3f91b9250ede398b35c659cd20f359fb6d3f7205a59a8e8e0d5f5ca86c
 deliverables/store-assets/screenshots/fr-CA/tablet/01-overview.png,233017,245d81fc623f4d1993a2dd39f48e4d9e13ec0919935594f7e5bb6f0a558ac523
 deliverables/store-assets/screenshots/fr-CA/tablet/01-overview.svg,571,197db0e4824221801b3152593655242505a4ebb80c6701d5453545a8b0692fae
 deliverables/store-assets/screenshots/fr-CA/tablet/02-maintenance.png,191001,fd9aaa6d338f79f5cea97d98e0dcae976095c681a71702c717cadeda0eb25ce7
@@ -505,7 +508,7 @@ deliverables/store-assets/screenshots/fr-CA/tablet/07-offline-records.png,206511
 deliverables/store-assets/screenshots/fr-CA/tablet/07-offline-records.svg,592,93adde079c3cc6a1dbf639c4e8e7f2e6cb352b67bbc3cfaa3b705e5e5e1d74f4
 deliverables/store-assets/screenshots/fr-CA/tablet/08-reports.png,263213,6aecce7d9757d90a675533393d5f0b559062d404fe13a35af9fda6bfe7f38efd
 deliverables/store-assets/screenshots/fr-CA/tablet/08-reports.svg,610,1c534b65e1fc866cebc483ab9a982888502c468ac084664ce6b1dc47d3e07bd2
-deliverables/store-assets/screenshots/fr-CA/tablet-capture.json,3699,8c871c3f91b9250ede398b35c659cd20f359fb6d3f7205a59a8e8e0d5f5ca86c
+deliverables/store-assets/screenshots/fr-FR/compact-capture.json,3708,1dfe4cbf71e1caed11be0a40d3f74b9f34f3a5f2ed1e8800da5cc8ea44be0343
 deliverables/store-assets/screenshots/fr-FR/compact/01-overview.png,180073,7490e8cd437b7bb50571ace7002d5096c934b41eade9a66578fc5be50f4ff820
 deliverables/store-assets/screenshots/fr-FR/compact/01-overview.svg,570,f98d8f2504e0e1f0ed748fb6af58269bc824381664487ba509a6a44a321c1e2e
 deliverables/store-assets/screenshots/fr-FR/compact/02-maintenance.png,149932,b892ec593ffb4dfb33c93e105c469de20aa84beac64909d14924262740524c27
@@ -522,7 +525,7 @@ deliverables/store-assets/screenshots/fr-FR/compact/07-offline-records.png,16893
 deliverables/store-assets/screenshots/fr-FR/compact/07-offline-records.svg,713,450a621b72da10e44c7ba2d3017ee4413b7756ef672736187243657b325f4194
 deliverables/store-assets/screenshots/fr-FR/compact/08-reports.png,216624,b9a2f28c87d103a1781fe214804ac379b3a6978780f81fcf4093252e323968bb
 deliverables/store-assets/screenshots/fr-FR/compact/08-reports.svg,731,eb06444ebc8a5e0ca429b8bb4705d7a728b02635225a455db1924fbc396f98a3
-deliverables/store-assets/screenshots/fr-FR/compact-capture.json,3708,1dfe4cbf71e1caed11be0a40d3f74b9f34f3a5f2ed1e8800da5cc8ea44be0343
+deliverables/store-assets/screenshots/fr-FR/tablet-capture.json,3699,c35a511e01ade9e5617c363b60a6a4a75afdc2fdb99191d3004a39709def773c
 deliverables/store-assets/screenshots/fr-FR/tablet/01-overview.png,233017,245d81fc623f4d1993a2dd39f48e4d9e13ec0919935594f7e5bb6f0a558ac523
 deliverables/store-assets/screenshots/fr-FR/tablet/01-overview.svg,571,12cfb456cbadc43a35905f998f84be3d06a4647d0f18f5b8227931be47aff8b7
 deliverables/store-assets/screenshots/fr-FR/tablet/02-maintenance.png,191055,6fc8782fea32120e3a2f762cf98f7afad418c4e1af9761bc3d5f306a18007370
@@ -539,7 +542,7 @@ deliverables/store-assets/screenshots/fr-FR/tablet/07-offline-records.png,206317
 deliverables/store-assets/screenshots/fr-FR/tablet/07-offline-records.svg,592,427db0bb84c2291f26c210599f93b0f57445d465faf91c21e9b55ff5c090c000
 deliverables/store-assets/screenshots/fr-FR/tablet/08-reports.png,265092,5d3461fe84a154a1abae97dbd074fd3b706ff94f6211332b8537ebd3136aabe4
 deliverables/store-assets/screenshots/fr-FR/tablet/08-reports.svg,610,6d648fc284b8c2b38f7e00dd87ad2a7567ee127e84cc0a4ead135eedbbf5dd62
-deliverables/store-assets/screenshots/fr-FR/tablet-capture.json,3699,c35a511e01ade9e5617c363b60a6a4a75afdc2fdb99191d3004a39709def773c
+deliverables/store-assets/screenshots/hi-IN/compact-capture.json,3708,9ebd8abbb135e3a9e83ac9f68856286c938970a1b8787b559c8198eb55fb6328
 deliverables/store-assets/screenshots/hi-IN/compact/01-overview.png,172132,7372b5c11ff891f8db03bdc5f31955d5e167ff8d476bb4b279aa3ac83fa896c1
 deliverables/store-assets/screenshots/hi-IN/compact/01-overview.svg,687,ec5238d31453ab3afee9a880c69c052660e2a1bf8af21f467d66fcba2f231bab
 deliverables/store-assets/screenshots/hi-IN/compact/02-maintenance.png,133806,9abe14c64b2f310053ee039e2b30873c4f9ef418cc44446cd5efc3afa1da0779
@@ -556,7 +559,7 @@ deliverables/store-assets/screenshots/hi-IN/compact/07-offline-records.png,14758
 deliverables/store-assets/screenshots/hi-IN/compact/07-offline-records.svg,687,24de465275d77240de599b6a76ece745011e13b24c2588a94ca138339d483d21
 deliverables/store-assets/screenshots/hi-IN/compact/08-reports.png,193308,e1c0a55b7bfe1900d57ed571997ccf6ff74f8361de1865034202127ac51582e3
 deliverables/store-assets/screenshots/hi-IN/compact/08-reports.svg,776,0996cab51dc92b148f4ca409c47c6bec75efbbeb621cc9fc5c40d744db7b2fa3
-deliverables/store-assets/screenshots/hi-IN/compact-capture.json,3708,9ebd8abbb135e3a9e83ac9f68856286c938970a1b8787b559c8198eb55fb6328
+deliverables/store-assets/screenshots/hi-IN/tablet-capture.json,3699,6409fa7bdb89b9adecc780fe4cd8f01a46560f0ab7e27343e4b1bc7e1793c45d
 deliverables/store-assets/screenshots/hi-IN/tablet/01-overview.png,203123,18ba75c2e708fce32aa9a1fb7b57629b23701ca773ef41705fd234fa8896ad54
 deliverables/store-assets/screenshots/hi-IN/tablet/01-overview.svg,688,24ffe1261127ded61c3ca7214d1420b8bcae8e03e36c5f0b9ac88c9c0d84fc78
 deliverables/store-assets/screenshots/hi-IN/tablet/02-maintenance.png,160274,4171e61aad170e5a5011b609ad20a1e8969b6726ab63eebbaec6188589524cf7
@@ -573,7 +576,7 @@ deliverables/store-assets/screenshots/hi-IN/tablet/07-offline-records.png,172994
 deliverables/store-assets/screenshots/hi-IN/tablet/07-offline-records.svg,688,6cee35e72ba59f47853d476cf4171cdf98fa7443bb59926e3a7a7c2affe17a62
 deliverables/store-assets/screenshots/hi-IN/tablet/08-reports.png,221679,32dbc03f7e47b5fca7baba2c47529c3dd73b9b664f9cb008862d5bb069310871
 deliverables/store-assets/screenshots/hi-IN/tablet/08-reports.svg,777,fb6b4c1f897b275f40facf113961fa397bd3f3c7e7922ff679b4f5a893963c18
-deliverables/store-assets/screenshots/hi-IN/tablet-capture.json,3699,6409fa7bdb89b9adecc780fe4cd8f01a46560f0ab7e27343e4b1bc7e1793c45d
+deliverables/store-assets/screenshots/id-ID/compact-capture.json,3708,69c3028536dbe3a6a8487b6b3ff6907337d8611e291abc622aad7c820953f918
 deliverables/store-assets/screenshots/id-ID/compact/01-overview.png,184561,806744336d14316675170a7e2f3fee5ddab159c42dcda961fa4820c242cad875
 deliverables/store-assets/screenshots/id-ID/compact/01-overview.svg,561,59e63a7c70732814828ae62094e3624a4c47721926e7fea5a85fc2ca95e80db4
 deliverables/store-assets/screenshots/id-ID/compact/02-maintenance.png,137102,0a173595ffc5b6ee8912ae94e099a43b6a92e3a18d8bd87cfa1f2adddf550031
@@ -590,7 +593,7 @@ deliverables/store-assets/screenshots/id-ID/compact/07-offline-records.png,14879
 deliverables/store-assets/screenshots/id-ID/compact/07-offline-records.svg,561,b3dd8adb4b666be13215c92ceabceffd2902c918d39bc220441ab12142de29c0
 deliverables/store-assets/screenshots/id-ID/compact/08-reports.png,205813,30b1058e89ea76e6ccca77b843e59369dd3bdc0ec1a174f14efb58d31b5dc08b
 deliverables/store-assets/screenshots/id-ID/compact/08-reports.svg,835,7c2d7b3fd7d98d523737629bfdc462064170d907c31cab71962f6a40efa6d489
-deliverables/store-assets/screenshots/id-ID/compact-capture.json,3708,69c3028536dbe3a6a8487b6b3ff6907337d8611e291abc622aad7c820953f918
+deliverables/store-assets/screenshots/id-ID/tablet-capture.json,3699,f3c2ba4eea5815e3ddf321f8769b5159820f4a764f3a148cfe0690462f3bdfe5
 deliverables/store-assets/screenshots/id-ID/tablet/01-overview.png,236799,f08c480c6fddeb5e871dbd0d7f5c92b352e896905c3226981db4b47c8ccde0f0
 deliverables/store-assets/screenshots/id-ID/tablet/01-overview.svg,562,903ec455b46cc82923161fe31c6af7836a09bedfa4d9d7d1e0b873751262e971
 deliverables/store-assets/screenshots/id-ID/tablet/02-maintenance.png,178596,653cf934f0002b6a533c6daa5633faf6d5515c3d55e207f7bd02095fbb46d86a
@@ -607,7 +610,7 @@ deliverables/store-assets/screenshots/id-ID/tablet/07-offline-records.png,184481
 deliverables/store-assets/screenshots/id-ID/tablet/07-offline-records.svg,562,df1a40ce6b7ebea8212f850a2da7b35fb53839ef14bd1bcd69f9cd3a96cae745
 deliverables/store-assets/screenshots/id-ID/tablet/08-reports.png,242854,febb07777919c56f0bfce6b766a0f52f6d9dbfbedf5064afdfbc2f7b728dfbeb
 deliverables/store-assets/screenshots/id-ID/tablet/08-reports.svg,589,e338b13d60d75b69a816704f92a01f502d34134ae99353a5b71cef551da0cf2b
-deliverables/store-assets/screenshots/id-ID/tablet-capture.json,3699,f3c2ba4eea5815e3ddf321f8769b5159820f4a764f3a148cfe0690462f3bdfe5
+deliverables/store-assets/screenshots/it-IT/compact-capture.json,3708,f0bea67d8d47c1eee0acff9ba6f638c911bc28f868ae2aa446d156d4f5b6ab67
 deliverables/store-assets/screenshots/it-IT/compact/01-overview.png,178974,44483fc130028559fbd79e921edbf8bd39c1de0b1652fef9045452d7ddadfbd0
 deliverables/store-assets/screenshots/it-IT/compact/01-overview.svg,564,6e716e6c5901b8ab761256d6bb22532a0c8504099f5ddbbe5c994e87bb2a1f12
 deliverables/store-assets/screenshots/it-IT/compact/02-maintenance.png,149844,1fa4f61663f45d54fdf328df5d91843c644d91255cb952668ce63b209433de47
@@ -624,7 +627,7 @@ deliverables/store-assets/screenshots/it-IT/compact/07-offline-records.png,16572
 deliverables/store-assets/screenshots/it-IT/compact/07-offline-records.svg,573,01c7645a8b1cd8f39dd410e6659ca02e8bffbebfba6f4b277084fbed5d33f368
 deliverables/store-assets/screenshots/it-IT/compact/08-reports.png,210540,16f175433c579ea1c94015faffde8d022e75d5a0e836ab0e5ea58262610de42d
 deliverables/store-assets/screenshots/it-IT/compact/08-reports.svg,711,e42d4d94dbf1108c0c413f8ea60ed313467ab505b5069fbe08a2d24a7d8985f8
-deliverables/store-assets/screenshots/it-IT/compact-capture.json,3708,f0bea67d8d47c1eee0acff9ba6f638c911bc28f868ae2aa446d156d4f5b6ab67
+deliverables/store-assets/screenshots/it-IT/tablet-capture.json,3699,03067d011840730193f7a19130b0cd5d0f70b02add8034a7e43aff8664bbd9f0
 deliverables/store-assets/screenshots/it-IT/tablet/01-overview.png,234930,06b97556d7efadb3a5eedc73a32698a2e8a0d1ce41d7fba7de78b12e13b3dbb6
 deliverables/store-assets/screenshots/it-IT/tablet/01-overview.svg,565,ca3e4d40169d7b92afdfb4418d2babed20e80d67c129a8eb1614d635b9ecbc86
 deliverables/store-assets/screenshots/it-IT/tablet/02-maintenance.png,192132,07e59a1aab867c81c61e37b3ca428fccb09383c7d0f1786eb8a05d9f613a2248
@@ -641,7 +644,7 @@ deliverables/store-assets/screenshots/it-IT/tablet/07-offline-records.png,203496
 deliverables/store-assets/screenshots/it-IT/tablet/07-offline-records.svg,574,97739fa720ba567632286f981fec5bd93e3eefc104adfb0eaa0af4487f38ae1e
 deliverables/store-assets/screenshots/it-IT/tablet/08-reports.png,263063,a713229a3e298cfff40503cded1c92cf53a52a2ce1c669eeaedeafa6ff57d515
 deliverables/store-assets/screenshots/it-IT/tablet/08-reports.svg,590,065f26a42be33b7f1dbf06dac21c3bd595afa70f2f0b9055e2d9b6e9697fa37a
-deliverables/store-assets/screenshots/it-IT/tablet-capture.json,3699,03067d011840730193f7a19130b0cd5d0f70b02add8034a7e43aff8664bbd9f0
+deliverables/store-assets/screenshots/ja-JP/compact-capture.json,3708,683b87135e993155538aca34c2246b395d016094e3d4ae7955dc346d4a89f38a
 deliverables/store-assets/screenshots/ja-JP/compact/01-overview.png,185662,17988be9b7d80d26d51079200ac216b431d0cd6588a3519d464adb0869c4af9e
 deliverables/store-assets/screenshots/ja-JP/compact/01-overview.svg,569,d17bb75f374b21ad5bd2075661d3a67c1cdcc92b6dae479dc8aeab4d182f36bc
 deliverables/store-assets/screenshots/ja-JP/compact/02-maintenance.png,153360,bd3c6dd3d1171a045eaad4516bef1a41d19eecd9ca2871f11a9746ce2782c0ff
@@ -658,7 +661,7 @@ deliverables/store-assets/screenshots/ja-JP/compact/07-offline-records.png,17258
 deliverables/store-assets/screenshots/ja-JP/compact/07-offline-records.svg,576,0e6e8e0593dc0ee4e4dce68b98c09bad23b9cb609092a914c950ac67aa29da97
 deliverables/store-assets/screenshots/ja-JP/compact/08-reports.png,223598,03533fddb6a5d7334ee7cfeeffeb79dcbebc6dcb36c2e3d51381f8275ebfb98f
 deliverables/store-assets/screenshots/ja-JP/compact/08-reports.svg,764,768799638863cee43bc5c0b0fb96a78af88b8ffd3d64e5ae5c61224397020555
-deliverables/store-assets/screenshots/ja-JP/compact-capture.json,3708,683b87135e993155538aca34c2246b395d016094e3d4ae7955dc346d4a89f38a
+deliverables/store-assets/screenshots/ja-JP/tablet-capture.json,3699,01d3fd27ff2e0c9ab67752c888fe8206c732e023c0383cbf93f8fd206f26b551
 deliverables/store-assets/screenshots/ja-JP/tablet/01-overview.png,231563,5f0ca08ee6e5aa035125bda263bece797a77651d7fb3cca3c05f29c876d51472
 deliverables/store-assets/screenshots/ja-JP/tablet/01-overview.svg,570,820db84def078c1aa6209d416d9f4428257a097226421a584cafebff7ceba812
 deliverables/store-assets/screenshots/ja-JP/tablet/02-maintenance.png,190123,94f7cbff68cbaa2017e644657ee628357fff53679eb65100c8ae0b302e1c3725
@@ -675,7 +678,7 @@ deliverables/store-assets/screenshots/ja-JP/tablet/07-offline-records.png,205013
 deliverables/store-assets/screenshots/ja-JP/tablet/07-offline-records.svg,577,c9f8c6847f76ec4b3c553e6977cbf2fa22c106b53f03864a9f2a6c9e16d2f3f6
 deliverables/store-assets/screenshots/ja-JP/tablet/08-reports.png,258578,dded11083bec792adf13c9e50a8a15a23153f5c53864954d7a560990ef1a7e21
 deliverables/store-assets/screenshots/ja-JP/tablet/08-reports.svg,642,1b72478a3874b9af3f3d80ea153d9a084a2a17f59ba146cc742b4a8c1318eca1
-deliverables/store-assets/screenshots/ja-JP/tablet-capture.json,3699,01d3fd27ff2e0c9ab67752c888fe8206c732e023c0383cbf93f8fd206f26b551
+deliverables/store-assets/screenshots/ko-KR/compact-capture.json,3708,043c1617c755b2269a82822113bc49a14cf504eb579b71364e0e957689a3be2e
 deliverables/store-assets/screenshots/ko-KR/compact/01-overview.png,152685,b2ac5d229990d7acdf2fb032a88770b74ee445646b8b4746e8239cd2be60782d
 deliverables/store-assets/screenshots/ko-KR/compact/01-overview.svg,589,a5b1a2d1cc7cc24695bba42699baaf920b03d3ac2a7a2e8084a8ebd9a538e0d6
 deliverables/store-assets/screenshots/ko-KR/compact/02-maintenance.png,122510,c09f5e5241b00290f584bccd0d1396003f41d730091d06156bab18ee1ada402b
@@ -692,7 +695,7 @@ deliverables/store-assets/screenshots/ko-KR/compact/07-offline-records.png,13211
 deliverables/store-assets/screenshots/ko-KR/compact/07-offline-records.svg,568,849311168ae348f94c2f1597e5e9509b8f444da989ce53ede011bf2b9b6e215f
 deliverables/store-assets/screenshots/ko-KR/compact/08-reports.png,169429,cc29c42a00bd062fce63257b8c5edc914ddc480e5a193dbc84ac5c2702407fa2
 deliverables/store-assets/screenshots/ko-KR/compact/08-reports.svg,607,6139d64c00d9a6d919029753d3d12fd5acd06da183f89dd420c9851ff8f9590f
-deliverables/store-assets/screenshots/ko-KR/compact-capture.json,3708,043c1617c755b2269a82822113bc49a14cf504eb579b71364e0e957689a3be2e
+deliverables/store-assets/screenshots/ko-KR/tablet-capture.json,3699,47eb323cb6000d9ed43dfbee0f6a550db9c661fa742f0213e440f96588f97286
 deliverables/store-assets/screenshots/ko-KR/tablet/01-overview.png,179360,c20588a35d35ac1b9d66c767899b7f33cb1a579c84f4f1fd718a28b76ac25272
 deliverables/store-assets/screenshots/ko-KR/tablet/01-overview.svg,590,8e9fed4b60be3752825b6fb3d997c6ad22bc500cc28d4702611fb9dc842afb67
 deliverables/store-assets/screenshots/ko-KR/tablet/02-maintenance.png,143750,0139154cb8683eca234e73a16b351bdab646631bf814d97397e985bad01b46bc
@@ -709,8 +712,8 @@ deliverables/store-assets/screenshots/ko-KR/tablet/07-offline-records.png,151625
 deliverables/store-assets/screenshots/ko-KR/tablet/07-offline-records.svg,569,40cecc7f8c667b69708592061edacf4ee4158474936e29a228ed85bb817a2109
 deliverables/store-assets/screenshots/ko-KR/tablet/08-reports.png,186755,fd5144092b24bab4a9f4f5dfbf35a3f62b0587059ed6476783e5ddc5d82a57ff
 deliverables/store-assets/screenshots/ko-KR/tablet/08-reports.svg,608,4f25ce29103b144f434f10013c1c730ff54aa2d43ef954d7762f2beab70b4db6
-deliverables/store-assets/screenshots/ko-KR/tablet-capture.json,3699,47eb323cb6000d9ed43dfbee0f6a550db9c661fa742f0213e440f96588f97286
 deliverables/store-assets/screenshots/manifest.json,176069,ca6cc69f923380804de73a6addabbf0df33907d017bc28a06e97a36e80329d59
+deliverables/store-assets/screenshots/nl-NL/compact-capture.json,3708,89db83b9d25a2da973948b5e9a4a85123fae1cb2cdfe30ec1e5263efd24983b9
 deliverables/store-assets/screenshots/nl-NL/compact/01-overview.png,175852,da8316fe5ddf3f9331fc9af6016d29f50e25638f5530954336312b1a59d67241
 deliverables/store-assets/screenshots/nl-NL/compact/01-overview.svg,557,3cca087ed29bf1716ef6abcfd740c2ebf4388a8228d5fa8ed2c62a6b7673af36
 deliverables/store-assets/screenshots/nl-NL/compact/02-maintenance.png,138973,bd066c0b8e3918a0a04a30bc1025398d3c6ca5d89f7d79426735bd4e6db404cb
@@ -727,7 +730,7 @@ deliverables/store-assets/screenshots/nl-NL/compact/07-offline-records.png,15698
 deliverables/store-assets/screenshots/nl-NL/compact/07-offline-records.svg,552,9df7f8fd21ed5203426bda30b0ad2096d7f87d3243f8e21c5b8078df3542f108
 deliverables/store-assets/screenshots/nl-NL/compact/08-reports.png,223384,c6610b3bc9d9ac36ccdf8c749b9884b6c6965dee68704e9447a4a4dc0bcd597c
 deliverables/store-assets/screenshots/nl-NL/compact/08-reports.svg,714,3c56d27f65bbe76c02e1e643b44902f44b92c81f44982471b55fecd85feddbb3
-deliverables/store-assets/screenshots/nl-NL/compact-capture.json,3708,89db83b9d25a2da973948b5e9a4a85123fae1cb2cdfe30ec1e5263efd24983b9
+deliverables/store-assets/screenshots/nl-NL/tablet-capture.json,3699,dde73654cae2bfce4250399cb9c5eb29c6537ec509ed222d329e00f1e2846c1c
 deliverables/store-assets/screenshots/nl-NL/tablet/01-overview.png,227532,d55dcac2006557f320d15a6e6d2f19effa39725106652666e69a39de366978d1
 deliverables/store-assets/screenshots/nl-NL/tablet/01-overview.svg,558,72d8965afc26d82f088bd852ff5ba78c4c1c4e25b8bbfe98c4579ae78180a3c8
 deliverables/store-assets/screenshots/nl-NL/tablet/02-maintenance.png,177091,c817ceb08056d0e79676226a81ed72363da7c2ac471742da9c179dd1bd3b3d5a
@@ -744,7 +747,7 @@ deliverables/store-assets/screenshots/nl-NL/tablet/07-offline-records.png,195215
 deliverables/store-assets/screenshots/nl-NL/tablet/07-offline-records.svg,553,5f1f06af8c1db106b5bba97b5ac58238002feb281dd6d4e6b36015d1ec046387
 deliverables/store-assets/screenshots/nl-NL/tablet/08-reports.png,261019,703273014e164a61d1b0d5e6d7862f45708a0d86055916601c5d28706af19d17
 deliverables/store-assets/screenshots/nl-NL/tablet/08-reports.svg,593,f9b9129054a3a010f859e0484591a480ce48e15f5212e6417d873cf0049ac811
-deliverables/store-assets/screenshots/nl-NL/tablet-capture.json,3699,dde73654cae2bfce4250399cb9c5eb29c6537ec509ed222d329e00f1e2846c1c
+deliverables/store-assets/screenshots/pl-PL/compact-capture.json,3708,bfddd3408555825ea5aa0e0842efb4faed51208e20938af8bf78e9abd38b8153
 deliverables/store-assets/screenshots/pl-PL/compact/01-overview.png,182716,e33c375aac8e4bdbd984a3e42164b6986c55ad9d261956cacfc7f4da36cb4445
 deliverables/store-assets/screenshots/pl-PL/compact/01-overview.svg,570,939aa41f2d9586cfc361e4904c4ea989a96b0882c97676faf03708bd3dd53382
 deliverables/store-assets/screenshots/pl-PL/compact/02-maintenance.png,144207,d45bc0d2039a770d0cf099e3ba132e4f0bb08dc678d450a85a72fa5199ab144a
@@ -761,7 +764,7 @@ deliverables/store-assets/screenshots/pl-PL/compact/07-offline-records.png,15716
 deliverables/store-assets/screenshots/pl-PL/compact/07-offline-records.svg,576,d399ec59a13f2907fe298da587eedfa53e2f9378293233c4e3a0797f23cb4c49
 deliverables/store-assets/screenshots/pl-PL/compact/08-reports.png,223386,07cdd91a4c70a0305bebec43a75cb32a0d4e81769d128d8e4b6476404b202329
 deliverables/store-assets/screenshots/pl-PL/compact/08-reports.svg,583,1482ee522186363c43eae1232229677db062fba2ca56eaf1b0942e0dbad6c41f
-deliverables/store-assets/screenshots/pl-PL/compact-capture.json,3708,bfddd3408555825ea5aa0e0842efb4faed51208e20938af8bf78e9abd38b8153
+deliverables/store-assets/screenshots/pl-PL/tablet-capture.json,3699,cbc1b59b0e6f4dff3bdde433ad8e459d50c53fabc79338a3ab9456e30026e449
 deliverables/store-assets/screenshots/pl-PL/tablet/01-overview.png,244486,2b05ed8810aeca34897fad83a306493eb3ebf3f7068b0ccbe861c83f70ce2b1f
 deliverables/store-assets/screenshots/pl-PL/tablet/01-overview.svg,571,dcbcd997547d60797b3230fdb3e3516aa5fd4fb50f2c329ee8581500da728b99
 deliverables/store-assets/screenshots/pl-PL/tablet/02-maintenance.png,191197,1db395022cc142b32fe4a7fca326bdf603c1c933ea056d8f3eac8e7eb2059621
@@ -778,7 +781,7 @@ deliverables/store-assets/screenshots/pl-PL/tablet/07-offline-records.png,200733
 deliverables/store-assets/screenshots/pl-PL/tablet/07-offline-records.svg,577,3360679d7563a771243c9bfd7346e6e2761c73f95c4be08d5ffbc80b7c20dd26
 deliverables/store-assets/screenshots/pl-PL/tablet/08-reports.png,267198,6a2ec978a57cd182fb1c2f0da81f9462fdd830693e317caa19f14d8eef38c978
 deliverables/store-assets/screenshots/pl-PL/tablet/08-reports.svg,584,8c6211544c99d1362c7e2577e477280a67a23b8e6786bf7b72d67e87e1e16d1f
-deliverables/store-assets/screenshots/pl-PL/tablet-capture.json,3699,cbc1b59b0e6f4dff3bdde433ad8e459d50c53fabc79338a3ab9456e30026e449
+deliverables/store-assets/screenshots/pt-BR/compact-capture.json,3708,fd9d2821f4ed7db23db22e8d24191857b194023e69abccd9eb67a200d1d39010
 deliverables/store-assets/screenshots/pt-BR/compact/01-overview.png,194552,51ba139ee83bc52a08a27e1ca951dfa903be2b7614a8c118967312eb95007174
 deliverables/store-assets/screenshots/pt-BR/compact/01-overview.svg,560,6c01110aec370db5f328812b4537d531ac2f1e67031ee23dab3dac2ebe439653
 deliverables/store-assets/screenshots/pt-BR/compact/02-maintenance.png,149929,09cc443638cc2a2817c7189f8bdd4c00a7961d68052192f57e94e7b0b4ad3e32
@@ -795,7 +798,7 @@ deliverables/store-assets/screenshots/pt-BR/compact/07-offline-records.png,16704
 deliverables/store-assets/screenshots/pt-BR/compact/07-offline-records.svg,575,88b3fd578d60337c68ab36f7e0482476e503481c7b265c280097e97cae799a51
 deliverables/store-assets/screenshots/pt-BR/compact/08-reports.png,229075,28791f040b5d9a097677fb982fbb284e72082fa70c296eb5c3446ca0a8535fd1
 deliverables/store-assets/screenshots/pt-BR/compact/08-reports.svg,583,aa670a4f5d0f5c6974e61435c2b67d05a4f62a106b4eedefd844f8c609483091
-deliverables/store-assets/screenshots/pt-BR/compact-capture.json,3708,fd9d2821f4ed7db23db22e8d24191857b194023e69abccd9eb67a200d1d39010
+deliverables/store-assets/screenshots/pt-BR/tablet-capture.json,3699,a887a2017bb7492a25396a535599f2d2ec0f465ca9e203e2d14691a652a275b0
 deliverables/store-assets/screenshots/pt-BR/tablet/01-overview.png,253382,d72b802a039b4869f5f0cbdbaffe512bd70a9ca453e3f8ad0fec45fc39b3d18f
 deliverables/store-assets/screenshots/pt-BR/tablet/01-overview.svg,561,d87893fc0b3969cb3852aaafa7e430dcb9d97582b0b8b4a2a96191880585936d
 deliverables/store-assets/screenshots/pt-BR/tablet/02-maintenance.png,197743,d1ec2aee4eb5c1887b949f9961bc98dfa3fd490b50e8e530bec257de062c4659
@@ -812,7 +815,7 @@ deliverables/store-assets/screenshots/pt-BR/tablet/07-offline-records.png,212577
 deliverables/store-assets/screenshots/pt-BR/tablet/07-offline-records.svg,576,ae1de59b50c28ca02aebaef7b33256dbe706e882537e4c579538edcd049582fe
 deliverables/store-assets/screenshots/pt-BR/tablet/08-reports.png,276461,4b69109be4c30bd34dd8a44af1a78ecb115863a3ba4b649d91387f33b5c8992f
 deliverables/store-assets/screenshots/pt-BR/tablet/08-reports.svg,584,7677f2f9e338363a7bbd7dd0c1850f0619b7a64ca91fb773dff36da121a9d452
-deliverables/store-assets/screenshots/pt-BR/tablet-capture.json,3699,a887a2017bb7492a25396a535599f2d2ec0f465ca9e203e2d14691a652a275b0
+deliverables/store-assets/screenshots/pt-PT/compact-capture.json,3708,b2310c063a1125824eabe999f93f7a45ea78aa0c7b00709dba2325d4b5882198
 deliverables/store-assets/screenshots/pt-PT/compact/01-overview.png,190511,a65ce30f9a1d7e0864c4cfbe6da558f86ddd442b50bd44639b43c5ba8ae437cb
 deliverables/store-assets/screenshots/pt-PT/compact/01-overview.svg,565,dee207fc3588213f01dab5d20dde52ff0954b112d868b065128e4bf50f9672e4
 deliverables/store-assets/screenshots/pt-PT/compact/02-maintenance.png,148663,66df6bbeccb1da6070eeb6a2326a1d1055afc42c94b4e7dac894b19e8fc7f87a
@@ -829,7 +832,7 @@ deliverables/store-assets/screenshots/pt-PT/compact/07-offline-records.png,16582
 deliverables/store-assets/screenshots/pt-PT/compact/07-offline-records.svg,579,a3c3eb3af0b2a845efa0040dc9ca9ff21bf724ff879fcc7d34e861277babff89
 deliverables/store-assets/screenshots/pt-PT/compact/08-reports.png,229627,3262193625b97fc66cd6383b60b5f84e115def335aceeb4e9f32f5270a919804
 deliverables/store-assets/screenshots/pt-PT/compact/08-reports.svg,587,601bceaec1ab86c353705671fd005f5ad9d02a0f7633dd46f0a9c1bff2764832
-deliverables/store-assets/screenshots/pt-PT/compact-capture.json,3708,b2310c063a1125824eabe999f93f7a45ea78aa0c7b00709dba2325d4b5882198
+deliverables/store-assets/screenshots/pt-PT/tablet-capture.json,3699,0da8b5ff9f9d7c76ef460d46aafb633ac3609e7cafb9665dd45ac303f02bfee9
 deliverables/store-assets/screenshots/pt-PT/tablet/01-overview.png,250378,7ec471c27993750f5f478f3ef80c43a45b6f63e3d33a826bd8989414d8414a19
 deliverables/store-assets/screenshots/pt-PT/tablet/01-overview.svg,566,db1acbce5066eb2275b3a8b310ce8f0854c537d83aad74f9b4bd3ff19308dd74
 deliverables/store-assets/screenshots/pt-PT/tablet/02-maintenance.png,197111,8329c3ca1f0ecd7058ac700064a61f45d02c11ad23ff5d6d6834a2adab851c6e
@@ -846,7 +849,6 @@ deliverables/store-assets/screenshots/pt-PT/tablet/07-offline-records.png,211274
 deliverables/store-assets/screenshots/pt-PT/tablet/07-offline-records.svg,580,992835e8e9b6c91ba46b85c2c31f1f100868b172abc066a0b2f83675ef585059
 deliverables/store-assets/screenshots/pt-PT/tablet/08-reports.png,277987,b618a9607f6e9f57a87cf202c1410067cbb641ff237bdbf06e73ec69acbff29e
 deliverables/store-assets/screenshots/pt-PT/tablet/08-reports.svg,588,f68e483ece21925c73d43e07766b314f725c56d14fadf2f81e8ee7c856640710
-deliverables/store-assets/screenshots/pt-PT/tablet-capture.json,3699,0da8b5ff9f9d7c76ef460d46aafb633ac3609e7cafb9665dd45ac303f02bfee9
 deliverables/store-assets/screenshots/raw/ar/compact/01-overview.png,143496,73bf677aee295ccb6862542ae101eeeba77e39a39575a9be9ced691d2a479d35
 deliverables/store-assets/screenshots/raw/ar/compact/02-maintenance.png,116367,a50dc121b34d97e487d7824fd475e26d34f83e36a318f38223abf96be6f85a25
 deliverables/store-assets/screenshots/raw/ar/compact/03-repairs.png,90910,596d50f1146f19ad7a966959ada7552ff71240736ebf19cd9adc8105264e35db
@@ -1231,6 +1233,7 @@ deliverables/store-assets/screenshots/raw/zh-Hant/tablet/05-voice-assistant.png,
 deliverables/store-assets/screenshots/raw/zh-Hant/tablet/06-calendar.png,118325,10d78d53ac40983912c11931835ef016afb13d9f4f078ed3cbe913ccaf07507f
 deliverables/store-assets/screenshots/raw/zh-Hant/tablet/07-offline-records.png,153837,c9bb64a640c584b6dab4d1793c9fe8571eed8cbd96f9857248c2953979b53830
 deliverables/store-assets/screenshots/raw/zh-Hant/tablet/08-reports.png,176696,5bb8de1cc9e6a6e5cb4f421d7dc74acf0c38de3da9460ec94cd42f8534fbc692
+deliverables/store-assets/screenshots/sv-SE/compact-capture.json,3708,3ee7877635dc70b3e4611080f37ab21fd8c27737396d99ea185942cb28a938e0
 deliverables/store-assets/screenshots/sv-SE/compact/01-overview.png,173412,6165ca23ed3b759fa010d6de23e6ed340e84567b22a66cff9d667bd76098464c
 deliverables/store-assets/screenshots/sv-SE/compact/01-overview.svg,569,00a31d29d72d9451a2ed2dd65873e4dceee3a55bba241dfa4add1f66a16ced33
 deliverables/store-assets/screenshots/sv-SE/compact/02-maintenance.png,132011,367ca6e7ac835ec6d71d3db4d6c902ddba97ec9f4d2dff068b22eb0a375588db
@@ -1247,7 +1250,7 @@ deliverables/store-assets/screenshots/sv-SE/compact/07-offline-records.png,14317
 deliverables/store-assets/screenshots/sv-SE/compact/07-offline-records.svg,545,f3ab03c239f46aacf3f08f414ae8568a2586c3bf5573eeae9328c103ef21dcd6
 deliverables/store-assets/screenshots/sv-SE/compact/08-reports.png,204233,88d2824aaf6a4543b6bacc63cdd1109f6f0721cd6293c6877c1064aa69006313
 deliverables/store-assets/screenshots/sv-SE/compact/08-reports.svg,581,160719b64f98221443fe84f873b6f7e7b26ca7e4763291fcd688fe8ac4d9f5c0
-deliverables/store-assets/screenshots/sv-SE/compact-capture.json,3708,3ee7877635dc70b3e4611080f37ab21fd8c27737396d99ea185942cb28a938e0
+deliverables/store-assets/screenshots/sv-SE/tablet-capture.json,3699,85e14ca60bc929bb8168f2a8727b9257c76a9668871c8bc2bc7567bc3c5b9eaa
 deliverables/store-assets/screenshots/sv-SE/tablet/01-overview.png,220653,705c79871111bd2550106bb559f120df5febf5a81351d655bc3ce3716a772d9b
 deliverables/store-assets/screenshots/sv-SE/tablet/01-overview.svg,570,1e053cc45a1e647ce1ff912d8b28614df922f565a7f52fc9ecd1a5f475c41447
 deliverables/store-assets/screenshots/sv-SE/tablet/02-maintenance.png,168801,4f7a854b25ac8f328189e12f2ac7b016c244153c6d06f998a6cd02f297270b01
@@ -1264,7 +1267,7 @@ deliverables/store-assets/screenshots/sv-SE/tablet/07-offline-records.png,176325
 deliverables/store-assets/screenshots/sv-SE/tablet/07-offline-records.svg,546,b37a892a3e3cfebbfd459a3f056c0e09800f6258858b87985e9607d1592b7ce7
 deliverables/store-assets/screenshots/sv-SE/tablet/08-reports.png,242623,2371b7760c0988037f12e902329fc1a5c504762490d98acfd94395b13f0a9011
 deliverables/store-assets/screenshots/sv-SE/tablet/08-reports.svg,582,a4a3fdbe78d9405bb78ac548bc986684f6a4121703fa94f57b6931e088ce5172
-deliverables/store-assets/screenshots/sv-SE/tablet-capture.json,3699,85e14ca60bc929bb8168f2a8727b9257c76a9668871c8bc2bc7567bc3c5b9eaa
+deliverables/store-assets/screenshots/tr-TR/compact-capture.json,3708,f6a78ce73968be0a942049b51172767e28958f280a968a3ffbcebb193ddd793d
 deliverables/store-assets/screenshots/tr-TR/compact/01-overview.png,169364,296b1322faaed15bbc7ddf13af7d7840398201d8537c6e9d9e1c271b7bdebd5d
 deliverables/store-assets/screenshots/tr-TR/compact/01-overview.svg,557,61aa39547c435fdd5d7023862207b45f29ecb589907782eb1d9e51d0e1c8b819
 deliverables/store-assets/screenshots/tr-TR/compact/02-maintenance.png,134524,c00f7875d393786c50297eb4bc61a7a01bae4778d52044012c4d6458e93aaf71
@@ -1281,7 +1284,7 @@ deliverables/store-assets/screenshots/tr-TR/compact/07-offline-records.png,14868
 deliverables/store-assets/screenshots/tr-TR/compact/07-offline-records.svg,570,5d47b8c9d4d036076409a9846c1652fd6d8858c37625669a4d9114c83155e908
 deliverables/store-assets/screenshots/tr-TR/compact/08-reports.png,196734,ceb5a8f2332c2e703515ec7469a11ff65c307b344226c26fa7b525c7e31663b6
 deliverables/store-assets/screenshots/tr-TR/compact/08-reports.svg,592,dedc56be2e33de96d043816267f8eb0f1f1c279a2b74b51f4fc42b84ccffbd60
-deliverables/store-assets/screenshots/tr-TR/compact-capture.json,3708,f6a78ce73968be0a942049b51172767e28958f280a968a3ffbcebb193ddd793d
+deliverables/store-assets/screenshots/tr-TR/tablet-capture.json,3699,b067922c89e1e8acba8fbd4bcf6b9b749b1f5151ae45f9de0447310780f95e28
 deliverables/store-assets/screenshots/tr-TR/tablet/01-overview.png,219474,8dc3bd93b91cdfe31c8774b74971cac30026de1062b4f038e9eb024443f961e4
 deliverables/store-assets/screenshots/tr-TR/tablet/01-overview.svg,558,ced0a1364d7444b6e9305cd48b6a3ce694f8a943ea925a782d298ce84fef5ccd
 deliverables/store-assets/screenshots/tr-TR/tablet/02-maintenance.png,169136,f9baafb038d2b75f1a3e1ef53f3cd2f7e54bc2c2fb38251eb905221c84809bc2
@@ -1298,7 +1301,7 @@ deliverables/store-assets/screenshots/tr-TR/tablet/07-offline-records.png,177970
 deliverables/store-assets/screenshots/tr-TR/tablet/07-offline-records.svg,571,0ca515141e1d4c115fd36675e7389de891b67237b90ec1edcb1c3dfdf6594f5a
 deliverables/store-assets/screenshots/tr-TR/tablet/08-reports.png,230483,18bc079b22b25aaa823b7c159f248f5bc9f4ad52a97bbe532c5cefce648f6c79
 deliverables/store-assets/screenshots/tr-TR/tablet/08-reports.svg,593,3aa0cfd2f1ff4b8d3b948d2bc3677b8d368ffb47772df3926113e50c38cc50c8
-deliverables/store-assets/screenshots/tr-TR/tablet-capture.json,3699,b067922c89e1e8acba8fbd4bcf6b9b749b1f5151ae45f9de0447310780f95e28
+deliverables/store-assets/screenshots/zh-Hans/compact-capture.json,3742,4336615f8dd2f4990a5b5d7b4b31de3dc9e2b6a4d7b9f04116e0412c1f2a1a37
 deliverables/store-assets/screenshots/zh-Hans/compact/01-overview.png,159084,fb6ace3405e3f6bbb309c0b1dfa5f62b764ec5f7b68bf41f50c75a799ff11180
 deliverables/store-assets/screenshots/zh-Hans/compact/01-overview.svg,547,bc5a4256b1c6de1a3d58d6c9f04c7c6e038cd93951ec60625e79020e0778b299
 deliverables/store-assets/screenshots/zh-Hans/compact/02-maintenance.png,145084,12ebabf039f12d7d2873a9ab59ac0e7231bd02d99da7e6b17575082342038c77
@@ -1315,7 +1318,7 @@ deliverables/store-assets/screenshots/zh-Hans/compact/07-offline-records.png,155
 deliverables/store-assets/screenshots/zh-Hans/compact/07-offline-records.svg,554,5bdb2b7354bd12d33a97c49b34680bc086a5baef2a0316240082080db5ebfd5a
 deliverables/store-assets/screenshots/zh-Hans/compact/08-reports.png,184311,8bca44e1cebce44ed9a47cdf1c85683b0c0a0b603d10c7cf04330dc224292d71
 deliverables/store-assets/screenshots/zh-Hans/compact/08-reports.svg,571,7c04c25812788bca01a473023d36d164b9dbb61ddb78cacc1b69ba38eef59efe
-deliverables/store-assets/screenshots/zh-Hans/compact-capture.json,3742,4336615f8dd2f4990a5b5d7b4b31de3dc9e2b6a4d7b9f04116e0412c1f2a1a37
+deliverables/store-assets/screenshots/zh-Hans/tablet-capture.json,3733,c04b0e2d0d86f4d5dffa7c49eb73d3cccaabde030e3feac8db5a21a75275fb12
 deliverables/store-assets/screenshots/zh-Hans/tablet/01-overview.png,194287,6e6d7d019878454cba3a728c9fa30b57a5d2d3724efcb9670f03b6393767509d
 deliverables/store-assets/screenshots/zh-Hans/tablet/01-overview.svg,548,d2d2793979a74ce06de37de67c56aeef38a0a2db10d49bf2caed21c789e34bdb
 deliverables/store-assets/screenshots/zh-Hans/tablet/02-maintenance.png,173378,3a32a2009135210c8cb76a7aa0b86a1e83f69d84d9457c3f5994d23e5d4dbeb6
@@ -1332,7 +1335,7 @@ deliverables/store-assets/screenshots/zh-Hans/tablet/07-offline-records.png,1780
 deliverables/store-assets/screenshots/zh-Hans/tablet/07-offline-records.svg,555,3a8bb604581c3e1dd4326dd13947ef949569c53c32fd05fc1cf4c048eef9bf53
 deliverables/store-assets/screenshots/zh-Hans/tablet/08-reports.png,203811,a809b4ab81c5db3cab871ca7e9bd4ffadcc5273826acd8f2c6508c48c8315e97
 deliverables/store-assets/screenshots/zh-Hans/tablet/08-reports.svg,572,e575e39acbcf0b5a41fa0da8ff748e3978a306823bffedbcdb997b506041bb36
-deliverables/store-assets/screenshots/zh-Hans/tablet-capture.json,3733,c04b0e2d0d86f4d5dffa7c49eb73d3cccaabde030e3feac8db5a21a75275fb12
+deliverables/store-assets/screenshots/zh-Hant/compact-capture.json,3742,187dd514df51484693da1071fc3f34ac2aed8f5de41b5897e8c19dc1bf71b4d0
 deliverables/store-assets/screenshots/zh-Hant/compact/01-overview.png,174404,4e37378f1c0f5f84b5ea612ed9389b917daf15720a03d2c908956d961644e4d1
 deliverables/store-assets/screenshots/zh-Hant/compact/01-overview.svg,547,61075da9c70ed0ce777c289bb2a4d47a5bd15bb288f3b6d5feb1cf5010a8ab5f
 deliverables/store-assets/screenshots/zh-Hant/compact/02-maintenance.png,148629,0523dd98b9102f9c445d60cf66ec4e220ecf74c32c8ddc5f6b8283e8f57b1106
@@ -1349,7 +1352,7 @@ deliverables/store-assets/screenshots/zh-Hant/compact/07-offline-records.png,163
 deliverables/store-assets/screenshots/zh-Hant/compact/07-offline-records.svg,554,a09c55e0893eb9c748a58411a3b380f048c69281eccca6139785ad1c2f7e3a43
 deliverables/store-assets/screenshots/zh-Hant/compact/08-reports.png,192561,cb81568cf727ea3fe2a7bb521cdc040d661523344b3b86d19d14e58bd73646d9
 deliverables/store-assets/screenshots/zh-Hant/compact/08-reports.svg,571,0fc7064b44ba8b382b8e9085bf7fc8c3b41670ee0680d1c9455d173477cd2e0c
-deliverables/store-assets/screenshots/zh-Hant/compact-capture.json,3742,187dd514df51484693da1071fc3f34ac2aed8f5de41b5897e8c19dc1bf71b4d0
+deliverables/store-assets/screenshots/zh-Hant/tablet-capture.json,3733,038ef3fa27d59a5f16bb4a2e6a07ca5fc179a40591b208ad0ee1f36fd0370950
 deliverables/store-assets/screenshots/zh-Hant/tablet/01-overview.png,201444,9b14fab4948913a4e8e7071222f878899a56b4cc5fb82503de00d608c721876f
 deliverables/store-assets/screenshots/zh-Hant/tablet/01-overview.svg,548,8d380e31581abf02944936aaa40e80bc5e3278c354597df74aca5c2dd4765943
 deliverables/store-assets/screenshots/zh-Hant/tablet/02-maintenance.png,176495,28b2dabca3a8babe265c1983c62d0c5e7800ed6651290eec5677630f30e99d1e
@@ -1366,4 +1369,3 @@ deliverables/store-assets/screenshots/zh-Hant/tablet/07-offline-records.png,1877
 deliverables/store-assets/screenshots/zh-Hant/tablet/07-offline-records.svg,555,8280c33acc73736d08cbc34b7a24a50398df8444732ebe2c95c152886ab176f6
 deliverables/store-assets/screenshots/zh-Hant/tablet/08-reports.png,215209,a72c5d70400f5d58c2af55a857bcbe55a1edcfb4061140c4fd7c213d0d9dfc2c
 deliverables/store-assets/screenshots/zh-Hant/tablet/08-reports.svg,572,cc6dfd10478f75e9c663a17e53d37b5dab22a39f88bc06a4f5c72690d1b5693f
-deliverables/store-assets/screenshots/zh-Hant/tablet-capture.json,3733,038ef3fa27d59a5f16bb4a2e6a07ca5fc179a40591b208ad0ee1f36fd0370950

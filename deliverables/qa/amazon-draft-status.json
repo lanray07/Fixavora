@@ -1,6 +1,6 @@
 {
-  "application": "Ready to Submit",
-  "iap": "Ready to Submit",
+  "application": "Submitted",
+  "iap": "Approved",
   "version": "1.0.0",
   "version_code": 2,
   "release_sha256": "c9582dcc96a4a42168eb6c85dcd866282f384a7b774e17490377210c4c90fbc3",
@@ -14,7 +14,11 @@
   "iap_locales": 12,
   "reviewer_instructions_saved": true,
   "export_certification": "Checked under explicit publisher authorization",
-  "app_submitted": false,
-  "iap_submitted": false,
-  "source": "Observed saved Amazon console UI; fresh review page confirms enabled Submit App"
+  "app_submitted": true,
+  "iap_submitted": true,
+  "source": "Observed Amazon app submission success/history and IAP dashboard Approved status",
+  "submitted_date": "2026-11-10",
+  "submission_authorization": "Publisher explicitly requested submit in this chat",
+  "estimated_availability_uk": "2026-11-15 14:30 GMT",
+  "estimate_is_guarantee": false
 }

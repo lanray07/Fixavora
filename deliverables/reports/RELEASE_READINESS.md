@@ -1,6 +1,6 @@
 # Fixavora submission readiness
 
-10 November 2026. Candidate: **1.0.0, version code 2**. The Amazon application draft is complete and its **Submit App** button is enabled. No app or IAP has been submitted or published. Final source and CI evidence are recorded in `deliverables/qa/source-verification.json`.
+10 November 2026. Candidate: **1.0.0, version code 2**. The publisher authorized submission on 10 November 2026. Amazon confirms the application is **Submitted** and the Premium IAP is **Approved**. The application is not yet confirmed live. Final source and CI evidence are recorded in `deliverables/qa/source-verification.json`.
 
 ## Release artifacts
 
@@ -35,7 +35,7 @@ The final version-code-2 APK is the only upload. Twelve compatible Fire tablet m
 
 Fifteen localized descriptions and all eleven offered image locales are populated. Each image locale has eight actual localized UI captures plus original brand icons/promotion. Reviewer instructions explain the free limits, purchase/restore, voice fallback, file picker, backup scope and local deletion. Public support is banksmi@mail.com; policy/support links use the public GitHub repository. Privacy labels conservatively cover local record inputs, purchase identifiers and verification-network identifiers, with functionality/security purposes. No advertising/analytics use is declared. Export certification was checked under the publisher's explicit instruction.
 
-Premium SKU `fixavora.premium.lifetime` is a one-time entitlement with GBP 4.99 base pricing and Amazon marketplace conversions. Its draft descriptions/icons are localized in the offered IAP languages. The shared secret is held in encrypted Cloudflare secrets; production and sandbox use distinct Workers on the Free plan. No paid service was enabled. The IAP remains a separate draft; submitting the application does not itself publish the product.
+Premium SKU `fixavora.premium.lifetime` is a one-time entitlement with GBP 4.99 base pricing and Amazon marketplace conversions. Its draft descriptions/icons are localized in the offered IAP languages. The shared secret is held in encrypted Cloudflare secrets; production and sandbox use distinct Workers on the Free plan. No paid service was enabled. The IAP was submitted separately using Submit to Test and Live; Amazon now lists it as Approved.
 
 ## Verified environment and limits
 
@@ -47,6 +47,6 @@ App Tester and a live sandbox RVS request have passed; the repeat final run rest
 
 The local database uses Android private storage and is not separately encrypted. There is no app lock, cloud sync, remote-model adapter, product analytics or advertising. Reports keep currencies separate; appointments use local times; reminders are periodic and subject to power settings. Backups contain records/history and exclude external files/photos/attachment links. The local assistant is limited and always needs user review. Whole-device security, a penetration test, human linguistic certification and legal/name clearance are not claimed.
 
-## Remaining release action
+## Submission and next validation
 
-The publisher must explicitly authorize final app and IAP submission. Until then both drafts stay unpublished. After Amazon signs and distributes a candidate, run the documented signed-build purchase/restore smoke check before claiming production payment verification. Setup, architecture, environment templates, voice, privacy and release instructions are included in README, `docs/` and the delivery reports.
+The publisher explicitly authorized submission. Amazon records App Submission Successful on 10 November 2026 and estimates availability by 15 November 2026 at 06:30 PST (14:30 GMT/UK), subject to review. This is an estimate, not confirmed approval or availability. Confirmation screenshots and current statuses are in `deliverables/qa/amazon-app-submission.jpg`, `amazon-iap-submission.jpg` and `amazon-draft-status.json`. After Amazon signs and distributes a candidate, run the documented signed-build purchase/restore smoke check before claiming production payment verification. Setup, architecture, environment templates, voice, privacy and release instructions are included in README, `docs/` and the delivery reports.
