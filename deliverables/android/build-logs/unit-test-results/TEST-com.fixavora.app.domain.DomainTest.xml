@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.fixavora.app.domain.DomainTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-10T08:11:03.392Z" hostname="DESKTOP-MAKK9CA" time="0.033">
+  <properties/>
+  <testcase name="multilingualDateDraft" classname="com.fixavora.app.domain.DomainTest" time="0.002"/>
+  <testcase name="moneyRejectsRoundingNegativeAndOverflow" classname="com.fixavora.app.domain.DomainTest" time="0.006"/>
+  <testcase name="quarterlyAndCustom" classname="com.fixavora.app.domain.DomainTest" time="0.005"/>
+  <testcase name="monthEndDoesNotDrift" classname="com.fixavora.app.domain.DomainTest" time="0.001"/>
+  <testcase name="daylightSavingsKeepsCalendarDate" classname="com.fixavora.app.domain.DomainTest" time="0.005"/>
+  <testcase name="commandDictionariesRouteReadOnlyAndMutatingIntents" classname="com.fixavora.app.domain.DomainTest" time="0.008"/>
+  <testcase name="duplicatesAreWordBased" classname="com.fixavora.app.domain.DomainTest" time="0.003"/>
+  <testcase name="moneyIsExactAndCurrencyAware" classname="com.fixavora.app.domain.DomainTest" time="0.001"/>
+  <testcase name="leapYearAnchorReturns" classname="com.fixavora.app.domain.DomainTest" time="0.0"/>
+  <testcase name="localAssistantNeverSavesAndFlagsHazards" classname="com.fixavora.app.domain.DomainTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -21,7 +21,10 @@ class AmazonBilling(private val context: Context) : PurchasingListener {
     private var userId: String? = null
     private var registered = false
     fun connect() {
-        if (registered) return
+        if (registered) {
+            runCatching { PurchasingService.getUserData(); PurchasingService.getPurchaseUpdates(false) }
+            return
+        }
         // Missing public key or service is a configuration blocker, never a simulated success.
         if (BuildConfig.RECEIPT_ENDPOINT.isBlank() || !context.assets.list("").orEmpty().contains("AppstoreAuthenticationKey.pem")) return
         runCatching {
@@ -29,6 +32,7 @@ class AmazonBilling(private val context: Context) : PurchasingListener {
             registered = true
             PurchasingService.getUserData()
             PurchasingService.getProductData(setOf(SKU))
+            PurchasingService.getPurchaseUpdates(false)
         }.onFailure { state.value = state.value.copy(message = "billing_unavailable", busy = false) }
     }
     fun buy() {
@@ -74,6 +78,7 @@ class AmazonBilling(private val context: Context) : PurchasingListener {
                     require(result["sku"] == SKU && result["receiptId"] == receipt.receiptId && result["userId"] == user)
                     result["active"] == true && !receipt.isCanceled
                 } finally { conn.disconnect() }
+                if (userId != null && userId != user) return@launch
                 cache.edit().putBoolean("active", active).putString("user", user).apply()
                 state.value = state.value.copy(premium = active, busy = false, message = if (active) "premium_active" else "purchase_inactive")
                 if (active) PurchasingService.notifyFulfillment(receipt.receiptId, FulfillmentResult.FULFILLED)

@@ -1,0 +1,9 @@
+{
+  "ro.product.manufacturer": "Amazon",
+  "ro.product.model": "KFTRWI",
+  "ro.build.version.sdk": "28",
+  "ro.build.version.release": "9",
+  "ro.build.display.id": "PS7331.4463N",
+  "display_size": "Physical size: 1200x1920",
+  "display_density": "Physical density: 240"
+}

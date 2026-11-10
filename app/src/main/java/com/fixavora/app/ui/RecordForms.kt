@@ -63,7 +63,7 @@ fun fieldsOf(r: HomeRecord): Map<String, String> = runCatching { Gson().fromJson
     var amount by remember { mutableStateOf(Money.decimal(initial.amountMinor, initial.currency).toPlainString()) }
     val extras = remember { mutableStateMapOf<String, String>().apply { putAll(fieldsOf(initial)) } }
     var error by remember { mutableStateOf(false) }
-    Dialog(onDismissRequest = dismiss, properties = androidx.compose.ui.window.DialogProperties(usePlatformDefaultWidth = false)) {
+    Dialog(onDismissRequest = dismiss, properties = androidx.compose.ui.window.DialogProperties(usePlatformDefaultWidth = false, decorFitsSystemWindows = false)) {
         Surface(Modifier.fillMaxWidth(.94f).widthIn(max = 720.dp).fillMaxHeight(.94f), shape = MaterialTheme.shapes.large) {
             Column(Modifier.padding(24.dp)) {
                 Heading(c.t(if (initial.title.isBlank()) "add_record" else "edit_record"), c.t(initial.kind.lowercase()))

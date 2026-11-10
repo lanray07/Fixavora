@@ -12,7 +12,9 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
       - run: chmod +x gradlew
       - run: python3 tools/localize.py validate
-      - run: ./gradlew testDebugUnitTest lintDebug assembleDebug assembleRelease --console=plain
+      - run: python3 -m unittest discover -s server -v
+      - run: ./gradlew testDebugUnitTest assembleDebug assembleRelease --console=plain
+      - run: ./gradlew lintDebug --console=plain
       - uses: actions/upload-artifact@v4
         if: always()
         with:

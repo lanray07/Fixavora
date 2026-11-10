@@ -13,6 +13,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.unit.dp
 import com.fixavora.app.data.*
 import com.fixavora.app.domain.*
@@ -25,6 +26,7 @@ import com.google.gson.reflect.TypeToken
 
 @Composable fun AssistantPanel(vm: HomeViewModel, property: HomeRecord?, records: List<HomeRecord>, locale: Locale, prefs: Preferences, edit: (HomeRecord) -> Unit) {
     val c = LocalContext.current
+    val keyboard = LocalSoftwareKeyboardController.current
     var input by remember { mutableStateOf("") }
     var listening by remember { mutableStateOf(false) }
     var proposal by remember { mutableStateOf<ProposedAction?>(null) }
@@ -51,6 +53,7 @@ import com.google.gson.reflect.TypeToken
                 else permission.launch(Manifest.permission.RECORD_AUDIO)
             }) { Icon(if (listening) Icons.Outlined.StopCircle else Icons.Outlined.MicNone, null); Text(c.t(if (listening) "stop_listening" else "push_to_talk")) }
             Button({
+                keyboard?.hide()
                 val today = LocalDate.now()
                 answer = ""
                 when (VoiceIntents.parse(input, dictionary)) {

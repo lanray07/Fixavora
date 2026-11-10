@@ -81,7 +81,7 @@ val sections = listOf(
             val wide = maxWidth >= 840.dp
             Row(Modifier.fillMaxSize()) {
                 if (wide) {
-                    Column(Modifier.width(208.dp).fillMaxHeight().background(MaterialTheme.colorScheme.surface).padding(16.dp).verticalScroll(rememberScrollState())) {
+                    Column(Modifier.testTag("tablet-navigation").width(208.dp).fillMaxHeight().background(MaterialTheme.colorScheme.surface).padding(16.dp).verticalScroll(rememberScrollState())) {
                         Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(vertical = 20.dp)) { Icon(Icons.Outlined.Cottage, null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(29.dp)); Spacer(Modifier.width(8.dp)); Text("Fixavora", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
                         Text(c.t("home_companion"), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         Spacer(Modifier.height(24.dp))

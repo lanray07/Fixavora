@@ -1,0 +1,178 @@
+[
+  {
+    "locale": "en-GB",
+    "variant": "tablet",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\tablet\\01-overview.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\tablet\\01-overview.png",
+    "width": 1920,
+    "height": 1200,
+    "sha256": "9b66a58d2d2e3d58a98e982d345f95aaacbc06bc7f242944adb60ba07c4d4c5e",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "tablet",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\tablet\\02-maintenance.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\tablet\\02-maintenance.png",
+    "width": 1920,
+    "height": 1200,
+    "sha256": "d761c4018a7bb7c66ec71f05734e35063042f54a0aa57270ad0607e53f451906",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "tablet",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\tablet\\03-repairs.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\tablet\\03-repairs.png",
+    "width": 1920,
+    "height": 1200,
+    "sha256": "5897789337ac79e13a817b4265d8995a0b82be3c7bb21ec78e46794c5834c914",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "tablet",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\tablet\\04-appliances.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\tablet\\04-appliances.png",
+    "width": 1920,
+    "height": 1200,
+    "sha256": "0e004a35517327eb62566324cb1a8ea9581a468f65ee78b6d714567b1b0bbf66",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "tablet",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\tablet\\05-voice-assistant.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\tablet\\05-voice-assistant.png",
+    "width": 1920,
+    "height": 1200,
+    "sha256": "2ce8e488d22b64ec541109a243385784fda5f03c1784bed36f397efb43c3022f",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "tablet",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\tablet\\06-calendar.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\tablet\\06-calendar.png",
+    "width": 1920,
+    "height": 1200,
+    "sha256": "de1383aeb7be3576d0225d6d741a990dd0b391c7fe5c555e9fb472caba5b88c4",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "tablet",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\tablet\\07-offline-records.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\tablet\\07-offline-records.png",
+    "width": 1920,
+    "height": 1200,
+    "sha256": "a01d2bb90a1b3ba6f58f8776473d79a45e4bfdb64cf8eddf989d572f243a9010",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "tablet",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\tablet\\08-reports.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\tablet\\08-reports.png",
+    "width": 1920,
+    "height": 1200,
+    "sha256": "ffbcec1ad664c3fb5122b7f35f00405bb3cd8a5444e5edb92d2645ed7b0217d5",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "compact",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\compact\\01-overview.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\compact\\01-overview.png",
+    "width": 800,
+    "height": 1280,
+    "sha256": "7d6d920532cbeb1249ac494852a7c82476ad279200f180ee389a94fa47ed3c22",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "compact",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\compact\\02-maintenance.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\compact\\02-maintenance.png",
+    "width": 800,
+    "height": 1280,
+    "sha256": "02bdd712182538daf13b6c10e9f30413a2ad9a1c620ae36c2f9adff7ae6b1633",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "compact",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\compact\\03-repairs.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\compact\\03-repairs.png",
+    "width": 800,
+    "height": 1280,
+    "sha256": "04d30a60f61b40bf33c1b5fa866d553ba625aef203060f45d64666e70223ae7b",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "compact",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\compact\\04-appliances.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\compact\\04-appliances.png",
+    "width": 800,
+    "height": 1280,
+    "sha256": "0dc3737c03cd507dd316fce3172b2330a31fd313208cd094f56cbd8a566f562e",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "compact",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\compact\\05-voice-assistant.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\compact\\05-voice-assistant.png",
+    "width": 800,
+    "height": 1280,
+    "sha256": "e4b0fdb9605bedf90ee423fd49b8a7ce43d11a4624ff4e146878b2ef87cce092",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "compact",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\compact\\06-calendar.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\compact\\06-calendar.png",
+    "width": 800,
+    "height": 1280,
+    "sha256": "38303cd0bb706e9e5f0ffa409f2d768b75c079ac066ade88993fb11790841058",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "compact",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\compact\\07-offline-records.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\compact\\07-offline-records.png",
+    "width": 800,
+    "height": 1280,
+    "sha256": "d749b046c32dc80501c642081ebaeea36c60d9e06b0f42fcd183cb5f8a0ad9fd",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  },
+  {
+    "locale": "en-GB",
+    "variant": "compact",
+    "raw": "deliverables\\store-assets\\screenshots\\raw\\en-GB\\compact\\08-reports.png",
+    "file": "deliverables\\store-assets\\screenshots\\en-GB\\compact\\08-reports.png",
+    "width": 800,
+    "height": 1280,
+    "sha256": "63805c7b85d35c72fcfe818cf141a6b3a20a16a83cfcdbac43ffa0940e239c69",
+    "status": "NOT TESTED",
+    "notes": "Real device capture; composition requires final visual and listing review. Compact is a Fire tablet viewport simulation, not physical phone validation."
+  }
+]

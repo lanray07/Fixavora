@@ -1,0 +1,16 @@
+[
+  {
+    "file": "deliverables\\android\\debug\\Fixavora-0.1.0-debug.apk",
+    "zip_integrity": true,
+    "amazon_auth_key_packaged": false,
+    "debug_capture_host_present": true,
+    "google_play_billing_namespace_present": false
+  },
+  {
+    "file": "deliverables\\android\\release\\Fixavora-0.1.0-release-unsigned.apk",
+    "zip_integrity": true,
+    "amazon_auth_key_packaged": false,
+    "debug_capture_host_present": false,
+    "google_play_billing_namespace_present": false
+  }
+]

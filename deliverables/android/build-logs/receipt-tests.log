@@ -1,0 +1,10 @@
+test_cancelled_or_other_product (test_receipts.ReceiptTest) ... ok
+test_rate_limit_is_shared_between_requests (test_receipts.ReceiptTest) ... ok
+test_receipt_must_match (test_receipts.ReceiptTest) ... ok
+test_test_receipt_rejected_in_production (test_receipts.ReceiptTest) ... ok
+test_valid_entitlement (test_receipts.ReceiptTest) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.891s
+
+OK

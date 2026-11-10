@@ -8,7 +8,9 @@ val languages = linkedMapOf("" to "System", "en-GB" to "English (UK)", "en-US" t
 fun Context.localized(tag: String): Context {
     val config = Configuration(resources.configuration)
     if (tag.isNotEmpty()) config.setLocale(Locale.forLanguageTag(tag))
-    return createConfigurationContext(config)
+    // Keep the Activity in the ContextWrapper chain. Compose activity-result launchers
+    // must still resolve its registry when using a per-app language configuration.
+    return android.view.ContextThemeWrapper(this, 0).apply { applyOverrideConfiguration(config) }
 }
 fun Context.t(key: String): String {
     val id = resources.getIdentifier(key.lowercase(), "string", packageName)

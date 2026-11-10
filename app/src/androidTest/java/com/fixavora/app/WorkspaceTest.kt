@@ -7,16 +7,16 @@ import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.platform.app.InstrumentationRegistry
 import com.fixavora.app.data.*
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.flow.first
 import org.junit.Rule
 import org.junit.Test
 import org.junit.Assert.*
 import java.io.File
 import java.time.LocalDate
 
-class WorkspaceTest {
-    @get:Rule val compose = createAndroidComposeRule<MainActivity>()
+abstract class WorkspaceJourney<T : MainActivity>(activityClass: Class<T>, private val phone: Boolean) {
+    @get:Rule val compose = createAndroidComposeRule(activityClass)
     private val app get() = compose.activity.application as FixavoraApp
-    private val phone get() = InstrumentationRegistry.getArguments().getString("deviceClass") == "phone"
 
     private fun seed() = runBlocking {
         app.repository.dao.clear()
@@ -39,7 +39,17 @@ class WorkspaceTest {
     }
 
     private fun clickNav(text: String) {
+        compose.waitUntil(10000) { compose.onAllNodes(isDialog()).fetchSemanticsNodes().isEmpty() }
+        compose.waitUntil(10000) { compose.onAllNodesWithTag(if (phone) "compact-navigation" else "tablet-navigation").fetchSemanticsNodes().isNotEmpty() }
         if (phone) compose.onNodeWithTag("compact-navigation").performScrollToNode(hasText(text))
+        else {
+            repeat(4) {
+                if (compose.onAllNodesWithText(text).fetchSemanticsNodes().isEmpty()) compose.onNodeWithTag("tablet-navigation").performTouchInput { swipeDown() }
+            }
+            repeat(4) {
+                if (compose.onAllNodesWithText(text).fetchSemanticsNodes().isEmpty()) compose.onNodeWithTag("tablet-navigation").performTouchInput { swipeUp() }
+            }
+        }
         val nodes = compose.onAllNodesWithText(text, useUnmergedTree = false)
         // First matching text is the navigation item on tablet layouts.
         nodes.onFirst().performScrollTo().performClick()
@@ -47,18 +57,32 @@ class WorkspaceTest {
     }
     private fun capture(name: String) {
         compose.waitForIdle()
+        compose.waitUntil(8000) { compose.onAllNodesWithText("Saved on this device", substring = false).fetchSemanticsNodes().isEmpty() }
         val instrumentation = InstrumentationRegistry.getInstrumentation()
         val image = instrumentation.uiAutomation.takeScreenshot()
         assertNotNull(image)
+        assertTrue("Unexpected viewport orientation", if (phone) image.width < image.height else image.width > image.height)
         val dir = File(app.getExternalFilesDir(null), "screenshots/en-GB/" + if (phone) "compact" else "tablet").apply { mkdirs() }
         File(dir, "$name.png").outputStream().use { image.compress(Bitmap.CompressFormat.PNG, 100, it) }
         image.recycle()
     }
 
     @Test fun actualScreensAndLocalTaskJourney() {
-        compose.runOnUiThread { compose.activity.requestedOrientation = if (phone) ActivityInfo.SCREEN_ORIENTATION_PORTRAIT else ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE }
+        compose.runOnUiThread {
+            compose.activity.window.addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        }
         seed()
-        compose.waitUntil(15000) { compose.onAllNodesWithText("Willow House").fetchSemanticsNodes().isNotEmpty() }
+        try {
+            compose.waitUntil(15000) { runCatching { compose.onAllNodesWithText("Willow House").fetchSemanticsNodes().isNotEmpty() }.getOrDefault(false) }
+        } catch (error: Exception) {
+            val diagnostics = File(app.getExternalFilesDir(null), "ui-startup-diagnostics.txt")
+            diagnostics.writeText(runCatching { compose.onRoot().printToString() }.getOrElse { it.toString() } + "\n" +
+                "activity=" + compose.activity.lifecycle.currentState + "\n" + runBlocking { "records=" + app.repository.dao.all().size + ", prefs=" + app.settings.flow.first() })
+            InstrumentationRegistry.getInstrumentation().uiAutomation.takeScreenshot()?.let { image ->
+                File(app.getExternalFilesDir(null), "ui-startup-failure.png").outputStream().use { image.compress(Bitmap.CompressFormat.PNG, 100, it) }; image.recycle()
+            }
+            throw error
+        }
         capture("01-overview")
         clickNav("Maintenance"); compose.onNodeWithText("Clean the kitchen extractor filter").assertExists(); capture("02-maintenance")
         clickNav("Repairs"); compose.onNodeWithText("Kitchen tap — dripping").assertExists(); capture("03-repairs")
@@ -68,10 +92,22 @@ class WorkspaceTest {
         compose.onNodeWithText("Prepare task").performClick(); compose.onNodeWithText("Review your task draft").assertExists(); capture("05-voice-assistant")
         // A proposal must not write until the separate editor save action.
         runBlocking { assertEquals(3, app.repository.dao.all().count { it.kind == "TASK" }) }
-        compose.onNodeWithText("Review details before saving").performClick(); compose.onNodeWithText("Save", substring = false).performClick()
+        compose.onNodeWithText("Review details before saving").performClick()
+        try {
+            compose.waitUntil(10000) { compose.onAllNodesWithText("Save", substring = false).fetchSemanticsNodes().isNotEmpty() }
+        } catch (error: Exception) {
+            val image = InstrumentationRegistry.getInstrumentation().uiAutomation.takeScreenshot()
+            File(app.getExternalFilesDir(null), "editor-failure.png").outputStream().use { image.compress(Bitmap.CompressFormat.PNG, 100, it) }; image.recycle()
+            File(app.getExternalFilesDir(null), "editor-failure.txt").writeText(compose.onAllNodes(isRoot()).printToString())
+            throw error
+        }
+        compose.onNodeWithText("Save", substring = false).performClick()
         compose.waitUntil(10000) { runBlocking { app.repository.dao.all().count { it.kind == "TASK" } == 4 } }
         clickNav("Calendar"); capture("06-calendar")
         clickNav("Maintenance"); compose.onNodeWithText("Check the kitchen tap tomorrow").assertExists(); capture("07-offline-records")
         clickNav("Reports"); compose.onNodeWithText("Report preview").assertExists(); capture("08-reports")
     }
 }
+
+class WorkspaceTest : WorkspaceJourney<TabletCaptureActivity>(TabletCaptureActivity::class.java, false)
+class CompactWorkspaceTest : WorkspaceJourney<CompactCaptureActivity>(CompactCaptureActivity::class.java, true)

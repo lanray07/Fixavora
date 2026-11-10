@@ -29,13 +29,14 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Content-Length", str(len(payload)))
         self.end_headers(); self.wfile.write(payload)
     def do_POST(self):
+        self.connection.settimeout(10)
         if self.path != "/verify": return self.respond(404, {"error": "not_found"})
         with self.lock:
             now = time.monotonic(); ip = self.client_address[0]
-            self.attempts = {k: v for k, v in self.attempts.items() if v[0] > now - 60}
-            start, count = self.attempts.get(ip, (now, 0))
+            type(self).attempts = {k: v for k, v in type(self).attempts.items() if v[0] > now - 60}
+            start, count = type(self).attempts.get(ip, (now, 0))
             if count >= 30: return self.respond(429, {"error": "rate_limit"})
-            self.attempts[ip] = (start, count + 1)
+            type(self).attempts[ip] = (start, count + 1)
         try:
             size = int(self.headers.get("Content-Length", "0"))
             if not 0 < size <= 8192: return self.respond(400, {"error": "invalid_request"})
