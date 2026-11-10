@@ -1,0 +1,98 @@
+{
+  "en-GB": {
+    "one": "%d record",
+    "other": "%d records"
+  },
+  "en-US": {
+    "one": "%d record",
+    "other": "%d records"
+  },
+  "en-AU": {
+    "one": "%d record",
+    "other": "%d records"
+  },
+  "es-ES": {
+    "one": "%d registro",
+    "other": "%d registros",
+    "many": "%d registros"
+  },
+  "es-419": {
+    "one": "%d registro",
+    "other": "%d registros",
+    "many": "%d registros"
+  },
+  "fr-FR": {
+    "one": "%d fiche",
+    "many": "%d fiches",
+    "other": "%d fiches"
+  },
+  "fr-CA": {
+    "one": "%d fiche",
+    "many": "%d fiches",
+    "other": "%d fiches"
+  },
+  "de-DE": {
+    "one": "%d Eintrag",
+    "other": "%d Einträge"
+  },
+  "it-IT": {
+    "one": "%d scheda",
+    "many": "%d schede",
+    "other": "%d schede"
+  },
+  "pt-BR": {
+    "one": "%d registro",
+    "many": "%d registros",
+    "other": "%d registros"
+  },
+  "pt-PT": {
+    "one": "%d registo",
+    "many": "%d registos",
+    "other": "%d registos"
+  },
+  "nl-NL": {
+    "one": "%d record",
+    "other": "%d records"
+  },
+  "pl-PL": {
+    "one": "%d wpis",
+    "few": "%d wpisy",
+    "many": "%d wpisów",
+    "other": "%d wpisu"
+  },
+  "sv-SE": {
+    "one": "%d post",
+    "other": "%d poster"
+  },
+  "ja-JP": {
+    "other": "%d件の記録"
+  },
+  "ko-KR": {
+    "other": "기록 %d개"
+  },
+  "zh-Hans": {
+    "other": "%d 条记录"
+  },
+  "zh-Hant": {
+    "other": "%d 筆記錄"
+  },
+  "hi-IN": {
+    "one": "%d रिकॉर्ड",
+    "other": "%d रिकॉर्ड"
+  },
+  "ar": {
+    "zero": "لا توجد سجلات",
+    "one": "سجل واحد",
+    "two": "سجلان",
+    "few": "%d سجلات",
+    "many": "%d سجلًا",
+    "other": "%d سجل"
+  },
+  "tr-TR": {
+    "one": "%d kayıt",
+    "other": "%d kayıt"
+  },
+  "id-ID": {
+    "other": "%d catatan"
+  }
+}

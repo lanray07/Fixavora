@@ -22,7 +22,7 @@ class ReminderWorker(context: Context, parameters: WorkerParameters) : Coroutine
         val prefs = app.settings.flow.first()
         if (!prefs.reminders) return Result.success()
         val hour = LocalTime.now().hour
-        val quiet = if (prefs.quietStart < prefs.quietEnd) hour in prefs.quietStart until prefs.quietEnd else hour >= prefs.quietStart || hour < prefs.quietEnd
+        val quiet = QuietHours.contains(hour, prefs.quietStart, prefs.quietEnd)
         if (quiet) return Result.success()
         if (Build.VERSION.SDK_INT >= 33 && app.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) != PackageManager.PERMISSION_GRANTED) return Result.success()
         val manager = app.getSystemService(NotificationManager::class.java)

@@ -38,13 +38,19 @@ Portable encrypted backups contain home records and history. They do not bundle 
 
 ## Amazon Appstore and purchases
 
-Amazon handles its own Appstore account, installation and store interactions under its policies. The current Fixavora development build does not enable purchases. If purchasing or a receipt-verification service is enabled in a later release, this policy will be updated to explain the purchase identifiers, service providers and processing involved before that functionality is offered.
+Premium is an optional one-time Amazon purchase. Amazon handles its own Appstore account, checkout, installation and store interactions under its policies. Fixavora checks the current Amazon account's purchase status when connecting to the store, so it can restore access and respond to account changes. The app does not receive your Amazon password or payment-card details.
+
+To verify a Premium receipt, Fixavora sends the Amazon customer identifier and receipt identifier over HTTPS to the publisher's receipt-verification service, hosted on Cloudflare Workers. That service asks Amazon's Receipt Verification Service whether the receipt is valid for Fixavora Premium and whether it has been cancelled. It returns the entitlement result to the app. Your property records, addresses, notes, documents and microphone audio are not included in these verification requests.
+
+The verifier does not keep a purchase database or intentionally log customer or receipt identifiers. Cloudflare processes network metadata, including the requesting IP address, to deliver and protect the service. A rate limiter uses the IP address for short-lived request limits. Cloudflare and Amazon may retain information under their own privacy and security policies; the absence of application logs is not a promise that infrastructure providers retain no metadata.
+
+The app caches the last verified entitlement, associated Amazon identifier and verification time in its private storage. Cached entitlement checks have a seven-day maximum grace period and may require connectivity or confirmation of the current Amazon account. Existing home records remain accessible when Premium verification is unavailable. Clearing home data does not cancel or remove an Amazon purchase.
 
 ## Retention and deletion
 
 Home records remain on your device until you delete them or remove the app. Settings includes a Delete all home data action for local records, history, attachment links and preferences. Android automatic application backup is disabled for Fixavora.
 
-Copies you exported or shared, files held by external document providers and Amazon's own store records are not deleted by clearing Fixavora's home data. Manage those copies with the relevant recipient or provider.
+Copies you exported or shared, files held by external document providers and Amazon's own store records are not deleted by clearing Fixavora's home data. The separately stored entitlement cache supports restoration of an existing purchase and is removed when the app's storage is cleared or the app is uninstalled. Manage external copies with the relevant recipient or provider.
 
 Because the publisher does not receive your local home records automatically, the publisher generally cannot access, recover or remotely delete them. Contact banksmi@mail.com with privacy questions. Do not post private addresses, receipts, contractor details or other sensitive records in public GitHub issues.
 

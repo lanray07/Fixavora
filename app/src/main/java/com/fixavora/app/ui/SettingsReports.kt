@@ -30,22 +30,22 @@ import java.util.Locale
     var deleting by remember { mutableStateOf(false) }
     var backupMode by remember { mutableStateOf<String?>(null) }
     var password by remember { mutableStateOf("") }
-    var confirmRestore by remember { mutableStateOf<android.net.Uri?>(null) }
+    val confirmRestore by vm.restoreUri.collectAsStateWithLifecycle()
     val premium by vm.billing.state.collectAsStateWithLifecycle()
     val backup = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/octet-stream")) { uri ->
-        val pass = password.toCharArray(); password = ""
+        val pass = vm.backupSession.take() ?: charArrayOf()
         uri?.let { vm.action { try {
             val bytes = withContext(Dispatchers.IO) { EncryptedBackup.encode(BackupData(records = vm.repo.dao.all(), events = vm.repo.dao.events()), pass) }
             withContext(Dispatchers.IO) { c.contentResolver.openOutputStream(it)?.use { out -> out.write(bytes) } ?: error("output") }
             vm.message.value = "backup_saved"
         } finally { pass.fill('\u0000') } } } ?: pass.fill('\u0000')
     }
-    val restore = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri -> if (uri != null) confirmRestore = uri else password = "" }
+    val restore = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri -> if (uri != null) vm.restoreUri.value = uri else vm.backupSession.clear() }
     val notifications = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted -> vm.action { vm.settings.flag("reminders", granted) }; if (!granted) vm.message.value = "notifications_denied" }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(bottom = 28.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
         Heading(c.t("language"), c.t("translation_review_notice"))
         Choice(prefs.language, languages.mapValues { if (it.key.isEmpty()) c.t("system_language") else it.value }, { vm.action { vm.settings.text("language", it) } })
-        Heading(c.t("currency")); Choice(prefs.currency, listOf("GBP", "USD", "EUR", "AUD", "CAD", "BRL", "JPY", "INR", "SAR", "TRY", "IDR", "PLN", "SEK").associateWith { it }, { vm.action { vm.settings.text("currency", it) } })
+        Heading(c.t("currency")); Choice(prefs.currency, currencyChoices, { vm.action { vm.settings.text("currency", it) } })
         Heading(c.t("measurement_units")); Choice(prefs.units, listOf("metric", "imperial").associateWith(c::t), { vm.action { vm.settings.text("units", it) } })
         Toggle(c.t("dark_mode"), prefs.dark) { vm.action { vm.settings.flag("dark", it) } }
         Toggle(c.t("high_contrast"), prefs.contrast) { vm.action { vm.settings.flag("contrast", it) } }
@@ -66,11 +66,11 @@ import java.util.Locale
         OutlinedButton({ backupMode = "restore" }) { Text(c.t("restore_backup")) }
         TextButton({ deleting = true }) { Text(c.t("delete_all_data"), color = MaterialTheme.colorScheme.error) }
         Text(c.t("safety_guardrail"), style = MaterialTheme.typography.bodySmall)
-        Text("Fixavora 0.1.0", style = MaterialTheme.typography.labelSmall)
+        Text("Fixavora ${com.fixavora.app.BuildConfig.VERSION_NAME}", style = MaterialTheme.typography.labelSmall)
     }
-    if (backupMode != null) AlertDialog(onDismissRequest = { backupMode = null; password = "" }, title = { Text(c.t(if (backupMode == "backup") "encrypted_backup" else "restore_backup")) }, text = { Column { Text(c.t("backup_password_notice")); OutlinedTextField(password, { password = it }, label = { Text(c.t("passphrase")) }, visualTransformation = PasswordVisualTransformation(), singleLine = true) } }, confirmButton = { TextButton({ val mode = backupMode; backupMode = null; if (mode == "backup") backup.launch("Fixavora-${LocalDate.now()}.fixavora") else restore.launch(arrayOf("application/octet-stream", "*/*")) }, enabled = password.length >= 12) { Text(c.t("continue_action")) } }, dismissButton = { TextButton({ backupMode = null; password = "" }) { Text(c.t("cancel")) } })
-    confirmRestore?.let { uri -> AlertDialog(onDismissRequest = { confirmRestore = null; password = "" }, title = { Text(c.t("restore_backup")) }, text = { Text(c.t("restore_warning")) }, confirmButton = { TextButton({
-        val pass = password.toCharArray(); password = ""; confirmRestore = null
+    if (backupMode != null) AlertDialog(onDismissRequest = { backupMode = null; password = ""; vm.backupSession.clear() }, title = { Text(c.t(if (backupMode == "backup") "encrypted_backup" else "restore_backup")) }, text = { Column { Text(c.t("backup_password_notice")); OutlinedTextField(password, { password = it }, label = { Text(c.t("passphrase")) }, visualTransformation = PasswordVisualTransformation(), singleLine = true) } }, confirmButton = { TextButton({ val mode = backupMode; vm.backupSession.begin(password); password = ""; backupMode = null; if (mode == "backup") backup.launch("Fixavora-${LocalDate.now()}.fixavora") else restore.launch(arrayOf("application/octet-stream", "*/*")) }, enabled = password.length >= 12) { Text(c.t("continue_action")) } }, dismissButton = { TextButton({ backupMode = null; password = ""; vm.backupSession.clear() }) { Text(c.t("cancel")) } })
+    confirmRestore?.let { uri -> AlertDialog(onDismissRequest = { vm.restoreUri.value = null; vm.backupSession.clear() }, title = { Text(c.t("restore_backup")) }, text = { Text(c.t("restore_warning")) }, confirmButton = { TextButton({
+        val pass = vm.backupSession.take() ?: charArrayOf(); vm.restoreUri.value = null
         vm.action { try {
             val data = withContext(Dispatchers.IO) {
                 val bytes = c.contentResolver.openInputStream(uri)?.use { source ->
@@ -88,9 +88,11 @@ import java.util.Locale
             }
             EncryptedBackup.restore(vm.repo, data); vm.message.value = "restored"
         } finally { pass.fill('\u0000') } }
-    }) { Text(c.t("restore_backup")) } }, dismissButton = { TextButton({ confirmRestore = null; password = "" }) { Text(c.t("cancel")) } }) }
+    }) { Text(c.t("restore_backup")) } }, dismissButton = { TextButton({ vm.restoreUri.value = null; vm.backupSession.clear() }) { Text(c.t("cancel")) } }) }
     if (deleting) AlertDialog(onDismissRequest = { deleting = false }, title = { Text(c.t("delete_all_data")) }, text = { Text(c.t("delete_all_warning")) }, confirmButton = { TextButton({ vm.action {
         vm.repo.dao.clear(); vm.settings.clear()
+        vm.reportSnapshot = emptyList(); vm.reportRange = ""
+        vm.backupSession.clear(); vm.restoreUri.value = null
         c.getSharedPreferences("notification_history", android.content.Context.MODE_PRIVATE).edit().clear().apply()
         c.getSystemService(NotificationManager::class.java).cancelAll()
         c.contentResolver.persistedUriPermissions.forEach { runCatching { c.contentResolver.releasePersistableUriPermission(it.uri, android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION) } }
@@ -111,7 +113,7 @@ import java.util.Locale
         Text(c.t("free_tier_detail"))
         state.price?.let { Text(it, style = MaterialTheme.typography.headlineLarge) }
         Text(c.t(state.message))
-        Button({ vm.billing.buy() }, enabled = state.price != null && !state.busy && !state.premium) { Text(c.t(if (state.premium) "premium_active" else "get_premium")) }
+        Button({ vm.billing.buy() }, enabled = state.accountReady && state.price != null && !state.busy && !state.premium) { Text(c.t(if (state.premium) "premium_active" else "get_premium")) }
         OutlinedButton({ vm.billing.restore() }, enabled = !state.busy) { Text(c.t("restore_purchases")) }
         Text(c.t("premium_ai_policy"), style = MaterialTheme.typography.bodySmall)
     }
@@ -123,11 +125,11 @@ import java.util.Locale
     var to by remember { mutableStateOf("") }
     var type by remember { mutableStateOf("all") }
     var export by remember { mutableStateOf<String?>(null) }
-    var snapshot by remember { mutableStateOf<List<HomeRecord>>(emptyList()) }
-    var rangeSnapshot by remember { mutableStateOf("") }
+    var snapshot by remember { mutableStateOf(vm.reportSnapshot) }
+    var rangeSnapshot by remember { mutableStateOf(vm.reportRange) }
     val filtered = records.filter { (type == "all" || it.kind == type) && (from.isEmpty() || (it.due ?: it.date) >= from) && (to.isEmpty() || (it.due ?: it.date) <= to) }
-    val pdf = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/pdf")) { uri -> uri?.let { vm.action { withContext(Dispatchers.IO) { c.contentResolver.openOutputStream(it)?.use { out -> Exports.pdf(Exports.summary(c, snapshot, locale, rangeSnapshot), out) } ?: error("output") }; vm.message.value = "export_saved" } } }
-    val csv = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/csv")) { uri -> uri?.let { vm.action { withContext(Dispatchers.IO) { c.contentResolver.openOutputStream(it)?.use { out -> Exports.csv(c, snapshot, out) } ?: error("output") }; vm.message.value = "export_saved" } } }
+    val pdf = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/pdf")) { uri -> uri?.let { vm.action { withContext(Dispatchers.IO) { c.contentResolver.openOutputStream(it)?.use { out -> Exports.pdf(Exports.summary(c, vm.reportSnapshot, locale, vm.reportRange), out, locale) } ?: error("output") }; vm.message.value = "export_saved" } } }
+    val csv = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/csv")) { uri -> uri?.let { vm.action { withContext(Dispatchers.IO) { c.contentResolver.openOutputStream(it)?.use { out -> Exports.csv(c, vm.reportSnapshot, out) } ?: error("output") }; vm.message.value = "export_saved" } } }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(bottom = 24.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
         Heading(c.t("maintenance_history"), c.t("reports_intro"))
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) { Column(Modifier.weight(1f)) { EditField("from_date", from, { from = it }, "date") }; Column(Modifier.weight(1f)) { EditField("to_date", to, { to = it }, "date") } }
@@ -144,6 +146,7 @@ import java.util.Locale
     }
     export?.let { format -> AlertDialog(onDismissRequest = { export = null }, title = { Text(c.t("export_records")) }, text = { Text(c.t("export_privacy_warning")) }, confirmButton = { TextButton({
         export = null
+        vm.reportSnapshot = snapshot.toList(); vm.reportRange = rangeSnapshot
         when(format) {
             "pdf" -> pdf.launch("Fixavora-${LocalDate.now()}.pdf")
             "csv" -> csv.launch("Fixavora-${LocalDate.now()}.csv")

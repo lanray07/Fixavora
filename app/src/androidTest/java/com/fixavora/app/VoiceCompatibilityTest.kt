@@ -27,10 +27,13 @@ class VoiceCompatibilityTest {
         val rows = languages.keys.filter { it.isNotEmpty() }.map { tag ->
             mapOf("locale" to tag, "ttsLanguageAvailable" to (initialized && engine!!.isLanguageAvailable(Locale.forLanguageTag(tag)) >= TextToSpeech.LANG_AVAILABLE), "acousticRecognitionTest" to "NOT TESTED")
         }
-        var synthesisStatus = "NOT TESTED"
+        val synthesisResults=linkedMapOf<String,String>()
+        for(tag in listOf("en-GB","en-US","en-AU")) {
+        var synthesisStatus = "UNAVAILABLE_INSTALLED_VOICE"
         val done = CountDownLatch(1)
-        val output = File(context.cacheDir, "tts-verification.wav")
-        if (initialized && engine!!.setLanguage(Locale.UK) >= TextToSpeech.LANG_AVAILABLE) {
+        val output = File(context.cacheDir, "tts-verification-$tag.wav")
+        if (initialized && engine!!.setLanguage(Locale.forLanguageTag(tag)) >= TextToSpeech.LANG_AVAILABLE) {
+            synthesisStatus="TIMEOUT"
             engine!!.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
                 override fun onStart(utteranceId: String?) {}
                 override fun onDone(utteranceId: String?) { synthesisStatus = if (output.length() > 44) "PASS" else "FAIL"; done.countDown() }
@@ -39,10 +42,13 @@ class VoiceCompatibilityTest {
             val result = engine!!.synthesizeToFile("Your maintenance record is saved.", null, output, "verification")
             if (result == TextToSpeech.SUCCESS) done.await(20, TimeUnit.SECONDS) else synthesisStatus = "FAIL"
         }
-        val report = mapOf("model" to android.os.Build.MODEL, "api" to android.os.Build.VERSION.SDK_INT, "recognitionServiceAvailable" to SpeechRecognizer.isRecognitionAvailable(context), "ttsInitialized" to initialized, "en-GB_synthesis" to synthesisStatus, "locales" to rows)
+        synthesisResults[tag]=synthesisStatus;output.delete()
+        }
+        val report = mapOf("model" to android.os.Build.MODEL, "api" to android.os.Build.VERSION.SDK_INT, "recognitionServiceAvailable" to SpeechRecognizer.isRecognitionAvailable(context), "ttsInitialized" to initialized, "synthesis" to synthesisResults, "locales" to rows)
         File(context.getExternalFilesDir(null), "voice-compatibility.json").writeText(Gson().toJson(report))
-        engine?.shutdown(); output.delete()
-        assertEquals(19, rows.size)
+        engine?.shutdown()
+        assertEquals(22, rows.size)
+        assertTrue(synthesisResults.values.none {it=="FAIL"||it=="TIMEOUT"})
         // Missing engines/languages are valid capabilities, not a fabricated recognition success.
     }
 }

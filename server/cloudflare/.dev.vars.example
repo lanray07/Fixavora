@@ -1,0 +1,2 @@
+# Local development only. Copy to .dev.vars and keep the real file out of Git.
+AMAZON_SHARED_SECRET=replace-with-development-secret

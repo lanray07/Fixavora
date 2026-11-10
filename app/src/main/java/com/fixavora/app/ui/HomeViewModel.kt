@@ -15,6 +15,12 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
     val records = repo.dao.observe().stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
     val preferences = settings.flow.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), Preferences())
     val billing = AmazonBilling(app)
+    val backupSession = com.fixavora.app.backup.BackupSession()
+    val restoreUri = MutableStateFlow<android.net.Uri?>(null)
+    // Retain the exact reviewed export while Android's document picker owns the
+    // foreground. Activity recreation must not produce an empty/different file.
+    var reportSnapshot: List<HomeRecord> = emptyList()
+    var reportRange: String = ""
     val message = MutableStateFlow<String?>(null)
     val busy = MutableStateFlow(false)
     val loaded = MutableStateFlow(false)
@@ -26,5 +32,5 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
     fun save(r: HomeRecord, onSaved: () -> Unit) = action { repo.save(r, billing.state.value.premium); onSaved(); message.value = "saved" }
-    override fun onCleared() { billing.close() }
+    override fun onCleared() { backupSession.clear(); billing.close() }
 }

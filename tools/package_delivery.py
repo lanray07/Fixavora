@@ -1,11 +1,12 @@
 """Copy built artifacts, preserve test evidence and inventory actual files with SHA-256 hashes."""
-import csv, hashlib, json, shutil
+import csv, hashlib, json, shutil, re
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/"deliverables"
+version=re.search(r'versionName\s*=\s*"([^"]+)"',(ROOT/"app/build.gradle.kts").read_text()).group(1)
 for source,target in [
-    ("app/build/outputs/apk/debug/app-debug.apk","android/debug/Fixavora-0.1.0-debug.apk"),
-    ("app/build/outputs/apk/release/app-release-unsigned.apk","android/release/Fixavora-0.1.0-release-unsigned.apk")
+    ("app/build/outputs/apk/debug/app-debug.apk",f"android/debug/Fixavora-{version}-debug.apk"),
+    ("app/build/outputs/apk/release/app-release-unsigned.apk",f"android/release/Fixavora-{version}-release-unsigned.apk")
 ]:
     src=ROOT/source
     if not src.exists(): raise SystemExit("BLOCKED: missing build artifact "+source)

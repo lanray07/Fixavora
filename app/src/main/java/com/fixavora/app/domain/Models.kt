@@ -33,16 +33,24 @@ object Recurrence {
 }
 
 object Money {
-    fun parse(input: String, currency: String): Long {
+    fun parse(input: String, currency: String, locale: java.util.Locale = java.util.Locale.ROOT): Long {
         val scale = Currency.getInstance(currency).defaultFractionDigits
         require(scale >= 0)
-        val decimal = BigDecimal(input.trim())
+        val separator = java.text.DecimalFormatSymbols.getInstance(locale).decimalSeparator
+        val normalized = normalizeDigits(input.trim()).replace(separator, '.')
+        val decimal = BigDecimal(normalized)
         require(decimal.signum() >= 0)
         return decimal.setScale(scale, RoundingMode.UNNECESSARY).movePointRight(scale).longValueExact()
     }
     fun decimal(minor: Long, currency: String): BigDecimal =
         BigDecimal.valueOf(minor, Currency.getInstance(currency).defaultFractionDigits)
 }
+
+/** Keep storage dates/times canonical while accepting a device's native digit keys. */
+fun normalizeDigits(value: String): String = value.map { char ->
+    val digit = Character.digit(char, 10)
+    if (digit >= 0) ('0'.code + digit).toChar() else char
+}.joinToString("")
 
 data class ProposedAction(val title: String, val category: String, val due: LocalDate?, val repeat: Repeat, val hazardous: Boolean)
 

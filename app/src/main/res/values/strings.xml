@@ -34,7 +34,7 @@
     <string name="bathroom">Bathroom</string>
     <string name="bedroom">Bedroom</string>
     <string name="before_photo">Before photo</string>
-    <string name="billing_unavailable">Amazon purchasing is not configured or available. No payment can be taken in this build.</string>
+    <string name="billing_unavailable">Amazon purchasing is unavailable right now. Check the Amazon Appstore and your connection, then try again.</string>
     <string name="business_name">Business name</string>
     <string name="calendar">Calendar</string>
     <string name="call">Call</string>
@@ -112,7 +112,7 @@
     <string name="homeowner">Homeowner</string>
     <string name="house">House</string>
     <string name="imperial">Imperial</string>
-    <string name="in_progress">In progress</string>
+    <string name="fixavora_in_progress">In progress</string>
     <string name="installation_date">Installation date</string>
     <string name="interval_days">Number of days</string>
     <string name="invalid_record">Check the record fields and linked property.</string>
@@ -165,7 +165,7 @@
     <string name="possible_duplicate">Possible matching task</string>
     <string name="premium">Premium</string>
     <string name="premium_active">Premium active</string>
-    <string name="premium_ai_policy">Premium does not include unlimited paid AI. Remote AI is not available in this build. The store supplies the actual local price; no purchase is made until you confirm with Amazon.</string>
+    <string name="premium_ai_policy">Premium is a one-time Amazon purchase. The store displays the price for your marketplace. You confirm purchases with Amazon; no subscription is started.</string>
     <string name="premium_backup">Portable encrypted record backups</string>
     <string name="premium_intro">More room for the homes you care for.</string>
     <string name="premium_properties">Manage multiple properties</string>
@@ -177,7 +177,7 @@
     <string name="previous_month">Previous month</string>
     <string name="priority">Priority</string>
     <string name="privacy">Privacy and your data</string>
-    <string name="privacy_detail">No account, advertising or analytics SDK. Home records stay in the app\'s private storage. Optional speech engines, your document provider and Amazon purchases have their own privacy policies. Exports leave private storage only when you choose a destination. No remote AI processing is enabled.</string>
+    <string name="privacy_detail">No mandatory account, advertising or product analytics. Home records stay in private app storage. Amazon and our receipt verifier process purchase identifiers to check Premium access. Optional speech and document providers have their own privacy policies. You choose where exports go. No remote AI processing.</string>
     <string name="privacy_intro">Your records stay on this device. No account, location tracking or advertising. Choose your preferences, then make Fixavora your own.</string>
     <string name="properties">Properties</string>
     <string name="property">Property</string>
@@ -203,7 +203,7 @@
     <string name="reminder_due">Your home has a reminder</string>
     <string name="reminder_limitations">Reminders are checked periodically, not at an exact time. Fire OS battery settings, notification permissions and device availability can delay delivery. Quiet hours use device local time.</string>
     <string name="reminders">Maintenance notifications</string>
-    <string name="remote_ai_unavailable">Remote AI is not configured. Local task drafts and record summaries remain available. Date and category parsing is limited; review every draft.</string>
+    <string name="remote_ai_unavailable">Drafts are prepared on this device. Date and category suggestions may be incomplete; review all details before saving.</string>
     <string name="remove_attachment">Remove attachment link</string>
     <string name="rented">Rented</string>
     <string name="renter">Renter</string>
@@ -255,7 +255,7 @@
     <string name="today">Today</string>
     <string name="total">Total</string>
     <string name="trade">Trade</string>
-    <string name="translation_review_notice">Additional languages contain draft translations and may fall back to English. They have not completed language or layout review.</string>
+    <string name="translation_review_notice">Choose your preferred language. Speech services and available voices depend on your device.</string>
     <string name="tts_unavailable">Spoken feedback is unavailable for this device or language. Your response remains visible.</string>
     <string name="type_or_speak">What needs your attention?</string>
     <string name="unarchive">Unarchive</string>

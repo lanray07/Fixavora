@@ -38,7 +38,7 @@ class HomeRepository(val database: HomeDatabase) {
         val fields = runCatching { gson.fromJson(r.fields, com.google.gson.JsonObject::class.java) }.getOrElse { fail() }
         if (fields.size() > 50 || fields.entrySet().any { (key, value) -> key.length > 100 || !value.isJsonPrimitive || !value.asJsonPrimitive.isString || value.asString.length > 10000 }) fail()
         if (r.interval !in 1..3650 || r.anchorDay !in 1..31 || r.amountMinor < 0) fail()
-        java.util.Currency.getInstance(r.currency)
+        if (java.util.Currency.getInstance(r.currency).defaultFractionDigits < 0) fail()
         LocalDate.parse(r.date)
         r.due?.let { LocalDate.parse(it) }
         if (r.kind != "PROPERTY" && r.propertyId == null) fail()

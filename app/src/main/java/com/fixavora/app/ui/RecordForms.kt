@@ -13,8 +13,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.*
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.unit.dp
@@ -24,6 +26,8 @@ import com.fixavora.app.domain.*
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import java.time.LocalDate
 import java.util.Locale
 
@@ -44,6 +48,7 @@ fun fieldsOf(r: HomeRecord): Map<String, String> = runCatching { Gson().fromJson
 
 @Composable fun RecordEditor(initial: HomeRecord, all: List<HomeRecord>, dismiss: () -> Unit, save: (HomeRecord) -> Unit) {
     val c = LocalContext.current
+    val inputLocale = LocalConfiguration.current.locales[0]
     val kind = Kind.valueOf(initial.kind)
     var title by remember { mutableStateOf(initial.title) }
     var notes by remember { mutableStateOf(initial.notes) }
@@ -121,14 +126,14 @@ fun fieldsOf(r: HomeRecord): Map<String, String> = runCatching { Gson().fromJson
                                 val value = extras[f.key].orEmpty()
                                 if (value.isNotBlank()) when (f.type) {
                                     "date" -> LocalDate.parse(value)
-                                    "money" -> Money.parse(value, currency)
+                                    "money" -> extras[f.key] = Money.decimal(Money.parse(value, currency, inputLocale), currency).toPlainString()
                                     "time" -> java.time.LocalTime.parse(value)
                                     "number" -> require(value.toInt() in 1..1440)
                                 }
                                 if (f.choices.isNotEmpty() && value.isEmpty()) extras[f.key] = f.choices.first()
                             }
                             if (kind == Kind.WARRANTY && !extras["start_date"].isNullOrBlank() && due.isNotBlank()) require(LocalDate.parse(extras["start_date"]) <= LocalDate.parse(due))
-                            val value = if (kind == Kind.EXPENSE) Money.parse(amount, currency) else initial.amountMinor
+                            val value = if (kind == Kind.EXPENSE) Money.parse(amount, currency, inputLocale) else initial.amountMinor
                             save(initial.copy(title = title.trim(), notes = notes, propertyId = property.ifBlank { null }, roomId = room.ifBlank { null }, contractorId = contractor.ifBlank { null }, relatedId = related.ifBlank { null }, due = due.ifBlank { null }, date = date, category = category, priority = priority, status = status, repeat = repeat, interval = n, paused = paused, currency = currency, amountMinor = value, fields = Gson().toJson(extras.toMap()), anchorDay = if (due != initial.due && due.isNotBlank()) LocalDate.parse(due).dayOfMonth else initial.anchorDay))
                         } catch (_: Exception) { error = true }
                     }) { Text(c.t("save")) }
@@ -140,7 +145,7 @@ fun fieldsOf(r: HomeRecord): Map<String, String> = runCatching { Gson().fromJson
 
 @Composable fun EditField(key: String, value: String, change: (String) -> Unit, type: String = "text", required: Boolean = false, multiline: Boolean = false) {
     val c = LocalContext.current
-    OutlinedTextField(value, change, Modifier.fillMaxWidth(), label = { Text(c.t(key) + if (required) " *" else "") }, singleLine = !multiline,
+    OutlinedTextField(value, { change(if (type in setOf("date", "time", "number")) normalizeDigits(it) else it) }, Modifier.fillMaxWidth(), label = { Text(c.t(key) + if (required) " *" else "") }, singleLine = !multiline,
         minLines = if (multiline) 3 else 1,
         supportingText = if (type == "date") ({ Text(c.t("date_format")) }) else if (type == "money") ({ Text(c.t("money_format")) }) else if (type == "time") ({ Text(c.t("time_format")) }) else null,
         keyboardOptions = KeyboardOptions(keyboardType = when(type) { "money" -> KeyboardType.Decimal; "number" -> KeyboardType.Number; "phone" -> KeyboardType.Phone; "email" -> KeyboardType.Email; "url" -> KeyboardType.Uri; else -> KeyboardType.Text }))
@@ -151,7 +156,7 @@ fun fieldsOf(r: HomeRecord): Map<String, String> = runCatching { Gson().fromJson
     val history by remember(r.id) { vm.repo.dao.history(r.id) }.collectAsState(initial = emptyList())
     val attachments by remember(r.id) { vm.repo.dao.attachments(r.id) }.collectAsState(initial = emptyList())
     var deleting by remember { mutableStateOf(false) }
-    var attachmentPurpose by remember(r.id) { mutableStateOf("document") }
+    var attachmentPurpose by rememberSaveable(r.id) { mutableStateOf("document") }
     val attach = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
         uri?.let { vm.action {
             c.contentResolver.takePersistableUriPermission(it, Intent.FLAG_GRANT_READ_URI_PERMISSION)
@@ -185,8 +190,11 @@ fun fieldsOf(r: HomeRecord): Map<String, String> = runCatching { Gson().fromJson
                 items(linked) { child -> RecordCard(child, all, locale) { openRecord(child) } }
                 item { Heading(c.t("documents"), c.t("document_privacy")); Choice(attachmentPurpose, listOf("document", "before_photo", "after_photo", "manual", "receipt", "certificate").associateWith(c::t), { attachmentPurpose = it }); OutlinedButton({ attach.launch(arrayOf("application/pdf", "image/*", "text/plain")) }) { Icon(Icons.Outlined.AttachFile, null); Text(c.t("attach_document")) } }
                 items(attachments) { a -> Row(verticalAlignment = Alignment.CenterVertically) {
-                    TextButton({ openExternal(c, Intent(Intent.ACTION_VIEW).setDataAndType(Uri.parse(a.uri), a.mime).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)) { vm.message.value = "document_unavailable" } }, Modifier.weight(1f)) { Text(a.name) }
-                    IconButton({ vm.action { vm.repo.dao.detach(a.id) } }) { Icon(Icons.Outlined.LinkOff, c.t("remove_attachment")) }
+                    TextButton({ vm.action { openAttachment(c, a) { vm.message.value = "document_unavailable" } } }, Modifier.weight(1f)) { Text(a.name) }
+                    IconButton({ vm.action {
+                        vm.repo.dao.detach(a.id)
+                        if(vm.repo.dao.attachments().none { it.uri == a.uri }) runCatching { c.contentResolver.releasePersistableUriPermission(Uri.parse(a.uri),Intent.FLAG_GRANT_READ_URI_PERMISSION) }
+                    } }) { Icon(Icons.Outlined.LinkOff, c.t("remove_attachment")) }
                 } }
                 item { Heading(c.t("history")) }
                 items(history.take(50)) { event -> Text(c.t(event.action) + " • " + java.text.DateFormat.getDateTimeInstance(java.text.DateFormat.MEDIUM, java.text.DateFormat.SHORT, locale).format(java.util.Date(event.at)), style = MaterialTheme.typography.bodySmall) }
@@ -199,6 +207,15 @@ fun fieldsOf(r: HomeRecord): Map<String, String> = runCatching { Gson().fromJson
 
 fun openExternal(c: android.content.Context, intent: Intent, failed: () -> Unit) { try { c.startActivity(intent) } catch (_: Exception) { failed() } }
 
+/** Detect removed documents and revoked grants before handing a dead URI to another app. */
+suspend fun openAttachment(c: android.content.Context, file: Attachment, failed: () -> Unit) {
+    val accessible = withContext(Dispatchers.IO) { runCatching {
+        c.contentResolver.openAssetFileDescriptor(Uri.parse(file.uri),"r")?.use { true } ?: false
+    }.getOrDefault(false) }
+    if(!accessible) { failed(); return }
+    openExternal(c,Intent(Intent.ACTION_VIEW).setDataAndType(Uri.parse(file.uri),file.mime).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION),failed)
+}
+
 @Composable fun DocumentsPanel(vm: HomeViewModel, all: List<HomeRecord>) {
     val c = LocalContext.current
     var files by remember { mutableStateOf<List<Attachment>>(emptyList()) }
@@ -206,6 +223,6 @@ fun openExternal(c: android.content.Context, intent: Intent, failed: () -> Unit)
     LazyColumn(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         item { Heading(c.t("documents"), c.t("document_privacy")) }
         if (files.isEmpty()) item { EmptyState(c.t("no_documents"), c.t("attachments_after_save"), Icons.Outlined.FolderOpen) }
-        items(files) { file -> OutlinedCard(onClick = { openExternal(c, Intent(Intent.ACTION_VIEW).setDataAndType(Uri.parse(file.uri), file.mime).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)) { vm.message.value = "document_unavailable" } }, Modifier.fillMaxWidth()) { Column(Modifier.padding(20.dp)) { Text(file.name); Text(all.find { it.id == file.recordId }?.title.orEmpty(), style = MaterialTheme.typography.bodySmall) } } }
+        items(files) { file -> OutlinedCard(onClick = { vm.action { openAttachment(c,file) { vm.message.value = "document_unavailable" } } }, Modifier.fillMaxWidth()) { Column(Modifier.padding(20.dp)) { Text(file.name); Text(all.find { it.id == file.recordId }?.title.orEmpty(), style = MaterialTheme.typography.bodySmall) } } }
     }
 }

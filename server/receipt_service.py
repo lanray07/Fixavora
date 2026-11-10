@@ -13,9 +13,9 @@ SKU = "fixavora.premium.lifetime"
 
 def evaluate(receipt, user, receipt_id):
     valid = receipt.get("productId") == SKU and receipt.get("productType") == "ENTITLED" and receipt.get("receiptId") == receipt_id
-    if os.environ.get("AMAZON_RVS_ENV", "production") == "production" and receipt.get("testTransaction") is True:
-        valid = False
-    return {"sku": SKU, "userId": user, "receiptId": receipt_id, "active": valid and not receipt.get("cancelDate")}
+    # Production RVS validates genuine LAT/reviewer receipts too. Never accept
+    # client-supplied verification data or route production traffic to sandbox.
+    return {"sku": SKU, "userId": user, "receiptId": receipt_id, "active": valid and not receipt.get("cancelDate"), "testTransaction": receipt.get("testTransaction") is True}
 
 class Handler(BaseHTTPRequestHandler):
     attempts = {}

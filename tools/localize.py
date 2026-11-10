@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 LOC = ROOT / "localization"
-TARGETS = "en-GB en-US en-AU es-ES es-419 fr-FR fr-CA de-DE it-IT pt-BR pt-PT nl-NL pl-PL sv-SE ja-JP hi-IN ar tr-TR id-ID".split()
+TARGETS = "en-GB en-US en-AU es-ES es-419 fr-FR fr-CA de-DE it-IT pt-BR pt-PT nl-NL pl-PL sv-SE ja-JP ko-KR zh-Hans zh-Hant hi-IN ar tr-TR id-ID".split()
 
 def load(path):
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
@@ -24,16 +24,19 @@ def generate():
     res = ROOT / "app/src/main/res"
     for tag in ["base"] + TARGETS:
         data = (base | load(LOC / f"{tag}.json")) if tag in ("base", "en-GB", "en-US", "en-AU") else load(LOC / f"{tag}.json")
-        folder = "values" if tag == "base" else "values-b+" + tag.replace("-", "+")
+        folder = "values" if tag == "base" else "values-in-rID" if tag == "id-ID" else "values-b+" + tag.replace("-", "+")
         path = res / folder / "strings.xml"
         path.parent.mkdir(parents=True, exist_ok=True)
         def android(s):
             return escape(s).replace("'", "\\'").replace('"', '\\"').replace("\n", "\\n")
-        lines = [f'    <string name="{k}">{android(v)}</string>' for k, v in sorted(data.items()) if k in base]
-        if tag in ("base", "en-GB", "en-US", "en-AU"):
-            lines.append('    <plurals name="record_count"><item quantity="one">%d record</item><item quantity="other">%d records</item></plurals>')
-        # Draft locales deliberately inherit the base plural until reviewed native forms are supplied.
+        lines = [f'    <string name="{"fixavora_in_progress" if k=="in_progress" else k}">{android(v)}</string>' for k, v in sorted(data.items()) if k in base]
+        plurals = load(LOC / "plurals.json")
+        forms = plurals.get(tag, plurals["en-GB"] if tag == "base" else {})
+        if forms:
+            lines.append('    <plurals name="record_count">' + ''.join(f'<item quantity="{q}">{android(text)}</item>' for q, text in forms.items()) + '</plurals>')
         path.write_text('<resources>\n' + '\n'.join(lines) + '\n</resources>\n', encoding="utf-8")
+    legacy = res / "values-b+id+ID/strings.xml"
+    if legacy.exists(): legacy.unlink(); legacy.parent.rmdir()
 
 def validate():
     base = load(LOC / "en-GB.json")
@@ -50,8 +53,14 @@ def validate():
     for tag in TARGETS:
         data = base if tag.startswith("en-") else load(LOC / f"{tag}.json")
         missing = sorted(set(base) - set(data))
-        bad = [k for k in data if k in base and placeholders(data[k]) != placeholders(base[k])]
+        bad = [k for k in data if k in base and (not isinstance(data[k], str) or not data[k].strip() or placeholders(data[k]) != placeholders(base[k]))]
         failures.extend((tag, k) for k in bad)
+        folder = "values-in-rID" if tag == "id-ID" else "values-b+" + tag.replace("-", "+")
+        path = ROOT / "app/src/main/res" / folder / "strings.xml"
+        generated = {("in_progress" if e.attrib["name"]=="fixavora_in_progress" else e.attrib["name"]): (e.text or "").replace("\\'", "'").replace('\\"', '"').replace("\\n", "\n") for e in ET.parse(path).getroot().findall("string")}
+        expected = base | load(LOC / f"{tag}.json") if tag.startswith("en-") else data
+        if generated != expected:
+            failures.append((tag, "generated Android resources differ from catalog"))
         rows.append(dict(locale=tag, translated=len(base) - len(missing), total=len(base), coverage=round((len(base)-len(missing))*100/len(base), 2), missing=missing, placeholder_errors=bad, human_review=review.get(tag, "NOT TESTED"), release_status="BLOCKED" if missing or review.get(tag) != "PASS" else "PASS"))
     for path in (ROOT / "app/src/main/res").glob("values*/strings.xml"):
         root = ET.parse(path).getroot()
@@ -61,7 +70,7 @@ def validate():
             assert "other" in {e.attrib["quantity"] for e in plural}, path
     (output / "coverage.json").write_text(json.dumps(rows, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"locales": len(rows), "base_strings": len(base), "placeholder_errors": failures, "fully_translated": [r["locale"] for r in rows if not r["missing"]], "release_approved": [r["locale"] for r in rows if r["release_status"] == "PASS"]}, indent=2))
-    if failures: sys.exit(1)
+    if failures or any(row["missing"] for row in rows): sys.exit(1)
 
 def translate(tag):
     endpoint = os.environ.get("TRANSLATION_ENDPOINT", "")

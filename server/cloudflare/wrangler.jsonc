@@ -1,0 +1,20 @@
+{
+  "name": "fixavora-receipts",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-10",
+  "workers_dev": true,
+  "observability": { "enabled": false },
+  "vars": { "AMAZON_RVS_ENV": "production" },
+  "ratelimits": [{
+    "name": "RECEIPT_LIMITER",
+    "namespace_id": "1001",
+    "simple": { "limit": 30, "period": 60 }
+  }],
+  "env": {
+    "sandbox": {
+      "name": "fixavora-receipts-sandbox",
+      "vars": { "AMAZON_RVS_ENV": "sandbox", "AMAZON_SHARED_SECRET": "sandbox-nonsecret" },
+      "ratelimits": [{ "name": "RECEIPT_LIMITER", "namespace_id": "1002", "simple": { "limit": 30, "period": 60 } }]
+    }
+  }
+}

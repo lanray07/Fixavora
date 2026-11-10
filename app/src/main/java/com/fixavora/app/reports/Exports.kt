@@ -45,9 +45,9 @@ object Exports {
             add(listOfNotNull(date, context.t(if (r.done) "completed" else r.status.lowercase()), r.notes.takeIf(String::isNotBlank)).joinToString(" • "))
         }
     }
-    fun pdf(lines: List<String>, output: OutputStream) {
+    fun pdf(lines: List<String>, output: OutputStream, locale: Locale = Locale.getDefault()) {
         val document = PdfDocument()
-        val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply { textSize = 11f; color = android.graphics.Color.rgb(23, 42, 58) }
+        val paint = android.text.TextPaint(Paint.ANTI_ALIAS_FLAG).apply { textSize = 11f; textLocale = locale; color = android.graphics.Color.rgb(23, 42, 58) }
         var page: PdfDocument.Page? = null
         var y = 0f
         var number = 0
@@ -59,14 +59,17 @@ object Exports {
         try {
             newPage()
             for (line in lines) {
-                var remaining = line
-                if (remaining.isEmpty()) y += 16
-                while (remaining.isNotEmpty()) {
-                    if (y > 795) newPage()
-                    val count = paint.breakText(remaining, true, 505f, null).coerceAtLeast(1)
-                    page!!.canvas.drawText(remaining.substring(0, count), 45f, y, paint)
-                    remaining = remaining.substring(count)
-                    y += 17
+                val layout = android.text.StaticLayout.Builder.obtain(line,0,line.length,paint,505)
+                    .setTextDirection(if(locale.language=="ar") android.text.TextDirectionHeuristics.FIRSTSTRONG_RTL else android.text.TextDirectionHeuristics.FIRSTSTRONG_LTR)
+                    .setIncludePad(false).setLineSpacing(3f,1f).build()
+                for(index in 0 until layout.lineCount) {
+                    val top=layout.getLineTop(index);val height=layout.getLineBottom(index)-top
+                    if (y+height > 795) newPage()
+                    page!!.canvas.apply {
+                        save();clipRect(45f,y,550f,y+height)
+                        translate(45f,y-top);layout.draw(this);restore()
+                    }
+                    y += height
                 }
                 y += 6
             }

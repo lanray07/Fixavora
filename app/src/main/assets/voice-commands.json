@@ -383,5 +383,65 @@
     "APPOINTMENT": [
       "añadir una cita"
     ]
+  },
+  "ko-KR": {
+    "DUE_WEEK": [
+      "이번 주 할 일"
+    ],
+    "OVERDUE": [
+      "기한이 지난 작업"
+    ],
+    "EXPENSES": [
+      "내 지출"
+    ],
+    "WARRANTIES": [
+      "보증"
+    ],
+    "COMPLETE": [
+      "완료로 표시"
+    ],
+    "APPOINTMENT": [
+      "일정 추가"
+    ]
+  },
+  "zh-Hans": {
+    "DUE_WEEK": [
+      "本周到期"
+    ],
+    "OVERDUE": [
+      "已逾期"
+    ],
+    "EXPENSES": [
+      "我的支出"
+    ],
+    "WARRANTIES": [
+      "保修"
+    ],
+    "COMPLETE": [
+      "标记为完成"
+    ],
+    "APPOINTMENT": [
+      "添加预约"
+    ]
+  },
+  "zh-Hant": {
+    "DUE_WEEK": [
+      "本週到期"
+    ],
+    "OVERDUE": [
+      "已逾期"
+    ],
+    "EXPENSES": [
+      "我的支出"
+    ],
+    "WARRANTIES": [
+      "保固"
+    ],
+    "COMPLETE": [
+      "標記為完成"
+    ],
+    "APPOINTMENT": [
+      "新增預約"
+    ]
   }
 }

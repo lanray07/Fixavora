@@ -27,7 +27,7 @@ class VoiceController(private val context: Context, private val changed: (Boolea
         fun play() {
             val engine = tts ?: return
             if (!ready || engine.setLanguage(locale) < TextToSpeech.LANG_AVAILABLE) { unsupported(); return }
-            engine.speak(text, TextToSpeech.QUEUE_FLUSH, null, "fixavora-feedback")
+            if (engine.speak(text, TextToSpeech.QUEUE_FLUSH, null, "fixavora-feedback") == TextToSpeech.ERROR) unsupported()
         }
         if (tts == null) tts = TextToSpeech(context) { status -> ready = status == TextToSpeech.SUCCESS; play() } else play()
     }

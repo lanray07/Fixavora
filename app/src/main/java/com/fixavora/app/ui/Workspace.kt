@@ -55,7 +55,7 @@ val sections = listOf(
     val base = LocalContext.current
     val context = remember(base, prefs.language) { base.localized(prefs.language) }
     val locale = context.resources.configuration.locales[0]
-    CompositionLocalProvider(LocalContext provides context, LocalLayoutDirection provides if (locale.language == "ar") LayoutDirection.Rtl else LayoutDirection.Ltr) {
+    CompositionLocalProvider(LocalContext provides context, LocalConfiguration provides context.resources.configuration, LocalLayoutDirection provides if (locale.language == "ar") LayoutDirection.Rtl else LayoutDirection.Ltr) {
         FixavoraTheme(prefs.dark, prefs.contrast) { Surface(Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) { Workspace(vm, prefs, locale) } }
     }
 }
@@ -69,7 +69,7 @@ val sections = listOf(
     var section by rememberSaveable { mutableStateOf("overview") }
     var propertyId by rememberSaveable { mutableStateOf<String?>(null) }
     var editing by remember { mutableStateOf<HomeRecord?>(null) }
-    var detail by remember { mutableStateOf<HomeRecord?>(null) }
+    var detailId by rememberSaveable { mutableStateOf<String?>(null) }
     val properties = all.filter { it.kind == "PROPERTY" && !it.archived }
     val selected = properties.find { it.id == propertyId } ?: properties.firstOrNull()
     val records = all.filter { it.propertyId == selected?.id || it.id == selected?.id }
@@ -107,8 +107,8 @@ val sections = listOf(
                     else if (!prefs.onboarding) Onboarding(vm, prefs, all) { editing = newRecord(Kind.PROPERTY, null, prefs); section = "properties" }
                     else Box(Modifier.weight(1f).padding(horizontal = if (wide) 32.dp else 16.dp)) {
                         when (section) {
-                            "overview" -> Dashboard(records, selected, locale, onAdd = { editing = newRecord(Kind.TASK, selected?.id, prefs) }, open = { detail = it }, navigate = { section = it })
-                            "calendar" -> CalendarView(records, locale) { detail = it }
+                            "overview" -> Dashboard(records, selected, locale, onAdd = { editing = newRecord(Kind.TASK, selected?.id, prefs) }, open = { detailId = it.id }, navigate = { section = it })
+                            "calendar" -> CalendarView(records, locale) { detailId = it.id }
                             "assistant" -> AssistantPanel(vm, selected, records, locale, prefs) { editing = it }
                             "reports" -> ReportsPanel(vm, records, locale, premium.premium)
                             "documents" -> DocumentsPanel(vm, all)
@@ -117,7 +117,7 @@ val sections = listOf(
                             else -> {
                                 val kind = sections.find { it.key == section }?.kind ?: Kind.TASK
                                 RecordList(if (kind == Kind.PROPERTY) all.filter { it.kind == "PROPERTY" } else records.filter { it.kind == kind.name }, all, locale,
-                                    add = { if (kind != Kind.PROPERTY && selected == null) vm.message.value = "create_property_first" else editing = newRecord(kind, selected?.id, prefs) }, open = { detail = it })
+                                    add = { if (kind != Kind.PROPERTY && selected == null) vm.message.value = "create_property_first" else editing = newRecord(kind, selected?.id, prefs) }, open = { detailId = it.id })
                             }
                         }
                     }
@@ -126,10 +126,8 @@ val sections = listOf(
         }
     }
     editing?.let { r -> RecordEditor(r, all, { editing = null }, { vm.save(it) { editing = null } }) }
-    detail?.let { original ->
-        val current = all.find { it.id == original.id }
-        if (current == null) detail = null
-        else RecordDetail(vm, current, all, locale, dismiss = { detail = null }, edit = { editing = current; detail = null }, addRoom = { editing = newRecord(Kind.ROOM, current.id, prefs); detail = null }, openRecord = { detail = it })
+    all.find { it.id == detailId }?.let { current ->
+        RecordDetail(vm, current, all, locale, dismiss = { detailId = null }, edit = { editing = current; detailId = null }, addRoom = { editing = newRecord(Kind.ROOM, current.id, prefs); detailId = null }, openRecord = { detailId = it.id })
     }
 }
 
@@ -144,7 +142,7 @@ fun newRecord(kind: Kind, propertyId: String?, prefs: Preferences) = HomeRecord(
         Text(c.t("privacy_intro"))
         Choice(prefs.language, languages.mapValues { if (it.key.isEmpty()) c.t("system_language") else it.value }, { vm.action { vm.settings.text("language", it) } })
         Choice(prefs.role, listOf("homeowner", "renter", "landlord").associateWith(c::t), { vm.action { vm.settings.text("role", it) } })
-        Choice(prefs.currency, listOf("GBP", "USD", "EUR", "AUD", "CAD", "BRL", "JPY", "INR", "SAR", "TRY", "IDR", "PLN", "SEK").associateWith { it }, { vm.action { vm.settings.text("currency", it) } })
+        Choice(prefs.currency, currencyChoices, { vm.action { vm.settings.text("currency", it) } })
         Choice(prefs.units, listOf("metric", "imperial").associateWith(c::t), { vm.action { vm.settings.text("units", it) } })
         Button(onClick = { vm.action { vm.settings.flag("onboarding", true); create() } }, Modifier.heightIn(min = 52.dp)) { Text(c.t("create_first_property")) }
         TextButton(onClick = { vm.action { vm.settings.flag("onboarding", true) } }) { Text(c.t("skip_for_now")) }

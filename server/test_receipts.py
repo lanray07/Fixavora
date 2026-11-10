@@ -9,8 +9,9 @@ class ReceiptTest(unittest.TestCase):
         self.assertFalse(evaluate(self.receipt(cancelDate=123), "user", "receipt-example")["active"])
         self.assertFalse(evaluate(self.receipt(productId="other"), "user", "receipt-example")["active"])
     def test_receipt_must_match(self): self.assertFalse(evaluate(self.receipt(), "user", "wrong")["active"])
-    def test_test_receipt_rejected_in_production(self):
-        with patch.dict(os.environ, {"AMAZON_RVS_ENV":"production"}): self.assertFalse(evaluate(self.receipt(testTransaction=True), "user", "receipt-example")["active"])
+    def test_verified_lat_receipt_keeps_test_marker(self):
+        result=evaluate(self.receipt(testTransaction=True), "user", "receipt-example")
+        self.assertTrue(result["active"]); self.assertTrue(result["testTransaction"])
     def test_rate_limit_is_shared_between_requests(self):
         Handler.attempts = {}
         server = ThreadingHTTPServer(("127.0.0.1", 0), Handler)

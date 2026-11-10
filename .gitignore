@@ -6,6 +6,7 @@ local.properties
 *.jks
 *.keystore
 .env
+.dev.vars
 __pycache__/
 deliverables/android/debug/*.apk
 deliverables/android/release/*.apk
@@ -13,4 +14,5 @@ deliverables/android/release/*.apk
 emulator-*.log
 build-first.log
 .runtime/
-app/src/main/assets/AppstoreAuthenticationKey.pem
+# Amazon's public authentication key is intentionally packaged and versioned.
+# The Amazon shared secret and publisher signing keys must never be committed.
