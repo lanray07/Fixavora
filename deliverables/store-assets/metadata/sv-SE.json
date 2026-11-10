@@ -1,0 +1,23 @@
+{
+  "status": "NOT TESTED",
+  "human_review": "NOT TESTED",
+  "publish_approved": false,
+  "locale": "sv-SE",
+  "display_title": "Fixavora – Underhåll och reparationer i hemmet",
+  "short_description": "Samla underhåll, reparationer och apparatuppgifter på enheten. Inget obligatoriskt konto.",
+  "long_description": "Fixavora samlar underhållsuppgifter, reparationer och apparatuppgifter. Lägg till rum, datum, anteckningar och dokumentlänkar. Uppgifterna sparas på enheten.\n\nGratisversionen omfattar en aktiv bostad och högst 15 aktiva underhållsuppgifter. Premium är ett frivilligt engångsköp via Amazon för flera bostäder, garantier, hantverkare, utgifter, rapporter och krypterade säkerhetskopior. Köp måste konfigureras och testas före publicering.\n\nDen lokala assistenten skapar utkast som du granskar innan de sparas. Röstfunktioner beror på installerade tjänster och språk. Påminnelser kan försenas. Externa dokument kan kräva anslutning. Appen intygar inte bostadens säkerhet.",
+  "product_feature_bullets": [
+    "Underhåll",
+    "Reparationer",
+    "Apparater",
+    "Dokument",
+    "Rapporter"
+  ],
+  "keywords": "Underhåll, Reparationer, Apparater",
+  "screenshot_headlines": [],
+  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
+  "release_notes": "Samla underhåll, reparationer och apparatuppgifter på enheten. Inget obligatoriskt konto.",
+  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
+  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
+  "support_status": "BLOCKED: publisher support contact required"
+}

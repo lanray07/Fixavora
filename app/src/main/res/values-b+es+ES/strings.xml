@@ -1,0 +1,28 @@
+<resources>
+    <string name="add">Añadir</string>
+    <string name="all">Todos los registros</string>
+    <string name="appliances">Electrodomésticos</string>
+    <string name="appointments">Citas</string>
+    <string name="assistant">Asistente</string>
+    <string name="calendar">Calendario</string>
+    <string name="cancel">Cancelar</string>
+    <string name="contractors">Profesionales</string>
+    <string name="delete">Eliminar</string>
+    <string name="documents">Documentos</string>
+    <string name="edit">Editar</string>
+    <string name="expenses">Gastos</string>
+    <string name="language">Idioma</string>
+    <string name="month">Este mes</string>
+    <string name="overview">Resumen</string>
+    <string name="premium">Premium</string>
+    <string name="properties">Propiedades</string>
+    <string name="repairs">Reparaciones</string>
+    <string name="reports">Informes</string>
+    <string name="save">Guardar</string>
+    <string name="search_records">Buscar registros</string>
+    <string name="settings">Ajustes</string>
+    <string name="tasks">Mantenimiento</string>
+    <string name="today">Hoy</string>
+    <string name="warranties">Garantías</string>
+    <string name="week">Esta semana</string>
+</resources>

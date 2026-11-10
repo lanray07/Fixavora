@@ -1,0 +1,28 @@
+<resources>
+    <string name="add">追加</string>
+    <string name="all">すべての記録</string>
+    <string name="appliances">家電</string>
+    <string name="appointments">予約</string>
+    <string name="assistant">アシスタント</string>
+    <string name="calendar">カレンダー</string>
+    <string name="cancel">キャンセル</string>
+    <string name="contractors">業者</string>
+    <string name="delete">削除</string>
+    <string name="documents">書類</string>
+    <string name="edit">編集</string>
+    <string name="expenses">費用</string>
+    <string name="language">言語</string>
+    <string name="month">今月</string>
+    <string name="overview">概要</string>
+    <string name="premium">プレミアム</string>
+    <string name="properties">物件</string>
+    <string name="repairs">修理</string>
+    <string name="reports">レポート</string>
+    <string name="save">保存</string>
+    <string name="search_records">記録を検索</string>
+    <string name="settings">設定</string>
+    <string name="tasks">メンテナンス</string>
+    <string name="today">今日</string>
+    <string name="warranties">保証</string>
+    <string name="week">今週</string>
+</resources>

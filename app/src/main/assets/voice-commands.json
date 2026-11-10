@@ -1,0 +1,387 @@
+{
+  "en-GB": {
+    "DUE_WEEK": [
+      "due this week"
+    ],
+    "OVERDUE": [
+      "overdue"
+    ],
+    "EXPENSES": [
+      "my expenses",
+      "repair expenses",
+      "my spending"
+    ],
+    "WARRANTIES": [
+      "warranty"
+    ],
+    "COMPLETE": [
+      "mark completed",
+      "mark",
+      "complete task"
+    ],
+    "APPOINTMENT": [
+      "add an appointment",
+      "contractor appointment"
+    ]
+  },
+  "fr-FR": {
+    "DUE_WEEK": [
+      "cette semaine"
+    ],
+    "OVERDUE": [
+      "en retard"
+    ],
+    "EXPENSES": [
+      "mes dépenses"
+    ],
+    "WARRANTIES": [
+      "garantie"
+    ],
+    "COMPLETE": [
+      "marquer comme terminé"
+    ],
+    "APPOINTMENT": [
+      "ajouter un rendez-vous"
+    ]
+  },
+  "es-ES": {
+    "DUE_WEEK": [
+      "esta semana"
+    ],
+    "OVERDUE": [
+      "atrasadas"
+    ],
+    "EXPENSES": [
+      "mis gastos"
+    ],
+    "WARRANTIES": [
+      "garantía"
+    ],
+    "COMPLETE": [
+      "marcar como completada"
+    ],
+    "APPOINTMENT": [
+      "añadir una cita"
+    ]
+  },
+  "de-DE": {
+    "DUE_WEEK": [
+      "diese woche"
+    ],
+    "OVERDUE": [
+      "überfällig"
+    ],
+    "EXPENSES": [
+      "meine ausgaben"
+    ],
+    "WARRANTIES": [
+      "garantie"
+    ],
+    "COMPLETE": [
+      "als erledigt markieren"
+    ],
+    "APPOINTMENT": [
+      "termin hinzufügen"
+    ]
+  },
+  "it-IT": {
+    "DUE_WEEK": [
+      "questa settimana"
+    ],
+    "OVERDUE": [
+      "in ritardo"
+    ],
+    "EXPENSES": [
+      "le mie spese"
+    ],
+    "WARRANTIES": [
+      "garanzia"
+    ],
+    "COMPLETE": [
+      "segna come completato"
+    ],
+    "APPOINTMENT": [
+      "aggiungi appuntamento"
+    ]
+  },
+  "pt-BR": {
+    "DUE_WEEK": [
+      "esta semana"
+    ],
+    "OVERDUE": [
+      "atrasadas"
+    ],
+    "EXPENSES": [
+      "minhas despesas"
+    ],
+    "WARRANTIES": [
+      "garantia"
+    ],
+    "COMPLETE": [
+      "marcar como concluída"
+    ],
+    "APPOINTMENT": [
+      "adicionar compromisso"
+    ]
+  },
+  "pt-PT": {
+    "DUE_WEEK": [
+      "esta semana"
+    ],
+    "OVERDUE": [
+      "em atraso"
+    ],
+    "EXPENSES": [
+      "as minhas despesas"
+    ],
+    "WARRANTIES": [
+      "garantia"
+    ],
+    "COMPLETE": [
+      "marcar como concluída"
+    ],
+    "APPOINTMENT": [
+      "adicionar compromisso"
+    ]
+  },
+  "nl-NL": {
+    "DUE_WEEK": [
+      "deze week"
+    ],
+    "OVERDUE": [
+      "achterstallig"
+    ],
+    "EXPENSES": [
+      "mijn uitgaven"
+    ],
+    "WARRANTIES": [
+      "garantie"
+    ],
+    "COMPLETE": [
+      "markeer als voltooid"
+    ],
+    "APPOINTMENT": [
+      "afspraak toevoegen"
+    ]
+  },
+  "pl-PL": {
+    "DUE_WEEK": [
+      "w tym tygodniu"
+    ],
+    "OVERDUE": [
+      "zaległe"
+    ],
+    "EXPENSES": [
+      "moje wydatki"
+    ],
+    "WARRANTIES": [
+      "gwarancja"
+    ],
+    "COMPLETE": [
+      "oznacz jako ukończone"
+    ],
+    "APPOINTMENT": [
+      "dodaj wizytę"
+    ]
+  },
+  "sv-SE": {
+    "DUE_WEEK": [
+      "denna vecka"
+    ],
+    "OVERDUE": [
+      "försenade"
+    ],
+    "EXPENSES": [
+      "mina utgifter"
+    ],
+    "WARRANTIES": [
+      "garanti"
+    ],
+    "COMPLETE": [
+      "markera som klar"
+    ],
+    "APPOINTMENT": [
+      "lägg till bokning"
+    ]
+  },
+  "ja-JP": {
+    "DUE_WEEK": [
+      "今週"
+    ],
+    "OVERDUE": [
+      "期限切れ"
+    ],
+    "EXPENSES": [
+      "費用"
+    ],
+    "WARRANTIES": [
+      "保証"
+    ],
+    "COMPLETE": [
+      "完了にする"
+    ],
+    "APPOINTMENT": [
+      "予約を追加"
+    ]
+  },
+  "hi-IN": {
+    "DUE_WEEK": [
+      "इस सप्ताह"
+    ],
+    "OVERDUE": [
+      "बकाया"
+    ],
+    "EXPENSES": [
+      "मेरे खर्च"
+    ],
+    "WARRANTIES": [
+      "वारंटी"
+    ],
+    "COMPLETE": [
+      "पूर्ण चिह्नित"
+    ],
+    "APPOINTMENT": [
+      "मुलाकात जोड़ें"
+    ]
+  },
+  "ar": {
+    "DUE_WEEK": [
+      "هذا الأسبوع"
+    ],
+    "OVERDUE": [
+      "المتأخرة"
+    ],
+    "EXPENSES": [
+      "مصروفاتي"
+    ],
+    "WARRANTIES": [
+      "الضمان"
+    ],
+    "COMPLETE": [
+      "وضع علامة مكتمل"
+    ],
+    "APPOINTMENT": [
+      "إضافة موعد"
+    ]
+  },
+  "tr-TR": {
+    "DUE_WEEK": [
+      "bu hafta"
+    ],
+    "OVERDUE": [
+      "gecikmiş"
+    ],
+    "EXPENSES": [
+      "giderlerim"
+    ],
+    "WARRANTIES": [
+      "garanti"
+    ],
+    "COMPLETE": [
+      "tamamlandı olarak işaretle"
+    ],
+    "APPOINTMENT": [
+      "randevu ekle"
+    ]
+  },
+  "id-ID": {
+    "DUE_WEEK": [
+      "minggu ini"
+    ],
+    "OVERDUE": [
+      "terlambat"
+    ],
+    "EXPENSES": [
+      "pengeluaran saya"
+    ],
+    "WARRANTIES": [
+      "garansi"
+    ],
+    "COMPLETE": [
+      "tandai selesai"
+    ],
+    "APPOINTMENT": [
+      "tambah janji"
+    ]
+  },
+  "en-US": {
+    "DUE_WEEK": [
+      "due this week"
+    ],
+    "OVERDUE": [
+      "overdue"
+    ],
+    "EXPENSES": [
+      "my expenses"
+    ],
+    "WARRANTIES": [
+      "warranty"
+    ],
+    "COMPLETE": [
+      "mark completed"
+    ],
+    "APPOINTMENT": [
+      "add an appointment"
+    ]
+  },
+  "en-AU": {
+    "DUE_WEEK": [
+      "due this week"
+    ],
+    "OVERDUE": [
+      "overdue"
+    ],
+    "EXPENSES": [
+      "my expenses"
+    ],
+    "WARRANTIES": [
+      "warranty"
+    ],
+    "COMPLETE": [
+      "mark completed"
+    ],
+    "APPOINTMENT": [
+      "add an appointment"
+    ]
+  },
+  "fr-CA": {
+    "DUE_WEEK": [
+      "cette semaine"
+    ],
+    "OVERDUE": [
+      "en retard"
+    ],
+    "EXPENSES": [
+      "mes dépenses"
+    ],
+    "WARRANTIES": [
+      "garantie"
+    ],
+    "COMPLETE": [
+      "marquer comme terminé"
+    ],
+    "APPOINTMENT": [
+      "ajouter un rendez-vous"
+    ]
+  },
+  "es-419": {
+    "DUE_WEEK": [
+      "esta semana"
+    ],
+    "OVERDUE": [
+      "atrasadas"
+    ],
+    "EXPENSES": [
+      "mis gastos"
+    ],
+    "WARRANTIES": [
+      "garantía"
+    ],
+    "COMPLETE": [
+      "marcar como completada"
+    ],
+    "APPOINTMENT": [
+      "añadir una cita"
+    ]
+  }
+}

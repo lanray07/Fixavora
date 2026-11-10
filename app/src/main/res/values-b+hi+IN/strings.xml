@@ -1,0 +1,28 @@
+<resources>
+    <string name="add">जोड़ें</string>
+    <string name="all">सभी रिकॉर्ड</string>
+    <string name="appliances">उपकरण</string>
+    <string name="appointments">मुलाकातें</string>
+    <string name="assistant">सहायक</string>
+    <string name="calendar">कैलेंडर</string>
+    <string name="cancel">रद्द करें</string>
+    <string name="contractors">ठेकेदार</string>
+    <string name="delete">हटाएँ</string>
+    <string name="documents">दस्तावेज़</string>
+    <string name="edit">संपादित करें</string>
+    <string name="expenses">खर्च</string>
+    <string name="language">भाषा</string>
+    <string name="month">इस महीने</string>
+    <string name="overview">अवलोकन</string>
+    <string name="premium">प्रीमियम</string>
+    <string name="properties">संपत्तियाँ</string>
+    <string name="repairs">मरम्मत</string>
+    <string name="reports">रिपोर्ट</string>
+    <string name="save">सहेजें</string>
+    <string name="search_records">रिकॉर्ड खोजें</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="tasks">रखरखाव</string>
+    <string name="today">आज</string>
+    <string name="warranties">वारंटी</string>
+    <string name="week">इस सप्ताह</string>
+</resources>

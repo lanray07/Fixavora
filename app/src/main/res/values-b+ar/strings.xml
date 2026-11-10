@@ -1,0 +1,28 @@
+<resources>
+    <string name="add">إضافة</string>
+    <string name="all">كل السجلات</string>
+    <string name="appliances">الأجهزة</string>
+    <string name="appointments">المواعيد</string>
+    <string name="assistant">المساعد</string>
+    <string name="calendar">التقويم</string>
+    <string name="cancel">إلغاء</string>
+    <string name="contractors">المقاولون</string>
+    <string name="delete">حذف</string>
+    <string name="documents">المستندات</string>
+    <string name="edit">تعديل</string>
+    <string name="expenses">المصروفات</string>
+    <string name="language">اللغة</string>
+    <string name="month">هذا الشهر</string>
+    <string name="overview">نظرة عامة</string>
+    <string name="premium">بريميوم</string>
+    <string name="properties">العقارات</string>
+    <string name="repairs">الإصلاحات</string>
+    <string name="reports">التقارير</string>
+    <string name="save">حفظ</string>
+    <string name="search_records">البحث في السجلات</string>
+    <string name="settings">الإعدادات</string>
+    <string name="tasks">الصيانة</string>
+    <string name="today">اليوم</string>
+    <string name="warranties">الضمانات</string>
+    <string name="week">هذا الأسبوع</string>
+</resources>

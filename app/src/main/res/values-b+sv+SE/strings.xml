@@ -1,0 +1,28 @@
+<resources>
+    <string name="add">Lägg till</string>
+    <string name="all">Alla poster</string>
+    <string name="appliances">Apparater</string>
+    <string name="appointments">Bokningar</string>
+    <string name="assistant">Assistent</string>
+    <string name="calendar">Kalender</string>
+    <string name="cancel">Avbryt</string>
+    <string name="contractors">Hantverkare</string>
+    <string name="delete">Ta bort</string>
+    <string name="documents">Dokument</string>
+    <string name="edit">Redigera</string>
+    <string name="expenses">Utgifter</string>
+    <string name="language">Språk</string>
+    <string name="month">Denna månad</string>
+    <string name="overview">Översikt</string>
+    <string name="premium">Premium</string>
+    <string name="properties">Bostäder</string>
+    <string name="repairs">Reparationer</string>
+    <string name="reports">Rapporter</string>
+    <string name="save">Spara</string>
+    <string name="search_records">Sök poster</string>
+    <string name="settings">Inställningar</string>
+    <string name="tasks">Underhåll</string>
+    <string name="today">Idag</string>
+    <string name="warranties">Garantier</string>
+    <string name="week">Denna vecka</string>
+</resources>

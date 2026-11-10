@@ -1,0 +1,23 @@
+{
+  "status": "NOT TESTED",
+  "human_review": "NOT TESTED",
+  "publish_approved": false,
+  "locale": "fr-FR",
+  "display_title": "Fixavora – Entretien et réparations de la maison",
+  "short_description": "Organisez l'entretien, les réparations et les appareils de votre logement. Vos dossiers restent sur votre appareil.",
+  "long_description": "Fixavora rassemble les tâches d'entretien, les réparations et les informations sur vos appareils. Ajoutez des pièces, des échéances, des notes et des liens vers vos documents. Aucun compte obligatoire.\n\nL'offre gratuite comprend un bien actif et jusqu'à 15 tâches d'entretien actives. L'achat unique Premium proposé via Amazon étend la gestion à plusieurs biens et ajoute les garanties, les artisans, les dépenses, les rapports et les sauvegardes chiffrées des dossiers. Les achats doivent être configurés et testés avant publication.\n\nL'assistant local prépare des tâches à vérifier avant enregistrement. La voix dépend des services installés et des langues disponibles. Les rappels peuvent être retardés par les réglages de l'appareil. Les documents externes peuvent nécessiter une connexion. Fixavora ne certifie pas la sécurité du logement.",
+  "product_feature_bullets": [
+    "Entretien",
+    "Réparations",
+    "Appareils",
+    "Documents",
+    "Rapports"
+  ],
+  "keywords": "Entretien, Réparations, Appareils",
+  "screenshot_headlines": [],
+  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
+  "release_notes": "Organisez l'entretien, les réparations et les appareils de votre logement. Vos dossiers restent sur votre appareil.",
+  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
+  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
+  "support_status": "BLOCKED: publisher support contact required"
+}

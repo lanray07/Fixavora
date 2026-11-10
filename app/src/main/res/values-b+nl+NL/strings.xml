@@ -1,0 +1,28 @@
+<resources>
+    <string name="add">Toevoegen</string>
+    <string name="all">Alle gegevens</string>
+    <string name="appliances">Apparaten</string>
+    <string name="appointments">Afspraken</string>
+    <string name="assistant">Assistent</string>
+    <string name="calendar">Kalender</string>
+    <string name="cancel">Annuleren</string>
+    <string name="contractors">Vakmensen</string>
+    <string name="delete">Verwijderen</string>
+    <string name="documents">Documenten</string>
+    <string name="edit">Bewerken</string>
+    <string name="expenses">Uitgaven</string>
+    <string name="language">Taal</string>
+    <string name="month">Deze maand</string>
+    <string name="overview">Overzicht</string>
+    <string name="premium">Premium</string>
+    <string name="properties">Woningen</string>
+    <string name="repairs">Reparaties</string>
+    <string name="reports">Rapporten</string>
+    <string name="save">Opslaan</string>
+    <string name="search_records">Gegevens zoeken</string>
+    <string name="settings">Instellingen</string>
+    <string name="tasks">Onderhoud</string>
+    <string name="today">Vandaag</string>
+    <string name="warranties">Garanties</string>
+    <string name="week">Deze week</string>
+</resources>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="add">Ekle</string>
+    <string name="all">Tüm kayıtlar</string>
+    <string name="appliances">Cihazlar</string>
+    <string name="appointments">Randevular</string>
+    <string name="assistant">Asistan</string>
+    <string name="calendar">Takvim</string>
+    <string name="cancel">İptal</string>
+    <string name="contractors">Ustalar</string>
+    <string name="delete">Sil</string>
+    <string name="documents">Belgeler</string>
+    <string name="edit">Düzenle</string>
+    <string name="expenses">Giderler</string>
+    <string name="language">Dil</string>
+    <string name="month">Bu ay</string>
+    <string name="overview">Genel bakış</string>
+    <string name="premium">Premium</string>
+    <string name="properties">Mülkler</string>
+    <string name="repairs">Onarımlar</string>
+    <string name="reports">Raporlar</string>
+    <string name="save">Kaydet</string>
+    <string name="search_records">Kayıtlarda ara</string>
+    <string name="settings">Ayarlar</string>
+    <string name="tasks">Bakım</string>
+    <string name="today">Bugün</string>
+    <string name="warranties">Garantiler</string>
+    <string name="week">Bu hafta</string>
+</resources>

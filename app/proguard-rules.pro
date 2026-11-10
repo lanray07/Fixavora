@@ -1,0 +1,3 @@
+-keep class com.amazon.** { *; }
+-dontwarn com.amazon.**
+-keepattributes Signature,*Annotation*

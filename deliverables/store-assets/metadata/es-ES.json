@@ -1,0 +1,23 @@
+{
+  "status": "NOT TESTED",
+  "human_review": "NOT TESTED",
+  "publish_approved": false,
+  "locale": "es-ES",
+  "display_title": "Fixavora – Mantenimiento y reparaciones del hogar",
+  "short_description": "Organiza el mantenimiento, las reparaciones y los electrodomésticos. Registros locales sin cuenta obligatoria.",
+  "long_description": "Guarda tareas, reparaciones y datos de tus electrodomésticos en Fixavora. Añade habitaciones, fechas, notas y enlaces a documentos. Tus registros se almacenan en el dispositivo.\n\nLa versión gratuita incluye una propiedad activa y hasta 15 tareas de mantenimiento activas. Premium es una compra única opcional mediante Amazon para varias propiedades, garantías, profesionales, gastos, informes y copias cifradas de registros. Configura y prueba las compras antes de publicar.\n\nEl asistente local prepara borradores que debes revisar antes de guardar. Las funciones de voz dependen de los servicios y los idiomas disponibles. Los recordatorios pueden retrasarse. Los documentos externos pueden necesitar conexión. La aplicación no certifica la seguridad de una vivienda.",
+  "product_feature_bullets": [
+    "Mantenimiento",
+    "Reparaciones",
+    "Electrodomésticos",
+    "Documentos",
+    "Informes"
+  ],
+  "keywords": "Mantenimiento, Reparaciones, Electrodomésticos",
+  "screenshot_headlines": [],
+  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
+  "release_notes": "Organiza el mantenimiento, las reparaciones y los electrodomésticos. Registros locales sin cuenta obligatoria.",
+  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
+  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
+  "support_status": "BLOCKED: publisher support contact required"
+}

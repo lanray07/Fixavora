@@ -1,0 +1,23 @@
+{
+  "status": "NOT TESTED",
+  "human_review": "NOT TESTED",
+  "publish_approved": false,
+  "locale": "pt-PT",
+  "display_title": "Fixavora – Manutenção e reparações da casa",
+  "short_description": "Organize reparações, equipamentos e tarefas. Registos no dispositivo, sem conta obrigatória.",
+  "long_description": "O Fixavora reúne tarefas de manutenção, reparações e informações sobre equipamentos. Adicione divisões, datas, notas e ligações para documentos. Os registos ficam no dispositivo.\n\nA versão gratuita inclui um imóvel ativo e até 15 tarefas de manutenção ativas. O Premium é uma compra única opcional através da Amazon para vários imóveis, garantias, profissionais, despesas, relatórios e cópias cifradas dos registos. Configure e teste as compras antes de publicar.\n\nO assistente local prepara rascunhos para revisão antes de guardar. As funções de voz dependem dos serviços e idiomas instalados. Os lembretes podem sofrer atrasos. Os documentos externos podem precisar de ligação. A aplicação não certifica a segurança do imóvel.",
+  "product_feature_bullets": [
+    "Manutenção",
+    "Reparações",
+    "Eletrodomésticos",
+    "Documentos",
+    "Relatórios"
+  ],
+  "keywords": "Manutenção, Reparações, Eletrodomésticos",
+  "screenshot_headlines": [],
+  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
+  "release_notes": "Organize reparações, equipamentos e tarefas. Registos no dispositivo, sem conta obrigatória.",
+  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
+  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
+  "support_status": "BLOCKED: publisher support contact required"
+}

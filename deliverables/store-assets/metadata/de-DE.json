@@ -1,0 +1,23 @@
+{
+  "status": "NOT TESTED",
+  "human_review": "NOT TESTED",
+  "publish_approved": false,
+  "locale": "de-DE",
+  "display_title": "Fixavora – Hauswartung und Reparaturen planen",
+  "short_description": "Wartung, Reparaturen und Geräte übersichtlich verwalten. Lokale Daten ohne verpflichtendes Konto.",
+  "long_description": "Fixavora bündelt Wartungsaufgaben, Reparaturen und Geräteinformationen. Ergänzen Sie Räume, Termine, Notizen und Dokumentverknüpfungen. Ihre Einträge bleiben auf dem Gerät.\n\nKostenlos: eine aktive Immobilie und bis zu 15 aktive Wartungsaufgaben. Premium ist ein optionaler Einmalkauf über Amazon für mehrere Immobilien, Garantien, Handwerker, Ausgaben, Berichte und verschlüsselte Datensicherungen. Käufe müssen vor der Veröffentlichung eingerichtet und getestet werden.\n\nDer lokale Assistent erstellt Aufgabenentwürfe zur Prüfung. Spracheingabe und Sprachausgabe hängen von installierten Diensten und Sprachen ab. Erinnerungen können sich verzögern. Externe Dokumente können eine Verbindung erfordern. Fixavora ersetzt keine fachkundige Sicherheitsprüfung.",
+  "product_feature_bullets": [
+    "Wartung",
+    "Reparaturen",
+    "Geräte",
+    "Dokumente",
+    "Berichte"
+  ],
+  "keywords": "Wartung, Reparaturen, Geräte",
+  "screenshot_headlines": [],
+  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
+  "release_notes": "Wartung, Reparaturen und Geräte übersichtlich verwalten. Lokale Daten ohne verpflichtendes Konto.",
+  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
+  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
+  "support_status": "BLOCKED: publisher support contact required"
+}

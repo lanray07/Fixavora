@@ -1,0 +1,23 @@
+{
+  "status": "NOT TESTED",
+  "human_review": "NOT TESTED",
+  "publish_approved": false,
+  "locale": "nl-NL",
+  "display_title": "Fixavora – Onderhoud en reparaties van je huis",
+  "short_description": "Bewaar onderhoud, reparaties en apparaatgegevens op je apparaat. Geen verplicht account.",
+  "long_description": "Verzamel onderhoudstaken, reparaties en apparaatgegevens in Fixavora. Voeg kamers, datums, notities en documentlinks toe. Je gegevens blijven op het apparaat.\n\nGratis: één actieve woning en maximaal 15 actieve onderhoudstaken. Premium is een optionele eenmalige aankoop via Amazon voor meerdere woningen, garanties, vakmensen, uitgaven, rapporten en versleutelde gegevensback-ups. Configureer en test aankopen vóór publicatie.\n\nDe lokale assistent maakt concepttaken die je vóór het opslaan controleert. Spraakfuncties hangen af van de geïnstalleerde diensten en talen. Herinneringen kunnen vertraging oplopen. Externe documenten kunnen een verbinding vereisen. Fixavora geeft geen veiligheidscertificering.",
+  "product_feature_bullets": [
+    "Onderhoud",
+    "Reparaties",
+    "Apparaten",
+    "Documenten",
+    "Rapporten"
+  ],
+  "keywords": "Onderhoud, Reparaties, Apparaten",
+  "screenshot_headlines": [],
+  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
+  "release_notes": "Bewaar onderhoud, reparaties en apparaatgegevens op je apparaat. Geen verplicht account.",
+  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
+  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
+  "support_status": "BLOCKED: publisher support contact required"
+}

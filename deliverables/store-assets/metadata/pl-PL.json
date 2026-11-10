@@ -1,0 +1,23 @@
+{
+  "status": "NOT TESTED",
+  "human_review": "NOT TESTED",
+  "publish_approved": false,
+  "locale": "pl-PL",
+  "display_title": "Fixavora – Konserwacja i naprawy domu",
+  "short_description": "Uporządkuj konserwację, naprawy i informacje o urządzeniach. Dane lokalne bez obowiązkowego konta.",
+  "long_description": "Fixavora gromadzi zadania konserwacyjne, naprawy i informacje o urządzeniach. Dodawaj pomieszczenia, daty, notatki i odnośniki do dokumentów. Dane pozostają na urządzeniu.\n\nWersja bezpłatna obejmuje jedną aktywną nieruchomość i do 15 aktywnych zadań konserwacyjnych. Premium to opcjonalny jednorazowy zakup przez Amazon: wiele nieruchomości, gwarancje, wykonawcy, wydatki, raporty i szyfrowane kopie danych. Zakupy wymagają konfiguracji i testów przed publikacją.\n\nLokalny asystent przygotowuje szkice do sprawdzenia przed zapisaniem. Funkcje głosowe zależą od usług i języków na urządzeniu. Przypomnienia mogą się opóźniać. Zewnętrzne dokumenty mogą wymagać połączenia. Aplikacja nie potwierdza bezpieczeństwa nieruchomości.",
+  "product_feature_bullets": [
+    "Konserwacja",
+    "Naprawy",
+    "Urządzenia",
+    "Dokumenty",
+    "Raporty"
+  ],
+  "keywords": "Konserwacja, Naprawy, Urządzenia",
+  "screenshot_headlines": [],
+  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
+  "release_notes": "Uporządkuj konserwację, naprawy i informacje o urządzeniach. Dane lokalne bez obowiązkowego konta.",
+  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
+  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
+  "support_status": "BLOCKED: publisher support contact required"
+}

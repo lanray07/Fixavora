@@ -1,0 +1,23 @@
+{
+  "status": "NOT TESTED",
+  "human_review": "NOT TESTED",
+  "publish_approved": false,
+  "locale": "ja-JP",
+  "display_title": "Fixavora – 住まいのメンテナンスと修理記録",
+  "short_description": "住まいの点検予定、修理、家電の情報を端末に記録。アカウント登録は必須ではありません。",
+  "long_description": "Fixavoraは、住まいのメンテナンス予定、修理、家電の情報をまとめて管理するアプリです。部屋、日付、メモ、書類へのリンクを追加できます。記録は端末内に保存されます。\n\n無料版は有効な物件1件と未完了のメンテナンスタスク15件まで。PremiumはAmazonでの任意の買い切り購入で、複数物件、保証、業者、費用、レポート、記録の暗号化バックアップを利用できます。公開前に購入機能の設定とテストが必要です。\n\nローカルアシスタントが作成するタスク案は、保存前に確認します。音声機能は端末の音声サービスと言語対応状況に依存します。通知が遅れる場合があります。外部の書類には接続が必要な場合があります。住宅の安全性を証明するアプリではありません。",
+  "product_feature_bullets": [
+    "メンテナンス",
+    "修理",
+    "家電",
+    "書類",
+    "レポート"
+  ],
+  "keywords": "メンテナンス, 修理, 家電",
+  "screenshot_headlines": [],
+  "screenshot_caption_status": "BLOCKED: full UI translation and screenshot copy review required",
+  "release_notes": "住まいの点検予定、修理、家電の情報を端末に記録。アカウント登録は必須ではありません。",
+  "category_recommendation": "Productivity (verify taxonomy in the submission console)",
+  "privacy_policy": "../../../docs/PRIVACY_POLICY_DRAFT.md",
+  "support_status": "BLOCKED: publisher support contact required"
+}

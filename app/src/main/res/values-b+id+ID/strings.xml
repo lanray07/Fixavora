@@ -1,0 +1,28 @@
+<resources>
+    <string name="add">Tambah</string>
+    <string name="all">Semua catatan</string>
+    <string name="appliances">Peralatan</string>
+    <string name="appointments">Janji temu</string>
+    <string name="assistant">Asisten</string>
+    <string name="calendar">Kalender</string>
+    <string name="cancel">Batal</string>
+    <string name="contractors">Kontraktor</string>
+    <string name="delete">Hapus</string>
+    <string name="documents">Dokumen</string>
+    <string name="edit">Edit</string>
+    <string name="expenses">Pengeluaran</string>
+    <string name="language">Bahasa</string>
+    <string name="month">Bulan ini</string>
+    <string name="overview">Ringkasan</string>
+    <string name="premium">Premium</string>
+    <string name="properties">Properti</string>
+    <string name="repairs">Perbaikan</string>
+    <string name="reports">Laporan</string>
+    <string name="save">Simpan</string>
+    <string name="search_records">Cari catatan</string>
+    <string name="settings">Pengaturan</string>
+    <string name="tasks">Pemeliharaan</string>
+    <string name="today">Hari ini</string>
+    <string name="warranties">Garansi</string>
+    <string name="week">Minggu ini</string>
+</resources>

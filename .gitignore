@@ -1,0 +1,15 @@
+.gradle/
+**/build/
+local.properties
+.idea/
+*.jks
+*.keystore
+.env
+__pycache__/
+deliverables/android/debug/*.apk
+deliverables/android/release/*.apk
+*.hprof
+emulator-*.log
+build-first.log
+.runtime/
+app/src/main/assets/AppstoreAuthenticationKey.pem
